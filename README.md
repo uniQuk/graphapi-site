@@ -1,10 +1,12 @@
 # Microsoft Graph API Site
 
-This repository hosts the generated static site for the [Microsoft Graph API Viewer](https://github.com/microsoftgraph/graphapi-viewer) project. The site provides an interactive interface for exploring Microsoft Graph API's OpenAPI specifications.
+This repository hosts the generated static site for the [Microsoft Graph API Viewer](https://github.com/uniQuk/GraphAPI-Viewer) project. The site provides an interactive interface for exploring Microsoft Graph API's OpenAPI specifications.
+
+View the live site at: [https://uniquk.github.io/graphapi-site/](https://uniquk.github.io/graphapi-site/)
 
 ## About
 
-This is a generated site repository. The source code and build tools can be found in the main [graphapi-viewer](https://github.com/microsoftgraph/graphapi-viewer) repository.
+This is a generated site repository. The source code and build tools can be found in the main [graphapi-viewer](https://github.com/uniQuk/GraphAPI-Viewer) repository.
 
 ## Features
 
