@@ -1,0 +1,154 @@
+{
+  "/auditLogs/provisioning/{provisioningObjectSummary-id}": {
+    "get": {
+      "tags": [
+        "auditLogs.provisioningObjectSummary"
+      ],
+      "summary": "Get provisioning from auditLogs",
+      "description": "Represents an action performed by the Microsoft Entra provisioning service and its associated properties.",
+      "operationId": "auditLog_GetProvisioning",
+      "parameters": [
+        {
+          "name": "provisioningObjectSummary-id",
+          "in": "path",
+          "description": "The unique identifier of provisioningObjectSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "provisioningObjectSummary"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.provisioningObjectSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "auditLogs.provisioningObjectSummary"
+      ],
+      "summary": "Update the navigation property provisioning in auditLogs",
+      "operationId": "auditLog_UpdateProvisioning",
+      "parameters": [
+        {
+          "name": "provisioningObjectSummary-id",
+          "in": "path",
+          "description": "The unique identifier of provisioningObjectSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "provisioningObjectSummary"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.provisioningObjectSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.provisioningObjectSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "auditLogs.provisioningObjectSummary"
+      ],
+      "summary": "Delete navigation property provisioning for auditLogs",
+      "operationId": "auditLog_DeleteProvisioning",
+      "parameters": [
+        {
+          "name": "provisioningObjectSummary-id",
+          "in": "path",
+          "description": "The unique identifier of provisioningObjectSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "provisioningObjectSummary"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

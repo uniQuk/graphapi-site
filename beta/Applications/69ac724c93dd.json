@@ -1,0 +1,52 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/ownedObjects/microsoft.graph.group/$count": {
+    "get": {
+      "tags": [
+        "servicePrincipals.directoryObject"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "servicePrincipal.OwnedObject_GetCountAsGroup",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

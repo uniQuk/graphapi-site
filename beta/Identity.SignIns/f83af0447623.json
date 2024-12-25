@@ -1,0 +1,153 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/apiConnectorConfiguration/postFederationSignup": {
+    "get": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Get postFederationSignup from identity",
+      "operationId": "identity.b2xUserFlow_GetPostFederationSignup",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityApiConnector"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Update the navigation property postFederationSignup in identity",
+      "operationId": "identity.b2xUserFlow_UpdatePostFederationSignup",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityApiConnector"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityApiConnector"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Delete navigation property postFederationSignup for identity",
+      "operationId": "identity.b2xUserFlow_DeletePostFederationSignup",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

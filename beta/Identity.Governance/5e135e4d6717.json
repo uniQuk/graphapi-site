@@ -1,0 +1,60 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment-id}/accessPackage/accessPackageResourceRoleScopes/{accessPackageResourceRoleScope-id}/accessPackageResourceScope/accessPackageResource/accessPackageResourceRoles/{accessPackageResourceRole-id}/accessPackageResource/microsoft.graph.refresh": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action refresh",
+      "description": "In Microsoft Entra entitlement management, refresh the accessPackageResource object to fetch the latest details for displayName, description, and resourceType from the origin system. For the AadApplication originSystem, this operation also updates the displayName and description for the accessPackageResourceRole. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackageresource-refresh?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.accessPackageResourceRoleScope.accessPackageResourceScope.accessPackageResource.accessPackageResourceRole.accessPackageResource_refresh",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "accessPackageResourceRoleScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRoleScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRoleScope"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

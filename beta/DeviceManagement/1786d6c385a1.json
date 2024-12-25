@@ -1,0 +1,63 @@
+{
+  "/deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicy-id}/settings/{deviceManagementConfigurationSetting-id}/settingDefinitions/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementConfigurationPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.configurationPolicy.setting.settingDefinition_GetCount",
+      "parameters": [
+        {
+          "name": "deviceManagementConfigurationPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationPolicy"
+        },
+        {
+          "name": "deviceManagementConfigurationSetting-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationSetting"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

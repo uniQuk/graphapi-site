@@ -1,0 +1,38 @@
+{
+  "/groups/{group-id}/calendar/microsoft.graph.permanentDelete": {
+    "post": {
+      "tags": [
+        "groups.Actions"
+      ],
+      "summary": "Invoke action permanentDelete",
+      "description": "Permanently delete a calendar folder and the events that it contains and remove them from the mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/calendar-permanentdelete?view=graph-rest-beta"
+      },
+      "operationId": "group.calendar_permanentDelete",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

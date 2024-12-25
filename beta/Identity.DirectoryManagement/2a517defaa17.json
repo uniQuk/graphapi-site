@@ -1,0 +1,79 @@
+{
+  "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/microsoft.graph.managedTenants.changeDeploymentStatus": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action changeDeploymentStatus",
+      "operationId": "tenantRelationship.managedTenant.managementTemplateStepVersion.deployment_changeDeploymentStatus",
+      "parameters": [
+        {
+          "name": "managementTemplateStepVersion-id",
+          "in": "path",
+          "description": "The unique identifier of managementTemplateStepVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managementTemplateStepVersion"
+        },
+        {
+          "name": "managementTemplateStepDeployment-id",
+          "in": "path",
+          "description": "The unique identifier of managementTemplateStepDeployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managementTemplateStepDeployment"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tenantId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "managementTemplateStepId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "status": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managementTemplateStepDeployment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

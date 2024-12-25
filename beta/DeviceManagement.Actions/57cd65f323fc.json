@@ -1,0 +1,111 @@
+{
+  "/deviceManagement/virtualEndpoint/reports/microsoft.graph.getSharedUseLicenseUsageReport": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action getSharedUseLicenseUsageReport",
+      "description": "Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcreports-getshareduselicenseusagereport?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.report_getSharedUseLicenseUsageReport",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reportName": {
+                  "$ref": "#/components/schemas/microsoft.graph.cloudPcReportName"
+                },
+                "filter": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "select": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "search": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupBy": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "orderBy": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "skip": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "top": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-10-17",
+        "date": "2023-05-17",
+        "version": "2023-05/getSharedUseLicenseUsageReport",
+        "description": "The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

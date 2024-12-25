@@ -1,0 +1,1818 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Devices.ServiceAnnouncement",
+    "version": "v1.0-beta"
+  },
+  "servers": [
+    {
+      "url": "https://graph.microsoft.com/beta/",
+      "description": "Core"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "microsoft.graph.browserSite": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "browserSite",
+            "type": "object",
+            "properties": {
+              "allowRedirect": {
+                "type": "boolean",
+                "description": "Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain."
+              },
+              "comment": {
+                "type": "string",
+                "description": "The comment for the site."
+              },
+              "compatibilityMode": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteCompatibilityMode"
+              },
+              "createdDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the site was created.",
+                "format": "date-time"
+              },
+              "deletedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the site was deleted.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "history": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.browserSiteHistory"
+                },
+                "description": "The history of modifications applied to the site."
+              },
+              "lastModifiedBy": {
+                "$ref": "#/components/schemas/microsoft.graph.identitySet"
+              },
+              "lastModifiedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the site was last modified.",
+                "format": "date-time"
+              },
+              "mergeType": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteMergeType"
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteStatus"
+              },
+              "targetEnvironment": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteTargetEnvironment"
+              },
+              "webUrl": {
+                "type": "string",
+                "description": "The URL of the site."
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            },
+            "description": "Singleton entity which is used to specify IE mode site metadata"
+          }
+        ]
+      },
+      "microsoft.graph.browserSharedCookie": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "browserSharedCookie",
+            "type": "object",
+            "properties": {
+              "comment": {
+                "type": "string",
+                "description": "The comment for the shared cookie."
+              },
+              "createdDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the shared cookie was created.",
+                "format": "date-time"
+              },
+              "deletedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the shared cookie was deleted.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "displayName": {
+                "type": "string",
+                "description": "The name of the cookie."
+              },
+              "history": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.browserSharedCookieHistory"
+                },
+                "description": "The history of modifications applied to the cookie."
+              },
+              "hostOnly": {
+                "type": "boolean",
+                "description": "Controls whether a cookie is a host-only or domain cookie."
+              },
+              "hostOrDomain": {
+                "type": "string",
+                "description": "The URL of the cookie."
+              },
+              "lastModifiedBy": {
+                "$ref": "#/components/schemas/microsoft.graph.identitySet"
+              },
+              "lastModifiedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the cookie was last modified.",
+                "format": "date-time"
+              },
+              "path": {
+                "type": "string",
+                "description": "The path of the cookie."
+              },
+              "sourceEnvironment": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSharedCookieSourceEnvironment"
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSharedCookieStatus"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.browserSiteList": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "browserSiteList",
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "The description of the site list."
+              },
+              "displayName": {
+                "type": "string",
+                "description": "The name of the site list."
+              },
+              "lastModifiedBy": {
+                "$ref": "#/components/schemas/microsoft.graph.identitySet"
+              },
+              "lastModifiedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the site list was last modified.",
+                "format": "date-time"
+              },
+              "publishedBy": {
+                "$ref": "#/components/schemas/microsoft.graph.identitySet"
+              },
+              "publishedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the site list was published.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "revision": {
+                "type": "string",
+                "description": "The current revision of the site list."
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteListStatus"
+              },
+              "sharedCookies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.browserSharedCookie"
+                },
+                "description": "A collection of shared cookies defined for the site list.",
+                "x-ms-navigationProperty": true
+              },
+              "sites": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.browserSite"
+                },
+                "description": "A collection of sites defined for the site list.",
+                "x-ms-navigationProperty": true
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            },
+            "description": "A singleton entity which is used to specify IE mode site list metadata"
+          }
+        ]
+      },
+      "microsoft.graph.serviceAnnouncement": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "serviceAnnouncement",
+            "type": "object",
+            "properties": {
+              "healthOverviews": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceHealth"
+                },
+                "description": "A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.",
+                "x-ms-navigationProperty": true
+              },
+              "issues": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+                },
+                "description": "A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.",
+                "x-ms-navigationProperty": true
+              },
+              "messages": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceUpdateMessage"
+                },
+                "description": "A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.",
+                "x-ms-navigationProperty": true
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.serviceHealth": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "serviceHealth",
+            "type": "object",
+            "properties": {
+              "service": {
+                "type": "string",
+                "description": "The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant."
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthStatus"
+              },
+              "issues": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+                },
+                "description": "A collection of issues that happened on the service, with detailed information for each issue.",
+                "x-ms-navigationProperty": true
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.serviceHealthIssue": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementBase"
+          },
+          {
+            "title": "serviceHealthIssue",
+            "type": "object",
+            "properties": {
+              "classification": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthClassificationType"
+              },
+              "feature": {
+                "type": "string",
+                "description": "The feature name of the service issue.",
+                "nullable": true
+              },
+              "featureGroup": {
+                "type": "string",
+                "description": "The feature group name of the service issue.",
+                "nullable": true
+              },
+              "impactDescription": {
+                "type": "string",
+                "description": "The description of the service issue impact."
+              },
+              "isResolved": {
+                "type": "boolean",
+                "description": "Indicates whether the issue is resolved."
+              },
+              "origin": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthOrigin"
+              },
+              "posts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssuePost"
+                },
+                "description": "Collection of historical posts for the service issue."
+              },
+              "service": {
+                "type": "string",
+                "description": "Indicates the service affected by the issue."
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthStatus"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.serviceUpdateMessage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementBase"
+          },
+          {
+            "title": "serviceUpdateMessage",
+            "type": "object",
+            "properties": {
+              "actionRequiredByDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The expected deadline of the action for the message.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "attachmentsArchive": {
+                "type": "string",
+                "description": "The zip file of all attachments for a message.",
+                "format": "base64url",
+                "nullable": true
+              },
+              "body": {
+                "$ref": "#/components/schemas/microsoft.graph.itemBody"
+              },
+              "category": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceUpdateCategory"
+              },
+              "hasAttachments": {
+                "type": "boolean",
+                "description": "Indicates whether the message has any attachment."
+              },
+              "isMajorChange": {
+                "type": "boolean",
+                "description": "Indicates whether the message describes a major update for the service.",
+                "nullable": true
+              },
+              "services": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": "The affected services by the service message."
+              },
+              "severity": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceUpdateSeverity"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": "A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on."
+              },
+              "viewPoint": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceUpdateMessageViewpoint"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementAttachment"
+                },
+                "description": "A collection of serviceAnnouncementAttachments.",
+                "x-ms-navigationProperty": true
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.serviceAnnouncementAttachment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "serviceAnnouncementAttachment",
+            "type": "object",
+            "properties": {
+              "content": {
+                "type": "string",
+                "description": "The attachment content.",
+                "format": "base64url",
+                "nullable": true
+              },
+              "contentType": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastModifiedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "size": {
+                "maximum": 2147483647,
+                "minimum": -2147483648,
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.windowsUpdates.updatableAsset": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "updatableAsset",
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.windowsUpdates.updateCategory": {
+        "title": "updateCategory",
+        "enum": [
+          "feature",
+          "quality",
+          "unknownFutureValue",
+          "driver"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.windowsUpdates.knownIssue": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "knownIssue",
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "The description of the particular known issue."
+              },
+              "knownIssueHistories": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knownIssueHistoryItem"
+                }
+              },
+              "lastUpdatedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the known issue was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time"
+              },
+              "resolvedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the known issue was resolved or mitigated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "safeguardHoldIds": {
+                "type": "array",
+                "items": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "startDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the known issue was first reported. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.",
+                "format": "date-time"
+              },
+              "status": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.windowsReleaseHealthStatus"
+              },
+              "title": {
+                "type": "string",
+                "description": "The title of the known issue."
+              },
+              "webViewUrl": {
+                "type": "string",
+                "description": "The URL to the known issue in the Windows Release Health dashboard on Microsoft 365 admin center."
+              },
+              "originatingKnowledgeBaseArticle": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+              },
+              "resolvingKnowledgeBaseArticle": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.windowsUpdates.product": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "product",
+            "type": "object",
+            "properties": {
+              "friendlyNames": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": "The friendly names of the product. For example, Version 22H2 (OS build 22621). Read-only."
+              },
+              "groupName": {
+                "type": "string",
+                "description": "The name of the product group. For example, Windows 11. Read-only.",
+                "nullable": true
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the product. For example, Windows 11, version 22H2. Read-only."
+              },
+              "editions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.edition"
+                },
+                "description": "Represents an edition of a particular Windows product.",
+                "x-ms-navigationProperty": true
+              },
+              "knownIssues": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knownIssue"
+                },
+                "description": "Represents a known issue related to a Windows product.",
+                "x-ms-navigationProperty": true
+              },
+              "revisions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.productRevision"
+                },
+                "description": "Represents a product revision.",
+                "x-ms-navigationProperty": true
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.entity": {
+        "title": "entity",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for an entity. Read-only."
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.browserSiteCompatibilityMode": {
+        "title": "browserSiteCompatibilityMode",
+        "enum": [
+          "default",
+          "internetExplorer8Enterprise",
+          "internetExplorer7Enterprise",
+          "internetExplorer11",
+          "internetExplorer10",
+          "internetExplorer9",
+          "internetExplorer8",
+          "internetExplorer7",
+          "internetExplorer5",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSiteCompatibilityMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "default",
+              "description": "Loads the site using default compatibility mode.",
+              "name": "default"
+            },
+            {
+              "value": "internetExplorer8Enterprise",
+              "description": "Loads the site in internetExplorer8 Enterprise Mode",
+              "name": "internetExplorer8Enterprise"
+            },
+            {
+              "value": "internetExplorer7Enterprise",
+              "description": "Loads the site in internetExplorer7 Enterprise Mode",
+              "name": "internetExplorer7Enterprise"
+            },
+            {
+              "value": "internetExplorer11",
+              "description": "Loads the site in internetExplorer11",
+              "name": "internetExplorer11"
+            },
+            {
+              "value": "internetExplorer10",
+              "description": "Loads the site in internetExplorer10",
+              "name": "internetExplorer10"
+            },
+            {
+              "value": "internetExplorer9",
+              "description": "Loads the site in internetExplorer9",
+              "name": "internetExplorer9"
+            },
+            {
+              "value": "internetExplorer8",
+              "description": "Loads the site in internetExplorer8",
+              "name": "internetExplorer8"
+            },
+            {
+              "value": "internetExplorer7",
+              "description": "Loads the site in internetExplorer7",
+              "name": "internetExplorer7"
+            },
+            {
+              "value": "internetExplorer5",
+              "description": "Loads the site in internetExplorer5",
+              "name": "internetExplorer5"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSiteHistory": {
+        "title": "browserSiteHistory",
+        "type": "object",
+        "properties": {
+          "allowRedirect": {
+            "type": "boolean",
+            "description": "Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.",
+            "nullable": true
+          },
+          "comment": {
+            "type": "string",
+            "description": "The comment for the site."
+          },
+          "compatibilityMode": {
+            "$ref": "#/components/schemas/microsoft.graph.browserSiteCompatibilityMode"
+          },
+          "lastModifiedBy": {
+            "$ref": "#/components/schemas/microsoft.graph.identitySet"
+          },
+          "mergeType": {
+            "$ref": "#/components/schemas/microsoft.graph.browserSiteMergeType"
+          },
+          "publishedDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The date and time when the site was last published.",
+            "format": "date-time"
+          },
+          "targetEnvironment": {
+            "$ref": "#/components/schemas/microsoft.graph.browserSiteTargetEnvironment"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "The history for the site modifications"
+      },
+      "microsoft.graph.identitySet": {
+        "title": "identitySet",
+        "type": "object",
+        "properties": {
+          "application": {
+            "$ref": "#/components/schemas/microsoft.graph.identity"
+          },
+          "device": {
+            "$ref": "#/components/schemas/microsoft.graph.identity"
+          },
+          "user": {
+            "$ref": "#/components/schemas/microsoft.graph.identity"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.browserSiteMergeType": {
+        "title": "browserSiteMergeType",
+        "enum": [
+          "noMerge",
+          "default",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSiteMergeType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "noMerge",
+              "description": "No merge type",
+              "name": "noMerge"
+            },
+            {
+              "value": "default",
+              "description": "Default merge type",
+              "name": "default"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSiteStatus": {
+        "title": "browserSiteStatus",
+        "enum": [
+          "published",
+          "pendingAdd",
+          "pendingEdit",
+          "pendingDelete",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSiteStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "published",
+              "description": "A site that has been published",
+              "name": "published"
+            },
+            {
+              "value": "pendingAdd",
+              "description": "A site that has been added pending publish",
+              "name": "pendingAdd"
+            },
+            {
+              "value": "pendingEdit",
+              "description": "A site that has been edited pending publish",
+              "name": "pendingEdit"
+            },
+            {
+              "value": "pendingDelete",
+              "description": "A site that has been deleted pending publish",
+              "name": "pendingDelete"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSiteTargetEnvironment": {
+        "title": "browserSiteTargetEnvironment",
+        "enum": [
+          "internetExplorerMode",
+          "internetExplorer11",
+          "microsoftEdge",
+          "configurable",
+          "none",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSiteTargetEnvironment",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "internetExplorerMode",
+              "description": "Open in Internet Explorer Mode",
+              "name": "internetExplorerMode"
+            },
+            {
+              "value": "internetExplorer11",
+              "description": "Open in standalone Internet Explorer 11",
+              "name": "internetExplorer11"
+            },
+            {
+              "value": "microsoftEdge",
+              "description": "Open in Microsoft Edge",
+              "name": "microsoftEdge"
+            },
+            {
+              "value": "configurable",
+              "description": "Configurable type",
+              "name": "configurable"
+            },
+            {
+              "value": "none",
+              "description": "Open in the browser the employee chooses.",
+              "name": "none"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSharedCookieHistory": {
+        "title": "browserSharedCookieHistory",
+        "type": "object",
+        "properties": {
+          "comment": {
+            "type": "string",
+            "description": "The comment for the shared cookie.",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the cookie."
+          },
+          "hostOnly": {
+            "type": "boolean",
+            "description": "Controls whether a cookie is a host-only or domain cookie."
+          },
+          "hostOrDomain": {
+            "type": "string",
+            "description": "The URL of the cookie.",
+            "nullable": true
+          },
+          "lastModifiedBy": {
+            "$ref": "#/components/schemas/microsoft.graph.identitySet"
+          },
+          "path": {
+            "type": "string",
+            "description": "The path of the cookie.",
+            "nullable": true
+          },
+          "publishedDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The date and time when the cookie was last published.",
+            "format": "date-time"
+          },
+          "sourceEnvironment": {
+            "$ref": "#/components/schemas/microsoft.graph.browserSharedCookieSourceEnvironment"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.browserSharedCookieSourceEnvironment": {
+        "title": "browserSharedCookieSourceEnvironment",
+        "enum": [
+          "microsoftEdge",
+          "internetExplorer11",
+          "both",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSharedCookieSourceEnvironment",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "microsoftEdge",
+              "description": "Share session cookies from Microsoft Edge to Internet Explorer.",
+              "name": "microsoftEdge"
+            },
+            {
+              "value": "internetExplorer11",
+              "description": "Share session cookies from Internet Explorer to Microsoft Edge.",
+              "name": "internetExplorer11"
+            },
+            {
+              "value": "both",
+              "description": "Share session cookies to and from Microsoft Edge and Internet Explorer.",
+              "name": "both"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSharedCookieStatus": {
+        "title": "browserSharedCookieStatus",
+        "enum": [
+          "published",
+          "pendingAdd",
+          "pendingEdit",
+          "pendingDelete",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSharedCookieStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "published",
+              "description": "A sharedcookie that has been published",
+              "name": "published"
+            },
+            {
+              "value": "pendingAdd",
+              "description": "A sharedcookie that has been added pending publish",
+              "name": "pendingAdd"
+            },
+            {
+              "value": "pendingEdit",
+              "description": "A sharedcookie that has been edited pending publish",
+              "name": "pendingEdit"
+            },
+            {
+              "value": "pendingDelete",
+              "description": "A sharedcookie that has been deleted pending publish",
+              "name": "pendingDelete"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.browserSiteListStatus": {
+        "title": "browserSiteListStatus",
+        "enum": [
+          "draft",
+          "published",
+          "pending",
+          "unknownFutureValue"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "browserSiteListStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "draft",
+              "description": "A site list that has not yet been published",
+              "name": "draft"
+            },
+            {
+              "value": "published",
+              "description": "A site list that has been published with no pending changes.",
+              "name": "published"
+            },
+            {
+              "value": "pending",
+              "description": "A site that has pending changes",
+              "name": "pending"
+            },
+            {
+              "value": "unknownFutureValue",
+              "description": "Placeholder for evolvable enum, but this enum is never returned to the caller, so it shoudn't be necessary.",
+              "name": "unknownFutureValue"
+            }
+          ]
+        }
+      },
+      "microsoft.graph.serviceHealthStatus": {
+        "title": "serviceHealthStatus",
+        "enum": [
+          "serviceOperational",
+          "investigating",
+          "restoringService",
+          "verifyingService",
+          "serviceRestored",
+          "postIncidentReviewPublished",
+          "serviceDegradation",
+          "serviceInterruption",
+          "extendedRecovery",
+          "falsePositive",
+          "investigationSuspended",
+          "resolved",
+          "mitigatedExternal",
+          "mitigated",
+          "resolvedExternal",
+          "confirmed",
+          "reported",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.serviceAnnouncementBase": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "serviceAnnouncementBase",
+            "type": "object",
+            "properties": {
+              "details": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.keyValuePair"
+                },
+                "description": "Extra details about service event. This property doesn't support filters."
+              },
+              "endDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The end time of the service event.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "lastModifiedDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The last modified time of the service event.",
+                "format": "date-time"
+              },
+              "startDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The start time of the service event.",
+                "format": "date-time"
+              },
+              "title": {
+                "type": "string",
+                "description": "The title of the service event."
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.serviceHealthClassificationType": {
+        "title": "serviceHealthClassificationType",
+        "enum": [
+          "advisory",
+          "incident",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.serviceHealthOrigin": {
+        "title": "serviceHealthOrigin",
+        "enum": [
+          "microsoft",
+          "thirdParty",
+          "customer",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.serviceHealthIssuePost": {
+        "title": "serviceHealthIssuePost",
+        "type": "object",
+        "properties": {
+          "createdDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The published time of the post.",
+            "format": "date-time"
+          },
+          "description": {
+            "$ref": "#/components/schemas/microsoft.graph.itemBody"
+          },
+          "postType": {
+            "$ref": "#/components/schemas/microsoft.graph.postType"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.itemBody": {
+        "title": "itemBody",
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The content of the item.",
+            "nullable": true
+          },
+          "contentType": {
+            "$ref": "#/components/schemas/microsoft.graph.bodyType"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.serviceUpdateCategory": {
+        "title": "serviceUpdateCategory",
+        "enum": [
+          "preventOrFixIssue",
+          "planForChange",
+          "stayInformed",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.serviceUpdateSeverity": {
+        "title": "serviceUpdateSeverity",
+        "enum": [
+          "normal",
+          "high",
+          "critical",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.serviceUpdateMessageViewpoint": {
+        "title": "serviceUpdateMessageViewpoint",
+        "type": "object",
+        "properties": {
+          "isArchived": {
+            "type": "boolean",
+            "description": "Indicates whether the user archived the message.",
+            "nullable": true
+          },
+          "isFavorited": {
+            "type": "boolean",
+            "description": "Indicates whether the user marked the message as favorite.",
+            "nullable": true
+          },
+          "isRead": {
+            "type": "boolean",
+            "description": "Indicates whether the user read the message.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.knownIssueHistoryItem": {
+        "title": "knownIssueHistoryItem",
+        "type": "object",
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.itemBody"
+          },
+          "createdDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The date and time when the post was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.windowsReleaseHealthStatus": {
+        "title": "windowsReleaseHealthStatus",
+        "enum": [
+          "resolved",
+          "mitigatedExternal",
+          "mitigated",
+          "resolvedExternal",
+          "confirmed",
+          "reported",
+          "investigating",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.windowsUpdates.knowledgeBaseArticle": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "knowledgeBaseArticle",
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "The URL of the knowledge base article. Read-only."
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.windowsUpdates.edition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "edition",
+            "type": "object",
+            "properties": {
+              "deviceFamily": {
+                "type": "string",
+                "description": "The device family targeted by the edition."
+              },
+              "endOfServiceDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the edition reached the end of service. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time"
+              },
+              "generalAvailabilityDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date and time when the edition became available to the general customers for the first time. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time"
+              },
+              "isInService": {
+                "type": "boolean",
+                "description": "Indicates whether the edition is in service or out of service."
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the edition. Read-only."
+              },
+              "releasedName": {
+                "type": "string",
+                "description": "The public name of the edition. Read-only."
+              },
+              "servicingPeriods": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.servicingPeriod"
+                }
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.windowsUpdates.productRevision": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "productRevision",
+            "type": "object",
+            "properties": {
+              "displayName": {
+                "type": "string",
+                "description": "The display name of the content. Read-only."
+              },
+              "osBuild": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.buildVersionDetails"
+              },
+              "product": {
+                "type": "string",
+                "description": "The product of the revision. Possible values are: Windows 10, Windows 11. Read-only."
+              },
+              "releaseDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time"
+              },
+              "version": {
+                "type": "string",
+                "description": "The version of the feature update. Read-only."
+              },
+              "catalogEntry": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.catalogEntry"
+              },
+              "knowledgeBaseArticle": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.ODataErrors.ODataError": {
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/microsoft.graph.ODataErrors.MainError"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.serviceHealthCollectionResponse": {
+        "title": "Collection of serviceHealth",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealth"
+            }
+          },
+          "@odata.nextLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.serviceHealthIssueCollectionResponse": {
+        "title": "Collection of serviceHealthIssue",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+            }
+          },
+          "@odata.nextLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "ODataCountResponse": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "microsoft.graph.serviceUpdateMessageCollectionResponse": {
+        "title": "Collection of serviceUpdateMessage",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceUpdateMessage"
+            }
+          },
+          "@odata.nextLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.serviceAnnouncementAttachmentCollectionResponse": {
+        "title": "Collection of serviceAnnouncementAttachment",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementAttachment"
+            }
+          },
+          "@odata.nextLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.identity": {
+        "title": "identity",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the identity. For drive items, the display name might not always be available or up to date. For example, if a user changes their display name the API might show the new value in a future response, but the items associated with the user don't show up as changed when using delta.",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the identity or actor. For example, in the access reviews decisions API, this property might record the id of the principal, that is, the group, user, or application that's subject to review.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.keyValuePair": {
+        "title": "keyValuePair",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name for this key-value pair"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for this key-value pair",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.postType": {
+        "title": "postType",
+        "enum": [
+          "regular",
+          "quick",
+          "strategic",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.bodyType": {
+        "title": "bodyType",
+        "enum": [
+          "text",
+          "html"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.windowsUpdates.itemBody": {
+        "title": "itemBody",
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The content of the item.",
+            "nullable": true
+          },
+          "contentType": {
+            "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.bodyType"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.servicingPeriod": {
+        "title": "servicingPeriod",
+        "type": "object",
+        "properties": {
+          "endDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The date and time when the servicing period ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the servicing period. For example, Modern Lifecycle."
+          },
+          "startDateTime": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "description": "The start date and time of the servicing period. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.buildVersionDetails": {
+        "title": "buildVersionDetails",
+        "type": "object",
+        "properties": {
+          "buildNumber": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "description": "The build number of the product release. Read-only.",
+            "format": "int32"
+          },
+          "majorVersion": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "description": "The major version of the product release. Read-only.",
+            "format": "int32"
+          },
+          "minorVersion": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "description": "The minor version of the product release. Read-only.",
+            "format": "int32"
+          },
+          "updateBuildRevision": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "description": "The update build revision number of the product revision. Read-only.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.catalogEntry": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/microsoft.graph.entity"
+          },
+          {
+            "title": "catalogEntry",
+            "type": "object",
+            "properties": {
+              "deployableUntilDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The date on which the content is no longer available to deploy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "displayName": {
+                "type": "string",
+                "description": "The display name of the content. Read-only.",
+                "nullable": true
+              },
+              "releaseDateTime": {
+                "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                "type": "string",
+                "description": "The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.",
+                "format": "date-time"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      "microsoft.graph.ODataErrors.MainError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string",
+            "x-ms-primary-error-message": true
+          },
+          "target": {
+            "type": "string",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails"
+            }
+          },
+          "innerError": {
+            "$ref": "#/components/schemas/microsoft.graph.ODataErrors.InnerError"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.windowsUpdates.bodyType": {
+        "title": "bodyType",
+        "enum": [
+          "text",
+          "html",
+          "unknownFutureValue"
+        ],
+        "type": "string"
+      },
+      "microsoft.graph.ODataErrors.ErrorDetails": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "microsoft.graph.ODataErrors.InnerError": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "The structure of this object is service-specific"
+      }
+    },
+    "responses": {
+      "error": {
+        "description": "error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.ODataErrors.ODataError"
+            }
+          }
+        }
+      },
+      "microsoft.graph.serviceHealthCollectionResponse": {
+        "description": "Retrieved collection",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealthCollectionResponse"
+            }
+          }
+        }
+      },
+      "microsoft.graph.serviceHealthIssueCollectionResponse": {
+        "description": "Retrieved collection",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssueCollectionResponse"
+            }
+          }
+        }
+      },
+      "ODataCountResponse": {
+        "description": "The count of the resource",
+        "content": {
+          "text/plain": {
+            "schema": {
+              "$ref": "#/components/schemas/ODataCountResponse"
+            }
+          }
+        }
+      },
+      "microsoft.graph.serviceUpdateMessageCollectionResponse": {
+        "description": "Retrieved collection",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceUpdateMessageCollectionResponse"
+            }
+          }
+        }
+      },
+      "microsoft.graph.serviceAnnouncementAttachmentCollectionResponse": {
+        "description": "Retrieved collection",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementAttachmentCollectionResponse"
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Show only the first n items",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "example": 50
+      },
+      "skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Skip the first n items",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "search": {
+        "name": "$search",
+        "in": "query",
+        "description": "Search items by search phrases",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "filter": {
+        "name": "$filter",
+        "in": "query",
+        "description": "Filter items by property values",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "count": {
+        "name": "$count",
+        "in": "query",
+        "description": "Include count of items",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "boolean"
+        }
+      }
+    },
+    "securitySchemes": {
+      "azureaadv2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+            "tokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "azureaadv2": []
+    }
+  ]
+}

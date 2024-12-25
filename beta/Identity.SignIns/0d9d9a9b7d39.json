@@ -1,0 +1,77 @@
+{
+  "/identity/conditionalAccess/microsoft.graph.evaluate": {
+    "post": {
+      "tags": [
+        "identity.Actions"
+      ],
+      "summary": "Invoke action evaluate",
+      "operationId": "identity.conditionalAccess_evaluate",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "conditionalAccessWhatIfSubject": {
+                  "$ref": "#/components/schemas/microsoft.graph.conditionalAccessWhatIfSubject"
+                },
+                "conditionalAccessContext": {
+                  "$ref": "#/components/schemas/microsoft.graph.conditionalAccessContext"
+                },
+                "conditionalAccessWhatIfConditions": {
+                  "$ref": "#/components/schemas/microsoft.graph.conditionalAccessWhatIfConditions"
+                },
+                "appliedPoliciesOnly": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of conditionalAccessWhatIfPolicy",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.conditionalAccessWhatIfPolicy"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

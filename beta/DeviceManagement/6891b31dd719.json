@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicySettingStateSummary"
+      ],
+      "summary": "Get deviceCompliancePolicySettingStateSummaries from deviceManagement",
+      "description": "The summary states of compliance policy settings for this account.",
+      "operationId": "deviceManagement_GetDeviceCompliancePolicySettingStateSummary",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicySettingStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicySettingStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicySettingStateSummary"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceCompliancePolicySettingStateSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicySettingStateSummary"
+      ],
+      "summary": "Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement",
+      "operationId": "deviceManagement_UpdateDeviceCompliancePolicySettingStateSummary",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicySettingStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicySettingStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicySettingStateSummary"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceCompliancePolicySettingStateSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceCompliancePolicySettingStateSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicySettingStateSummary"
+      ],
+      "summary": "Delete navigation property deviceCompliancePolicySettingStateSummaries for deviceManagement",
+      "operationId": "deviceManagement_DeleteDeviceCompliancePolicySettingStateSummary",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicySettingStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicySettingStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicySettingStateSummary"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

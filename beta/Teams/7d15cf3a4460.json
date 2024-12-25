@@ -1,0 +1,190 @@
+{
+  "/chats/{chat-id}/messages/{chatMessage-id}/hostedContents/{chatMessageHostedContent-id}/$value": {
+    "get": {
+      "tags": [
+        "chats.chatMessage"
+      ],
+      "summary": "List hostedContents",
+      "description": "Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content.s",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-beta"
+      },
+      "operationId": "chat.message_GetHostedContentsContent",
+      "parameters": [
+        {
+          "name": "chat-id",
+          "in": "path",
+          "description": "The unique identifier of chat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chat"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "chats.chatMessage"
+      ],
+      "summary": "Update media content for the navigation property hostedContents in chats",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "chat.message_SetHostedContentsContent",
+      "parameters": [
+        {
+          "name": "chat-id",
+          "in": "path",
+          "description": "The unique identifier of chat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chat"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "chats.chatMessage"
+      ],
+      "summary": "Delete media content for the navigation property hostedContents in chats",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "chat.message_DeleteHostedContentsContent",
+      "parameters": [
+        {
+          "name": "chat-id",
+          "in": "path",
+          "description": "The unique identifier of chat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chat"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

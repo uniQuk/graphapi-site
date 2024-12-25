@@ -1,0 +1,51 @@
+{
+  "/deviceManagement/operationApprovalRequests/microsoft.graph.retrieveRequestStatus": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action retrieveRequestStatus",
+      "operationId": "deviceManagement.operationApprovalRequest_retrieveRequestStatus",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entityId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "entityType": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.operationApprovalRequestEntityStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

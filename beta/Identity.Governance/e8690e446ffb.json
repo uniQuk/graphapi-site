@@ -1,0 +1,143 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment-id}/accessPackage/incompatibleGroups/{group-id}/serviceProvisioningErrors": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get serviceProvisioningErrors property value",
+      "description": "Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object.",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.incompatibleGroup_ListServiceProvisioningError",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/microsoft.graph.serviceProvisioningErrorCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "/admin/windows/updates/deployments/{deployment-id}/audience/members/{updatableAsset-id}/microsoft.graph.windowsUpdates.removeMembersById": {
+    "post": {
+      "tags": [
+        "admin.Actions"
+      ],
+      "summary": "Invoke action removeMembersById",
+      "description": "Remove members of the same type from an updatableAssetGroup. You can also use the method removeMembers to remove members.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-removemembersbyid?view=graph-rest-beta"
+      },
+      "operationId": "admin.window.update.deployment.audience.member_removeMembersGraphBPreId",
+      "parameters": [
+        {
+          "name": "deployment-id",
+          "in": "path",
+          "description": "The unique identifier of deployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deployment"
+        },
+        {
+          "name": "updatableAsset-id",
+          "in": "path",
+          "description": "The unique identifier of updatableAsset",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "updatableAsset"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "memberEntityType": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

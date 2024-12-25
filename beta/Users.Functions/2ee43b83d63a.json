@@ -1,0 +1,210 @@
+{
+  "/users/{user-id}/drives/{drive-id}/root/microsoft.graph.getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}')": {
+    "get": {
+      "tags": [
+        "users.Functions"
+      ],
+      "summary": "Invoke function getActivitiesByInterval",
+      "description": "Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/itemactivity-getbyinterval?view=graph-rest-beta"
+      },
+      "operationId": "user.drive.root_getActivitiesGraphBPreInterval",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "startDateTime",
+          "in": "path",
+          "description": "Usage: startDateTime='{startDateTime}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "endDateTime",
+          "in": "path",
+          "description": "Usage: endDateTime='{endDateTime}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "interval",
+          "in": "path",
+          "description": "Usage: interval='{interval}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of itemActivityStat",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.itemActivityStat"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "function",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

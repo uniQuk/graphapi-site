@@ -1,0 +1,41 @@
+{
+  "/deviceAppManagement/vppTokens/{vppToken-id}/microsoft.graph.syncLicenses": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action syncLicenses",
+      "description": "Syncs licenses associated with a specific appleVolumePurchaseProgramToken",
+      "operationId": "deviceAppManagement.vppToken_syncLicense",
+      "parameters": [
+        {
+          "name": "vppToken-id",
+          "in": "path",
+          "description": "The unique identifier of vppToken",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "vppToken"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.vppToken"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

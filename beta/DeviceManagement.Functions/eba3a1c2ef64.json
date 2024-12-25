@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/deviceHealthScripts/microsoft.graph.getRemediationSummary()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getRemediationSummary",
+      "operationId": "deviceManagement.deviceHealthScript_getRemediationSummary",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceHealthScriptRemediationSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

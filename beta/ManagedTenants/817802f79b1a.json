@@ -1,0 +1,158 @@
+{
+  "/tenantRelationships/managedTenants/cloudPcConnections/{cloudPcConnection-id}": {
+    "get": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Get cloudPcConnection",
+      "description": "Read the properties and relationships of a cloudPcConnection object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-beta"
+      },
+      "operationId": "tenantRelationship.managedTenant_GetCloudPcConnection",
+      "parameters": [
+        {
+          "name": "cloudPcConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcConnection"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.cloudPcConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Update the navigation property cloudPcConnections in tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_UpdateCloudPcConnection",
+      "parameters": [
+        {
+          "name": "cloudPcConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcConnection"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedTenants.cloudPcConnection"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.cloudPcConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Delete navigation property cloudPcConnections for tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_DeleteCloudPcConnection",
+      "parameters": [
+        {
+          "name": "cloudPcConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcConnection"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

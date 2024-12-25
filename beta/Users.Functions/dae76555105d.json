@@ -1,0 +1,97 @@
+{
+  "/users/{user-id}/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+    "get": {
+      "tags": [
+        "users.Functions"
+      ],
+      "summary": "Invoke function getManagedDevicesWithFailedOrPendingApps",
+      "description": "Retrieves the list of devices with failed or pending apps",
+      "operationId": "user_getManagedDevicesGraphWPreFailedOrPendingApp",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/getManagedDevicesWithFailedOrPendingAppsResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "function",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

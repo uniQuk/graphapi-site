@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/deviceConfigurations/{deviceConfiguration-id}/microsoft.graph.assignedAccessMultiModeProfiles": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action assignedAccessMultiModeProfiles",
+      "operationId": "deviceManagement.deviceConfiguration_assignedAccessMultiModeProfile",
+      "parameters": [
+        {
+          "name": "deviceConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of deviceConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "assignedAccessMultiModeProfiles": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.windowsAssignedAccessProfile"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "/deviceManagement/roleScopeTags/{roleScopeTag-id}/microsoft.graph.assign": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action assign",
+      "operationId": "deviceManagement.roleScopeTag_assign",
+      "parameters": [
+        {
+          "name": "roleScopeTag-id",
+          "in": "path",
+          "description": "The unique identifier of roleScopeTag",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "roleScopeTag"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "assignments": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.roleScopeTagAutoAssignment"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of roleScopeTagAutoAssignment",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.roleScopeTagAutoAssignment"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

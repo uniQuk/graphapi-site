@@ -1,0 +1,169 @@
+{
+  "/reports/dailyPrintUsageSummariesByUser": {
+    "get": {
+      "tags": [
+        "reports.printUsageByUser"
+      ],
+      "summary": "Get dailyPrintUsageSummariesByUser from reports",
+      "operationId": "report_ListDailyPrintUsageSummariesGraphBPreUser",
+      "parameters": [
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/microsoft.graph.printUsageByUserCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this."
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "reports.printUsageByUser"
+      ],
+      "summary": "Create new navigation property to dailyPrintUsageSummariesByUser for reports",
+      "operationId": "report_CreateDailyPrintUsageSummariesGraphBPreUser",
+      "requestBody": {
+        "description": "New navigation property",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printUsageByUser"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Created navigation property.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printUsageByUser"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

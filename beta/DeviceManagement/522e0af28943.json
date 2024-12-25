@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/macOSSoftwareUpdateAccountSummaries/{macOSSoftwareUpdateAccountSummary-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.macOSSoftwareUpdateAccountSummary"
+      ],
+      "summary": "Get macOSSoftwareUpdateAccountSummaries from deviceManagement",
+      "description": "The MacOS software update account summaries for this account.",
+      "operationId": "deviceManagement_GetMacOSSoftwareUpdateAccountSummary",
+      "parameters": [
+        {
+          "name": "macOSSoftwareUpdateAccountSummary-id",
+          "in": "path",
+          "description": "The unique identifier of macOSSoftwareUpdateAccountSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "macOSSoftwareUpdateAccountSummary"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.macOSSoftwareUpdateAccountSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.macOSSoftwareUpdateAccountSummary"
+      ],
+      "summary": "Update the navigation property macOSSoftwareUpdateAccountSummaries in deviceManagement",
+      "operationId": "deviceManagement_UpdateMacOSSoftwareUpdateAccountSummary",
+      "parameters": [
+        {
+          "name": "macOSSoftwareUpdateAccountSummary-id",
+          "in": "path",
+          "description": "The unique identifier of macOSSoftwareUpdateAccountSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "macOSSoftwareUpdateAccountSummary"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.macOSSoftwareUpdateAccountSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.macOSSoftwareUpdateAccountSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.macOSSoftwareUpdateAccountSummary"
+      ],
+      "summary": "Delete navigation property macOSSoftwareUpdateAccountSummaries for deviceManagement",
+      "operationId": "deviceManagement_DeleteMacOSSoftwareUpdateAccountSummary",
+      "parameters": [
+        {
+          "name": "macOSSoftwareUpdateAccountSummary-id",
+          "in": "path",
+          "description": "The unique identifier of macOSSoftwareUpdateAccountSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "macOSSoftwareUpdateAccountSummary"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

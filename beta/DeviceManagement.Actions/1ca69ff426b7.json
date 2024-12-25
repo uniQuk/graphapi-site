@@ -1,0 +1,33 @@
+{
+  "/deviceManagement/microsoftTunnelSites/{microsoftTunnelSite-id}/microsoft.graph.requestUpgrade": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action requestUpgrade",
+      "operationId": "deviceManagement.microsoftTunnelSite_requestUpgrade",
+      "parameters": [
+        {
+          "name": "microsoftTunnelSite-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelSite"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

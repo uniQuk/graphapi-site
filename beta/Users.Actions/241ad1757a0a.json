@@ -1,0 +1,98 @@
+{
+  "/users/{user-id}/onenote/sections/{onenoteSection-id}/microsoft.graph.copyToSectionGroup": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action copyToSectionGroup",
+      "description": "Copies a section to a specific section group. For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/section-copytosectiongroup?view=graph-rest-beta"
+      },
+      "operationId": "user.onenote.section_copyToSectionGroup",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "onenoteSection-id",
+          "in": "path",
+          "description": "The unique identifier of onenoteSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenoteSection"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "renameAs": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "siteCollectionId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "siteId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onenoteOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

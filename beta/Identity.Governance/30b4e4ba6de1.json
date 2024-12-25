@@ -1,0 +1,168 @@
+{
+  "/identityGovernance/lifecycleWorkflows/customTaskExtensions/{customTaskExtension-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Get customTaskExtension",
+      "description": "Read the properties and relationships of a customTaskExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-get?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.lifecycleWorkflow_GetCustomTaskExtension",
+      "parameters": [
+        {
+          "name": "customTaskExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customTaskExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customTaskExtension"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.customTaskExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Update customTaskExtension",
+      "description": "Update the properties of a customTaskExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-update?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.lifecycleWorkflow_UpdateCustomTaskExtension",
+      "parameters": [
+        {
+          "name": "customTaskExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customTaskExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customTaskExtension"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityGovernance.customTaskExtension"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.customTaskExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Delete customTaskExtension",
+      "description": "Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-delete?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.lifecycleWorkflow_DeleteCustomTaskExtension",
+      "parameters": [
+        {
+          "name": "customTaskExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customTaskExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customTaskExtension"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

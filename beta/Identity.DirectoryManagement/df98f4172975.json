@@ -1,0 +1,146 @@
+{
+  "/devices/{device-id}/memberOf/microsoft.graph.administrativeUnit": {
+    "get": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "Get the items of type microsoft.graph.administrativeUnit in the microsoft.graph.directoryObject collection",
+      "operationId": "device_ListMemberGraphOPreAsAdministrativeUnit",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "in": "header",
+          "description": "Indicates the requested consistency level. Documentation URL: https://docs.microsoft.com/graph/aad-advanced-queries",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "examples": {
+            "example-1": {
+              "description": "$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'.",
+              "value": "eventual"
+            }
+          }
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/microsoft.graph.administrativeUnitCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPki-id}/microsoft.graph.upload": {
+    "post": {
+      "tags": [
+        "directory.publicKeyInfrastructureRoot"
+      ],
+      "summary": "Invoke action upload",
+      "operationId": "directory.publicKeyInfrastructure.certificateBasedAuthConfiguration_upload",
+      "parameters": [
+        {
+          "name": "certificateBasedAuthPki-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedAuthPki",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedAuthPki"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uploadUrl": {
+                  "type": "string"
+                },
+                "sha256FileHash": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "/teams/{team-id}/channels/{channel-id}/messages/{chatMessage-id}": {
+    "get": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Get chatMessage in a channel or chat",
+      "description": "Retrieve a single message or a message reply in a channel or a chat.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-beta"
+      },
+      "operationId": "team.channel_GetMessage",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Update chatMessage",
+      "description": "Update a chatMessage object. You can update all the properties of chatMessage in delegated permissions scenarios, except for the policyViolation property and read-only properties. The policyViolation property is the only property that can be updated in application permissions scenarios. Updating works only for chats where conversation members are Microsoft Teams users. If one of the members is using Skype, the operation fails. This method doesn't support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chatmessage-update?view=graph-rest-beta"
+      },
+      "operationId": "team.channel_UpdateMessage",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Delete navigation property messages for teams",
+      "operationId": "team.channel_DeleteMessage",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

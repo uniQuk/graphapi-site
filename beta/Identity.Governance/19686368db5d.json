@@ -1,0 +1,158 @@
+{
+  "/roleManagement/directory/roleAssignmentScheduleRequests/{unifiedRoleAssignmentScheduleRequest-id}": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Get unifiedRoleAssignmentScheduleRequest",
+      "description": "In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.directory_GetRoleAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentScheduleRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentScheduleRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Update the navigation property roleAssignmentScheduleRequests in roleManagement",
+      "operationId": "roleManagement.directory_UpdateRoleAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentScheduleRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentScheduleRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentScheduleRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Delete navigation property roleAssignmentScheduleRequests for roleManagement",
+      "operationId": "roleManagement.directory_DeleteRoleAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentScheduleRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

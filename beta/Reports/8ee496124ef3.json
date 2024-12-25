@@ -1,0 +1,69 @@
+{
+  "/reports/userInsights/monthly/signUps/{userSignUpMetric-id}": {
+    "get": {
+      "tags": [
+        "reports.userInsightsRoot"
+      ],
+      "summary": "Get signUps from reports",
+      "description": "Total sign-ups on apps registered in the tenant for a specified period.",
+      "operationId": "report.userInsight.monthly_GetSignUp",
+      "parameters": [
+        {
+          "name": "userSignUpMetric-id",
+          "in": "path",
+          "description": "The unique identifier of userSignUpMetric",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userSignUpMetric"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userSignUpMetric"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

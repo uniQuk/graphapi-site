@@ -1,0 +1,58 @@
+{
+  "/devices/{device-id}/registeredUsers/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "Delete registeredUser",
+      "description": "Remove a user as a registered user of the device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/device-delete-registeredusers?view=graph-rest-beta"
+      },
+      "operationId": "device.registeredUser_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

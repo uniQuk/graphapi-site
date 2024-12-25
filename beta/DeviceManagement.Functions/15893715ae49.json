@@ -1,0 +1,51 @@
+{
+  "/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting-id}/referencingConfigurationPolicies/{deviceManagementConfigurationPolicy-id}/microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function retrieveLatestUpgradeDefaultBaselinePolicy",
+      "operationId": "deviceManagement.reusablePolicySetting.referencingConfigurationPolicy_retrieveLatestUpgradeDefaultBaselinePolicy",
+      "parameters": [
+        {
+          "name": "deviceManagementReusablePolicySetting-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementReusablePolicySetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementReusablePolicySetting"
+        },
+        {
+          "name": "deviceManagementConfigurationPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationPolicy"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementConfigurationPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

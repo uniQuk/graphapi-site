@@ -1,0 +1,163 @@
+{
+  "/networkAccess/forwardingProfiles/{forwardingProfile-id}": {
+    "get": {
+      "tags": [
+        "networkAccess.forwardingProfile"
+      ],
+      "summary": "Get forwardingProfile",
+      "description": "Retrieve information about a specific forwarding profile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-beta"
+      },
+      "operationId": "networkAccess_GetForwardingProfile",
+      "parameters": [
+        {
+          "name": "forwardingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.forwardingProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "networkAccess.forwardingProfile"
+      ],
+      "summary": "Update forwardingProfile",
+      "description": "Update an existing forwarding profile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-beta"
+      },
+      "operationId": "networkAccess_UpdateForwardingProfile",
+      "parameters": [
+        {
+          "name": "forwardingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.networkaccess.forwardingProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.forwardingProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "networkAccess.forwardingProfile"
+      ],
+      "summary": "Delete navigation property forwardingProfiles for networkAccess",
+      "operationId": "networkAccess_DeleteForwardingProfile",
+      "parameters": [
+        {
+          "name": "forwardingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

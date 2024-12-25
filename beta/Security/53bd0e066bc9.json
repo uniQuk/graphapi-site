@@ -1,0 +1,66 @@
+{
+  "/security/collaboration/analyzedEmails/microsoft.graph.security.remediate": {
+    "post": {
+      "tags": [
+        "security.Actions"
+      ],
+      "summary": "Invoke action remediate",
+      "description": "Remove a potential threat from end users' mailboxes. Remediation means to take prescribed action against a threat. This API can trigger email purge actions like move to junk, move to deleted items, soft delete, hard delete, or move to Inbox. This API enables scenarios and use cases such as SOAR integration, playbooks, and automations. For more information read email remediation, trigger action and track actions. If there is false positives admins can take move to inbox action.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-analyzedemail-remediate?view=graph-rest-beta"
+      },
+      "operationId": "security.collaboration.analyzedEmail_remediate",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "severity": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.remediationSeverity"
+                },
+                "action": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.remediationAction"
+                },
+                "remediateSendersCopy": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "analyzedEmails": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.security.analyzedEmail"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

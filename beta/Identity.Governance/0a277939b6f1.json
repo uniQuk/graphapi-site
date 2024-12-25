@@ -1,0 +1,65 @@
+{
+  "/identityGovernance/lifecycleWorkflows/workflows/{workflow-id}/runs/microsoft.graph.identityGovernance.summary(startDateTime={startDateTime},endDateTime={endDateTime})": {
+    "get": {
+      "tags": [
+        "identityGovernance.Functions"
+      ],
+      "summary": "Invoke function summary",
+      "description": "Get a summary of runs for a specified time period. Because the amount of runs returned by the List API call can be overwhelming, this summary allows the administrator to get a quick overview based on counts.",
+      "operationId": "identityGovernance.lifecycleWorkflow.workflow.run_summary",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "startDateTime",
+          "in": "path",
+          "description": "Usage: startDateTime={startDateTime}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        {
+          "name": "endDateTime",
+          "in": "path",
+          "description": "Usage: endDateTime={endDateTime}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.runSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

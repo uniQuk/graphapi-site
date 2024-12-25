@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/appleUserInitiatedEnrollmentProfiles/{appleUserInitiatedEnrollmentProfile-id}/microsoft.graph.setPriority": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action setPriority",
+      "operationId": "deviceManagement.appleUserInitiatedEnrollmentProfile_setPriority",
+      "parameters": [
+        {
+          "name": "appleUserInitiatedEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of appleUserInitiatedEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appleUserInitiatedEnrollmentProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "priority": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

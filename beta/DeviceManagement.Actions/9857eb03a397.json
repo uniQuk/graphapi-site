@@ -1,0 +1,34 @@
+{
+  "/deviceManagement/depOnboardingSettings/{depOnboardingSetting-id}/microsoft.graph.syncWithAppleDeviceEnrollmentProgram": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action syncWithAppleDeviceEnrollmentProgram",
+      "description": "Synchronizes between Apple Device Enrollment Program and Intune",
+      "operationId": "deviceManagement.depOnboardingSetting_syncGraphWPreAppleDeviceEnrollmentProgram",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

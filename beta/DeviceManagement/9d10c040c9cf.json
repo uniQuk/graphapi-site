@@ -1,0 +1,119 @@
+{
+  "/deviceManagement/androidManagedStoreAccountEnterpriseSettings": {
+    "get": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAccountEnterpriseSettings"
+      ],
+      "summary": "Get androidManagedStoreAccountEnterpriseSettings from deviceManagement",
+      "description": "The singleton Android managed store account enterprise settings entity.",
+      "operationId": "deviceManagement_GetAndroidManagedStoreAccountEnterpriseSetting",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAccountEnterpriseSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAccountEnterpriseSettings"
+      ],
+      "summary": "Update the navigation property androidManagedStoreAccountEnterpriseSettings in deviceManagement",
+      "operationId": "deviceManagement_UpdateAndroidManagedStoreAccountEnterpriseSetting",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAccountEnterpriseSettings"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAccountEnterpriseSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAccountEnterpriseSettings"
+      ],
+      "summary": "Delete navigation property androidManagedStoreAccountEnterpriseSettings for deviceManagement",
+      "operationId": "deviceManagement_DeleteAndroidManagedStoreAccountEnterpriseSetting",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

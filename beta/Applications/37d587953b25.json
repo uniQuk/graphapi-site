@@ -1,0 +1,49 @@
+{
+  "/applications/{application-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.start": {
+    "post": {
+      "tags": [
+        "applications.Actions"
+      ],
+      "summary": "Invoke action start",
+      "description": "Start an existing synchronization job. If the job is in a paused state, it continues processing changes from the point where it was paused. If the job is in quarantine, the quarantine status is cleared. Don't create scripts to call the start job continuously while it's running because that can cause the service to stop running. Use the start job only when the job is currently paused or in quarantine. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-start?view=graph-rest-beta"
+      },
+      "operationId": "application.synchronization.job_start",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

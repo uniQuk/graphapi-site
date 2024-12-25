@@ -1,0 +1,190 @@
+{
+  "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value": {
+    "get": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Download printDocument binary file",
+      "description": "Download the binary file associated with a printDocument. Calling this method yields a redirect response with a preauthenticated URL that can be used to download the payload.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printdocument-get-file?view=graph-rest-beta"
+      },
+      "operationId": "print.printer.job_GetDocumentsContent",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Update media content for the navigation property documents in print",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "print.printer.job_SetDocumentsContent",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Delete media content for the navigation property documents in print",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "print.printer.job_DeleteDocumentsContent",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

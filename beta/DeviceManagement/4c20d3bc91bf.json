@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/userExperienceAnalyticsMetricHistory/{userExperienceAnalyticsMetricHistory-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsMetricHistory"
+      ],
+      "summary": "Get userExperienceAnalyticsMetricHistory from deviceManagement",
+      "description": "User experience analytics metric history",
+      "operationId": "deviceManagement_GetUserExperienceAnalyticsMetricHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsMetricHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsMetricHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsMetricHistory"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsMetricHistory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsMetricHistory"
+      ],
+      "summary": "Update the navigation property userExperienceAnalyticsMetricHistory in deviceManagement",
+      "operationId": "deviceManagement_UpdateUserExperienceAnalyticsMetricHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsMetricHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsMetricHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsMetricHistory"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsMetricHistory"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsMetricHistory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsMetricHistory"
+      ],
+      "summary": "Delete navigation property userExperienceAnalyticsMetricHistory for deviceManagement",
+      "operationId": "deviceManagement_DeleteUserExperienceAnalyticsMetricHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsMetricHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsMetricHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsMetricHistory"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

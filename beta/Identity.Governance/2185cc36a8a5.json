@@ -1,0 +1,82 @@
+{
+  "/privilegedAccess/{privilegedAccess-id}/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/microsoft.graph.updateRequest": {
+    "post": {
+      "tags": [
+        "privilegedAccess.Actions"
+      ],
+      "summary": "Invoke action updateRequest",
+      "operationId": "privilegedAccess.roleAssignmentRequest_updateRequest",
+      "parameters": [
+        {
+          "name": "privilegedAccess-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccess",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccess"
+        },
+        {
+          "name": "governanceRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of governanceRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "governanceRoleAssignmentRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "decision": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "assignmentState": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "schedule": {
+                  "$ref": "#/components/schemas/microsoft.graph.governanceSchedule"
+                },
+                "reason": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.governanceRoleAssignmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

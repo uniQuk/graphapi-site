@@ -1,0 +1,215 @@
+{
+  "/applications/{application-id}/owners/$ref": {
+    "get": {
+      "tags": [
+        "applications.directoryObject"
+      ],
+      "summary": "List owners of an application",
+      "description": "Retrieve a list of owners for an application that are directoryObject types.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-list-owners?view=graph-rest-beta"
+      },
+      "operationId": "application_ListOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "in": "header",
+          "description": "Indicates the requested consistency level. Documentation URL: https://docs.microsoft.com/graph/aad-advanced-queries",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "examples": {
+            "example-1": {
+              "description": "$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'.",
+              "value": "eventual"
+            }
+          }
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/StringCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "applications.directoryObject"
+      ],
+      "summary": "Add owner",
+      "description": "Add an owner to an application. Currently, only individual users are supported as owners of applications.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-post-owners?view=graph-rest-beta"
+      },
+      "operationId": "application_CreateOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPostBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "applications.directoryObject"
+      ],
+      "summary": "Remove owner",
+      "description": "Remove an owner from an application. As a recommended best practice, apps should have at least two owners.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-delete-owners?view=graph-rest-beta"
+      },
+      "operationId": "application_DeleteOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "@id",
+          "in": "query",
+          "description": "The delete Uri",
+          "required": true,
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

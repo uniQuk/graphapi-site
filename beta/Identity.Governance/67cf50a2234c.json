@@ -1,0 +1,153 @@
+{
+  "/programControlTypes/{programControlType-id}": {
+    "get": {
+      "tags": [
+        "programControlTypes.programControlType"
+      ],
+      "summary": "Get entity from programControlTypes by key",
+      "operationId": "programControlType_GetProgramControlType",
+      "parameters": [
+        {
+          "name": "programControlType-id",
+          "in": "path",
+          "description": "The unique identifier of programControlType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "programControlType"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.programControlType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "programControlTypes.programControlType"
+      ],
+      "summary": "Update entity in programControlTypes",
+      "operationId": "programControlType_UpdateProgramControlType",
+      "parameters": [
+        {
+          "name": "programControlType-id",
+          "in": "path",
+          "description": "The unique identifier of programControlType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "programControlType"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.programControlType"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.programControlType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "programControlTypes.programControlType"
+      ],
+      "summary": "Delete entity from programControlTypes",
+      "operationId": "programControlType_DeleteProgramControlType",
+      "parameters": [
+        {
+          "name": "programControlType-id",
+          "in": "path",
+          "description": "The unique identifier of programControlType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "programControlType"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

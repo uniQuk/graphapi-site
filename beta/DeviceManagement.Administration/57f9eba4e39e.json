@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/groupPolicyMigrationReports/{groupPolicyMigrationReport-id}/unsupportedGroupPolicyExtensions/{unsupportedGroupPolicyExtension-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyMigrationReport"
+      ],
+      "summary": "Get unsupportedGroupPolicyExtensions from deviceManagement",
+      "description": "A list of unsupported group policy extensions inside the Group Policy Object.",
+      "operationId": "deviceManagement.groupPolicyMigrationReport_GetUnsupportedGroupPolicyExtension",
+      "parameters": [
+        {
+          "name": "groupPolicyMigrationReport-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyMigrationReport",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyMigrationReport"
+        },
+        {
+          "name": "unsupportedGroupPolicyExtension-id",
+          "in": "path",
+          "description": "The unique identifier of unsupportedGroupPolicyExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unsupportedGroupPolicyExtension"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unsupportedGroupPolicyExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.groupPolicyMigrationReport"
+      ],
+      "summary": "Update the navigation property unsupportedGroupPolicyExtensions in deviceManagement",
+      "operationId": "deviceManagement.groupPolicyMigrationReport_UpdateUnsupportedGroupPolicyExtension",
+      "parameters": [
+        {
+          "name": "groupPolicyMigrationReport-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyMigrationReport",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyMigrationReport"
+        },
+        {
+          "name": "unsupportedGroupPolicyExtension-id",
+          "in": "path",
+          "description": "The unique identifier of unsupportedGroupPolicyExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unsupportedGroupPolicyExtension"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unsupportedGroupPolicyExtension"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unsupportedGroupPolicyExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.groupPolicyMigrationReport"
+      ],
+      "summary": "Delete navigation property unsupportedGroupPolicyExtensions for deviceManagement",
+      "operationId": "deviceManagement.groupPolicyMigrationReport_DeleteUnsupportedGroupPolicyExtension",
+      "parameters": [
+        {
+          "name": "groupPolicyMigrationReport-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyMigrationReport",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyMigrationReport"
+        },
+        {
+          "name": "unsupportedGroupPolicyExtension-id",
+          "in": "path",
+          "description": "The unique identifier of unsupportedGroupPolicyExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unsupportedGroupPolicyExtension"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "/external/connections/{externalConnection-id}/items/{externalItem-id}/microsoft.graph.externalConnectors.addActivities": {
+    "post": {
+      "tags": [
+        "external.Actions"
+      ],
+      "summary": "Invoke action addActivities",
+      "operationId": "external.connection.item_addActivity",
+      "parameters": [
+        {
+          "name": "externalConnection-id",
+          "in": "path",
+          "description": "The unique identifier of externalConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalConnection"
+        },
+        {
+          "name": "externalItem-id",
+          "in": "path",
+          "description": "The unique identifier of externalItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalItem"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.externalConnectors.externalActivity"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of externalActivityResult",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.externalConnectors.externalActivityResult"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

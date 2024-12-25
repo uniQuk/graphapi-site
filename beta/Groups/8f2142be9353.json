@@ -1,0 +1,73 @@
+{
+  "/groups/{group-id}/groupLifecyclePolicies/microsoft.graph.renewGroup": {
+    "post": {
+      "tags": [
+        "groups.Actions"
+      ],
+      "summary": "Invoke action renewGroup",
+      "description": "Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/grouplifecyclepolicy-renewgroup?view=graph-rest-beta"
+      },
+      "operationId": "group.groupLifecyclePolicy_renewGroup",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "groupId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

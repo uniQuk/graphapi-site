@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/microsoft.graph.verifyWindowsEnrollmentAutoDiscovery(domainName='{domainName}')": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function verifyWindowsEnrollmentAutoDiscovery",
+      "operationId": "deviceManagement_verifyWindowsEnrollmentAutoDiscovery",
+      "parameters": [
+        {
+          "name": "domainName",
+          "in": "path",
+          "description": "Usage: domainName='{domainName}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

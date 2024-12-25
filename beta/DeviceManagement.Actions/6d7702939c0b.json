@@ -1,0 +1,72 @@
+{
+  "/deviceManagement/groupPolicyMigrationReports/{groupPolicyMigrationReport-id}/microsoft.graph.updateScopeTags": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action updateScopeTags",
+      "operationId": "deviceManagement.groupPolicyMigrationReport_updateScopeTag",
+      "parameters": [
+        {
+          "name": "groupPolicyMigrationReport-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyMigrationReport",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyMigrationReport"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "roleScopeTagIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

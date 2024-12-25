@@ -1,0 +1,271 @@
+{
+  "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}": {
+    "get": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Get permissions from users",
+      "description": "The set of permissions for the item. Read-only. Nullable.",
+      "operationId": "user.drive.item_GetPermission",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "permission-id",
+          "in": "path",
+          "description": "The unique identifier of permission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permission"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.permission"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Update the navigation property permissions in users",
+      "operationId": "user.drive.item_UpdatePermission",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "permission-id",
+          "in": "path",
+          "description": "The unique identifier of permission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permission"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.permission"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.permission"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Delete navigation property permissions for users",
+      "operationId": "user.drive.item_DeletePermission",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "permission-id",
+          "in": "path",
+          "description": "The unique identifier of permission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permission"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

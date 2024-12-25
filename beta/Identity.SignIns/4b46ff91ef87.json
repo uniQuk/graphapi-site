@@ -1,0 +1,168 @@
+{
+  "/identity/b2cUserFlows/{b2cIdentityUserFlow-id}": {
+    "get": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Get b2cIdentityUserFlow",
+      "description": "Retrieve the properties and relationships of a b2cUserFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-beta"
+      },
+      "operationId": "identity_GetB2cUserFlow",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.b2cIdentityUserFlow"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Update b2cIdentityUserFlow",
+      "description": "Update the properties of a b2cIdentityUserFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-beta"
+      },
+      "operationId": "identity_UpdateB2cUserFlow",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.b2cIdentityUserFlow"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.b2cIdentityUserFlow"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Delete b2cIdentityUserFlow",
+      "description": "Delete a b2cIdentityUserFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-beta"
+      },
+      "operationId": "identity_DeleteB2cUserFlow",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

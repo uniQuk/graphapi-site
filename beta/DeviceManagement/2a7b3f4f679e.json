@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Get notificationMessageTemplates from deviceManagement",
+      "description": "The Notification Message Templates.",
+      "operationId": "deviceManagement_GetNotificationMessageTemplate",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.notificationMessageTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Update the navigation property notificationMessageTemplates in deviceManagement",
+      "operationId": "deviceManagement_UpdateNotificationMessageTemplate",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.notificationMessageTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.notificationMessageTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Delete navigation property notificationMessageTemplates for deviceManagement",
+      "operationId": "deviceManagement_DeleteNotificationMessageTemplate",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

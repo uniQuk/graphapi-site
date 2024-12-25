@@ -1,0 +1,86 @@
+{
+  "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/lastIndexOperation": {
+    "get": {
+      "tags": [
+        "compliance.ediscoveryroot"
+      ],
+      "summary": "Get lastIndexOperation from compliance",
+      "operationId": "compliance.ediscovery.case.custodian_GetLastIndexOperation",
+      "parameters": [
+        {
+          "name": "case-id",
+          "in": "path",
+          "description": "The unique identifier of case",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "case"
+        },
+        {
+          "name": "custodian-id",
+          "in": "path",
+          "description": "The unique identifier of custodian",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "custodian"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.ediscovery.caseIndexOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-02-01",
+        "date": "2022-12-05",
+        "version": "2022-12/ediscoveryNamespace",
+        "description": "The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

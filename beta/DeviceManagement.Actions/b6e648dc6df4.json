@@ -1,0 +1,85 @@
+{
+  "/deviceManagement/virtualEndpoint/cloudPCs/microsoft.graph.bulkResize": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action bulkResize",
+      "description": "Perform a bulk resize action to resize a group of cloudPCs that successfully pass validation. If any devices can't be resized, those devices indicate 'resize failed'. The remaining devices are provisioned for the resize process.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpc-bulkresize?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.cloudPC_bulkResize",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cloudPcIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "targetServicePlanId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.cloudPcRemoteActionResult"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-09-24",
+        "date": "2023-05-24",
+        "version": "2023-05/bulkResize",
+        "description": "The bulkResize action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api."
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

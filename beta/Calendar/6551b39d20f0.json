@@ -1,0 +1,41 @@
+{
+  "/places/microsoft.graph.roomList/$count": {
+    "get": {
+      "tags": [
+        "places.place"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "place_GetCountAsRoomList",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

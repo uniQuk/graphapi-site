@@ -1,0 +1,66 @@
+{
+  "/directory/impactedResources/{impactedResource-id}/microsoft.graph.postpone": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action postpone",
+      "description": "Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/impactedresource-postpone?view=graph-rest-beta"
+      },
+      "operationId": "directory.impactedResource_postpone",
+      "parameters": [
+        {
+          "name": "impactedResource-id",
+          "in": "path",
+          "description": "The unique identifier of impactedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "impactedResource"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "postponeUntilDateTime": {
+                  "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.impactedResource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

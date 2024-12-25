@@ -1,0 +1,225 @@
+{
+  "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/userSources": {
+    "get": {
+      "tags": [
+        "compliance.ediscoveryroot"
+      ],
+      "summary": "List legalHold userSources",
+      "description": "Get the list of userSource objects associated with a legal hold.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-usersources?view=graph-rest-beta"
+      },
+      "operationId": "compliance.ediscovery.case.legalHold_ListUserSource",
+      "parameters": [
+        {
+          "name": "case-id",
+          "in": "path",
+          "description": "The unique identifier of case",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "case"
+        },
+        {
+          "name": "legalHold-id",
+          "in": "path",
+          "description": "The unique identifier of legalHold",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "legalHold"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/microsoft.graph.ediscovery.userSourceCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-02-01",
+        "date": "2022-12-05",
+        "version": "2022-12/ediscoveryNamespace",
+        "description": "The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security."
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "compliance.ediscoveryroot"
+      ],
+      "summary": "Create legalHold userSource",
+      "description": "Adds a userSource to a legalHold object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-usersources?view=graph-rest-beta"
+      },
+      "operationId": "compliance.ediscovery.case.legalHold_CreateUserSource",
+      "parameters": [
+        {
+          "name": "case-id",
+          "in": "path",
+          "description": "The unique identifier of case",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "case"
+        },
+        {
+          "name": "legalHold-id",
+          "in": "path",
+          "description": "The unique identifier of legalHold",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "legalHold"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.ediscovery.userSource"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Created navigation property.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.ediscovery.userSource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-02-01",
+        "date": "2022-12-05",
+        "version": "2022-12/ediscoveryNamespace",
+        "description": "The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "/privilegedRoleAssignmentRequests/{privilegedRoleAssignmentRequest-id}/roleInfo/assignments/{privilegedRoleAssignment-id}": {
+    "get": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.privilegedRole"
+      ],
+      "summary": "Get assignments from privilegedRoleAssignmentRequests",
+      "operationId": "privilegedRoleAssignmentRequest.roleInfo_GetAssignment",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        },
+        {
+          "name": "privilegedRoleAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

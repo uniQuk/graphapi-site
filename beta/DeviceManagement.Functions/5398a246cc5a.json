@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/deviceHealthScripts/microsoft.graph.areGlobalScriptsAvailable()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function areGlobalScriptsAvailable",
+      "operationId": "deviceManagement.deviceHealthScript_areGlobalScriptsAvailable",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.globalDeviceHealthScriptState"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

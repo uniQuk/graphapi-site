@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/policySets/{policySet-id}/items/{policySetItem-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.policySet"
+      ],
+      "summary": "Get items from deviceAppManagement",
+      "description": "Items of the PolicySet with maximum count 100.",
+      "operationId": "deviceAppManagement.policySet_GetItem",
+      "parameters": [
+        {
+          "name": "policySet-id",
+          "in": "path",
+          "description": "The unique identifier of policySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySet"
+        },
+        {
+          "name": "policySetItem-id",
+          "in": "path",
+          "description": "The unique identifier of policySetItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySetItem"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.policySetItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.policySet"
+      ],
+      "summary": "Update the navigation property items in deviceAppManagement",
+      "operationId": "deviceAppManagement.policySet_UpdateItem",
+      "parameters": [
+        {
+          "name": "policySet-id",
+          "in": "path",
+          "description": "The unique identifier of policySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySet"
+        },
+        {
+          "name": "policySetItem-id",
+          "in": "path",
+          "description": "The unique identifier of policySetItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySetItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.policySetItem"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.policySetItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.policySet"
+      ],
+      "summary": "Delete navigation property items for deviceAppManagement",
+      "operationId": "deviceAppManagement.policySet_DeleteItem",
+      "parameters": [
+        {
+          "name": "policySet-id",
+          "in": "path",
+          "description": "The unique identifier of policySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySet"
+        },
+        {
+          "name": "policySetItem-id",
+          "in": "path",
+          "description": "The unique identifier of policySetItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policySetItem"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

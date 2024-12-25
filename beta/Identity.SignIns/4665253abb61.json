@@ -1,0 +1,221 @@
+{
+  "/identity/b2cUserFlows/{b2cIdentityUserFlow-id}/identityProviders/$ref": {
+    "get": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "List all identityProviders in a b2cIdentityUserFlow (deprecated)",
+      "description": "Get the identity providers in a b2cIdentityUserFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-list-identityproviders?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_ListIdentityProviderGraphBPreRef",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/StringCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Add identityProvider to a b2cIdentityUserFlow (deprecated)",
+      "description": "Add identity providers in a b2cIdentityUserFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-post-identityproviders?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_CreateIdentityProviderGraphBPreRef",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPostBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Delete an identityProvider from a b2cIdentityUserFlow (deprecated)",
+      "description": "Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete-identityproviders?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_DeleteIdentityProviderGraphBPreRef",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "@id",
+          "in": "query",
+          "description": "The delete Uri",
+          "required": true,
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

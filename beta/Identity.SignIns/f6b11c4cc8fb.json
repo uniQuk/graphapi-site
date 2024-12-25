@@ -1,0 +1,52 @@
+{
+  "/informationProtection/threatAssessmentRequests/{threatAssessmentRequest-id}/results/$count": {
+    "get": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "informationProtection.threatAssessmentRequest.result_GetCount",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

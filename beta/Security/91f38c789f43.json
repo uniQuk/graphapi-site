@@ -1,0 +1,191 @@
+{
+  "/security/cases/ediscoveryCases/{ediscoveryCase-id}/operations/{caseOperation-id}": {
+    "get": {
+      "tags": [
+        "security.casesRoot"
+      ],
+      "summary": "Get caseOperation",
+      "description": "Read the properties and relationships of a caseOperation object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-caseoperation-get?view=graph-rest-beta"
+      },
+      "operationId": "security.case.ediscoveryCase_GetOperation",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "caseOperation-id",
+          "in": "path",
+          "description": "The unique identifier of caseOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "caseOperation"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.caseOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.casesRoot"
+      ],
+      "summary": "Update the navigation property operations in security",
+      "operationId": "security.case.ediscoveryCase_UpdateOperation",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "caseOperation-id",
+          "in": "path",
+          "description": "The unique identifier of caseOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "caseOperation"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.caseOperation"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.caseOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.casesRoot"
+      ],
+      "summary": "Delete navigation property operations for security",
+      "operationId": "security.case.ediscoveryCase_DeleteOperation",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "caseOperation-id",
+          "in": "path",
+          "description": "The unique identifier of caseOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "caseOperation"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

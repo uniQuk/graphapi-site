@@ -1,0 +1,57 @@
+{
+  "/deviceAppManagement/deviceAppManagementTasks/{deviceAppManagementTask-id}/microsoft.graph.updateStatus": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action updateStatus",
+      "description": "Set the task's status and attach a note.",
+      "operationId": "deviceAppManagement.deviceAppManagementTask_updateStatus",
+      "parameters": [
+        {
+          "name": "deviceAppManagementTask-id",
+          "in": "path",
+          "description": "The unique identifier of deviceAppManagementTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceAppManagementTask"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "$ref": "#/components/schemas/microsoft.graph.deviceAppManagementTaskStatus"
+                },
+                "note": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

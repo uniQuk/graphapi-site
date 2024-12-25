@@ -1,0 +1,52 @@
+{
+  "/privilegedApproval/{privilegedApproval-id}/roleInfo/assignments/$count": {
+    "get": {
+      "tags": [
+        "privilegedApproval.privilegedRole"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "privilegedApproval.roleInfo.assignment_GetCount",
+      "parameters": [
+        {
+          "name": "privilegedApproval-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedApproval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedApproval"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

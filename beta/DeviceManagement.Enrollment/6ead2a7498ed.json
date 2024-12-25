@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/depOnboardingSettings/{depOnboardingSetting-id}/importedAppleDeviceIdentities/{importedAppleDeviceIdentity-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.depOnboardingSetting"
+      ],
+      "summary": "Get importedAppleDeviceIdentities from deviceManagement",
+      "description": "The imported Apple device identities.",
+      "operationId": "deviceManagement.depOnboardingSetting_GetImportedAppleDeviceIdentity",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        },
+        {
+          "name": "importedAppleDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of importedAppleDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "importedAppleDeviceIdentity"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.importedAppleDeviceIdentity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.depOnboardingSetting"
+      ],
+      "summary": "Update the navigation property importedAppleDeviceIdentities in deviceManagement",
+      "operationId": "deviceManagement.depOnboardingSetting_UpdateImportedAppleDeviceIdentity",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        },
+        {
+          "name": "importedAppleDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of importedAppleDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "importedAppleDeviceIdentity"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.importedAppleDeviceIdentity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.importedAppleDeviceIdentity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.depOnboardingSetting"
+      ],
+      "summary": "Delete navigation property importedAppleDeviceIdentities for deviceManagement",
+      "operationId": "deviceManagement.depOnboardingSetting_DeleteImportedAppleDeviceIdentity",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        },
+        {
+          "name": "importedAppleDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of importedAppleDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "importedAppleDeviceIdentity"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

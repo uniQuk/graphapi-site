@@ -1,0 +1,77 @@
+{
+  "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.stop": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action stop",
+      "description": "Stop a currently active accessReviewInstance. After the access review instance stops, the instance status will be Completed, the reviewers can no longer give input, and the access review decisions can be applied. Stopping an instance will not effect future instances. To prevent a recurring access review from starting future instances, update the schedule definition to change its scheduled end date.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewinstance-stop?view=graph-rest-beta"
+      },
+      "operationId": "user.pendingAccessReviewInstance.stage.decision.instance_stop",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "accessReviewInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstance"
+        },
+        {
+          "name": "accessReviewStage-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewStage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewStage"
+        },
+        {
+          "name": "accessReviewInstanceDecisionItem-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstanceDecisionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstanceDecisionItem"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

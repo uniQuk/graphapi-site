@@ -1,0 +1,128 @@
+{
+  "/policies/defaultAppManagementPolicy": {
+    "get": {
+      "tags": [
+        "policies.tenantAppManagementPolicy"
+      ],
+      "summary": "Get tenantAppManagementPolicy",
+      "description": "Read the properties of a tenantAppManagementPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "policy_GetDefaultAppManagementPolicy",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tenantAppManagementPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.tenantAppManagementPolicy"
+      ],
+      "summary": "Update tenantAppManagementPolicy",
+      "description": "Update the properties of a tenantAppManagementPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-beta"
+      },
+      "operationId": "policy_UpdateDefaultAppManagementPolicy",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.tenantAppManagementPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tenantAppManagementPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.tenantAppManagementPolicy"
+      ],
+      "summary": "Delete navigation property defaultAppManagementPolicy for policies",
+      "operationId": "policy_DeleteDefaultAppManagementPolicy",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

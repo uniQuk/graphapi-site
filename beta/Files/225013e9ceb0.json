@@ -1,0 +1,44 @@
+{
+  "/shares/{sharedDriveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+    "post": {
+      "tags": [
+        "shares.Actions"
+      ],
+      "summary": "Invoke action restoreVersion",
+      "operationId": "share.listItem.version_restoreVersion",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "listItemVersion-id",
+          "in": "path",
+          "description": "The unique identifier of listItemVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "listItemVersion"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

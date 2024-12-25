@@ -1,0 +1,32 @@
+{
+  "/security/identities/sensors/microsoft.graph.security.regenerateDeploymentAccessKey": {
+    "post": {
+      "tags": [
+        "security.Actions"
+      ],
+      "summary": "Invoke action regenerateDeploymentAccessKey",
+      "description": "Generate a new deployment access key that can be used to install a sensor associated with the workspace.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-beta"
+      },
+      "operationId": "security.identity.sensor_regenerateDeploymentAccessKey",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.deploymentAccessKeyType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

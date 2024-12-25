@@ -1,0 +1,168 @@
+{
+  "/security/identities/sensors/{sensor-id}": {
+    "get": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Get sensor",
+      "description": "Read the properties and relationships of a sensor object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-sensor-get?view=graph-rest-beta"
+      },
+      "operationId": "security.identity_GetSensor",
+      "parameters": [
+        {
+          "name": "sensor-id",
+          "in": "path",
+          "description": "The unique identifier of sensor",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensor"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.sensor"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Update sensor",
+      "description": "Update the properties of a sensor object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-sensor-update?view=graph-rest-beta"
+      },
+      "operationId": "security.identity_UpdateSensor",
+      "parameters": [
+        {
+          "name": "sensor-id",
+          "in": "path",
+          "description": "The unique identifier of sensor",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensor"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.sensor"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.sensor"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Delete sensor",
+      "description": "Delete a sensor object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-identitycontainer-delete-sensors?view=graph-rest-beta"
+      },
+      "operationId": "security.identity_DeleteSensor",
+      "parameters": [
+        {
+          "name": "sensor-id",
+          "in": "path",
+          "description": "The unique identifier of sensor",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensor"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

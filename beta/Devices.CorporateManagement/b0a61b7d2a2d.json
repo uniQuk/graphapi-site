@@ -1,0 +1,58 @@
+{
+  "/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration-id}/microsoft.graph.targetApps": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action targetApps",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration_targetApp",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "apps": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.managedMobileApp"
+                  }
+                },
+                "appGroupType": {
+                  "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppGroupType"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

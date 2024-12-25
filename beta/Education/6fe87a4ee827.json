@@ -1,0 +1,71 @@
+{
+  "/education/synchronizationProfiles/{educationSynchronizationProfile-id}/microsoft.graph.start": {
+    "post": {
+      "tags": [
+        "education.Actions"
+      ],
+      "summary": "Invoke action start",
+      "description": "Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-beta"
+      },
+      "operationId": "education.synchronizationProfile_start",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.educationFileSynchronizationVerificationMessage"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "/shares/{sharedDriveItem-id}/listItem/activities/{itemActivityOLD-id}/listItem": {
+    "get": {
+      "tags": [
+        "shares.listItem"
+      ],
+      "summary": "Get listItem from shares",
+      "operationId": "share.listItem.activity_GetListItem",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.listItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

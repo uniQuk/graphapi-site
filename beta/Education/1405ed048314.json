@@ -1,0 +1,201 @@
+{
+  "/education/classes/{educationClass-id}/assignments/{educationAssignment-id}": {
+    "get": {
+      "tags": [
+        "education.educationClass"
+      ],
+      "summary": "Get educationAssignment",
+      "description": "Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class. You can use the Prefer header in your request to get the inactive status in case the assignment is deactivated; otherwise, the response value for the status property is unknownFutureValue.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-beta"
+      },
+      "operationId": "education.class_GetAssignment",
+      "parameters": [
+        {
+          "name": "educationClass-id",
+          "in": "path",
+          "description": "The unique identifier of educationClass",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationClass"
+        },
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "education.educationClass"
+      ],
+      "summary": "Update educationassignment",
+      "description": "Update an educationAssignment object.  Only teachers in the class can do this. You can't use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationassignment-update?view=graph-rest-beta"
+      },
+      "operationId": "education.class_UpdateAssignment",
+      "parameters": [
+        {
+          "name": "educationClass-id",
+          "in": "path",
+          "description": "The unique identifier of educationClass",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationClass"
+        },
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.educationAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "education.educationClass"
+      ],
+      "summary": "Delete educationAssignment",
+      "description": "Delete an existing assignment. Only teachers within a class can delete assignments.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-beta"
+      },
+      "operationId": "education.class_DeleteAssignment",
+      "parameters": [
+        {
+          "name": "educationClass-id",
+          "in": "path",
+          "description": "The unique identifier of educationClass",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationClass"
+        },
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

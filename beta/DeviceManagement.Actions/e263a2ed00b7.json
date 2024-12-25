@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/windowsQualityUpdateProfiles/{windowsQualityUpdateProfile-id}/microsoft.graph.assign": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action assign",
+      "operationId": "deviceManagement.windowsQualityUpdateProfile_assign",
+      "parameters": [
+        {
+          "name": "windowsQualityUpdateProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsQualityUpdateProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsQualityUpdateProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "assignments": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.windowsQualityUpdateProfileAssignment"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

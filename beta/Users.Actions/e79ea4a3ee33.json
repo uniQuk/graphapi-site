@@ -1,0 +1,43 @@
+{
+  "/users/{user-id}/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action wipeManagedAppRegistrationsByAzureAdDeviceId",
+      "description": "Issues a wipe operation on an app registration with specified aad device Id.",
+      "operationId": "user_wipeManagedAppRegistrationsGraphBPreAzureAdDeviceId",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/wipeManagedAppRegistrationsByAzureAdDeviceIdRequestBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

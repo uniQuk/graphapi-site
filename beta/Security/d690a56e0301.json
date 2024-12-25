@@ -1,0 +1,174 @@
+{
+  "/security/providerTenantSettings/{providerTenantSetting-id}": {
+    "get": {
+      "tags": [
+        "security.providerTenantSetting"
+      ],
+      "summary": "Get providerTenantSettings from security",
+      "operationId": "security_GetProviderTenantSetting",
+      "parameters": [
+        {
+          "name": "providerTenantSetting-id",
+          "in": "path",
+          "description": "The unique identifier of providerTenantSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "providerTenantSetting"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.providerTenantSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.providerTenantSetting"
+      ],
+      "summary": "Update the navigation property providerTenantSettings in security",
+      "operationId": "security_UpdateProviderTenantSetting",
+      "parameters": [
+        {
+          "name": "providerTenantSetting-id",
+          "in": "path",
+          "description": "The unique identifier of providerTenantSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "providerTenantSetting"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.providerTenantSetting"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.providerTenantSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.providerTenantSetting"
+      ],
+      "summary": "Delete navigation property providerTenantSettings for security",
+      "operationId": "security_DeleteProviderTenantSetting",
+      "parameters": [
+        {
+          "name": "providerTenantSetting-id",
+          "in": "path",
+          "description": "The unique identifier of providerTenantSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "providerTenantSetting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

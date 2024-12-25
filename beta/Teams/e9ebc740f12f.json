@@ -1,0 +1,75 @@
+{
+  "/teamwork/teamTemplates/{teamTemplate-id}/definitions/{teamTemplateDefinition-id}/teamDefinition/primaryChannel/messages/{chatMessage-id}/microsoft.graph.setReaction": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action setReaction",
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel.message_setReaction",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reactionType": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

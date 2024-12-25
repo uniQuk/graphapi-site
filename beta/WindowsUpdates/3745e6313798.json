@@ -1,0 +1,187 @@
+{
+  "/admin/windows/updates/products/{product-id}/revisions/{productRevision-id}/knowledgeBaseArticle": {
+    "get": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Get knowledgeBaseArticle from admin",
+      "description": "The knowledge base article associated with the product revision.",
+      "operationId": "admin.window.update.product.revision_GetKnowledgeBaseArticle",
+      "parameters": [
+        {
+          "name": "product-id",
+          "in": "path",
+          "description": "The unique identifier of product",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "product"
+        },
+        {
+          "name": "productRevision-id",
+          "in": "path",
+          "description": "The unique identifier of productRevision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "productRevision"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Update the navigation property knowledgeBaseArticle in admin",
+      "operationId": "admin.window.update.product.revision_UpdateKnowledgeBaseArticle",
+      "parameters": [
+        {
+          "name": "product-id",
+          "in": "path",
+          "description": "The unique identifier of product",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "product"
+        },
+        {
+          "name": "productRevision-id",
+          "in": "path",
+          "description": "The unique identifier of productRevision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "productRevision"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.knowledgeBaseArticle"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Delete navigation property knowledgeBaseArticle for admin",
+      "operationId": "admin.window.update.product.revision_DeleteKnowledgeBaseArticle",
+      "parameters": [
+        {
+          "name": "product-id",
+          "in": "path",
+          "description": "The unique identifier of product",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "product"
+        },
+        {
+          "name": "productRevision-id",
+          "in": "path",
+          "description": "The unique identifier of productRevision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "productRevision"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

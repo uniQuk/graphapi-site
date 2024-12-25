@@ -1,0 +1,79 @@
+{
+  "/trustFramework/keySets/{trustFrameworkKeySet-id}/microsoft.graph.uploadSecret": {
+    "post": {
+      "tags": [
+        "trustFramework.Actions"
+      ],
+      "summary": "Invoke action uploadSecret",
+      "description": "Upload a plain text secret to a trustFrameworkKeyset. Examples of secrets are application secrets in Microsoft Entra ID, Google, Facebook, or any other identity provider. his method returns trustFrameworkKey.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframeworkkeyset-uploadsecret?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework.keySet_uploadSecret",
+      "parameters": [
+        {
+          "name": "trustFrameworkKeySet-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkKeySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkKeySet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "use": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "k": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "nbf": {
+                  "type": "integer",
+                  "format": "int64",
+                  "nullable": true
+                },
+                "exp": {
+                  "type": "integer",
+                  "format": "int64",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trustFrameworkKey"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "/identityProtection/riskyServicePrincipals/microsoft.graph.dismiss": {
+    "post": {
+      "tags": [
+        "identityProtection.Actions"
+      ],
+      "summary": "Invoke action dismiss",
+      "description": "Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account's risk level to none. You can dismiss up to 60 service principal accounts in one request.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/riskyserviceprincipal-dismiss?view=graph-rest-beta"
+      },
+      "operationId": "identityProtection.riskyServicePrincipal_dismiss",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "servicePrincipalIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

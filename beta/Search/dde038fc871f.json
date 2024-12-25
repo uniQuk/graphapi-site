@@ -1,0 +1,38 @@
+{
+  "/external/industryData/dataConnectors/{industryDataConnector-id}/microsoft.graph.industryData.validate": {
+    "post": {
+      "tags": [
+        "external.Actions"
+      ],
+      "summary": "Invoke action validate",
+      "description": "Perform validations applicable for the specific instance of the data connector.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-validate?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData.dataConnector_validate",
+      "parameters": [
+        {
+          "name": "industryDataConnector-id",
+          "in": "path",
+          "description": "The unique identifier of industryDataConnector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "industryDataConnector"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

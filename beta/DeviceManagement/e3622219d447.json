@@ -1,0 +1,63 @@
+{
+  "/deviceManagement/deviceManagementScripts/{deviceManagementScript-id}/userRunStates/{deviceManagementScriptUserState-id}/deviceRunStates/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementScript"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.deviceManagementScript.userRunState.deviceRunState_GetCount",
+      "parameters": [
+        {
+          "name": "deviceManagementScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementScript"
+        },
+        {
+          "name": "deviceManagementScriptUserState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementScriptUserState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementScriptUserState"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

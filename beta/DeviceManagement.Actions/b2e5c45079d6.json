@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/intents/{deviceManagementIntent-id}/microsoft.graph.updateSettings": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action updateSettings",
+      "operationId": "deviceManagement.intent_updateSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "settings": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

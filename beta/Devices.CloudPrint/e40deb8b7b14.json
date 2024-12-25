@@ -1,0 +1,196 @@
+{
+  "/print/printers/{printer-id}/jobs/{printJob-id}": {
+    "get": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Get printJob",
+      "description": "Retrieve the properties and relationships of a print job.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printjob-get?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_GetJob",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printJob"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Update printJob",
+      "description": "Update a print job. Only the configuration property can be updated. Updating a print job will only succeed if a printTask in a processing state, started by a trigger that the requesting app created, is associated with the print job. For details about how to register a task trigger, see Extending Universal Print to support pull printing.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printjob-update?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_UpdateJob",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printJob"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printJob"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Delete navigation property jobs for print",
+      "operationId": "print.printer_DeleteJob",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

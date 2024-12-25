@@ -1,0 +1,28 @@
+{
+  "/reports/microsoft.graph.deviceConfigurationDeviceActivity()": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function deviceConfigurationDeviceActivity",
+      "description": "Metadata for the device configuration device activity report",
+      "operationId": "report_deviceConfigurationDeviceActivity",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.report"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

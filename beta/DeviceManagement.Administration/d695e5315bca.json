@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/exchangeOnPremisesPolicies/{deviceManagementExchangeOnPremisesPolicy-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementExchangeOnPremisesPolicy"
+      ],
+      "summary": "Get exchangeOnPremisesPolicies from deviceManagement",
+      "description": "The list of Exchange On Premisis policies configured by the tenant.",
+      "operationId": "deviceManagement_GetExchangeOnPremisesPolicy",
+      "parameters": [
+        {
+          "name": "deviceManagementExchangeOnPremisesPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementExchangeOnPremisesPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementExchangeOnPremisesPolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementExchangeOnPremisesPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementExchangeOnPremisesPolicy"
+      ],
+      "summary": "Update the navigation property exchangeOnPremisesPolicies in deviceManagement",
+      "operationId": "deviceManagement_UpdateExchangeOnPremisesPolicy",
+      "parameters": [
+        {
+          "name": "deviceManagementExchangeOnPremisesPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementExchangeOnPremisesPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementExchangeOnPremisesPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementExchangeOnPremisesPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementExchangeOnPremisesPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementExchangeOnPremisesPolicy"
+      ],
+      "summary": "Delete navigation property exchangeOnPremisesPolicies for deviceManagement",
+      "operationId": "deviceManagement_DeleteExchangeOnPremisesPolicy",
+      "parameters": [
+        {
+          "name": "deviceManagementExchangeOnPremisesPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementExchangeOnPremisesPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementExchangeOnPremisesPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

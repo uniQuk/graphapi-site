@@ -1,0 +1,58 @@
+{
+  "/deviceManagement/depOnboardingSettings/{depOnboardingSetting-id}/microsoft.graph.uploadDepToken": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action uploadDepToken",
+      "description": "Uploads a new Device Enrollment Program token",
+      "operationId": "deviceManagement.depOnboardingSetting_uploadDepToken",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "appleId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "depToken": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "/planner/rosters/{plannerRoster-id}/microsoft.graph.assignSensitivityLabel": {
+    "post": {
+      "tags": [
+        "planner.Actions"
+      ],
+      "summary": "Invoke action assignSensitivityLabel",
+      "description": "Assign a sensitivity label to a plannerRoster object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerroster-assignsensitivitylabel?view=graph-rest-beta"
+      },
+      "operationId": "planner.roster_assignSensitivityLabel",
+      "parameters": [
+        {
+          "name": "plannerRoster-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRoster",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRoster"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sensitivityLabelId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "assignmentMethod": {
+                  "$ref": "#/components/schemas/microsoft.graph.sensitivityLabelAssignmentMethod"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.plannerRoster"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

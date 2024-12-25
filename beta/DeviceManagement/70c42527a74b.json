@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/intents/{deviceManagementIntent-id}/settings/{deviceManagementSettingInstance-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Get settings from deviceManagement",
+      "description": "Collection of all settings to be applied",
+      "operationId": "deviceManagement.intent_GetSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Update the navigation property settings in deviceManagement",
+      "operationId": "deviceManagement.intent_UpdateSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Delete navigation property settings for deviceManagement",
+      "operationId": "deviceManagement.intent_DeleteSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

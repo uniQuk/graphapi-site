@@ -1,0 +1,78 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.provisionOnDemand": {
+    "post": {
+      "tags": [
+        "servicePrincipals.Actions"
+      ],
+      "summary": "Invoke action provisionOnDemand",
+      "description": "Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. No user or group will be provisioned on-demand that would not have been provisioned through the regular provisioning cycles.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal.synchronization.job_provisionOnDemand",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "parameters": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.synchronizationJobApplicationParameters"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.stringKeyStringValuePair"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

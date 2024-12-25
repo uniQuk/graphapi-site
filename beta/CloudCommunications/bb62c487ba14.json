@@ -1,0 +1,72 @@
+{
+  "/communications/calls/{call-id}/participants/microsoft.graph.muteAll": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action muteAll",
+      "description": "Mute all participants in the call.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/participant-muteall?view=graph-rest-beta"
+      },
+      "operationId": "communication.call.participant_muteAll",
+      "parameters": [
+        {
+          "name": "call-id",
+          "in": "path",
+          "description": "The unique identifier of call",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "call"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "participants": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "clientContext": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.muteParticipantsOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

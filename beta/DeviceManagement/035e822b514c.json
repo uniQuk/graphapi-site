@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/intents/{deviceManagementIntent-id}/userStates/{deviceManagementIntentUserState-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Get userStates from deviceManagement",
+      "description": "Collection of states of all users that the intent is applied to",
+      "operationId": "deviceManagement.intent_GetUserState",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementIntentUserState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntentUserState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntentUserState"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementIntentUserState"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Update the navigation property userStates in deviceManagement",
+      "operationId": "deviceManagement.intent_UpdateUserState",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementIntentUserState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntentUserState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntentUserState"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementIntentUserState"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementIntentUserState"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Delete navigation property userStates for deviceManagement",
+      "operationId": "deviceManagement.intent_DeleteUserState",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementIntentUserState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntentUserState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntentUserState"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

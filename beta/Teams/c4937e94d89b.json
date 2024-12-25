@@ -1,0 +1,158 @@
+{
+  "/teamwork/devices/{teamworkDevice-id}": {
+    "get": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Get teamworkDevice",
+      "description": "Get the properties of a Microsoft Teams-enabled device. For example, you can use this method to get the device type, hardware detail, activity state, and health status information for a device that's enabled for Teams.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkdevice-get?view=graph-rest-beta"
+      },
+      "operationId": "teamwork_GetDevice",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDevice"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Update the navigation property devices in teamwork",
+      "operationId": "teamwork_UpdateDevice",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.teamworkDevice"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDevice"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Delete navigation property devices for teamwork",
+      "operationId": "teamwork_DeleteDevice",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

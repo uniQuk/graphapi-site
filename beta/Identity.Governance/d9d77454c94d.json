@@ -1,0 +1,153 @@
+{
+  "/privilegedOperationEvents/{privilegedOperationEvent-id}": {
+    "get": {
+      "tags": [
+        "privilegedOperationEvents.privilegedOperationEvent"
+      ],
+      "summary": "Get entity from privilegedOperationEvents by key",
+      "operationId": "privilegedOperationEvent_GetPrivilegedOperationEvent",
+      "parameters": [
+        {
+          "name": "privilegedOperationEvent-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedOperationEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedOperationEvent"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedOperationEvent"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "privilegedOperationEvents.privilegedOperationEvent"
+      ],
+      "summary": "Update entity in privilegedOperationEvents",
+      "operationId": "privilegedOperationEvent_UpdatePrivilegedOperationEvent",
+      "parameters": [
+        {
+          "name": "privilegedOperationEvent-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedOperationEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedOperationEvent"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.privilegedOperationEvent"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedOperationEvent"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "privilegedOperationEvents.privilegedOperationEvent"
+      ],
+      "summary": "Delete entity from privilegedOperationEvents",
+      "operationId": "privilegedOperationEvent_DeletePrivilegedOperationEvent",
+      "parameters": [
+        {
+          "name": "privilegedOperationEvent-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedOperationEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedOperationEvent"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

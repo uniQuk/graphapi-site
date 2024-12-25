@@ -1,0 +1,44 @@
+{
+  "/identityGovernance/roleManagementAlerts/alerts/{unifiedRoleManagementAlert-id}/alertIncidents/{unifiedRoleManagementAlertIncident-id}/microsoft.graph.remediate": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action remediate",
+      "operationId": "identityGovernance.roleManagementAlert.alert.alertIncident_remediate",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementAlert-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlert"
+        },
+        {
+          "name": "unifiedRoleManagementAlertIncident-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlertIncident",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlertIncident"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

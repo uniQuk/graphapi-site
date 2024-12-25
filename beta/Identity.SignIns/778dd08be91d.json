@@ -1,0 +1,45 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userAttributeAssignments/microsoft.graph.getOrder()": {
+    "get": {
+      "tags": [
+        "identity.Functions"
+      ],
+      "summary": "Invoke function getOrder",
+      "description": "Get the order of identityUserFlowAttributeAssignments being collected within a user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2xUserFlow.userAttributeAssignment_getOrder",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.assignmentOrder"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

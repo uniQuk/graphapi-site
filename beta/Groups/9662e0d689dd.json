@@ -1,0 +1,49 @@
+{
+  "/groups/{group-id}/calendarView/{event-id}/microsoft.graph.permanentDelete": {
+    "post": {
+      "tags": [
+        "groups.Actions"
+      ],
+      "summary": "Invoke action permanentDelete",
+      "description": "Permanently delete an event and place it in the Purges folder in the dumpster in the user's mailbox. Email clients such as Outlook or the Outlook on the web can't access permanently deleted items. Unless there's a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/event-permanentdelete?view=graph-rest-beta"
+      },
+      "operationId": "group.calendarView_permanentDelete",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "event-id",
+          "in": "path",
+          "description": "The unique identifier of event",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "event"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

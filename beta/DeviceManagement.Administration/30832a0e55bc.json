@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/cartToClassAssociations/{cartToClassAssociation-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.cartToClassAssociation"
+      ],
+      "summary": "Get cartToClassAssociations from deviceManagement",
+      "description": "The Cart To Class Associations.",
+      "operationId": "deviceManagement_GetCartToClassAssociation",
+      "parameters": [
+        {
+          "name": "cartToClassAssociation-id",
+          "in": "path",
+          "description": "The unique identifier of cartToClassAssociation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cartToClassAssociation"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cartToClassAssociation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.cartToClassAssociation"
+      ],
+      "summary": "Update the navigation property cartToClassAssociations in deviceManagement",
+      "operationId": "deviceManagement_UpdateCartToClassAssociation",
+      "parameters": [
+        {
+          "name": "cartToClassAssociation-id",
+          "in": "path",
+          "description": "The unique identifier of cartToClassAssociation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cartToClassAssociation"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.cartToClassAssociation"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cartToClassAssociation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.cartToClassAssociation"
+      ],
+      "summary": "Delete navigation property cartToClassAssociations for deviceManagement",
+      "operationId": "deviceManagement_DeleteCartToClassAssociation",
+      "parameters": [
+        {
+          "name": "cartToClassAssociation-id",
+          "in": "path",
+          "description": "The unique identifier of cartToClassAssociation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cartToClassAssociation"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

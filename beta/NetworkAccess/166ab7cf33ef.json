@@ -1,0 +1,187 @@
+{
+  "/networkAccess/filteringProfiles/{filteringProfile-id}/policies/{policyLink-id}": {
+    "get": {
+      "tags": [
+        "networkAccess.filteringProfile"
+      ],
+      "summary": "Get policies from networkAccess",
+      "description": "Traffic forwarding policies associated with this profile.",
+      "operationId": "networkAccess.filteringProfile_GetPolicy",
+      "parameters": [
+        {
+          "name": "filteringProfile-id",
+          "in": "path",
+          "description": "The unique identifier of filteringProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "filteringProfile"
+        },
+        {
+          "name": "policyLink-id",
+          "in": "path",
+          "description": "The unique identifier of policyLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyLink"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyLink"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "networkAccess.filteringProfile"
+      ],
+      "summary": "Update the navigation property policies in networkAccess",
+      "operationId": "networkAccess.filteringProfile_UpdatePolicy",
+      "parameters": [
+        {
+          "name": "filteringProfile-id",
+          "in": "path",
+          "description": "The unique identifier of filteringProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "filteringProfile"
+        },
+        {
+          "name": "policyLink-id",
+          "in": "path",
+          "description": "The unique identifier of policyLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyLink"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyLink"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyLink"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "networkAccess.filteringProfile"
+      ],
+      "summary": "Delete navigation property policies for networkAccess",
+      "operationId": "networkAccess.filteringProfile_DeletePolicy",
+      "parameters": [
+        {
+          "name": "filteringProfile-id",
+          "in": "path",
+          "description": "The unique identifier of filteringProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "filteringProfile"
+        },
+        {
+          "name": "policyLink-id",
+          "in": "path",
+          "description": "The unique identifier of policyLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyLink"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

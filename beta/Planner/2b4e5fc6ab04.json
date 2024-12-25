@@ -1,0 +1,196 @@
+{
+  "/planner/rosters/{plannerRoster-id}/members/{plannerRosterMember-id}": {
+    "get": {
+      "tags": [
+        "planner.plannerRoster"
+      ],
+      "summary": "Get plannerRosterMember",
+      "description": "Read the properties and relationships of a plannerRosterMember object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerrostermember-get?view=graph-rest-beta"
+      },
+      "operationId": "planner.roster_GetMember",
+      "parameters": [
+        {
+          "name": "plannerRoster-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRoster",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRoster"
+        },
+        {
+          "name": "plannerRosterMember-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRosterMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRosterMember"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.plannerRosterMember"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "planner.plannerRoster"
+      ],
+      "summary": "Update the navigation property members in planner",
+      "operationId": "planner.roster_UpdateMember",
+      "parameters": [
+        {
+          "name": "plannerRoster-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRoster",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRoster"
+        },
+        {
+          "name": "plannerRosterMember-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRosterMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRosterMember"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.plannerRosterMember"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.plannerRosterMember"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "planner.plannerRoster"
+      ],
+      "summary": "Delete plannerRosterMember",
+      "description": "Delete a plannerRosterMember object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerrostermember-delete?view=graph-rest-beta"
+      },
+      "operationId": "planner.roster_DeleteMember",
+      "parameters": [
+        {
+          "name": "plannerRoster-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRoster",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRoster"
+        },
+        {
+          "name": "plannerRosterMember-id",
+          "in": "path",
+          "description": "The unique identifier of plannerRosterMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerRosterMember"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

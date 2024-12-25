@@ -1,0 +1,63 @@
+{
+  "/deviceAppManagement/mobileApps/{mobileApp-id}/microsoft.graph.androidLobApp/contentVersions/{mobileAppContent-id}/files/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.mobileApp"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.mobileAppAsAndroidLobApp.contentVersion.file_GetCount",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppContent-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppContent"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

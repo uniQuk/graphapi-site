@@ -1,0 +1,55 @@
+{
+  "/users/{user-id}/cloudPCs/{cloudPC-id}/microsoft.graph.stop": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action stop",
+      "description": "Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpc-stop?view=graph-rest-beta"
+      },
+      "operationId": "user.cloudPC_stop",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "cloudPC-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPC",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPC"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "/policies/authenticationStrengthPolicies/{authenticationStrengthPolicy-id}/microsoft.graph.usage()": {
+    "get": {
+      "tags": [
+        "policies.Functions"
+      ],
+      "summary": "Invoke function usage",
+      "description": "The usage function allows the caller to see which Conditional Access policies reference a specified authentication strength policy. The policies are returned in two collections, one containing Conditional Access policies that require an MFA claim and the other containing Conditional Access policies that do not require such a claim. Policies in the former category are restricted in what kinds of changes may be made to them to prevent undermining the MFA requirement of those policies.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-usage?view=graph-rest-beta"
+      },
+      "operationId": "policy.authenticationStrengthPolicy_usage",
+      "parameters": [
+        {
+          "name": "authenticationStrengthPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationStrengthPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationStrengthPolicy"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationStrengthUsage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/external/industryData/runs/{industryDataRun-id}/activities/$count": {
+    "get": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "external.industryData.run.activity_GetCount",
+      "parameters": [
+        {
+          "name": "industryDataRun-id",
+          "in": "path",
+          "description": "The unique identifier of industryDataRun",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "industryDataRun"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

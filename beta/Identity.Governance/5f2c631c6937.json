@@ -1,0 +1,38 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles/{accessPackageAssignmentResourceRole-id}/accessPackageResourceRole/accessPackageResource/microsoft.graph.refresh": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action refresh",
+      "description": "In Microsoft Entra entitlement management, refresh the accessPackageResource object to fetch the latest details for displayName, description, and resourceType from the origin system. For the AadApplication originSystem, this operation also updates the displayName and description for the accessPackageResourceRole. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackageresource-refresh?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignmentResourceRole.accessPackageResourceRole.accessPackageResource_refresh",
+      "parameters": [
+        {
+          "name": "accessPackageAssignmentResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignmentResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignmentResourceRole"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

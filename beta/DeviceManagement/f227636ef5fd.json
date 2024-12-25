@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/embeddedSIMActivationCodePools/{embeddedSIMActivationCodePool-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.embeddedSIMActivationCodePool"
+      ],
+      "summary": "Get embeddedSIMActivationCodePools from deviceManagement",
+      "description": "The embedded SIM activation code pools created by this account.",
+      "operationId": "deviceManagement_GetEmbeddedSIMActivationCodePool",
+      "parameters": [
+        {
+          "name": "embeddedSIMActivationCodePool-id",
+          "in": "path",
+          "description": "The unique identifier of embeddedSIMActivationCodePool",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "embeddedSIMActivationCodePool"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.embeddedSIMActivationCodePool"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.embeddedSIMActivationCodePool"
+      ],
+      "summary": "Update the navigation property embeddedSIMActivationCodePools in deviceManagement",
+      "operationId": "deviceManagement_UpdateEmbeddedSIMActivationCodePool",
+      "parameters": [
+        {
+          "name": "embeddedSIMActivationCodePool-id",
+          "in": "path",
+          "description": "The unique identifier of embeddedSIMActivationCodePool",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "embeddedSIMActivationCodePool"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.embeddedSIMActivationCodePool"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.embeddedSIMActivationCodePool"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.embeddedSIMActivationCodePool"
+      ],
+      "summary": "Delete navigation property embeddedSIMActivationCodePools for deviceManagement",
+      "operationId": "deviceManagement_DeleteEmbeddedSIMActivationCodePool",
+      "parameters": [
+        {
+          "name": "embeddedSIMActivationCodePool-id",
+          "in": "path",
+          "description": "The unique identifier of embeddedSIMActivationCodePool",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "embeddedSIMActivationCodePool"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "/deviceManagement/comanagedDevices/{managedDevice-id}/microsoft.graph.createDeviceLogCollectionRequest": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action createDeviceLogCollectionRequest",
+      "operationId": "deviceManagement.comanagedDevice_createDeviceLogCollectionRequest",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "templateType": {
+                  "$ref": "#/components/schemas/microsoft.graph.deviceLogCollectionRequest"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceLogCollectionResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

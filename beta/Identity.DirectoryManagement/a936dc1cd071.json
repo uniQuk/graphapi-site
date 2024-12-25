@@ -1,0 +1,33 @@
+{
+  "/domains/{domain-id}/microsoft.graph.promoteToInitial": {
+    "post": {
+      "tags": [
+        "domains.Actions"
+      ],
+      "summary": "Invoke action promoteToInitial",
+      "operationId": "domain_promoteToInitial",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

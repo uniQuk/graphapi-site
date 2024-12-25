@@ -1,0 +1,168 @@
+{
+  "/roleManagement/deviceManagement/roleAssignments/{unifiedRoleAssignmentMultiple-id}": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplicationMultiple"
+      ],
+      "summary": "Get unifiedRoleAssignmentMultiple",
+      "description": "Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:\n- Cloud PC \n- device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.deviceManagement_GetRoleAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentMultiple-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentMultiple",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentMultiple"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentMultiple"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "roleManagement.rbacApplicationMultiple"
+      ],
+      "summary": "Update unifiedRoleAssignmentMultiple",
+      "description": "Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:\n- Cloud PC \n- device management (Intune) In contrast, unifiedRoleAssignment does not support update.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.deviceManagement_UpdateRoleAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentMultiple-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentMultiple",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentMultiple"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentMultiple"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentMultiple"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "roleManagement.rbacApplicationMultiple"
+      ],
+      "summary": "Delete unifiedRoleAssignmentMultiple",
+      "description": "Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:\n- Cloud PC \n- device management (Intune)",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.deviceManagement_DeleteRoleAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentMultiple-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentMultiple",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentMultiple"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

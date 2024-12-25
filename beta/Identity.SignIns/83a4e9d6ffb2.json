@@ -1,0 +1,25 @@
+{
+  "/policies/crossTenantAccessPolicy/default/microsoft.graph.resetToSystemDefault": {
+    "post": {
+      "tags": [
+        "policies.Actions"
+      ],
+      "summary": "Invoke action resetToSystemDefault",
+      "description": "Reset any changes made to the default configuration in a cross-tenant access policy back to the system default.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-resettosystemdefault?view=graph-rest-beta"
+      },
+      "operationId": "policy.crossTenantAccessPolicy.default_resetToSystemDefault",
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

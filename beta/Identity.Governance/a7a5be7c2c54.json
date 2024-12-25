@@ -1,0 +1,153 @@
+{
+  "/privilegedRoles/{privilegedRole-id}": {
+    "get": {
+      "tags": [
+        "privilegedRoles.privilegedRole"
+      ],
+      "summary": "Get entity from privilegedRoles by key",
+      "operationId": "privilegedRole_GetPrivilegedRole",
+      "parameters": [
+        {
+          "name": "privilegedRole-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRole"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRole"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "privilegedRoles.privilegedRole"
+      ],
+      "summary": "Update entity in privilegedRoles",
+      "operationId": "privilegedRole_UpdatePrivilegedRole",
+      "parameters": [
+        {
+          "name": "privilegedRole-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRole"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.privilegedRole"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRole"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "privilegedRoles.privilegedRole"
+      ],
+      "summary": "Delete entity from privilegedRoles",
+      "operationId": "privilegedRole_DeletePrivilegedRole",
+      "parameters": [
+        {
+          "name": "privilegedRole-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRole"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

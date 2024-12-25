@@ -1,0 +1,220 @@
+{
+  "/onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/agentGroups/{onPremisesAgentGroup-id}/agents/{onPremisesAgent-id}": {
+    "get": {
+      "tags": [
+        "onPremisesPublishingProfiles.onPremisesAgentGroup"
+      ],
+      "summary": "Get agents from onPremisesPublishingProfiles",
+      "description": "List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.",
+      "operationId": "onPremisesPublishingProfile.agentGroup_GetAgent",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "onPremisesAgentGroup-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgentGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgentGroup"
+        },
+        {
+          "name": "onPremisesAgent-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgent"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onPremisesAgent"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "onPremisesPublishingProfiles.onPremisesAgentGroup"
+      ],
+      "summary": "Update the navigation property agents in onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile.agentGroup_UpdateAgent",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "onPremisesAgentGroup-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgentGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgentGroup"
+        },
+        {
+          "name": "onPremisesAgent-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgent"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.onPremisesAgent"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onPremisesAgent"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "onPremisesPublishingProfiles.onPremisesAgentGroup"
+      ],
+      "summary": "Delete navigation property agents for onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile.agentGroup_DeleteAgent",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "onPremisesAgentGroup-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgentGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgentGroup"
+        },
+        {
+          "name": "onPremisesAgent-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgent"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

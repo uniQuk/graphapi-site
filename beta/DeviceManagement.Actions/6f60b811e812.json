@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicy-id}/microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action clearEnrollmentTimeDeviceMembershipTarget",
+      "operationId": "deviceManagement.configurationPolicy_clearEnrollmentTimeDeviceMembershipTarget",
+      "parameters": [
+        {
+          "name": "deviceManagementConfigurationPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationPolicy"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

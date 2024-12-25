@@ -1,0 +1,177 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/claimsPolicy": {
+    "get": {
+      "tags": [
+        "servicePrincipals.customClaimsPolicy"
+      ],
+      "summary": "Get customClaimsPolicy",
+      "description": "Get the properties and relationships of a customClaimsPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customclaimspolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal_GetClaimsPolicy",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customClaimsPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "put": {
+      "tags": [
+        "servicePrincipals.customClaimsPolicy"
+      ],
+      "summary": "Create or replace claimsPolicy",
+      "description": "Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-put-claimspolicy?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal_SetClaimsPolicy",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.customClaimsPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customClaimsPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "servicePrincipals.customClaimsPolicy"
+      ],
+      "summary": "Create or replace claimsPolicy",
+      "description": "Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-put-claimspolicy?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal_UpdateClaimsPolicy",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.customClaimsPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customClaimsPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

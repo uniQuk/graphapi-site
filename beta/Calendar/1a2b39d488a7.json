@@ -1,0 +1,85 @@
+{
+  "/groups/{group-id}/events/{event-id}/instances/{event-id1}/exceptionOccurrences/{event-id2}/attachments/$count": {
+    "get": {
+      "tags": [
+        "groups.event"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "group.event.instance.exceptionOccurrence.attachment_GetCount",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "event-id",
+          "in": "path",
+          "description": "The unique identifier of event",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "event"
+        },
+        {
+          "name": "event-id1",
+          "in": "path",
+          "description": "The unique identifier of event",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "event"
+        },
+        {
+          "name": "event-id2",
+          "in": "path",
+          "description": "The unique identifier of event",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "event"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

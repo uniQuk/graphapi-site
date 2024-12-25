@@ -1,0 +1,153 @@
+{
+  "/privilegedRoleAssignmentRequests/{privilegedRoleAssignmentRequest-id}": {
+    "get": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest"
+      ],
+      "summary": "Get entity from privilegedRoleAssignmentRequests by key",
+      "operationId": "privilegedRoleAssignmentRequest_GetPrivilegedRoleAssignmentRequest",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest"
+      ],
+      "summary": "Update entity in privilegedRoleAssignmentRequests",
+      "operationId": "privilegedRoleAssignmentRequest_UpdatePrivilegedRoleAssignmentRequest",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignmentRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest"
+      ],
+      "summary": "Delete entity from privilegedRoleAssignmentRequests",
+      "operationId": "privilegedRoleAssignmentRequest_DeletePrivilegedRoleAssignmentRequest",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

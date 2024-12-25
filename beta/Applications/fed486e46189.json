@@ -1,0 +1,186 @@
+{
+  "/onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/connectorGroups/{connectorGroup-id}/applications/{application-id}/logo": {
+    "get": {
+      "tags": [
+        "onPremisesPublishingProfiles.connectorGroup"
+      ],
+      "summary": "Get logo for the navigation property applications from onPremisesPublishingProfiles",
+      "description": "The main logo for the application. Not nullable.",
+      "operationId": "onPremisesPublishingProfile.connectorGroup_GetApplicationsLogo",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connectorGroup-id",
+          "in": "path",
+          "description": "The unique identifier of connectorGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectorGroup"
+        },
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "onPremisesPublishingProfiles.connectorGroup"
+      ],
+      "summary": "Update logo for the navigation property applications in onPremisesPublishingProfiles",
+      "description": "The main logo for the application. Not nullable.",
+      "operationId": "onPremisesPublishingProfile.connectorGroup_SetApplicationsLogo",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connectorGroup-id",
+          "in": "path",
+          "description": "The unique identifier of connectorGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectorGroup"
+        },
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "onPremisesPublishingProfiles.connectorGroup"
+      ],
+      "summary": "Delete logo for the navigation property applications in onPremisesPublishingProfiles",
+      "description": "The main logo for the application. Not nullable.",
+      "operationId": "onPremisesPublishingProfile.connectorGroup_DeleteApplicationsLogo",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connectorGroup-id",
+          "in": "path",
+          "description": "The unique identifier of connectorGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectorGroup"
+        },
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

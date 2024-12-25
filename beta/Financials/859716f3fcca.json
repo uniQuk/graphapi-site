@@ -1,0 +1,67 @@
+{
+  "/financials/companies/{company-id}/salesCreditMemos/{salesCreditMemo-id}/customer/picture/$count": {
+    "get": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "financial.company.salesCreditMemo.customer.picture_GetCount",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesCreditMemo-id",
+          "in": "path",
+          "description": "The unique identifier of salesCreditMemo",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesCreditMemo"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

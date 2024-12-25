@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/groupPolicyObjectFiles/{groupPolicyObjectFile-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyObjectFile"
+      ],
+      "summary": "Get groupPolicyObjectFiles from deviceManagement",
+      "description": "A list of Group Policy Object files uploaded.",
+      "operationId": "deviceManagement_GetGroupPolicyObjectFile",
+      "parameters": [
+        {
+          "name": "groupPolicyObjectFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyObjectFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyObjectFile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyObjectFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.groupPolicyObjectFile"
+      ],
+      "summary": "Update the navigation property groupPolicyObjectFiles in deviceManagement",
+      "operationId": "deviceManagement_UpdateGroupPolicyObjectFile",
+      "parameters": [
+        {
+          "name": "groupPolicyObjectFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyObjectFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyObjectFile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupPolicyObjectFile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyObjectFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.groupPolicyObjectFile"
+      ],
+      "summary": "Delete navigation property groupPolicyObjectFiles for deviceManagement",
+      "operationId": "deviceManagement_DeleteGroupPolicyObjectFile",
+      "parameters": [
+        {
+          "name": "groupPolicyObjectFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyObjectFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyObjectFile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

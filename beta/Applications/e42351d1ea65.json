@@ -1,0 +1,64 @@
+{
+  "/onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/publishedResources/{publishedResource-id}/agentGroups/{onPremisesAgentGroup-id}/$ref": {
+    "delete": {
+      "tags": [
+        "onPremisesPublishingProfiles.publishedResource"
+      ],
+      "summary": "Delete ref of navigation property agentGroups for onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile.publishedResource.agentGroup_DeleteOnPremisesAgentGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "publishedResource-id",
+          "in": "path",
+          "description": "The unique identifier of publishedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "publishedResource"
+        },
+        {
+          "name": "onPremisesAgentGroup-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesAgentGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesAgentGroup"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

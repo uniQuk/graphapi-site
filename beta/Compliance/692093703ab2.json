@@ -1,0 +1,78 @@
+{
+  "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/microsoft.graph.ediscovery.addToReviewSet": {
+    "post": {
+      "tags": [
+        "compliance.Actions"
+      ],
+      "summary": "Invoke action addToReviewSet",
+      "description": "Start the process of adding a collection from Microsoft 365 services to a review set. After the operation is created, you can get the status of the operation by retrieving the Location parameter from the response headers. The location provides a URL that will return a caseExportOperation.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/ediscovery-reviewset-addtoreviewset?view=graph-rest-beta"
+      },
+      "operationId": "compliance.ediscovery.case.reviewSet_addToReviewSet",
+      "parameters": [
+        {
+          "name": "case-id",
+          "in": "path",
+          "description": "The unique identifier of case",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "case"
+        },
+        {
+          "name": "reviewSet-id",
+          "in": "path",
+          "description": "The unique identifier of reviewSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "reviewSet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceCollection": {
+                  "$ref": "#/components/schemas/microsoft.graph.ediscovery.sourceCollection"
+                },
+                "additionalDataOptions": {
+                  "$ref": "#/components/schemas/microsoft.graph.ediscovery.additionalDataOptions"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-02-01",
+        "date": "2022-12-05",
+        "version": "2022-12/ediscoveryNamespace",
+        "description": "The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "/applications(appId='{appId}')": {
+    "get": {
+      "tags": [
+        "applications.application"
+      ],
+      "summary": "Get application",
+      "description": "Get the properties and relationships of an application object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-get?view=graph-rest-beta"
+      },
+      "operationId": "application_GetApplicationGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.application"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "applications.application"
+      ],
+      "summary": "Upsert application",
+      "description": "Create a new application object if it doesn't exist, or update the properties of an existing application object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-upsert?view=graph-rest-beta"
+      },
+      "operationId": "application_UpdateApplicationGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.application"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.application"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "applications.application"
+      ],
+      "summary": "Delete application",
+      "description": "Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-beta"
+      },
+      "operationId": "application_DeleteApplicationGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

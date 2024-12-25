@@ -1,0 +1,44 @@
+{
+  "/users/{user-id}/microsoft.graph.retryServiceProvisioning": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action retryServiceProvisioning",
+      "description": "Retry the user service provisioning.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/user-retryserviceprovisioning?view=graph-rest-beta"
+      },
+      "operationId": "user_retryServiceProvisioning",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

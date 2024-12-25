@@ -1,0 +1,187 @@
+{
+  "/identityProtection/riskyServicePrincipals/{riskyServicePrincipal-id}/history/{riskyServicePrincipalHistoryItem-id}": {
+    "get": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Get history from identityProtection",
+      "description": "Represents the risk history of Microsoft Entra service principals.",
+      "operationId": "identityProtection.riskyServicePrincipal_GetHistory",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "riskyServicePrincipalHistoryItem-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipalHistoryItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipalHistoryItem"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipalHistoryItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Update the navigation property history in identityProtection",
+      "operationId": "identityProtection.riskyServicePrincipal_UpdateHistory",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "riskyServicePrincipalHistoryItem-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipalHistoryItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipalHistoryItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipalHistoryItem"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipalHistoryItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Delete navigation property history for identityProtection",
+      "operationId": "identityProtection.riskyServicePrincipal_DeleteHistory",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "riskyServicePrincipalHistoryItem-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipalHistoryItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipalHistoryItem"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

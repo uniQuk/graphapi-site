@@ -1,0 +1,158 @@
+{
+  "/deviceManagement/virtualEndpoint/reports/exportJobs/{cloudPcExportJob-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Get cloudPcExportJob",
+      "description": "Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. The property becomes completed when the report finishes downloading in the location specified by the exportUrl property.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcexportjob-get?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.report_GetExportJob",
+      "parameters": [
+        {
+          "name": "cloudPcExportJob-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcExportJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcExportJob"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcExportJob"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Update the navigation property exportJobs in deviceManagement",
+      "operationId": "deviceManagement.virtualEndpoint.report_UpdateExportJob",
+      "parameters": [
+        {
+          "name": "cloudPcExportJob-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcExportJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcExportJob"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.cloudPcExportJob"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcExportJob"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Delete navigation property exportJobs for deviceManagement",
+      "operationId": "deviceManagement.virtualEndpoint.report_DeleteExportJob",
+      "parameters": [
+        {
+          "name": "cloudPcExportJob-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcExportJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcExportJob"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

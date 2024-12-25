@@ -1,0 +1,80 @@
+{
+  "/contacts/{orgContact-id}/transitiveReports/{directoryObject-id}": {
+    "get": {
+      "tags": [
+        "contacts.directoryObject"
+      ],
+      "summary": "Get transitiveReports from contacts",
+      "description": "The transitive reports for a contact. Read-only.",
+      "operationId": "contact_GetTransitiveReport",
+      "parameters": [
+        {
+          "name": "orgContact-id",
+          "in": "path",
+          "description": "The unique identifier of orgContact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "orgContact"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directoryObject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

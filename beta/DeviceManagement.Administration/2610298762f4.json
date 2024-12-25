@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/termsAndConditions/{termsAndConditions-id}/groupAssignments/{termsAndConditionsGroupAssignment-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Get groupAssignments from deviceManagement",
+      "description": "The list of group assignments for this T&C policy.",
+      "operationId": "deviceManagement.termsAndCondition_GetGroupAssignment",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsGroupAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsGroupAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsGroupAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsGroupAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Update the navigation property groupAssignments in deviceManagement",
+      "operationId": "deviceManagement.termsAndCondition_UpdateGroupAssignment",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsGroupAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsGroupAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsGroupAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsGroupAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsGroupAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Delete navigation property groupAssignments for deviceManagement",
+      "operationId": "deviceManagement.termsAndCondition_DeleteGroupAssignment",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsGroupAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsGroupAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsGroupAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

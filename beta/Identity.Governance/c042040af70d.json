@@ -1,0 +1,154 @@
+{
+  "/identityGovernance/termsOfUse/agreementAcceptances/{agreementAcceptance-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Get agreementAcceptances from identityGovernance",
+      "description": "Represents the current status of a user's response to a company's customizable terms of use agreement.",
+      "operationId": "identityGovernance.termsGraphOPreUse_GetAgreementAcceptance",
+      "parameters": [
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Update the navigation property agreementAcceptances in identityGovernance",
+      "operationId": "identityGovernance.termsGraphOPreUse_UpdateAgreementAcceptance",
+      "parameters": [
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Delete navigation property agreementAcceptances for identityGovernance",
+      "operationId": "identityGovernance.termsGraphOPreUse_DeleteAgreementAcceptance",
+      "parameters": [
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

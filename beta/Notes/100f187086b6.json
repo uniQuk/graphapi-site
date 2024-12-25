@@ -1,0 +1,63 @@
+{
+  "/sites/{site-id}/onenote/notebooks/{notebook-id}/sectionGroups/$count": {
+    "get": {
+      "tags": [
+        "sites.onenote"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "site.onenote.notebook.sectionGroup_GetCount",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "notebook-id",
+          "in": "path",
+          "description": "The unique identifier of notebook",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notebook"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

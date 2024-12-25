@@ -1,0 +1,45 @@
+{
+  "/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC-id}/microsoft.graph.getCloudPcLaunchInfo()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getCloudPcLaunchInfo",
+      "description": "Get the cloudPCLaunchInfo for the signed-in user.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.cloudPC_getCloudPcLaunchInfo",
+      "parameters": [
+        {
+          "name": "cloudPC-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPC",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPC"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcLaunchInfo"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

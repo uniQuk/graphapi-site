@@ -1,0 +1,44 @@
+{
+  "/drives/{drive-id}/root/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+    "post": {
+      "tags": [
+        "drives.Actions"
+      ],
+      "summary": "Invoke action restoreVersion",
+      "operationId": "drive.root.listItem.version_restoreVersion",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "listItemVersion-id",
+          "in": "path",
+          "description": "The unique identifier of listItemVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "listItemVersion"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/microsoft.graph.updatePasswordSingleSignOnCredentials": {
+    "post": {
+      "tags": [
+        "servicePrincipals.Actions"
+      ],
+      "summary": "Invoke action updatePasswordSingleSignOnCredentials",
+      "description": "Update single sign-on credentials using a password for a user or group.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-updatepasswordsinglesignoncredentials?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal_updatePasswordSingleSignOnCredential",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "credentials": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.credential"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

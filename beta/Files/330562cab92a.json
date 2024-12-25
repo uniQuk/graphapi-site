@@ -1,0 +1,191 @@
+{
+  "/drives/{drive-id}/items/{driveItem-id}/analytics": {
+    "get": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Get analytics",
+      "description": "Get itemAnalytics about the views that took place under this resource.\nThe itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.\nFor a custom time range or interval, use the getActivitiesByInterval API.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-beta"
+      },
+      "operationId": "drive.item_GetAnalytic",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.itemAnalytics"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Update the navigation property analytics in drives",
+      "operationId": "drive.item_UpdateAnalytic",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.itemAnalytics"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.itemAnalytics"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Delete navigation property analytics for drives",
+      "operationId": "drive.item_DeleteAnalytic",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

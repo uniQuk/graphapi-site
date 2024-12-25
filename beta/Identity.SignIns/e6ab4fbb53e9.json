@@ -1,0 +1,128 @@
+{
+  "/trustFramework/policies/{trustFrameworkPolicy-id}/$value": {
+    "get": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "List trustFrameworkPolicies",
+      "description": "Retrieve a list of trustFrameworkPolicies in the tenant/directory.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework_GetPoliciesContent",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "Update media content for the navigation property policies in trustFramework",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "trustFramework_SetPoliciesContent",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "Delete trustFrameworkPolicy",
+      "description": "Delete an existing trustFrameworkPolicy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework_DeletePoliciesContent",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

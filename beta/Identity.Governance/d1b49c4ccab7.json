@@ -1,0 +1,192 @@
+{
+  "/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow-id}/runs/{run-id}/userProcessingResults/{userProcessingResult-id}/taskProcessingResults/{taskProcessingResult-id}/subject/mailboxSettings": {
+    "get": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Get mailboxSettings property value",
+      "description": "Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.",
+      "operationId": "identityGovernance.lifecycleWorkflow.deletedItem.workflow.run.userProcessingResult.taskProcessingResult.subject_GetMailboxSetting",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "run-id",
+          "in": "path",
+          "description": "The unique identifier of run",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "run"
+        },
+        {
+          "name": "userProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of userProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userProcessingResult"
+        },
+        {
+          "name": "taskProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of taskProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "taskProcessingResult"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Entity result.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mailboxSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      }
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Update property mailboxSettings value.",
+      "operationId": "identityGovernance.lifecycleWorkflow.deletedItem.workflow.run.userProcessingResult.taskProcessingResult.subject_UpdateMailboxSetting",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "run-id",
+          "in": "path",
+          "description": "The unique identifier of run",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "run"
+        },
+        {
+          "name": "userProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of userProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userProcessingResult"
+        },
+        {
+          "name": "taskProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of taskProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "taskProcessingResult"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.mailboxSettings"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mailboxSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "/directoryObjects/{directoryObject-id}": {
+    "get": {
+      "tags": [
+        "directoryObjects.directoryObject"
+      ],
+      "summary": "Get directoryObject",
+      "description": "Retrieve the properties and relationships of a directoryObject object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-beta"
+      },
+      "operationId": "directoryObject_GetDirectoryObject",
+      "parameters": [
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directoryObject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directoryObjects.directoryObject"
+      ],
+      "summary": "Update entity in directoryObjects",
+      "operationId": "directoryObject_UpdateDirectoryObject",
+      "parameters": [
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.directoryObject"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directoryObject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directoryObjects.directoryObject"
+      ],
+      "summary": "Delete directoryObject",
+      "description": "Delete a directory object, for example, a group, user, application, or service principal.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-beta"
+      },
+      "operationId": "directoryObject_DeleteDirectoryObject",
+      "parameters": [
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

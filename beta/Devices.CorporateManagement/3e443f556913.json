@@ -1,0 +1,33 @@
+{
+  "/deviceAppManagement/windowsInformationProtectionDeviceRegistrations/{windowsInformationProtectionDeviceRegistration-id}/microsoft.graph.wipe": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action wipe",
+      "operationId": "deviceAppManagement.windowsInformationProtectionDeviceRegistration_wipe",
+      "parameters": [
+        {
+          "name": "windowsInformationProtectionDeviceRegistration-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionDeviceRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionDeviceRegistration"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

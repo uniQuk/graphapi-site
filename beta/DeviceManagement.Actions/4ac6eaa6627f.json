@@ -1,0 +1,46 @@
+{
+  "/deviceManagement/assignmentFilters/microsoft.graph.validateFilter": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action validateFilter",
+      "operationId": "deviceManagement.assignmentFilter_validateFilter",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deviceAndAppManagementAssignmentFilter": {
+                  "$ref": "#/components/schemas/microsoft.graph.deviceAndAppManagementAssignmentFilter"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.assignmentFilterValidationResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

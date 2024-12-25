@@ -1,0 +1,69 @@
+{
+  "/identity/apiConnectors/{identityApiConnector-id}/microsoft.graph.uploadClientCertificate": {
+    "post": {
+      "tags": [
+        "identity.Actions"
+      ],
+      "summary": "Invoke action uploadClientCertificate",
+      "description": "Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityapiconnector-uploadclientcertificate?view=graph-rest-beta"
+      },
+      "operationId": "identity.apiConnector_uploadClientCertificate",
+      "parameters": [
+        {
+          "name": "identityApiConnector-id",
+          "in": "path",
+          "description": "The unique identifier of identityApiConnector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityApiConnector"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pkcs12Value": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "password": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityApiConnector"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

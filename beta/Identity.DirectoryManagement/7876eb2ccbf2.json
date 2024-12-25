@@ -1,0 +1,163 @@
+{
+  "/directory/attributeSets/{attributeSet-id}": {
+    "get": {
+      "tags": [
+        "directory.attributeSet"
+      ],
+      "summary": "Get attributeSet",
+      "description": "Read the properties and relationships of an attributeSet object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/attributeset-get?view=graph-rest-beta"
+      },
+      "operationId": "directory_GetAttributeSet",
+      "parameters": [
+        {
+          "name": "attributeSet-id",
+          "in": "path",
+          "description": "The unique identifier of attributeSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attributeSet"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.attributeSet"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.attributeSet"
+      ],
+      "summary": "Update attributeSet",
+      "description": "Update the properties of an attributeSet object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/attributeset-update?view=graph-rest-beta"
+      },
+      "operationId": "directory_UpdateAttributeSet",
+      "parameters": [
+        {
+          "name": "attributeSet-id",
+          "in": "path",
+          "description": "The unique identifier of attributeSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attributeSet"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.attributeSet"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.attributeSet"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.attributeSet"
+      ],
+      "summary": "Delete navigation property attributeSets for directory",
+      "operationId": "directory_DeleteAttributeSet",
+      "parameters": [
+        {
+          "name": "attributeSet-id",
+          "in": "path",
+          "description": "The unique identifier of attributeSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attributeSet"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/oauth2PermissionGrants/{oAuth2PermissionGrant-id}": {
+    "get": {
+      "tags": [
+        "servicePrincipals.oAuth2PermissionGrant"
+      ],
+      "summary": "Get oauth2PermissionGrants from servicePrincipals",
+      "description": "Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.",
+      "operationId": "servicePrincipal_GetOauth2PermissionGrant",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "oAuth2PermissionGrant-id",
+          "in": "path",
+          "description": "The unique identifier of oAuth2PermissionGrant",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "oAuth2PermissionGrant"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.oAuth2PermissionGrant"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

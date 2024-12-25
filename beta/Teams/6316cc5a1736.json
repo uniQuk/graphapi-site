@@ -1,0 +1,220 @@
+{
+  "/teamwork/deletedTeams/{deletedTeam-id}/channels/{channel-id}/messages/{chatMessage-id}": {
+    "get": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Get messages from teamwork",
+      "description": "A collection of all the messages in the channel. A navigation property. Nullable.",
+      "operationId": "teamwork.deletedTeam.channel_GetMessage",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Update the navigation property messages in teamwork",
+      "operationId": "teamwork.deletedTeam.channel_UpdateMessage",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.chatMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Delete navigation property messages for teamwork",
+      "operationId": "teamwork.deletedTeam.channel_DeleteMessage",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "/onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/connectors/{connector-id}": {
+    "get": {
+      "tags": [
+        "onPremisesPublishingProfiles.connector"
+      ],
+      "summary": "Get connectors from onPremisesPublishingProfiles",
+      "description": "List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.",
+      "operationId": "onPremisesPublishingProfile_GetConnector",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connector-id",
+          "in": "path",
+          "description": "The unique identifier of connector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connector"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.connector"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "onPremisesPublishingProfiles.connector"
+      ],
+      "summary": "Update the navigation property connectors in onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile_UpdateConnector",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connector-id",
+          "in": "path",
+          "description": "The unique identifier of connector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connector"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.connector"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.connector"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "onPremisesPublishingProfiles.connector"
+      ],
+      "summary": "Delete navigation property connectors for onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile_DeleteConnector",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connector-id",
+          "in": "path",
+          "description": "The unique identifier of connector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connector"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

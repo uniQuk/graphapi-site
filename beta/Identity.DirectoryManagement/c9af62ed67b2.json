@@ -1,0 +1,60 @@
+{
+  "/directory/featureRolloutPolicies/{featureRolloutPolicy-id}/appliesTo/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "directory.featureRolloutPolicy"
+      ],
+      "summary": "Delete ref of navigation property appliesTo for directory",
+      "operationId": "directory.featureRolloutPolicy.appliesTo_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2021-06-30",
+        "date": "2021-03-05",
+        "version": "2021-01/DirectoryFeatureRolloutPolicies",
+        "description": "Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

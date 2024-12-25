@@ -1,0 +1,43 @@
+{
+  "/users/{user-id}/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action wipeManagedAppRegistrationByDeviceTag",
+      "description": "Issues a wipe operation on an app registration with specified device tag.",
+      "operationId": "user_wipeManagedAppRegistrationGraphBPreDeviceTag",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/wipeManagedAppRegistrationByDeviceTagRequestBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

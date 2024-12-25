@@ -1,0 +1,55 @@
+{
+  "/deviceAppManagement/managedAppPolicies/{managedAppPolicy-id}/microsoft.graph.targetApps": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action targetApps",
+      "operationId": "deviceAppManagement.managedAppPolicy_targetApp",
+      "parameters": [
+        {
+          "name": "managedAppPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of managedAppPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedAppPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "apps": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.managedMobileApp"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

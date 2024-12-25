@@ -1,0 +1,111 @@
+{
+  "/education/me/assignments/{educationAssignment-id}/rubric/$ref": {
+    "get": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Get ref of rubric from education",
+      "description": "When set, the grading rubric attached to this assignment.",
+      "operationId": "education.me.assignment_GetRubricGraphBPreRef",
+      "parameters": [
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property link",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "put": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Update the ref of navigation property rubric in education",
+      "operationId": "education.me.assignment_SetRubricGraphBPreRef",
+      "parameters": [
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPutBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Delete ref of navigation property rubric for education",
+      "operationId": "education.me.assignment_DeleteRubricGraphBPreRef",
+      "parameters": [
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

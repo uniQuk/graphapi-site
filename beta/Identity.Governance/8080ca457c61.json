@@ -1,0 +1,49 @@
+{
+  "/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition-id}/instances/{accessReviewInstance-id}/microsoft.graph.sendReminder": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action sendReminder",
+      "description": "Send a reminder to the reviewers of a currently active accessReviewInstance.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.accessReview.definition.instance_sendReminder",
+      "parameters": [
+        {
+          "name": "accessReviewScheduleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewScheduleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewScheduleDefinition"
+        },
+        {
+          "name": "accessReviewInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstance"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

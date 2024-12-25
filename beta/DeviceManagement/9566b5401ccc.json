@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/settingDefinitions/{deviceManagementSettingDefinition-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementSettingDefinition"
+      ],
+      "summary": "Get settingDefinitions from deviceManagement",
+      "description": "The device management intent setting definitions",
+      "operationId": "deviceManagement_GetSettingDefinition",
+      "parameters": [
+        {
+          "name": "deviceManagementSettingDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementSettingDefinition"
+      ],
+      "summary": "Update the navigation property settingDefinitions in deviceManagement",
+      "operationId": "deviceManagement_UpdateSettingDefinition",
+      "parameters": [
+        {
+          "name": "deviceManagementSettingDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingDefinition"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementSettingDefinition"
+      ],
+      "summary": "Delete navigation property settingDefinitions for deviceManagement",
+      "operationId": "deviceManagement_DeleteSettingDefinition",
+      "parameters": [
+        {
+          "name": "deviceManagementSettingDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

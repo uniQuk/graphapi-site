@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/virtualEndpoint/microsoft.graph.retrieveTenantEncryptionSetting()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function retrieveTenantEncryptionSetting",
+      "operationId": "deviceManagement.virtualEndpoint_retrieveTenantEncryptionSetting",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcTenantEncryptionSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "/communications/calls/{call-id}/microsoft.graph.reject": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action reject",
+      "description": "Enable a bot to reject an incoming call. The incoming call request can be an invite from a participant in a group call or a peer-to-peer call. If an invite to a group call is received, the notification contains the chatInfo and meetingInfo parameters. The bot is expected to answer or reject the call before the call times out. The current timeout value is 15 seconds. This API doesn't end existing calls that have already been answered. Use delete call to end a call.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/call-reject?view=graph-rest-beta"
+      },
+      "operationId": "communication.call_reject",
+      "parameters": [
+        {
+          "name": "call-id",
+          "in": "path",
+          "description": "The unique identifier of call",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "call"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "$ref": "#/components/schemas/microsoft.graph.rejectReason"
+                },
+                "callbackUri": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

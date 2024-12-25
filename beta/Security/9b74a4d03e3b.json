@@ -1,0 +1,154 @@
+{
+  "/security/attackSimulation/loginPages/{loginPage-id}": {
+    "get": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Get loginPages from security",
+      "description": "Represents an attack simulation training login page.",
+      "operationId": "security.attackSimulation_GetLoginPage",
+      "parameters": [
+        {
+          "name": "loginPage-id",
+          "in": "path",
+          "description": "The unique identifier of loginPage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "loginPage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.loginPage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Update the navigation property loginPages in security",
+      "operationId": "security.attackSimulation_UpdateLoginPage",
+      "parameters": [
+        {
+          "name": "loginPage-id",
+          "in": "path",
+          "description": "The unique identifier of loginPage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "loginPage"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.loginPage"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.loginPage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Delete navigation property loginPages for security",
+      "operationId": "security.attackSimulation_DeleteLoginPage",
+      "parameters": [
+        {
+          "name": "loginPage-id",
+          "in": "path",
+          "description": "The unique identifier of loginPage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "loginPage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/print/printers/{printer-id}/microsoft.graph.getCapabilities()": {
+    "get": {
+      "tags": [
+        "print.Functions"
+      ],
+      "summary": "Invoke function getCapabilities",
+      "description": "Get a list of capabilities for the printer.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printer-getcapabilities?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_getCapability",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printerCapabilities"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this."
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

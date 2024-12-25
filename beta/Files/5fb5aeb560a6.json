@@ -1,0 +1,187 @@
+{
+  "/shares/{sharedDriveItem-id}/list/subscriptions/{subscription-id}": {
+    "get": {
+      "tags": [
+        "shares.list"
+      ],
+      "summary": "Get subscriptions from shares",
+      "description": "The set of subscriptions on the list.",
+      "operationId": "share.list_GetSubscription",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "subscription-id",
+          "in": "path",
+          "description": "The unique identifier of subscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscription"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subscription"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "shares.list"
+      ],
+      "summary": "Update the navigation property subscriptions in shares",
+      "operationId": "share.list_UpdateSubscription",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "subscription-id",
+          "in": "path",
+          "description": "The unique identifier of subscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscription"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.subscription"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subscription"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "shares.list"
+      ],
+      "summary": "Delete navigation property subscriptions for shares",
+      "operationId": "share.list_DeleteSubscription",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "subscription-id",
+          "in": "path",
+          "description": "The unique identifier of subscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscription"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "/deviceManagement/elevationRequests/{privilegeManagementElevationRequest-id}/microsoft.graph.getAllElevationRequests": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action getAllElevationRequests",
+      "operationId": "deviceManagement.elevationRequest_getAllElevationRequest",
+      "parameters": [
+        {
+          "name": "privilegeManagementElevationRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegeManagementElevationRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegeManagementElevationRequest"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of privilegeManagementElevationRequest",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.privilegeManagementElevationRequest"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "/teamwork/devices/{teamworkDevice-id}/activity": {
+    "get": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Get teamworkDeviceActivity",
+      "description": "Get the activity status of a Microsoft Teams-enabled device. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkdeviceactivity-get?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.device_GetActivity",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Update the navigation property activity in teamwork",
+      "operationId": "teamwork.device_UpdateActivity",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceActivity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Delete navigation property activity for teamwork",
+      "operationId": "teamwork.device_DeleteActivity",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

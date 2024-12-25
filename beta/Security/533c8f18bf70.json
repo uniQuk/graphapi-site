@@ -1,0 +1,49 @@
+{
+  "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/microsoft.graph.security.updateIndex": {
+    "post": {
+      "tags": [
+        "security.Actions"
+      ],
+      "summary": "Invoke action updateIndex",
+      "description": "Trigger an indexOperation",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-updateindex?view=graph-rest-beta"
+      },
+      "operationId": "security.case.ediscoveryCase.noncustodialDataSource_updateIndex",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "ediscoveryNoncustodialDataSource-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryNoncustodialDataSource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryNoncustodialDataSource"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

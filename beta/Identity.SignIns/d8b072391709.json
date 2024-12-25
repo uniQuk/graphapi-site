@@ -1,0 +1,168 @@
+{
+  "/policies/permissionGrantPolicies/{permissionGrantPolicy-id}": {
+    "get": {
+      "tags": [
+        "policies.permissionGrantPolicy"
+      ],
+      "summary": "Get permissionGrantPolicy",
+      "description": "Retrieve a single permissionGrantPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "policy_GetPermissionGrantPolicy",
+      "parameters": [
+        {
+          "name": "permissionGrantPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of permissionGrantPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permissionGrantPolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.permissionGrantPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.permissionGrantPolicy"
+      ],
+      "summary": "Update permissionGrantPolicy",
+      "description": "Update properties of a  permissionGrantPolicy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-beta"
+      },
+      "operationId": "policy_UpdatePermissionGrantPolicy",
+      "parameters": [
+        {
+          "name": "permissionGrantPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of permissionGrantPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permissionGrantPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.permissionGrantPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.permissionGrantPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.permissionGrantPolicy"
+      ],
+      "summary": "Delete permissionGrantPolicy",
+      "description": "Delete a permissionGrantPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-beta"
+      },
+      "operationId": "policy_DeletePermissionGrantPolicy",
+      "parameters": [
+        {
+          "name": "permissionGrantPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of permissionGrantPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "permissionGrantPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "/identityGovernance/lifecycleWorkflows/workflows/{workflow-id}/runs/{run-id}/userProcessingResults/{userProcessingResult-id}/taskProcessingResults/{taskProcessingResult-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Get taskProcessingResults from identityGovernance",
+      "description": "The associated individual task execution.",
+      "operationId": "identityGovernance.lifecycleWorkflow.workflow.run.userProcessingResult_GetTaskProcessingResult",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "run-id",
+          "in": "path",
+          "description": "The unique identifier of run",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "run"
+        },
+        {
+          "name": "userProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of userProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userProcessingResult"
+        },
+        {
+          "name": "taskProcessingResult-id",
+          "in": "path",
+          "description": "The unique identifier of taskProcessingResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "taskProcessingResult"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.taskProcessingResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

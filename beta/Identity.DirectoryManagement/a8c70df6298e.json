@@ -1,0 +1,76 @@
+{
+  "/directory/recommendations/{recommendation-id}/impactedResources/{impactedResource-id}/microsoft.graph.dismiss": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action dismiss",
+      "description": "Dismiss an impactedResources object and update its status to dismissed.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-beta"
+      },
+      "operationId": "directory.recommendation.impactedResource_dismiss",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        },
+        {
+          "name": "impactedResource-id",
+          "in": "path",
+          "description": "The unique identifier of impactedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "impactedResource"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dismissReason": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.impactedResource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

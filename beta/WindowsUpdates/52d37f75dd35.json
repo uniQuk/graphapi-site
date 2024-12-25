@@ -1,0 +1,187 @@
+{
+  "/admin/windows/updates/deployments/{deployment-id}/audience/exclusions/{updatableAsset-id}": {
+    "get": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Get exclusions from admin",
+      "description": "Specifies the assets to exclude from the audience.",
+      "operationId": "admin.window.update.deployment.audience_GetExclusion",
+      "parameters": [
+        {
+          "name": "deployment-id",
+          "in": "path",
+          "description": "The unique identifier of deployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deployment"
+        },
+        {
+          "name": "updatableAsset-id",
+          "in": "path",
+          "description": "The unique identifier of updatableAsset",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "updatableAsset"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Update the navigation property exclusions in admin",
+      "operationId": "admin.window.update.deployment.audience_UpdateExclusion",
+      "parameters": [
+        {
+          "name": "deployment-id",
+          "in": "path",
+          "description": "The unique identifier of deployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deployment"
+        },
+        {
+          "name": "updatableAsset-id",
+          "in": "path",
+          "description": "The unique identifier of updatableAsset",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "updatableAsset"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Delete navigation property exclusions for admin",
+      "operationId": "admin.window.update.deployment.audience_DeleteExclusion",
+      "parameters": [
+        {
+          "name": "deployment-id",
+          "in": "path",
+          "description": "The unique identifier of deployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deployment"
+        },
+        {
+          "name": "updatableAsset-id",
+          "in": "path",
+          "description": "The unique identifier of updatableAsset",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "updatableAsset"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

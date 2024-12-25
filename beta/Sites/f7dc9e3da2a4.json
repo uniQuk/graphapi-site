@@ -1,0 +1,193 @@
+{
+  "/groups/{group-id}/sites/{site-id}/onenote/resources/{onenoteResource-id}/content": {
+    "get": {
+      "tags": [
+        "groups.site"
+      ],
+      "summary": "Get content for the navigation property resources from groups",
+      "description": "The content of the resource.",
+      "operationId": "group.site.onenote_GetResourcesContent",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "onenoteResource-id",
+          "in": "path",
+          "description": "The unique identifier of onenoteResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenoteResource"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "groups.site"
+      ],
+      "summary": "Update content for the navigation property resources in groups",
+      "description": "The content of the resource.",
+      "operationId": "group.site.onenote_SetResourcesContent",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "onenoteResource-id",
+          "in": "path",
+          "description": "The unique identifier of onenoteResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenoteResource"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onenoteResource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "groups.site"
+      ],
+      "summary": "Delete content for the navigation property resources in groups",
+      "description": "The content of the resource.",
+      "operationId": "group.site.onenote_DeleteResourcesContent",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "onenoteResource-id",
+          "in": "path",
+          "description": "The unique identifier of onenoteResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenoteResource"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

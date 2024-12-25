@@ -1,0 +1,158 @@
+{
+  "/identityProtection/riskyServicePrincipals/{riskyServicePrincipal-id}": {
+    "get": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Get riskyServicePrincipal",
+      "description": "Read the properties and relationships of a riskyServicePrincipal object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-beta"
+      },
+      "operationId": "identityProtection_GetRiskyServicePrincipal",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipal"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Update the navigation property riskyServicePrincipals in identityProtection",
+      "operationId": "identityProtection_UpdateRiskyServicePrincipal",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipal"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.riskyServicePrincipal"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Delete navigation property riskyServicePrincipals for identityProtection",
+      "operationId": "identityProtection_DeleteRiskyServicePrincipal",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

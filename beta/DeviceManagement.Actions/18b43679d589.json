@@ -1,0 +1,73 @@
+{
+  "/deviceManagement/operationApprovalRequests/{operationApprovalRequest-id}/microsoft.graph.cancelApproval": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action cancelApproval",
+      "description": "Cancels an already approved instance of an operationApprovalRequest.",
+      "operationId": "deviceManagement.operationApprovalRequest_cancelApproval",
+      "parameters": [
+        {
+          "name": "operationApprovalRequest-id",
+          "in": "path",
+          "description": "The unique identifier of operationApprovalRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "operationApprovalRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "justification": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "approvalSource": {
+                  "$ref": "#/components/schemas/microsoft.graph.operationApprovalSource"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "/deviceManagement/templates/{deviceManagementTemplate-id}/migratableTo/{deviceManagementTemplate-id1}/categories/{deviceManagementTemplateSettingCategory-id}/settingDefinitions/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementTemplate"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.template.migratableTo.category.settingDefinition_GetCount",
+      "parameters": [
+        {
+          "name": "deviceManagementTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementTemplate-id1",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementTemplateSettingCategory-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplateSettingCategory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplateSettingCategory"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition-id}/instances/{accessReviewInstance-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/definition": {
+    "get": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Get definition from identityGovernance",
+      "description": "There's exactly one accessReviewScheduleDefinition associated with each instance. It's the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.",
+      "operationId": "identityGovernance.accessReview.definition.instance.decision.instance_GetDefinition",
+      "parameters": [
+        {
+          "name": "accessReviewScheduleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewScheduleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewScheduleDefinition"
+        },
+        {
+          "name": "accessReviewInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstance"
+        },
+        {
+          "name": "accessReviewInstanceDecisionItem-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstanceDecisionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstanceDecisionItem"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewScheduleDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

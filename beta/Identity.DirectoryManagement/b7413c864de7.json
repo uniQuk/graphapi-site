@@ -1,0 +1,60 @@
+{
+  "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/microsoft.graph.managedTenants.addUserInputLog": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action addUserInputLog",
+      "operationId": "tenantRelationship.managedTenant.managedTenantAlert_addUserInputLog",
+      "parameters": [
+        {
+          "name": "managedTenantAlert-id",
+          "in": "path",
+          "description": "The unique identifier of managedTenantAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedTenantAlert"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "logInformation": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managedTenantAlert"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

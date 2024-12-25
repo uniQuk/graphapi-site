@@ -1,0 +1,153 @@
+{
+  "/bookingCurrencies/{bookingCurrency-id}": {
+    "get": {
+      "tags": [
+        "bookingCurrencies.bookingCurrency"
+      ],
+      "summary": "Get entity from bookingCurrencies by key",
+      "operationId": "bookingCurrency_GetBookingCurrency",
+      "parameters": [
+        {
+          "name": "bookingCurrency-id",
+          "in": "path",
+          "description": "The unique identifier of bookingCurrency",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingCurrency"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingCurrency"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "bookingCurrencies.bookingCurrency"
+      ],
+      "summary": "Update entity in bookingCurrencies",
+      "operationId": "bookingCurrency_UpdateBookingCurrency",
+      "parameters": [
+        {
+          "name": "bookingCurrency-id",
+          "in": "path",
+          "description": "The unique identifier of bookingCurrency",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingCurrency"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.bookingCurrency"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingCurrency"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "bookingCurrencies.bookingCurrency"
+      ],
+      "summary": "Delete entity from bookingCurrencies",
+      "operationId": "bookingCurrency_DeleteBookingCurrency",
+      "parameters": [
+        {
+          "name": "bookingCurrency-id",
+          "in": "path",
+          "description": "The unique identifier of bookingCurrency",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingCurrency"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

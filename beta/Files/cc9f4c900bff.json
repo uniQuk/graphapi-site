@@ -1,0 +1,237 @@
+{
+  "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/activities/{itemActivityOLD-id}/driveItem/contentStream": {
+    "get": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Get contentStream for the navigation property driveItem from users",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "user.drive.item.listItem.activity_GetDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      }
+    },
+    "put": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Update contentStream for the navigation property driveItem in users",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "user.drive.item.listItem.activity_SetDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      }
+    },
+    "delete": {
+      "tags": [
+        "users.drive"
+      ],
+      "summary": "Delete contentStream for the navigation property driveItem in users",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "user.drive.item.listItem.activity_DeleteDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      }
+    }
+  }
+}

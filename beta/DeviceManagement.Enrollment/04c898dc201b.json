@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/windowsAutopilotDeploymentProfiles/{windowsAutopilotDeploymentProfile-id}/assignedDevices/{windowsAutopilotDeviceIdentity-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Get assignedDevices from deviceManagement",
+      "description": "The list of assigned devices for the profile.",
+      "operationId": "deviceManagement.windowsAutopilotDeploymentProfile_GetAssignedDevice",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeviceIdentity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Update the navigation property assignedDevices in deviceManagement",
+      "operationId": "deviceManagement.windowsAutopilotDeploymentProfile_UpdateAssignedDevice",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeviceIdentity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeviceIdentity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Delete navigation property assignedDevices for deviceManagement",
+      "operationId": "deviceManagement.windowsAutopilotDeploymentProfile_DeleteAssignedDevice",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

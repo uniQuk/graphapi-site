@@ -1,0 +1,33 @@
+{
+  "/identityGovernance/roleManagementAlerts/alerts/{unifiedRoleManagementAlert-id}/microsoft.graph.refresh": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action refresh",
+      "operationId": "identityGovernance.roleManagementAlert.alert_refresh",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementAlert-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlert"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

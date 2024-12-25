@@ -1,0 +1,80 @@
+{
+  "/sites/{site-id}/externalColumns/{columnDefinition-id}": {
+    "get": {
+      "tags": [
+        "sites.columnDefinition"
+      ],
+      "summary": "Get externalColumns from sites",
+      "description": "The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.",
+      "operationId": "site_GetExternalColumn",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "columnDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of columnDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "columnDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.columnDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

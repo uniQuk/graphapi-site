@@ -1,0 +1,187 @@
+{
+  "/informationProtection/threatAssessmentRequests/{threatAssessmentRequest-id}/results/{threatAssessmentResult-id}": {
+    "get": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Get results from informationProtection",
+      "description": "A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.",
+      "operationId": "informationProtection.threatAssessmentRequest_GetResult",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "threatAssessmentResult-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentResult"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.threatAssessmentResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Update the navigation property results in informationProtection",
+      "operationId": "informationProtection.threatAssessmentRequest_UpdateResult",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "threatAssessmentResult-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentResult"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.threatAssessmentResult"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.threatAssessmentResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Delete navigation property results for informationProtection",
+      "operationId": "informationProtection.threatAssessmentRequest_DeleteResult",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "threatAssessmentResult-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentResult",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentResult"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "/identityGovernance/roleManagementAlerts/alerts/{unifiedRoleManagementAlert-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.roleManagementAlert"
+      ],
+      "summary": "Get alerts from identityGovernance",
+      "description": "Represents the alert entity.",
+      "operationId": "identityGovernance.roleManagementAlert_GetAlert",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementAlert-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlert"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementAlert"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.roleManagementAlert"
+      ],
+      "summary": "Update the navigation property alerts in identityGovernance",
+      "operationId": "identityGovernance.roleManagementAlert_UpdateAlert",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementAlert-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlert"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementAlert"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementAlert"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.roleManagementAlert"
+      ],
+      "summary": "Delete navigation property alerts for identityGovernance",
+      "operationId": "identityGovernance.roleManagementAlert_DeleteAlert",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementAlert-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementAlert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementAlert"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/accessPackageCatalog": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get accessPackageCatalog from identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackage_GetAccessPackageCatalog",
+      "parameters": [
+        {
+          "name": "accessPackage-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageCatalog"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

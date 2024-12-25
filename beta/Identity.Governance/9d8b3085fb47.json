@@ -1,0 +1,159 @@
+{
+  "/identityGovernance/entitlementManagement/subjects(objectId='{objectId}')": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get subjects from identityGovernance",
+      "description": "Represents the subjects within entitlement management.",
+      "operationId": "identityGovernance.entitlementManagement.subject_GetGraphBPreObjectId",
+      "parameters": [
+        {
+          "name": "objectId",
+          "in": "path",
+          "description": "Alternate key of accessPackageSubject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageSubject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update accessPackageSubject",
+      "description": "Update an existing accessPackageSubject object to change the subject lifecycle.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackagesubject-update?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.subject_UpdateGraphBPreObjectId",
+      "parameters": [
+        {
+          "name": "objectId",
+          "in": "path",
+          "description": "Alternate key of accessPackageSubject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessPackageSubject"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageSubject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete navigation property subjects for identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.subject_DeleteGraphBPreObjectId",
+      "parameters": [
+        {
+          "name": "objectId",
+          "in": "path",
+          "description": "Alternate key of accessPackageSubject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

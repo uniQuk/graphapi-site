@@ -1,0 +1,119 @@
+{
+  "/deviceAppManagement/symantecCodeSigningCertificate": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.symantecCodeSigningCertificate"
+      ],
+      "summary": "Get symantecCodeSigningCertificate from deviceAppManagement",
+      "description": "The WinPhone Symantec Code Signing Certificate.",
+      "operationId": "deviceAppManagement_GetSymantecCodeSigningCertificate",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.symantecCodeSigningCertificate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.symantecCodeSigningCertificate"
+      ],
+      "summary": "Update the navigation property symantecCodeSigningCertificate in deviceAppManagement",
+      "operationId": "deviceAppManagement_UpdateSymantecCodeSigningCertificate",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.symantecCodeSigningCertificate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.symantecCodeSigningCertificate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.symantecCodeSigningCertificate"
+      ],
+      "summary": "Delete navigation property symantecCodeSigningCertificate for deviceAppManagement",
+      "operationId": "deviceAppManagement_DeleteSymantecCodeSigningCertificate",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

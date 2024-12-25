@@ -1,0 +1,59 @@
+{
+  "/print/printerShares/{printerShare-id}/jobs/$count": {
+    "get": {
+      "tags": [
+        "print.printerShare"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "print.printerShare.job_GetCount",
+      "parameters": [
+        {
+          "name": "printerShare-id",
+          "in": "path",
+          "description": "The unique identifier of printerShare",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printerShare"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this."
+      }
+    }
+  }
+}

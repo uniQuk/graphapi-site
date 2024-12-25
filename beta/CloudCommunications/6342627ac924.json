@@ -1,0 +1,120 @@
+{
+  "/communications/onlineMeetings/{onlineMeeting-id}/attendeeReport": {
+    "get": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Get attendeeReport for the navigation property onlineMeetings from communications",
+      "description": "The content stream of the attendee report of a Teams live event. Read-only.",
+      "operationId": "communication_GetOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Update attendeeReport for the navigation property onlineMeetings in communications",
+      "description": "The content stream of the attendee report of a Teams live event. Read-only.",
+      "operationId": "communication_SetOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Delete attendeeReport for the navigation property onlineMeetings in communications",
+      "description": "The content stream of the attendee report of a Teams live event. Read-only.",
+      "operationId": "communication_DeleteOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

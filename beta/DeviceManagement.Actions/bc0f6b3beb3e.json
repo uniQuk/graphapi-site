@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/userExperienceAnalyticsDeviceScope/microsoft.graph.triggerDeviceScopeAction": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action triggerDeviceScopeAction",
+      "operationId": "deviceManagement.userExperienceAnalyticsDeviceScope_triggerDeviceScopeAction",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "actionName": {
+                  "$ref": "#/components/schemas/microsoft.graph.deviceScopeAction"
+                },
+                "deviceScopeId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceScopeActionResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

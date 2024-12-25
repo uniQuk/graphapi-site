@@ -1,0 +1,168 @@
+{
+  "/search/bookmarks/{bookmark-id}": {
+    "get": {
+      "tags": [
+        "search.bookmark"
+      ],
+      "summary": "Get bookmark",
+      "description": "Read the properties and relationships of a bookmark object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-beta"
+      },
+      "operationId": "search_GetBookmark",
+      "parameters": [
+        {
+          "name": "bookmark-id",
+          "in": "path",
+          "description": "The unique identifier of bookmark",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookmark"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.search.bookmark"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "search.bookmark"
+      ],
+      "summary": "Update bookmark",
+      "description": "Update the properties of a bookmark object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-beta"
+      },
+      "operationId": "search_UpdateBookmark",
+      "parameters": [
+        {
+          "name": "bookmark-id",
+          "in": "path",
+          "description": "The unique identifier of bookmark",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookmark"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.search.bookmark"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.search.bookmark"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "search.bookmark"
+      ],
+      "summary": "Delete bookmark",
+      "description": "Delete a bookmark object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-beta"
+      },
+      "operationId": "search_DeleteBookmark",
+      "parameters": [
+        {
+          "name": "bookmark-id",
+          "in": "path",
+          "description": "The unique identifier of bookmark",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookmark"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

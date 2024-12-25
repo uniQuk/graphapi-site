@@ -1,0 +1,158 @@
+{
+  "/trustFramework/policies/{trustFrameworkPolicy-id}": {
+    "get": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "Get policies from trustFramework",
+      "operationId": "trustFramework_GetPolicy",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trustFrameworkPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "Update the navigation property policies in trustFramework",
+      "operationId": "trustFramework_UpdatePolicy",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.trustFrameworkPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trustFrameworkPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "trustFramework.trustFrameworkPolicy"
+      ],
+      "summary": "Delete trustFrameworkPolicy",
+      "description": "Delete an existing trustFrameworkPolicy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework_DeletePolicy",
+      "parameters": [
+        {
+          "name": "trustFrameworkPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

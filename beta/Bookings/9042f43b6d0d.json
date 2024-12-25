@@ -1,0 +1,52 @@
+{
+  "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/$count": {
+    "get": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "solution.virtualEvent.townhall.presenter_GetCount",
+      "parameters": [
+        {
+          "name": "virtualEventTownhall-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventTownhall",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventTownhall"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

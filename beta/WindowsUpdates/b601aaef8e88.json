@@ -1,0 +1,80 @@
+{
+  "/admin/windows/updates/deploymentAudiences/{deploymentAudience-id}/applicableContent/{applicableContent-catalogEntryId}/catalogEntry": {
+    "get": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Get catalogEntry from admin",
+      "description": "Catalog entry for the update or content.",
+      "operationId": "admin.window.update.deploymentAudience.applicableContent_GetCatalogEntry",
+      "parameters": [
+        {
+          "name": "deploymentAudience-id",
+          "in": "path",
+          "description": "The unique identifier of deploymentAudience",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deploymentAudience"
+        },
+        {
+          "name": "applicableContent-catalogEntryId",
+          "in": "path",
+          "description": "The unique identifier of applicableContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "applicableContent"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.catalogEntry"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

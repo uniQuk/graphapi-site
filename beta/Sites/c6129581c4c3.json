@@ -1,0 +1,187 @@
+{
+  "/sites/{site-id}/columns/{columnDefinition-id}": {
+    "get": {
+      "tags": [
+        "sites.columnDefinition"
+      ],
+      "summary": "Get columns from sites",
+      "description": "The collection of column definitions reusable across lists under this site.",
+      "operationId": "site_GetColumn",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "columnDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of columnDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "columnDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.columnDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "sites.columnDefinition"
+      ],
+      "summary": "Update the navigation property columns in sites",
+      "operationId": "site_UpdateColumn",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "columnDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of columnDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "columnDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.columnDefinition"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.columnDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "sites.columnDefinition"
+      ],
+      "summary": "Delete navigation property columns for sites",
+      "operationId": "site_DeleteColumn",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "columnDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of columnDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "columnDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

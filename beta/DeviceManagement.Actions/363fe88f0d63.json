@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/microsoftTunnelServerLogCollectionResponses/{microsoftTunnelServerLogCollectionResponse-id}/microsoft.graph.createDownloadUrl": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action createDownloadUrl",
+      "operationId": "deviceManagement.microsoftTunnelServerLogCollectionResponse_createDownloadUrl",
+      "parameters": [
+        {
+          "name": "microsoftTunnelServerLogCollectionResponse-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServerLogCollectionResponse",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServerLogCollectionResponse"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

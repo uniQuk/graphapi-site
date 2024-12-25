@@ -1,0 +1,158 @@
+{
+  "/deviceManagement/virtualEndpoint/snapshots/{cloudPcSnapshot-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Get cloudPcSnapshot",
+      "description": "Read the properties and relationships of a cloudPcSnapshot object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcsnapshot-get?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_GetSnapshot",
+      "parameters": [
+        {
+          "name": "cloudPcSnapshot-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcSnapshot",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcSnapshot"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcSnapshot"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Update the navigation property snapshots in deviceManagement",
+      "operationId": "deviceManagement.virtualEndpoint_UpdateSnapshot",
+      "parameters": [
+        {
+          "name": "cloudPcSnapshot-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcSnapshot",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcSnapshot"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.cloudPcSnapshot"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcSnapshot"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Delete navigation property snapshots for deviceManagement",
+      "operationId": "deviceManagement.virtualEndpoint_DeleteSnapshot",
+      "parameters": [
+        {
+          "name": "cloudPcSnapshot-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcSnapshot",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcSnapshot"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

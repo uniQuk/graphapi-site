@@ -1,0 +1,40 @@
+{
+  "/deviceAppManagement/mobileApps/microsoft.graph.convertFromMobileAppCatalogPackage(mobileAppCatalogPackageId='{mobileAppCatalogPackageId}')": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.Functions"
+      ],
+      "summary": "Invoke function convertFromMobileAppCatalogPackage",
+      "operationId": "deviceAppManagement.mobileApp_convertFromMobileAppCatalogPackage",
+      "parameters": [
+        {
+          "name": "mobileAppCatalogPackageId",
+          "in": "path",
+          "description": "Usage: mobileAppCatalogPackageId='{mobileAppCatalogPackageId}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mobileApp"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

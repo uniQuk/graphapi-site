@@ -1,0 +1,49 @@
+{
+  "/applications/{application-id}/synchronization/microsoft.graph.Ping()": {
+    "get": {
+      "tags": [
+        "applications.Functions"
+      ],
+      "summary": "Invoke function Ping",
+      "operationId": "application.synchronization_Ping",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

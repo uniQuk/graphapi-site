@@ -1,0 +1,154 @@
+{
+  "/bookingBusinesses/{bookingBusiness-id}": {
+    "get": {
+      "tags": [
+        "bookingBusinesses.bookingBusiness"
+      ],
+      "summary": "Get entity from bookingBusinesses by key",
+      "description": "Represents a Microsoft Bookings Business.",
+      "operationId": "bookingBusiness_GetBookingBusiness",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingBusiness"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "bookingBusinesses.bookingBusiness"
+      ],
+      "summary": "Update entity in bookingBusinesses",
+      "operationId": "bookingBusiness_UpdateBookingBusiness",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.bookingBusiness"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingBusiness"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "bookingBusinesses.bookingBusiness"
+      ],
+      "summary": "Delete entity from bookingBusinesses",
+      "operationId": "bookingBusiness_DeleteBookingBusiness",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

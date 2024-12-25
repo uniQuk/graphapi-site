@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/userExperienceAnalyticsBatteryHealthDeviceAppImpact/{userExperienceAnalyticsBatteryHealthDeviceAppImpact-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+      ],
+      "summary": "Get userExperienceAnalyticsBatteryHealthDeviceAppImpact from deviceManagement",
+      "description": "User Experience Analytics Battery Health Device App Impact",
+      "operationId": "deviceManagement_GetUserExperienceAnalyticsBatteryHealthDeviceAppImpact",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceAppImpact-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceAppImpact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+      ],
+      "summary": "Update the navigation property userExperienceAnalyticsBatteryHealthDeviceAppImpact in deviceManagement",
+      "operationId": "deviceManagement_UpdateUserExperienceAnalyticsBatteryHealthDeviceAppImpact",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceAppImpact-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceAppImpact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+      ],
+      "summary": "Delete navigation property userExperienceAnalyticsBatteryHealthDeviceAppImpact for deviceManagement",
+      "operationId": "deviceManagement_DeleteUserExperienceAnalyticsBatteryHealthDeviceAppImpact",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceAppImpact-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceAppImpact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceAppImpact"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

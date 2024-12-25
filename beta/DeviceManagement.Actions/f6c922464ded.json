@@ -1,0 +1,34 @@
+{
+  "/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentity-id}/microsoft.graph.allowNextEnrollment": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action allowNextEnrollment",
+      "description": "Unblocks next autopilot enrollment.",
+      "operationId": "deviceManagement.windowsAutopilotDeviceIdentity_allowNextEnrollment",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

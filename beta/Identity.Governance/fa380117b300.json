@@ -1,0 +1,63 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageResources/{accessPackageResource-id}/accessPackageResourceRoles/{accessPackageResourceRole-id}/accessPackageResource/accessPackageResourceScopes/$count": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageResource.accessPackageResourceRole.accessPackageResource.accessPackageResourceScope_GetCount",
+      "parameters": [
+        {
+          "name": "accessPackageResource-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResource"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

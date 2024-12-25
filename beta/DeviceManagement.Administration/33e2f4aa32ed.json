@@ -1,0 +1,69 @@
+{
+  "/deviceManagement/groupPolicyDefinitions/{groupPolicyDefinition-id}/definitionFile": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyDefinition"
+      ],
+      "summary": "Get definitionFile from deviceManagement",
+      "description": "The group policy file associated with the definition.",
+      "operationId": "deviceManagement.groupPolicyDefinition_GetDefinitionFile",
+      "parameters": [
+        {
+          "name": "groupPolicyDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyDefinitionFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

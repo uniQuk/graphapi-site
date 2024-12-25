@@ -1,0 +1,63 @@
+{
+  "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members/$count": {
+    "get": {
+      "tags": [
+        "external.externalConnection"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "external.connection.group.member_GetCount",
+      "parameters": [
+        {
+          "name": "externalConnection-id",
+          "in": "path",
+          "description": "The unique identifier of externalConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalConnection"
+        },
+        {
+          "name": "externalGroup-id",
+          "in": "path",
+          "description": "The unique identifier of externalGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalGroup"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

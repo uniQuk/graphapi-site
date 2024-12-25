@@ -1,0 +1,196 @@
+{
+  "/print/printers/{printer-id}/taskTriggers/{printTaskTrigger-id}": {
+    "get": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Get taskTrigger",
+      "description": "Get a task trigger from a printer. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_GetTaskTrigger",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printTaskTrigger-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskTrigger",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskTrigger"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printTaskTrigger"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Update the navigation property taskTriggers in print",
+      "operationId": "print.printer_UpdateTaskTrigger",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printTaskTrigger-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskTrigger",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskTrigger"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printTaskTrigger"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printTaskTrigger"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "print.printer"
+      ],
+      "summary": "Delete taskTrigger",
+      "description": "Delete a printer's task trigger to prevent related print events from triggering tasks on the specified printer.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_DeleteTaskTrigger",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printTaskTrigger-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskTrigger",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskTrigger"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

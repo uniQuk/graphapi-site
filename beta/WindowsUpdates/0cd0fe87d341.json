@@ -1,0 +1,46 @@
+{
+  "/admin/windows/updates/updatableAssets/microsoft.graph.windowsUpdates.unenrollAssets": {
+    "post": {
+      "tags": [
+        "admin.Actions"
+      ],
+      "summary": "Invoke action unenrollAssets",
+      "description": "Unenroll updatableAsset resources from update management by Windows Autopatch. You can also use the method unenrollAssetsById to unenroll assets.",
+      "operationId": "admin.window.update.updatableAsset_unenrollAsset",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "updateCategory": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updateCategory"
+                },
+                "assets": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

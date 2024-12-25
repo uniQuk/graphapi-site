@@ -1,0 +1,206 @@
+{
+  "/administrativeUnits/{administrativeUnit-id}/members/$ref": {
+    "get": {
+      "tags": [
+        "administrativeUnits.directoryObject"
+      ],
+      "summary": "Get ref of members from administrativeUnits",
+      "description": "Users and groups that are members of this administrative unit. Supports $expand.",
+      "operationId": "administrativeUnit_ListMemberGraphBPreRef",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "in": "header",
+          "description": "Indicates the requested consistency level. Documentation URL: https://docs.microsoft.com/graph/aad-advanced-queries",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "examples": {
+            "example-1": {
+              "description": "$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'.",
+              "value": "eventual"
+            }
+          }
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/StringCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "administrativeUnits.directoryObject"
+      ],
+      "summary": "Add a member",
+      "description": "Use this API to add a member (user, group, or device) to an administrative unit or to create a new group within an administrative unit. All group types can be created within an administrative unit. Note: Currently, it's only possible to add one member at a time to an administrative unit.`",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/administrativeunit-post-members?view=graph-rest-beta"
+      },
+      "operationId": "administrativeUnit_CreateMemberGraphBPreRef",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPostBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "administrativeUnits.directoryObject"
+      ],
+      "summary": "Delete ref of navigation property members for administrativeUnits",
+      "operationId": "administrativeUnit_DeleteMemberGraphBPreRef",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "@id",
+          "in": "query",
+          "description": "The delete Uri",
+          "required": true,
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

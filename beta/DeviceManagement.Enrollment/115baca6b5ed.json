@@ -1,0 +1,69 @@
+{
+  "/deviceManagement/depOnboardingSettings/{depOnboardingSetting-id}/defaultIosEnrollmentProfile": {
+    "get": {
+      "tags": [
+        "deviceManagement.depOnboardingSetting"
+      ],
+      "summary": "Get defaultIosEnrollmentProfile from deviceManagement",
+      "description": "Default iOS Enrollment Profile",
+      "operationId": "deviceManagement.depOnboardingSetting_GetDefaultIosEnrollmentProfile",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.depIOSEnrollmentProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

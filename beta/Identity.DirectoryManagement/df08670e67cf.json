@@ -1,0 +1,229 @@
+{
+  "/organization/{organization-id}/branding/localizations/{organizationalBrandingLocalization-id}/bannerLogo": {
+    "get": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Get bannerLogo for the navigation property localizations from organization",
+      "description": "A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 \u00d7 245 pixels. We recommend using a transparent image with no padding around the logo.",
+      "operationId": "organization.branding_GetLocalizationsBannerLogo",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "organizationalBrandingLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of organizationalBrandingLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organizationalBrandingLocalization"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "image/bmp": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpeg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/gif": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/vnd.microsoft.icon": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/png": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/tiff": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Update organizationalBrandingLocalization",
+      "description": "Update the properties of an organizationalBrandingLocalization object for a specific localization.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-beta"
+      },
+      "operationId": "organization.branding_SetLocalizationsBannerLogo",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "organizationalBrandingLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of organizationalBrandingLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organizationalBrandingLocalization"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "image/bmp": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/gif": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/vnd.microsoft.icon": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/png": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/tiff": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Delete bannerLogo for the navigation property localizations in organization",
+      "description": "A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 \u00d7 245 pixels. We recommend using a transparent image with no padding around the logo.",
+      "operationId": "organization.branding_DeleteLocalizationsBannerLogo",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "organizationalBrandingLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of organizationalBrandingLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organizationalBrandingLocalization"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

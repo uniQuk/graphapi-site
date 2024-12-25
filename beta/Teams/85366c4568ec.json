@@ -1,0 +1,49 @@
+{
+  "/teamwork/teamTemplates/{teamTemplate-id}/definitions/{teamTemplateDefinition-id}/teamDefinition/primaryChannel/microsoft.graph.removeEmail": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action removeEmail",
+      "description": "Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/channel-removeemail?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel_removeEmail",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

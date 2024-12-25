@@ -1,0 +1,33 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.windowsDefenderUpdateSignatures": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action windowsDefenderUpdateSignatures",
+      "operationId": "deviceManagement.managedDevice_windowsDefenderUpdateSignature",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

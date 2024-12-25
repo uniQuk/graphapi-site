@@ -1,0 +1,52 @@
+{
+  "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/assignments/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.windowsInformationProtectionPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.windowsInformationProtectionPolicy.assignment_GetCount",
+      "parameters": [
+        {
+          "name": "windowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

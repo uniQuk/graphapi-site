@@ -1,0 +1,49 @@
+{
+  "/directory/outboundSharedUserProfiles/{outboundSharedUserProfile-userId}/tenants/{tenantReference-tenantId}/microsoft.graph.removePersonalData": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action removePersonalData",
+      "description": "Create a request to remove the personal data for an outboundSharedUserProfile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tenantreference-removepersonaldata?view=graph-rest-beta"
+      },
+      "operationId": "directory.outboundSharedUserProfile.tenant_removePersonalData",
+      "parameters": [
+        {
+          "name": "outboundSharedUserProfile-userId",
+          "in": "path",
+          "description": "The unique identifier of outboundSharedUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "outboundSharedUserProfile"
+        },
+        {
+          "name": "tenantReference-tenantId",
+          "in": "path",
+          "description": "The unique identifier of tenantReference",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tenantReference"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

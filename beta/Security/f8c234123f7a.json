@@ -1,0 +1,158 @@
+{
+  "/security/threatSubmission/emailThreats/{emailThreatSubmission-id}": {
+    "get": {
+      "tags": [
+        "security.threatSubmissionRoot"
+      ],
+      "summary": "Get emailThreatSubmission",
+      "description": "Read the properties and relationships of an emailThreatSubmission object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-emailthreatsubmission-get?view=graph-rest-beta"
+      },
+      "operationId": "security.threatSubmission_GetEmailThreat",
+      "parameters": [
+        {
+          "name": "emailThreatSubmission-id",
+          "in": "path",
+          "description": "The unique identifier of emailThreatSubmission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "emailThreatSubmission"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.emailThreatSubmission"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.threatSubmissionRoot"
+      ],
+      "summary": "Update the navigation property emailThreats in security",
+      "operationId": "security.threatSubmission_UpdateEmailThreat",
+      "parameters": [
+        {
+          "name": "emailThreatSubmission-id",
+          "in": "path",
+          "description": "The unique identifier of emailThreatSubmission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "emailThreatSubmission"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.emailThreatSubmission"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.emailThreatSubmission"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.threatSubmissionRoot"
+      ],
+      "summary": "Delete navigation property emailThreats for security",
+      "operationId": "security.threatSubmission_DeleteEmailThreat",
+      "parameters": [
+        {
+          "name": "emailThreatSubmission-id",
+          "in": "path",
+          "description": "The unique identifier of emailThreatSubmission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "emailThreatSubmission"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

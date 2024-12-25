@@ -1,0 +1,60 @@
+{
+  "/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC-id}/microsoft.graph.reprovision": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action reprovision",
+      "description": "Reprovision a specific Cloud PC.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpc-reprovision?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.cloudPC_reprovision",
+      "parameters": [
+        {
+          "name": "cloudPC-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPC",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPC"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userAccountType": {
+                  "$ref": "#/components/schemas/microsoft.graph.cloudPcUserAccountType"
+                },
+                "osVersion": {
+                  "$ref": "#/components/schemas/microsoft.graph.cloudPcOperatingSystem"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

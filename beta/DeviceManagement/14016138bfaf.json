@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/deviceShellScripts/{deviceShellScript-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceShellScript"
+      ],
+      "summary": "Get deviceShellScripts from deviceManagement",
+      "description": "The list of device shell scripts associated with the tenant.",
+      "operationId": "deviceManagement_GetDeviceShellScript",
+      "parameters": [
+        {
+          "name": "deviceShellScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceShellScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceShellScript"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceShellScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceShellScript"
+      ],
+      "summary": "Update the navigation property deviceShellScripts in deviceManagement",
+      "operationId": "deviceManagement_UpdateDeviceShellScript",
+      "parameters": [
+        {
+          "name": "deviceShellScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceShellScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceShellScript"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceShellScript"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceShellScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceShellScript"
+      ],
+      "summary": "Delete navigation property deviceShellScripts for deviceManagement",
+      "operationId": "deviceManagement_DeleteDeviceShellScript",
+      "parameters": [
+        {
+          "name": "deviceShellScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceShellScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceShellScript"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

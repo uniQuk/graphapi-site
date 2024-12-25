@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/deviceHealthScripts/{deviceHealthScript-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceHealthScript"
+      ],
+      "summary": "Get deviceHealthScripts from deviceManagement",
+      "description": "The list of device health scripts associated with the tenant.",
+      "operationId": "deviceManagement_GetDeviceHealthScript",
+      "parameters": [
+        {
+          "name": "deviceHealthScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceHealthScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceHealthScript"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceHealthScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceHealthScript"
+      ],
+      "summary": "Update the navigation property deviceHealthScripts in deviceManagement",
+      "operationId": "deviceManagement_UpdateDeviceHealthScript",
+      "parameters": [
+        {
+          "name": "deviceHealthScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceHealthScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceHealthScript"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceHealthScript"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceHealthScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceHealthScript"
+      ],
+      "summary": "Delete navigation property deviceHealthScripts for deviceManagement",
+      "operationId": "deviceManagement_DeleteDeviceHealthScript",
+      "parameters": [
+        {
+          "name": "deviceHealthScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceHealthScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceHealthScript"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

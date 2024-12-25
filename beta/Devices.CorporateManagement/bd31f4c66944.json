@@ -1,0 +1,154 @@
+{
+  "/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration-id}/deviceStatusSummary": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.managedDeviceMobileAppConfiguration"
+      ],
+      "summary": "Get deviceStatusSummary from deviceAppManagement",
+      "description": "App configuration device status summary.",
+      "operationId": "deviceAppManagement.mobileAppConfiguration_GetDeviceStatusSummary",
+      "parameters": [
+        {
+          "name": "managedDeviceMobileAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationDeviceSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.managedDeviceMobileAppConfiguration"
+      ],
+      "summary": "Update the navigation property deviceStatusSummary in deviceAppManagement",
+      "operationId": "deviceAppManagement.mobileAppConfiguration_UpdateDeviceStatusSummary",
+      "parameters": [
+        {
+          "name": "managedDeviceMobileAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationDeviceSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationDeviceSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.managedDeviceMobileAppConfiguration"
+      ],
+      "summary": "Delete navigation property deviceStatusSummary for deviceAppManagement",
+      "operationId": "deviceAppManagement.mobileAppConfiguration_DeleteDeviceStatusSummary",
+      "parameters": [
+        {
+          "name": "managedDeviceMobileAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

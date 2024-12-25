@@ -1,0 +1,68 @@
+{
+  "/tenantRelationships/managedTenants/tenantTags/{tenantTag-id}/microsoft.graph.managedTenants.assignTag": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action assignTag",
+      "description": "Assign the tenant tag to the specified managed tenants.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-beta"
+      },
+      "operationId": "tenantRelationship.managedTenant.tenantTag_assignTag",
+      "parameters": [
+        {
+          "name": "tenantTag-id",
+          "in": "path",
+          "description": "The unique identifier of tenantTag",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tenantTag"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tenantIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.tenantTag"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

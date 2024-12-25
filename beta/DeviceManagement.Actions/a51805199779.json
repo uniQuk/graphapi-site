@@ -1,0 +1,61 @@
+{
+  "/deviceManagement/deviceCustomAttributeShellScripts/{deviceCustomAttributeShellScript-id}/microsoft.graph.assign": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action assign",
+      "operationId": "deviceManagement.deviceCustomAttributeShellScript_assign",
+      "parameters": [
+        {
+          "name": "deviceCustomAttributeShellScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCustomAttributeShellScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCustomAttributeShellScript"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deviceManagementScriptGroupAssignments": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.deviceManagementScriptGroupAssignment"
+                  }
+                },
+                "deviceManagementScriptAssignments": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.deviceManagementScriptAssignment"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

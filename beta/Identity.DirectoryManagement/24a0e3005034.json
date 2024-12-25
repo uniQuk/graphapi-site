@@ -1,0 +1,215 @@
+{
+  "/devices/{device-id}/registeredOwners/$ref": {
+    "get": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "List registeredOwners",
+      "description": "Retrieve a list of users that are registered owners of the device. A registered owner is the user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-beta"
+      },
+      "operationId": "device_ListRegisteredOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "in": "header",
+          "description": "Indicates the requested consistency level. Documentation URL: https://docs.microsoft.com/graph/aad-advanced-queries",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "examples": {
+            "example-1": {
+              "description": "$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'.",
+              "value": "eventual"
+            }
+          }
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/StringCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "Create registeredOwner",
+      "description": "Add a user as a registered owner of the device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/device-post-registeredowners?view=graph-rest-beta"
+      },
+      "operationId": "device_CreateRegisteredOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPostBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "Delete registeredOwner",
+      "description": "Remove a user as a registered owner of the device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-beta"
+      },
+      "operationId": "device_DeleteRegisteredOwnerGraphBPreRef",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "@id",
+          "in": "query",
+          "description": "The delete Uri",
+          "required": true,
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

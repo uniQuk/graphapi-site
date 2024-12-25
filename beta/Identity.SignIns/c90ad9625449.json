@@ -1,0 +1,158 @@
+{
+  "/dataPolicyOperations/{dataPolicyOperation-id}": {
+    "get": {
+      "tags": [
+        "dataPolicyOperations.dataPolicyOperation"
+      ],
+      "summary": "Get dataPolicyOperation",
+      "description": "Retrieve the properties of the dataPolicyOperation object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/datapolicyoperation-get?view=graph-rest-beta"
+      },
+      "operationId": "dataPolicyOperation_GetDataPolicyOperation",
+      "parameters": [
+        {
+          "name": "dataPolicyOperation-id",
+          "in": "path",
+          "description": "The unique identifier of dataPolicyOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dataPolicyOperation"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.dataPolicyOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "dataPolicyOperations.dataPolicyOperation"
+      ],
+      "summary": "Update entity in dataPolicyOperations",
+      "operationId": "dataPolicyOperation_UpdateDataPolicyOperation",
+      "parameters": [
+        {
+          "name": "dataPolicyOperation-id",
+          "in": "path",
+          "description": "The unique identifier of dataPolicyOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dataPolicyOperation"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.dataPolicyOperation"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.dataPolicyOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "dataPolicyOperations.dataPolicyOperation"
+      ],
+      "summary": "Delete entity from dataPolicyOperations",
+      "operationId": "dataPolicyOperation_DeleteDataPolicyOperation",
+      "parameters": [
+        {
+          "name": "dataPolicyOperation-id",
+          "in": "path",
+          "description": "The unique identifier of dataPolicyOperation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dataPolicyOperation"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

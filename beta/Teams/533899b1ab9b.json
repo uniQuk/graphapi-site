@@ -1,0 +1,82 @@
+{
+  "/teamwork/teamTemplates/{teamTemplate-id}/definitions/{teamTemplateDefinition-id}/teamDefinition/channels/{channel-id}/messages/{chatMessage-id}/replies/{chatMessage-id1}/microsoft.graph.softDelete": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action softDelete",
+      "description": "Delete a single chatMessage or a chat message reply in a channel or a chat.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.channel.message.reply_softDelete",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessage-id1",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

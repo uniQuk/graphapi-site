@@ -1,0 +1,63 @@
+{
+  "/accessReviews/{accessReview-id}/instances/{accessReview-id1}/myDecisions/$count": {
+    "get": {
+      "tags": [
+        "accessReviews.accessReview"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "accessReview.instance.myDecision_GetCount",
+      "parameters": [
+        {
+          "name": "accessReview-id",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReview-id1",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

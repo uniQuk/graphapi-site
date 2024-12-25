@@ -1,0 +1,154 @@
+{
+  "/reports/monthlyPrintUsageByUser/{printUsageByUser-id}": {
+    "get": {
+      "tags": [
+        "reports.printUsageByUser"
+      ],
+      "summary": "Get monthlyPrintUsageByUser from reports",
+      "description": "Retrieve a list of monthly print usage summaries, grouped by user.",
+      "operationId": "report_GetMonthlyPrintUsageGraphBPreUser",
+      "parameters": [
+        {
+          "name": "printUsageByUser-id",
+          "in": "path",
+          "description": "The unique identifier of printUsageByUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printUsageByUser"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printUsageByUser"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "reports.printUsageByUser"
+      ],
+      "summary": "Update the navigation property monthlyPrintUsageByUser in reports",
+      "operationId": "report_UpdateMonthlyPrintUsageGraphBPreUser",
+      "parameters": [
+        {
+          "name": "printUsageByUser-id",
+          "in": "path",
+          "description": "The unique identifier of printUsageByUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printUsageByUser"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printUsageByUser"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printUsageByUser"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "reports.printUsageByUser"
+      ],
+      "summary": "Delete navigation property monthlyPrintUsageByUser for reports",
+      "operationId": "report_DeleteMonthlyPrintUsageGraphBPreUser",
+      "parameters": [
+        {
+          "name": "printUsageByUser-id",
+          "in": "path",
+          "description": "The unique identifier of printUsageByUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printUsageByUser"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

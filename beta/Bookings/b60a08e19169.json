@@ -1,0 +1,38 @@
+{
+  "/solutions/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.unpublish": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action unpublish",
+      "description": "Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and publicUrl property to null.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-beta"
+      },
+      "operationId": "solution.bookingBusiness_unpublish",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

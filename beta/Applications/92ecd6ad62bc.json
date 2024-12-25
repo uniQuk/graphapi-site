@@ -1,0 +1,60 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/synchronization/microsoft.graph.acquireAccessToken": {
+    "post": {
+      "tags": [
+        "servicePrincipals.Actions"
+      ],
+      "summary": "Invoke action acquireAccessToken",
+      "description": "Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal.synchronization_acquireAccessToken",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "credentials": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.synchronizationSecretKeyStringValuePair"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

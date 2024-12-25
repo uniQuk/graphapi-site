@@ -1,0 +1,65 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.restoreCloudPc": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action restoreCloudPc",
+      "description": "Restore a Cloud PC device to a previous state with an Intune managed device ID.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.managedDevice_restoreCloudPc",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cloudPcSnapshotId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-10-30",
+        "date": "2023-08-22",
+        "version": "2023-07/restoreCloudPc",
+        "description": "The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

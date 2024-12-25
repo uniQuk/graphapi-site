@@ -1,0 +1,60 @@
+{
+  "/networkAccess/forwardingPolicies/{forwardingPolicy-id}/microsoft.graph.networkaccess.updatePolicyRules": {
+    "post": {
+      "tags": [
+        "networkAccess.Actions"
+      ],
+      "summary": "Invoke action updatePolicyRules",
+      "description": "Update the rules within a forwarding policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-updatepolicyrules?view=graph-rest-beta"
+      },
+      "operationId": "networkAccess.forwardingPolicy_updatePolicyRule",
+      "parameters": [
+        {
+          "name": "forwardingPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rules": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyRuleDelta"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

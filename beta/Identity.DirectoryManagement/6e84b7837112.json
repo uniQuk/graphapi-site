@@ -1,0 +1,186 @@
+{
+  "/domains/{domain-id}/sharedEmailDomainInvitations/{sharedEmailDomainInvitation-id}": {
+    "get": {
+      "tags": [
+        "domains.sharedEmailDomainInvitation"
+      ],
+      "summary": "Get sharedEmailDomainInvitations from domains",
+      "operationId": "domain_GetSharedEmailDomainInvitation",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "sharedEmailDomainInvitation-id",
+          "in": "path",
+          "description": "The unique identifier of sharedEmailDomainInvitation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedEmailDomainInvitation"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.sharedEmailDomainInvitation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "domains.sharedEmailDomainInvitation"
+      ],
+      "summary": "Update the navigation property sharedEmailDomainInvitations in domains",
+      "operationId": "domain_UpdateSharedEmailDomainInvitation",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "sharedEmailDomainInvitation-id",
+          "in": "path",
+          "description": "The unique identifier of sharedEmailDomainInvitation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedEmailDomainInvitation"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.sharedEmailDomainInvitation"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.sharedEmailDomainInvitation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "domains.sharedEmailDomainInvitation"
+      ],
+      "summary": "Delete navigation property sharedEmailDomainInvitations for domains",
+      "operationId": "domain_DeleteSharedEmailDomainInvitation",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "sharedEmailDomainInvitation-id",
+          "in": "path",
+          "description": "The unique identifier of sharedEmailDomainInvitation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedEmailDomainInvitation"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

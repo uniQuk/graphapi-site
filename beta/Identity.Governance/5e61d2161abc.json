@@ -1,0 +1,52 @@
+{
+  "/programs/{program-id}/controls/$count": {
+    "get": {
+      "tags": [
+        "programs.programControl"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "program.control_GetCount",
+      "parameters": [
+        {
+          "name": "program-id",
+          "in": "path",
+          "description": "The unique identifier of program",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "program"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

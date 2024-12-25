@@ -1,0 +1,63 @@
+{
+  "/identityGovernance/accessReviews/decisions/{accessReviewInstanceDecisionItem-id}/instance/stages/{accessReviewStage-id}/decisions/$count": {
+    "get": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identityGovernance.accessReview.decision.instance.stage.decision_GetCount",
+      "parameters": [
+        {
+          "name": "accessReviewInstanceDecisionItem-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewInstanceDecisionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewInstanceDecisionItem"
+        },
+        {
+          "name": "accessReviewStage-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewStage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewStage"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

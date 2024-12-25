@@ -1,0 +1,220 @@
+{
+  "/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy-id}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule-id}/scheduledActionConfigurations/{deviceComplianceActionItem-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicy"
+      ],
+      "summary": "Get scheduledActionConfigurations from deviceManagement",
+      "description": "The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.",
+      "operationId": "deviceManagement.deviceCompliancePolicy.scheduledActionsGraphFPreRule_GetScheduledActionConfiguration",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicy"
+        },
+        {
+          "name": "deviceComplianceScheduledActionForRule-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceScheduledActionForRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceScheduledActionForRule"
+        },
+        {
+          "name": "deviceComplianceActionItem-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceActionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceActionItem"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceComplianceActionItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicy"
+      ],
+      "summary": "Update the navigation property scheduledActionConfigurations in deviceManagement",
+      "operationId": "deviceManagement.deviceCompliancePolicy.scheduledActionsGraphFPreRule_UpdateScheduledActionConfiguration",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicy"
+        },
+        {
+          "name": "deviceComplianceScheduledActionForRule-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceScheduledActionForRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceScheduledActionForRule"
+        },
+        {
+          "name": "deviceComplianceActionItem-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceActionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceActionItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceComplianceActionItem"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceComplianceActionItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceCompliancePolicy"
+      ],
+      "summary": "Delete navigation property scheduledActionConfigurations for deviceManagement",
+      "operationId": "deviceManagement.deviceCompliancePolicy.scheduledActionsGraphFPreRule_DeleteScheduledActionConfiguration",
+      "parameters": [
+        {
+          "name": "deviceCompliancePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceCompliancePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceCompliancePolicy"
+        },
+        {
+          "name": "deviceComplianceScheduledActionForRule-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceScheduledActionForRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceScheduledActionForRule"
+        },
+        {
+          "name": "deviceComplianceActionItem-id",
+          "in": "path",
+          "description": "The unique identifier of deviceComplianceActionItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceComplianceActionItem"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "/organization/{organization-id}/settings/itemInsights": {
+    "get": {
+      "tags": [
+        "organization.organizationSettings"
+      ],
+      "summary": "List itemInsights",
+      "description": "Get the properties of an insightsSettings object for displaying or returning item insights in an organization. To learn how to customize the privacy of item insights in an organization, see Customize item insights privacy. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/organizationsettings-list-iteminsights?view=graph-rest-beta"
+      },
+      "operationId": "organization.setting_GetItemInsight",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.insightsSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-01-01",
+        "date": "2023-10-17",
+        "version": "2023-10/Beta:ItemInsightsOranizationSettings",
+        "description": "The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "organization.organizationSettings"
+      ],
+      "summary": "Update the navigation property itemInsights in organization",
+      "operationId": "organization.setting_UpdateItemInsight",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.insightsSettings"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.insightsSettings"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-01-01",
+        "date": "2023-10-17",
+        "version": "2023-10/Beta:ItemInsightsOranizationSettings",
+        "description": "The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "organization.organizationSettings"
+      ],
+      "summary": "Delete navigation property itemInsights for organization",
+      "operationId": "organization.setting_DeleteItemInsight",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-01-01",
+        "date": "2023-10-17",
+        "version": "2023-10/Beta:ItemInsightsOranizationSettings",
+        "description": "The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

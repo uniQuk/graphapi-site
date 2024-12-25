@@ -1,0 +1,63 @@
+{
+  "/admin/windows/updates/updatePolicies/{updatePolicy-id}/audience/exclusions/microsoft.graph.windowsUpdates.unenrollAssetsById": {
+    "post": {
+      "tags": [
+        "admin.Actions"
+      ],
+      "summary": "Invoke action unenrollAssetsById",
+      "operationId": "admin.window.update.updatePolicy.audience.exclusion_unenrollAssetsGraphBPreId",
+      "parameters": [
+        {
+          "name": "updatePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of updatePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "updatePolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "updateCategory": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updateCategory"
+                },
+                "memberEntityType": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

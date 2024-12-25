@@ -1,0 +1,27 @@
+{
+  "/external/industryData/runs/microsoft.graph.industryData.getStatistics()": {
+    "get": {
+      "tags": [
+        "external.Functions"
+      ],
+      "summary": "Invoke function getStatistics",
+      "operationId": "external.industryData.run_getStatistics",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.industryDataRunStatistics"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

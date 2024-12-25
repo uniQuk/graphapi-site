@@ -1,0 +1,163 @@
+{
+  "/deviceManagement/monitoring/alertRules/{alertRule-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.monitoring"
+      ],
+      "summary": "Get alertRule",
+      "description": "Read the properties and relationships of an alertRule object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/devicemanagement-alertrule-get?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.monitoring_GetAlertRule",
+      "parameters": [
+        {
+          "name": "alertRule-id",
+          "in": "path",
+          "description": "The unique identifier of alertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alertRule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagement.alertRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.monitoring"
+      ],
+      "summary": "Update alertRule",
+      "description": "Update the properties of an alertRule object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/devicemanagement-alertrule-update?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.monitoring_UpdateAlertRule",
+      "parameters": [
+        {
+          "name": "alertRule-id",
+          "in": "path",
+          "description": "The unique identifier of alertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alertRule"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagement.alertRule"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagement.alertRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.monitoring"
+      ],
+      "summary": "Delete navigation property alertRules for deviceManagement",
+      "operationId": "deviceManagement.monitoring_DeleteAlertRule",
+      "parameters": [
+        {
+          "name": "alertRule-id",
+          "in": "path",
+          "description": "The unique identifier of alertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alertRule"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

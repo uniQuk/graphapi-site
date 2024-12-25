@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicy-id}/microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action retrieveEnrollmentTimeDeviceMembershipTarget",
+      "operationId": "deviceManagement.configurationPolicy_retrieveEnrollmentTimeDeviceMembershipTarget",
+      "parameters": [
+        {
+          "name": "deviceManagementConfigurationPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationPolicy"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.enrollmentTimeDeviceMembershipTargetResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "/chats/{chat-id}/microsoft.graph.completeMigration": {
+    "post": {
+      "tags": [
+        "chats.Actions"
+      ],
+      "summary": "Invoke action completeMigration",
+      "operationId": "chat_completeMigration",
+      "parameters": [
+        {
+          "name": "chat-id",
+          "in": "path",
+          "description": "The unique identifier of chat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chat"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

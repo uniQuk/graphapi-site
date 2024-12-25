@@ -1,0 +1,48 @@
+{
+  "/reports/userInsights/daily/inactiveUsersByApplication/$count": {
+    "get": {
+      "tags": [
+        "reports.userInsightsRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "report.userInsight.daily.inactiveUsersGraphBPreApplication_GetCount",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-02-16",
+        "date": "2024-02-02",
+        "version": "2024-02/Remove_Breakdown_APIs",
+        "description": "The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API."
+      }
+    }
+  }
+}

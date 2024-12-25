@@ -1,0 +1,154 @@
+{
+  "/security/partner/securityScore/customerInsights/{customerInsight-tenantId}": {
+    "get": {
+      "tags": [
+        "security.partnerSecurity"
+      ],
+      "summary": "Get customerInsights from security",
+      "description": "Contains customer-specific information for certain requirements.",
+      "operationId": "security.partner.securityScore_GetCustomerInsight",
+      "parameters": [
+        {
+          "name": "customerInsight-tenantId",
+          "in": "path",
+          "description": "The unique identifier of customerInsight",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customerInsight"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.partner.security.customerInsight"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.partnerSecurity"
+      ],
+      "summary": "Update the navigation property customerInsights in security",
+      "operationId": "security.partner.securityScore_UpdateCustomerInsight",
+      "parameters": [
+        {
+          "name": "customerInsight-tenantId",
+          "in": "path",
+          "description": "The unique identifier of customerInsight",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customerInsight"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.partner.security.customerInsight"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.partner.security.customerInsight"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.partnerSecurity"
+      ],
+      "summary": "Delete navigation property customerInsights for security",
+      "operationId": "security.partner.securityScore_DeleteCustomerInsight",
+      "parameters": [
+        {
+          "name": "customerInsight-tenantId",
+          "in": "path",
+          "description": "The unique identifier of customerInsight",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customerInsight"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

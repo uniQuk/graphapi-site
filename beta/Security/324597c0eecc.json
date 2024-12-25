@@ -1,0 +1,52 @@
+{
+  "/security/identities/sensors/{sensor-id}/healthIssues/$count": {
+    "get": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.identity.sensor.healthIssue_GetCount",
+      "parameters": [
+        {
+          "name": "sensor-id",
+          "in": "path",
+          "description": "The unique identifier of sensor",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensor"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

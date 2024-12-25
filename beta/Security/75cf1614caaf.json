@@ -1,0 +1,70 @@
+{
+  "/security/alerts_v2/{alert-id}/comments": {
+    "post": {
+      "tags": [
+        "security.alert"
+      ],
+      "summary": "Create comment for alert",
+      "description": "Create a comment for an existing alert based on the specified alert id property.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-alert-post-comments?view=graph-rest-beta"
+      },
+      "operationId": "security.alerts_v2_SetComment",
+      "parameters": [
+        {
+          "name": "alert-id",
+          "in": "path",
+          "description": "The unique identifier of alert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alert"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/microsoft.graph.security.alertComment"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.alertComment"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

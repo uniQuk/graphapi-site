@@ -1,0 +1,46 @@
+{
+  "/deviceManagement/deviceCompliancePolicies/microsoft.graph.validateComplianceScript": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action validateComplianceScript",
+      "operationId": "deviceManagement.deviceCompliancePolicy_validateComplianceScript",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deviceCompliancePolicyScript": {
+                  "$ref": "#/components/schemas/microsoft.graph.deviceCompliancePolicyScript"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceComplianceScriptValidationResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

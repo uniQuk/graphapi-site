@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.getCloudPcReviewStatus()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getCloudPcReviewStatus",
+      "description": "Get the review status of a specific Cloud PC device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-getcloudpcreviewstatus?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.managedDevice_getCloudPcReviewStatus",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcReviewStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-04-30",
+        "date": "2024-01-03",
+        "version": "2024-01/getCloudPcReviewStatus",
+        "description": "The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API"
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

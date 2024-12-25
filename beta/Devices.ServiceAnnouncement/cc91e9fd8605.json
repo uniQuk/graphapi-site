@@ -1,0 +1,164 @@
+{
+  "/admin/serviceAnnouncement/messages/{serviceUpdateMessage-id}/attachments/{serviceAnnouncementAttachment-id}/content": {
+    "get": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Get serviceAnnouncementAttachment",
+      "description": "Read the properties and relationships of a serviceAnnouncementAttachment object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-beta"
+      },
+      "operationId": "admin.serviceAnnouncement.message_GetAttachmentsContent",
+      "parameters": [
+        {
+          "name": "serviceUpdateMessage-id",
+          "in": "path",
+          "description": "The unique identifier of serviceUpdateMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceUpdateMessage"
+        },
+        {
+          "name": "serviceAnnouncementAttachment-id",
+          "in": "path",
+          "description": "The unique identifier of serviceAnnouncementAttachment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceAnnouncementAttachment"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Update content for the navigation property attachments in admin",
+      "description": "The attachment content.",
+      "operationId": "admin.serviceAnnouncement.message_SetAttachmentsContent",
+      "parameters": [
+        {
+          "name": "serviceUpdateMessage-id",
+          "in": "path",
+          "description": "The unique identifier of serviceUpdateMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceUpdateMessage"
+        },
+        {
+          "name": "serviceAnnouncementAttachment-id",
+          "in": "path",
+          "description": "The unique identifier of serviceAnnouncementAttachment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceAnnouncementAttachment"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceAnnouncementAttachment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Delete content for the navigation property attachments in admin",
+      "description": "The attachment content.",
+      "operationId": "admin.serviceAnnouncement.message_DeleteAttachmentsContent",
+      "parameters": [
+        {
+          "name": "serviceUpdateMessage-id",
+          "in": "path",
+          "description": "The unique identifier of serviceUpdateMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceUpdateMessage"
+        },
+        {
+          "name": "serviceAnnouncementAttachment-id",
+          "in": "path",
+          "description": "The unique identifier of serviceAnnouncementAttachment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceAnnouncementAttachment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

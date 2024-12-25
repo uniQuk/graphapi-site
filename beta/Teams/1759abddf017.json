@@ -1,0 +1,153 @@
+{
+  "/teamwork/teamTemplates/{teamTemplate-id}/definitions/{teamTemplateDefinition-id}/teamDefinition/primaryChannel/filesFolder/contentStream": {
+    "get": {
+      "tags": [
+        "teamwork.teamTemplate"
+      ],
+      "summary": "Get contentStream for the navigation property filesFolder from teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel_GetFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "teamwork.teamTemplate"
+      ],
+      "summary": "Update contentStream for the navigation property filesFolder in teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel_SetFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "teamwork.teamTemplate"
+      ],
+      "summary": "Delete contentStream for the navigation property filesFolder in teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel_DeleteFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

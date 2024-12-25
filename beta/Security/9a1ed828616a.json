@@ -1,0 +1,49 @@
+{
+  "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/microsoft.graph.security.estimateStatistics": {
+    "post": {
+      "tags": [
+        "security.Actions"
+      ],
+      "summary": "Invoke action estimateStatistics",
+      "description": "Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-estimatestatistics?view=graph-rest-beta"
+      },
+      "operationId": "security.case.ediscoveryCase.search_estimateStatistics",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "ediscoverySearch-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoverySearch",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoverySearch"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

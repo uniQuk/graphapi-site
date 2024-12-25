@@ -1,0 +1,78 @@
+{
+  "/financials/companies/{company-id}/salesInvoices/{salesInvoice-id}/salesInvoiceLines/{salesInvoiceLine-id}/item/picture/$count": {
+    "get": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "financial.company.salesInvoice.salesInvoiceLine.item.picture_GetCount",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesInvoice-id",
+          "in": "path",
+          "description": "The unique identifier of salesInvoice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesInvoice"
+        },
+        {
+          "name": "salesInvoiceLine-id",
+          "in": "path",
+          "description": "The unique identifier of salesInvoiceLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "salesInvoiceLine"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

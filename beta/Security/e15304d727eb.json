@@ -1,0 +1,187 @@
+{
+  "/security/auditLog/queries/{auditLogQuery-id}/records/{auditLogRecord-id}": {
+    "get": {
+      "tags": [
+        "security.auditCoreRoot"
+      ],
+      "summary": "Get records from security",
+      "description": "An individual audit log record.",
+      "operationId": "security.auditLog.query_GetRecord",
+      "parameters": [
+        {
+          "name": "auditLogQuery-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogQuery",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogQuery"
+        },
+        {
+          "name": "auditLogRecord-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogRecord"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.auditLogRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.auditCoreRoot"
+      ],
+      "summary": "Update the navigation property records in security",
+      "operationId": "security.auditLog.query_UpdateRecord",
+      "parameters": [
+        {
+          "name": "auditLogQuery-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogQuery",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogQuery"
+        },
+        {
+          "name": "auditLogRecord-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogRecord"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.auditLogRecord"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.auditLogRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.auditCoreRoot"
+      ],
+      "summary": "Delete navigation property records for security",
+      "operationId": "security.auditLog.query_DeleteRecord",
+      "parameters": [
+        {
+          "name": "auditLogQuery-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogQuery",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogQuery"
+        },
+        {
+          "name": "auditLogRecord-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogRecord"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

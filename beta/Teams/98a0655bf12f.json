@@ -1,0 +1,153 @@
+{
+  "/teamwork/deletedTeams/{deletedTeam-id}/channels/{channel-id}/filesFolder/contentStream": {
+    "get": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Get contentStream for the navigation property filesFolder from teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.deletedTeam.channel_GetFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Update contentStream for the navigation property filesFolder in teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.deletedTeam.channel_SetFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Delete contentStream for the navigation property filesFolder in teamwork",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "teamwork.deletedTeam.channel_DeleteFilesFolderContentStream",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

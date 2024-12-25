@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy-id}/deviceStatuses/{windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy"
+      ],
+      "summary": "Get deviceStatuses from deviceAppManagement",
+      "description": "The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.",
+      "operationId": "deviceAppManagement.wdacSupplementalPolicy_GetDeviceStatus",
+      "parameters": [
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicy"
+        },
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy"
+      ],
+      "summary": "Update the navigation property deviceStatuses in deviceAppManagement",
+      "operationId": "deviceAppManagement.wdacSupplementalPolicy_UpdateDeviceStatus",
+      "parameters": [
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicy"
+        },
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy"
+      ],
+      "summary": "Delete navigation property deviceStatuses for deviceAppManagement",
+      "operationId": "deviceAppManagement.wdacSupplementalPolicy_DeleteDeviceStatus",
+      "parameters": [
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicy"
+        },
+        {
+          "name": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus-id",
+          "in": "path",
+          "description": "The unique identifier of windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "/teamwork/teamTemplates/{teamTemplate-id}/definitions/{teamTemplateDefinition-id}/teamDefinition/primaryChannel/messages/{chatMessage-id}/replies/$count": {
+    "get": {
+      "tags": [
+        "teamwork.teamTemplate"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "teamwork.teamTemplate.definition.teamDefinition.primaryChannel.message.reply_GetCount",
+      "parameters": [
+        {
+          "name": "teamTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplate"
+        },
+        {
+          "name": "teamTemplateDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamTemplateDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamTemplateDefinition"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

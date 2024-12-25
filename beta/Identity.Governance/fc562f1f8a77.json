@@ -1,0 +1,168 @@
+{
+  "/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Get accessReviewScheduleDefinition",
+      "description": "Retrieve an accessReviewScheduleDefinition object by ID. This returns all properties of the scheduled access review series except for the associated accessReviewInstances. Each accessReviewScheduleDefinition has at least one instance. An instance represents a review for a specific resource (such as a particular group's members), during one occurrence (for example, March 2021) of a recurring review. To retrieve the instances of the access review series, use the list accessReviewInstance API.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.accessReview_GetDefinition",
+      "parameters": [
+        {
+          "name": "accessReviewScheduleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewScheduleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewScheduleDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewScheduleDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "put": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Update accessReviewScheduleDefinition",
+      "description": "Update an existing accessReviewScheduleDefinition object to change one or more of its properties.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.accessReview_SetDefinition",
+      "parameters": [
+        {
+          "name": "accessReviewScheduleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewScheduleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewScheduleDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessReviewScheduleDefinition"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewScheduleDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Delete accessReviewScheduleDefinition",
+      "description": "Delete an accessReviewScheduleDefinition object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.accessReview_DeleteDefinition",
+      "parameters": [
+        {
+          "name": "accessReviewScheduleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewScheduleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewScheduleDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent-id}/appLogCollectionRequests/{appLogCollectionRequest-id}/microsoft.graph.createDownloadUrl": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action createDownloadUrl",
+      "operationId": "deviceManagement.mobileAppTroubleshootingEvent.appLogCollectionRequest_createDownloadUrl",
+      "parameters": [
+        {
+          "name": "mobileAppTroubleshootingEvent-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppTroubleshootingEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppTroubleshootingEvent"
+        },
+        {
+          "name": "appLogCollectionRequest-id",
+          "in": "path",
+          "description": "The unique identifier of appLogCollectionRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appLogCollectionRequest"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.appLogCollectionDownloadDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

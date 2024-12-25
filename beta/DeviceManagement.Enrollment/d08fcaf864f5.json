@@ -1,0 +1,41 @@
+{
+  "/roleManagement/exchange/resourceNamespaces/$count": {
+    "get": {
+      "tags": [
+        "roleManagement.unifiedRbacApplication"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "roleManagement.exchange.resourceNamespace_GetCount",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

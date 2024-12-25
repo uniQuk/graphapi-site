@@ -1,0 +1,70 @@
+{
+  "/groups/{group-id}/sites/{site-id}/informationProtection/policy/labels/$count": {
+    "get": {
+      "tags": [
+        "groups.site"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "group.site.informationProtection.policy.label_GetCount",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-08-15",
+        "date": "2021-02-15",
+        "version": "2021-02/Beta_SensitivityLabels",
+        "description": "This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs."
+      }
+    }
+  }
+}

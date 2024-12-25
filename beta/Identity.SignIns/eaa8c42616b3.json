@@ -1,0 +1,138 @@
+{
+  "/organization/{organization-id}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration-id}": {
+    "get": {
+      "tags": [
+        "organization.certificateBasedAuthConfiguration"
+      ],
+      "summary": "Get certificateBasedAuthConfiguration",
+      "description": "Get the properties of a certificateBasedAuthConfiguration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-beta"
+      },
+      "operationId": "organization_GetCertificateBasedAuthConfiguration",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "certificateBasedAuthConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedAuthConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedAuthConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "organization.certificateBasedAuthConfiguration"
+      ],
+      "summary": "Delete certificateBasedAuthConfiguration",
+      "description": "Delete a certificateBasedAuthConfiguration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-beta"
+      },
+      "operationId": "organization_DeleteCertificateBasedAuthConfiguration",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "certificateBasedAuthConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedAuthConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedAuthConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

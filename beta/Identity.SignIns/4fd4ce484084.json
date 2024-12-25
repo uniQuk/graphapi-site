@@ -1,0 +1,68 @@
+{
+  "/identity/authenticationEventsFlows/{authenticationEventsFlow-id}/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart": {
+    "get": {
+      "tags": [
+        "identity.authenticationEventsFlow"
+      ],
+      "summary": "Get onAuthenticationMethodLoadStart property value",
+      "description": "Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.",
+      "operationId": "identity.authenticationEventsFlowAsExternalUsersSelfServiceSignUpEventsFlow_GetOnAuthenticationMethodLoadStart",
+      "parameters": [
+        {
+          "name": "authenticationEventsFlow-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationEventsFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationEventsFlow"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Entity result.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onAuthenticationMethodLoadStartHandler"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

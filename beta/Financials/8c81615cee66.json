@@ -1,0 +1,48 @@
+{
+  "/financials/companies/{company-id}/salesQuotes/{salesQuote-id}/microsoft.graph.send": {
+    "post": {
+      "tags": [
+        "financials.Actions"
+      ],
+      "summary": "Invoke action send",
+      "operationId": "financial.company.salesQuote_send",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesQuote-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesQuote"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "/financials/companies/{company-id}/journals/{journal-id}/journalLines/{journalLine-id}": {
+    "get": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Get journalLines from financials",
+      "operationId": "financial.company.journal_GetJournalLine",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "journal-id",
+          "in": "path",
+          "description": "The unique identifier of journal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journal"
+        },
+        {
+          "name": "journalLine-id",
+          "in": "path",
+          "description": "The unique identifier of journalLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journalLine"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.journalLine"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Update the navigation property journalLines in financials",
+      "operationId": "financial.company.journal_UpdateJournalLine",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "journal-id",
+          "in": "path",
+          "description": "The unique identifier of journal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journal"
+        },
+        {
+          "name": "journalLine-id",
+          "in": "path",
+          "description": "The unique identifier of journalLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journalLine"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.journalLine"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.journalLine"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Delete navigation property journalLines for financials",
+      "operationId": "financial.company.journal_DeleteJournalLine",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "journal-id",
+          "in": "path",
+          "description": "The unique identifier of journal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journal"
+        },
+        {
+          "name": "journalLine-id",
+          "in": "path",
+          "description": "The unique identifier of journalLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "journalLine"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

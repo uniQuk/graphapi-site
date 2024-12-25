@@ -1,0 +1,187 @@
+{
+  "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}": {
+    "get": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Get presenters from solutions",
+      "description": "The virtual event presenters.",
+      "operationId": "solution.virtualEvent.event_GetPresenter",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "virtualEventPresenter-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventPresenter",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventPresenter"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventPresenter"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Update the navigation property presenters in solutions",
+      "operationId": "solution.virtualEvent.event_UpdatePresenter",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "virtualEventPresenter-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventPresenter",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventPresenter"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.virtualEventPresenter"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventPresenter"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Delete navigation property presenters for solutions",
+      "operationId": "solution.virtualEvent.event_DeletePresenter",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "virtualEventPresenter-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventPresenter",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventPresenter"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

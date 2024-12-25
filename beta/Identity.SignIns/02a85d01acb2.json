@@ -1,0 +1,79 @@
+{
+  "/trustFramework/keySets/{trustFrameworkKeySet-id}/microsoft.graph.generateKey": {
+    "post": {
+      "tags": [
+        "trustFramework.Actions"
+      ],
+      "summary": "Invoke action generateKey",
+      "description": "Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframeworkkeyset-generatekey?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework.keySet_generateKey",
+      "parameters": [
+        {
+          "name": "trustFrameworkKeySet-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkKeySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkKeySet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "use": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "kty": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "nbf": {
+                  "type": "integer",
+                  "format": "int64",
+                  "nullable": true
+                },
+                "exp": {
+                  "type": "integer",
+                  "format": "int64",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trustFrameworkKey"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

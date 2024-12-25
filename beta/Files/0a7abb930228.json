@@ -1,0 +1,51 @@
+{
+  "/drives/{drive-id}/items/{driveItem-id}/microsoft.graph.extractSensitivityLabels": {
+    "post": {
+      "tags": [
+        "drives.Actions"
+      ],
+      "summary": "Invoke action extractSensitivityLabels",
+      "operationId": "drive.item_extractSensitivityLabel",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.extractSensitivityLabelsResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

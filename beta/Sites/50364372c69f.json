@@ -1,0 +1,48 @@
+{
+  "/sites/{site-id}/contentTypes/{contentType-id}/microsoft.graph.unpublish": {
+    "post": {
+      "tags": [
+        "sites.Actions"
+      ],
+      "summary": "Invoke action unpublish",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-beta"
+      },
+      "operationId": "site.contentType_unpublish",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "contentType-id",
+          "in": "path",
+          "description": "The unique identifier of contentType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contentType"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

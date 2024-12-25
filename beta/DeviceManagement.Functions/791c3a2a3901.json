@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/microsoft.graph.getComanagedDevicesSummary()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getComanagedDevicesSummary",
+      "operationId": "deviceManagement_getComanagedDevicesSummary",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.comanagedDevicesSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

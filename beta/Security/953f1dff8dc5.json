@@ -1,0 +1,76 @@
+{
+  "/security/incidents/{incident-id}/alerts/{alert-id}/comments": {
+    "post": {
+      "tags": [
+        "security.incident"
+      ],
+      "summary": "Sets a new value for the collection of alertComment.",
+      "operationId": "security.incident.alert_SetComment",
+      "parameters": [
+        {
+          "name": "incident-id",
+          "in": "path",
+          "description": "The unique identifier of incident",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "incident"
+        },
+        {
+          "name": "alert-id",
+          "in": "path",
+          "description": "The unique identifier of alert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alert"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/microsoft.graph.security.alertComment"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.alertComment"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "/financials/companies/{company-id}/salesQuotes/{salesQuote-id}/salesQuoteLines/{salesQuoteLine-id}/item/itemCategory": {
+    "get": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Get itemCategory from financials",
+      "operationId": "financial.company.salesQuote.salesQuoteLine.item_GetItemCategory",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesQuote-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesQuote"
+        },
+        {
+          "name": "salesQuoteLine-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuoteLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "salesQuoteLine"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.itemCategory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Update the navigation property itemCategory in financials",
+      "operationId": "financial.company.salesQuote.salesQuoteLine.item_UpdateItemCategory",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesQuote-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesQuote"
+        },
+        {
+          "name": "salesQuoteLine-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuoteLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "salesQuoteLine"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.itemCategory"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.itemCategory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "financials.company"
+      ],
+      "summary": "Delete navigation property itemCategory for financials",
+      "operationId": "financial.company.salesQuote.salesQuoteLine.item_DeleteItemCategory",
+      "parameters": [
+        {
+          "name": "company-id",
+          "in": "path",
+          "description": "The unique identifier of company",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "company"
+        },
+        {
+          "name": "salesQuote-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string",
+            "format": "uuid"
+          },
+          "x-ms-docs-key-type": "salesQuote"
+        },
+        {
+          "name": "salesQuoteLine-id",
+          "in": "path",
+          "description": "The unique identifier of salesQuoteLine",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "salesQuoteLine"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

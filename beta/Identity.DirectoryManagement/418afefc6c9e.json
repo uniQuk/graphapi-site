@@ -1,0 +1,45 @@
+{
+  "/directory/recommendations/{recommendation-id}/microsoft.graph.reactivate": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action reactivate",
+      "description": "Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-beta"
+      },
+      "operationId": "directory.recommendation_reactivate",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.recommendation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

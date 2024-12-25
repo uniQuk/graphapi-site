@@ -1,0 +1,63 @@
+{
+  "/roleManagement/enterpriseApps/{rbacApplication-id}/roleAssignmentApprovals/{approval-id}/steps/$count": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "roleManagement.enterpriseApp.roleAssignmentApproval.step_GetCount",
+      "parameters": [
+        {
+          "name": "rbacApplication-id",
+          "in": "path",
+          "description": "The unique identifier of rbacApplication",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "rbacApplication"
+        },
+        {
+          "name": "approval-id",
+          "in": "path",
+          "description": "The unique identifier of approval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "approval"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

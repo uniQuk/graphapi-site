@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/microsoftTunnelSites/{microsoftTunnelSite-id}/microsoftTunnelServers/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.microsoftTunnelSite"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.microsoftTunnelSite.microsoftTunnelServer_GetCount",
+      "parameters": [
+        {
+          "name": "microsoftTunnelSite-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelSite"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

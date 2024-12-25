@@ -1,0 +1,58 @@
+{
+  "/print/shares/{printerShare-id}/allowedGroups/{group-id}/$ref": {
+    "delete": {
+      "tags": [
+        "print.printerShare"
+      ],
+      "summary": "Delete allowedGroup from printerShare",
+      "description": "Revoke the specified group's access to submit print jobs to the associated printerShare.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printershare-delete-allowedgroup?view=graph-rest-beta"
+      },
+      "operationId": "print.share.allowedGroup_DeleteGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "printerShare-id",
+          "in": "path",
+          "description": "The unique identifier of printerShare",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printerShare"
+        },
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

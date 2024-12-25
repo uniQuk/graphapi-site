@@ -1,0 +1,64 @@
+{
+  "/solutions/businessScenarios/{businessScenario-id}/planner/microsoft.graph.getPlan": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action getPlan",
+      "description": "Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn't exist for the specified target at the time of the request, a new plan will be created for the businessScenario.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/businessscenarioplanner-getplan?view=graph-rest-beta"
+      },
+      "operationId": "solution.businessScenario.planner_getPlan",
+      "parameters": [
+        {
+          "name": "businessScenario-id",
+          "in": "path",
+          "description": "The unique identifier of businessScenario",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "businessScenario"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "target": {
+                  "$ref": "#/components/schemas/microsoft.graph.businessScenarioTaskTargetBase"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.businessScenarioPlanReference"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

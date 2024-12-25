@@ -1,0 +1,158 @@
+{
+  "/teamwork/devices/{teamworkDevice-id}/configuration": {
+    "get": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Get teamworkDeviceConfiguration",
+      "description": "Get the configuration details of a Microsoft Teams-enabled device, including software versions, peripheral device configuration (for example, camera, display, microphone, and speaker), hardware configuration, and Microsoft Teams client configuration.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkdeviceconfiguration-get?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.device_GetConfiguration",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Update the navigation property configuration in teamwork",
+      "operationId": "teamwork.device_UpdateConfiguration",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceConfiguration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkDeviceConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teamwork.teamworkDevice"
+      ],
+      "summary": "Delete navigation property configuration for teamwork",
+      "operationId": "teamwork.device_DeleteConfiguration",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

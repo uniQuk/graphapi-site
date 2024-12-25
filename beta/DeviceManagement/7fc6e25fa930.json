@@ -1,0 +1,168 @@
+{
+  "/admin/edge/internetExplorerMode/siteLists/{browserSiteList-id}": {
+    "get": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Get browserSiteList",
+      "description": "Get a browserSiteList that contains browserSite and browserSharedCookie resources.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-beta"
+      },
+      "operationId": "admin.edge.internetExplorerMode_GetSiteList",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteList"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Update browserSiteList",
+      "description": "Update the properties of a browserSiteList object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-beta"
+      },
+      "operationId": "admin.edge.internetExplorerMode_UpdateSiteList",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.browserSiteList"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteList"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Delete browserSiteList",
+      "description": "Delete a browserSiteList object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-beta"
+      },
+      "operationId": "admin.edge.internetExplorerMode_DeleteSiteList",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

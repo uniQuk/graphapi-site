@@ -1,0 +1,63 @@
+{
+  "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleDefinitions/$count": {
+    "get": {
+      "tags": [
+        "privilegedAccess.governanceResource"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "privilegedAccess.resource.roleDefinition_GetCount",
+      "parameters": [
+        {
+          "name": "privilegedAccess-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccess",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccess"
+        },
+        {
+          "name": "governanceResource-id",
+          "in": "path",
+          "description": "The unique identifier of governanceResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "governanceResource"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

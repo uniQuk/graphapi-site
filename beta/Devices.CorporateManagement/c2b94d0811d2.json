@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/exemptAppLockerFiles/{windowsInformationProtectionAppLockerFile-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.mdmWindowsInformationProtectionPolicy"
+      ],
+      "summary": "Get exemptAppLockerFiles from deviceAppManagement",
+      "description": "Another way to input exempt apps through xml files",
+      "operationId": "deviceAppManagement.mdmWindowsInformationProtectionPolicy_GetExemptAppLockerFile",
+      "parameters": [
+        {
+          "name": "mdmWindowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of mdmWindowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mdmWindowsInformationProtectionPolicy"
+        },
+        {
+          "name": "windowsInformationProtectionAppLockerFile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionAppLockerFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionAppLockerFile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsInformationProtectionAppLockerFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.mdmWindowsInformationProtectionPolicy"
+      ],
+      "summary": "Update the navigation property exemptAppLockerFiles in deviceAppManagement",
+      "operationId": "deviceAppManagement.mdmWindowsInformationProtectionPolicy_UpdateExemptAppLockerFile",
+      "parameters": [
+        {
+          "name": "mdmWindowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of mdmWindowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mdmWindowsInformationProtectionPolicy"
+        },
+        {
+          "name": "windowsInformationProtectionAppLockerFile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionAppLockerFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionAppLockerFile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsInformationProtectionAppLockerFile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsInformationProtectionAppLockerFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.mdmWindowsInformationProtectionPolicy"
+      ],
+      "summary": "Delete navigation property exemptAppLockerFiles for deviceAppManagement",
+      "operationId": "deviceAppManagement.mdmWindowsInformationProtectionPolicy_DeleteExemptAppLockerFile",
+      "parameters": [
+        {
+          "name": "mdmWindowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of mdmWindowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mdmWindowsInformationProtectionPolicy"
+        },
+        {
+          "name": "windowsInformationProtectionAppLockerFile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionAppLockerFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionAppLockerFile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

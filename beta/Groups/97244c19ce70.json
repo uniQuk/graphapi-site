@@ -1,0 +1,51 @@
+{
+  "/groups/{group-id}/onenote/pages/{onenotePage-id}/microsoft.graph.preview()": {
+    "get": {
+      "tags": [
+        "groups.Functions"
+      ],
+      "summary": "Invoke function preview",
+      "operationId": "group.onenote.page_preview",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "onenotePage-id",
+          "in": "path",
+          "description": "The unique identifier of onenotePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenotePage"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onenotePagePreview"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "/planner/buckets/{plannerBucket-id}": {
+    "get": {
+      "tags": [
+        "planner.plannerBucket"
+      ],
+      "summary": "Get plannerBucket",
+      "description": "Retrieve the properties and relationships of a plannerBucket object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-beta"
+      },
+      "operationId": "planner_GetBucket",
+      "parameters": [
+        {
+          "name": "plannerBucket-id",
+          "in": "path",
+          "description": "The unique identifier of plannerBucket",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerBucket"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.plannerBucket"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "planner.plannerBucket"
+      ],
+      "summary": "Update plannerbucket",
+      "description": "Update the properties of plannerbucket object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-beta"
+      },
+      "operationId": "planner_UpdateBucket",
+      "parameters": [
+        {
+          "name": "plannerBucket-id",
+          "in": "path",
+          "description": "The unique identifier of plannerBucket",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerBucket"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag value.",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.plannerBucket"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.plannerBucket"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "planner.plannerBucket"
+      ],
+      "summary": "Delete plannerBucket",
+      "description": "Delete plannerBucket.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-beta"
+      },
+      "operationId": "planner_DeleteBucket",
+      "parameters": [
+        {
+          "name": "plannerBucket-id",
+          "in": "path",
+          "description": "The unique identifier of plannerBucket",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "plannerBucket"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

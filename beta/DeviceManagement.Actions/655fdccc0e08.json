@@ -1,0 +1,34 @@
+{
+  "/deviceManagement/comanagedDevices/{managedDevice-id}/microsoft.graph.enrollNowAction": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action enrollNowAction",
+      "description": "Trigger comanagement enrollment action on ConfigurationManager client",
+      "operationId": "deviceManagement.comanagedDevice_enrollNowAction",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

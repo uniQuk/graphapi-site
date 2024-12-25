@@ -1,0 +1,128 @@
+{
+  "/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationPartnerConfiguration": {
+    "get": {
+      "tags": [
+        "policies.crossTenantAccessPolicy"
+      ],
+      "summary": "Get multiTenantOrganizationPartnerConfigurationTemplate",
+      "description": "Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-get?view=graph-rest-beta"
+      },
+      "operationId": "policy.crossTenantAccessPolicy.template_GetMultiTenantOrganizationPartnerConfiguration",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.multiTenantOrganizationPartnerConfigurationTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.crossTenantAccessPolicy"
+      ],
+      "summary": "Update multiTenantOrganizationPartnerConfigurationTemplate",
+      "description": "Update the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-update?view=graph-rest-beta"
+      },
+      "operationId": "policy.crossTenantAccessPolicy.template_UpdateMultiTenantOrganizationPartnerConfiguration",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.multiTenantOrganizationPartnerConfigurationTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.multiTenantOrganizationPartnerConfigurationTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.crossTenantAccessPolicy"
+      ],
+      "summary": "Delete navigation property multiTenantOrganizationPartnerConfiguration for policies",
+      "operationId": "policy.crossTenantAccessPolicy.template_DeleteMultiTenantOrganizationPartnerConfiguration",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

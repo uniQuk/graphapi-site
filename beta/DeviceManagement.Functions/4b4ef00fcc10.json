@@ -1,0 +1,50 @@
+{
+  "/deviceManagement/depOnboardingSettings/{depOnboardingSetting-id}/microsoft.graph.getEncryptionPublicKey()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getEncryptionPublicKey",
+      "description": "Get a public key to use to encrypt the Apple device enrollment program token",
+      "operationId": "deviceManagement.depOnboardingSetting_getEncryptionPublicKey",
+      "parameters": [
+        {
+          "name": "depOnboardingSetting-id",
+          "in": "path",
+          "description": "The unique identifier of depOnboardingSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "depOnboardingSetting"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

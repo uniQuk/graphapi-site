@@ -1,0 +1,57 @@
+{
+  "/deviceManagement/intents/{deviceManagementIntent-id}/microsoft.graph.migrateToTemplate": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action migrateToTemplate",
+      "operationId": "deviceManagement.intent_migrateToTemplate",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newTemplateId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "preserveCustomValues": {
+                  "type": "boolean",
+                  "default": false
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

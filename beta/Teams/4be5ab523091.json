@@ -1,0 +1,80 @@
+{
+  "/teams/{team-id}/schedule/timeCards/{timeCard-id}/microsoft.graph.startBreak": {
+    "post": {
+      "tags": [
+        "teams.Actions"
+      ],
+      "summary": "Invoke action startBreak",
+      "description": "Start a break in a specific timeCard.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/timecard-startbreak?view=graph-rest-beta"
+      },
+      "operationId": "team.schedule.timeCard_startBreak",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "timeCard-id",
+          "in": "path",
+          "description": "The unique identifier of timeCard",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "timeCard"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "atApprovedLocation": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "notes": {
+                  "$ref": "#/components/schemas/microsoft.graph.itemBody"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.timeCard"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

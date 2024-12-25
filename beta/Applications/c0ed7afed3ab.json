@@ -1,0 +1,58 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}/$ref": {
+    "delete": {
+      "tags": [
+        "servicePrincipals.homeRealmDiscoveryPolicy"
+      ],
+      "summary": "Remove homeRealmDiscoveryPolicy",
+      "description": "Remove a homeRealmDiscoveryPolicy from a servicePrincipal.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-delete-homerealmdiscoverypolicies?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal.homeRealmDiscoveryPolicy_DeleteHomeRealmDiscoveryPolicyGraphBPreRef",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "homeRealmDiscoveryPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of homeRealmDiscoveryPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "homeRealmDiscoveryPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

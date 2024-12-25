@@ -1,0 +1,63 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/languages/{userFlowLanguageConfiguration-id}/overridesPages/$count": {
+    "get": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identity.b2xUserFlow.language.overridesPage_GetCount",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

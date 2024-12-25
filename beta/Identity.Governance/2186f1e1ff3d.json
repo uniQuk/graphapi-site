@@ -1,0 +1,220 @@
+{
+  "/accessReviews/{accessReview-id}/instances/{accessReview-id1}/decisions/{accessReviewDecision-id}": {
+    "get": {
+      "tags": [
+        "accessReviews.accessReview"
+      ],
+      "summary": "Get decisions from accessReviews",
+      "description": "The collection of decisions for this access review.",
+      "operationId": "accessReview.instance_GetDecision",
+      "parameters": [
+        {
+          "name": "accessReview-id",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReview-id1",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReviewDecision-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewDecision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewDecision"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewDecision"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "accessReviews.accessReview"
+      ],
+      "summary": "Update the navigation property decisions in accessReviews",
+      "operationId": "accessReview.instance_UpdateDecision",
+      "parameters": [
+        {
+          "name": "accessReview-id",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReview-id1",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReviewDecision-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewDecision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewDecision"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessReviewDecision"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewDecision"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "accessReviews.accessReview"
+      ],
+      "summary": "Delete navigation property decisions for accessReviews",
+      "operationId": "accessReview.instance_DeleteDecision",
+      "parameters": [
+        {
+          "name": "accessReview-id",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReview-id1",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        },
+        {
+          "name": "accessReviewDecision-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewDecision",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewDecision"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

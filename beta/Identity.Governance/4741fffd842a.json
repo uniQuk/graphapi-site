@@ -1,0 +1,53 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment-id}/accessPackage/incompatibleAccessPackages/{accessPackage-id}/$ref": {
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete ref of navigation property incompatibleAccessPackages for identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.incompatibleAccessPackage_DeleteAccessPackageGraphBPreRef",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "accessPackage-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

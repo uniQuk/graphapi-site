@@ -1,0 +1,220 @@
+{
+  "/deviceAppManagement/managedEBooks/{managedEBook-id}/userStateSummary/{userInstallStateSummary-id}/deviceStates/{deviceInstallState-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.managedEBook"
+      ],
+      "summary": "Get deviceStates from deviceAppManagement",
+      "description": "The install state of the eBook.",
+      "operationId": "deviceAppManagement.managedEBook.userStateSummary_GetDeviceState",
+      "parameters": [
+        {
+          "name": "managedEBook-id",
+          "in": "path",
+          "description": "The unique identifier of managedEBook",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedEBook"
+        },
+        {
+          "name": "userInstallStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of userInstallStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userInstallStateSummary"
+        },
+        {
+          "name": "deviceInstallState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceInstallState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceInstallState"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceInstallState"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.managedEBook"
+      ],
+      "summary": "Update the navigation property deviceStates in deviceAppManagement",
+      "operationId": "deviceAppManagement.managedEBook.userStateSummary_UpdateDeviceState",
+      "parameters": [
+        {
+          "name": "managedEBook-id",
+          "in": "path",
+          "description": "The unique identifier of managedEBook",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedEBook"
+        },
+        {
+          "name": "userInstallStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of userInstallStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userInstallStateSummary"
+        },
+        {
+          "name": "deviceInstallState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceInstallState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceInstallState"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceInstallState"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceInstallState"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.managedEBook"
+      ],
+      "summary": "Delete navigation property deviceStates for deviceAppManagement",
+      "operationId": "deviceAppManagement.managedEBook.userStateSummary_DeleteDeviceState",
+      "parameters": [
+        {
+          "name": "managedEBook-id",
+          "in": "path",
+          "description": "The unique identifier of managedEBook",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedEBook"
+        },
+        {
+          "name": "userInstallStateSummary-id",
+          "in": "path",
+          "description": "The unique identifier of userInstallStateSummary",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userInstallStateSummary"
+        },
+        {
+          "name": "deviceInstallState-id",
+          "in": "path",
+          "description": "The unique identifier of deviceInstallState",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceInstallState"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

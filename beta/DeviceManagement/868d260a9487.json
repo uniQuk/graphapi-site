@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/microsoftTunnelServerLogCollectionResponses/{microsoftTunnelServerLogCollectionResponse-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.microsoftTunnelServerLogCollectionResponse"
+      ],
+      "summary": "Get microsoftTunnelServerLogCollectionResponses from deviceManagement",
+      "description": "Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.",
+      "operationId": "deviceManagement_GetMicrosoftTunnelServerLogCollectionResponse",
+      "parameters": [
+        {
+          "name": "microsoftTunnelServerLogCollectionResponse-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServerLogCollectionResponse",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServerLogCollectionResponse"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServerLogCollectionResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.microsoftTunnelServerLogCollectionResponse"
+      ],
+      "summary": "Update the navigation property microsoftTunnelServerLogCollectionResponses in deviceManagement",
+      "operationId": "deviceManagement_UpdateMicrosoftTunnelServerLogCollectionResponse",
+      "parameters": [
+        {
+          "name": "microsoftTunnelServerLogCollectionResponse-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServerLogCollectionResponse",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServerLogCollectionResponse"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServerLogCollectionResponse"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServerLogCollectionResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.microsoftTunnelServerLogCollectionResponse"
+      ],
+      "summary": "Delete navigation property microsoftTunnelServerLogCollectionResponses for deviceManagement",
+      "operationId": "deviceManagement_DeleteMicrosoftTunnelServerLogCollectionResponse",
+      "parameters": [
+        {
+          "name": "microsoftTunnelServerLogCollectionResponse-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServerLogCollectionResponse",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServerLogCollectionResponse"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

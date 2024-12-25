@@ -1,0 +1,92 @@
+{
+  "/solutions/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.getStaffAvailability": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action getStaffAvailability",
+      "description": "Get the availability information of staff members of a Microsoft Bookings calendar.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingbusiness-getstaffavailability?view=graph-rest-beta"
+      },
+      "operationId": "solution.bookingBusiness_getStaffAvailability",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "staffIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "startDateTime": {
+                  "$ref": "#/components/schemas/microsoft.graph.dateTimeTimeZone"
+                },
+                "endDateTime": {
+                  "$ref": "#/components/schemas/microsoft.graph.dateTimeTimeZone"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.staffAvailabilityItem"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

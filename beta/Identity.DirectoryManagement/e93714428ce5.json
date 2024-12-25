@@ -1,0 +1,53 @@
+{
+  "/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "administrativeUnits.directoryObject"
+      ],
+      "summary": "Delete ref of navigation property members for administrativeUnits",
+      "operationId": "administrativeUnit.member_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

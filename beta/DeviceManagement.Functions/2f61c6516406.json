@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/microsoft.graph.getComanagementEligibleDevicesSummary()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getComanagementEligibleDevicesSummary",
+      "operationId": "deviceManagement_getComanagementEligibleDevicesSummary",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.comanagementEligibleDevicesSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

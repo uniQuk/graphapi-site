@@ -1,0 +1,47 @@
+{
+  "/deviceManagement/androidManagedStoreAccountEnterpriseSettings/microsoft.graph.approveApps": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action approveApps",
+      "operationId": "deviceManagement.androidManagedStoreAccountEnterpriseSetting_approveApp",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "packageIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "approveAllPermissions": {
+                  "type": "boolean",
+                  "default": false
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

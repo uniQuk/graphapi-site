@@ -1,0 +1,69 @@
+{
+  "/education/classes/{educationClass-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id}/$ref": {
+    "delete": {
+      "tags": [
+        "education.educationClass"
+      ],
+      "summary": "Remove educationCategory",
+      "description": "Remove an educationCategory from an educationAssignment. Only teachers can perform this operation.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationassignment-remove-category?view=graph-rest-beta"
+      },
+      "operationId": "education.class.assignment.category_DeleteEducationCategoryGraphBPreRef",
+      "parameters": [
+        {
+          "name": "educationClass-id",
+          "in": "path",
+          "description": "The unique identifier of educationClass",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationClass"
+        },
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        },
+        {
+          "name": "educationCategory-id",
+          "in": "path",
+          "description": "The unique identifier of educationCategory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationCategory"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

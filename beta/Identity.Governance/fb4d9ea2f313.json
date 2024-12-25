@@ -1,0 +1,72 @@
+{
+  "/privilegedRoleAssignmentRequests/{privilegedRoleAssignmentRequest-id}/roleInfo/microsoft.graph.selfActivate": {
+    "post": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.Actions"
+      ],
+      "summary": "Invoke action selfActivate",
+      "operationId": "privilegedRoleAssignmentRequest.roleInfo_selfActivate",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "duration": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketNumber": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketSystem": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

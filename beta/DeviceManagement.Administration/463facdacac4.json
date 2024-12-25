@@ -1,0 +1,168 @@
+{
+  "/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Get cloudPcOnPremisesConnection",
+      "description": "Read the properties and relationships of the cloudPcOnPremisesConnection object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_GetOnPremisesConnection",
+      "parameters": [
+        {
+          "name": "cloudPcOnPremisesConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcOnPremisesConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcOnPremisesConnection"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcOnPremisesConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Update cloudPcOnPremisesConnection",
+      "description": "Update the properties of a cloudPcOnPremisesConnection object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_UpdateOnPremisesConnection",
+      "parameters": [
+        {
+          "name": "cloudPcOnPremisesConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcOnPremisesConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcOnPremisesConnection"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.cloudPcOnPremisesConnection"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcOnPremisesConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Delete cloudPcOnPremisesConnection",
+      "description": "Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You can't delete an Azure network connection when it's in use, as indicated by the inUse property.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_DeleteOnPremisesConnection",
+      "parameters": [
+        {
+          "name": "cloudPcOnPremisesConnection-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcOnPremisesConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcOnPremisesConnection"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

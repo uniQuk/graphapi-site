@@ -1,0 +1,56 @@
+{
+  "/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition-id}/instances/{accessReviewHistoryInstance-id}/microsoft.graph.generateDownloadUri": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action generateDownloadUri",
+      "description": "Generates a URI for an accessReviewHistoryInstance object the status for which is done. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the downloadUri property from the accessReviewHistoryInstance object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreviewhistoryinstance-generatedownloaduri?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.accessReview.historyDefinition.instance_generateDownloadUri",
+      "parameters": [
+        {
+          "name": "accessReviewHistoryDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryDefinition"
+        },
+        {
+          "name": "accessReviewHistoryInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryInstance"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewHistoryInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

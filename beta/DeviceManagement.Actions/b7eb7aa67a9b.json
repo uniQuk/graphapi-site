@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/zebraFotaDeployments/{zebraFotaDeployment-id}/microsoft.graph.cancel": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action cancel",
+      "operationId": "deviceManagement.zebraFotaDeployment_cancel",
+      "parameters": [
+        {
+          "name": "zebraFotaDeployment-id",
+          "in": "path",
+          "description": "The unique identifier of zebraFotaDeployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "zebraFotaDeployment"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

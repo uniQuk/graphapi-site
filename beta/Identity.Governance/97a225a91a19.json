@@ -1,0 +1,153 @@
+{
+  "/businessFlowTemplates/{businessFlowTemplate-id}": {
+    "get": {
+      "tags": [
+        "businessFlowTemplates.businessFlowTemplate"
+      ],
+      "summary": "Get entity from businessFlowTemplates by key",
+      "operationId": "businessFlowTemplate_GetBusinessFlowTemplate",
+      "parameters": [
+        {
+          "name": "businessFlowTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of businessFlowTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "businessFlowTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.businessFlowTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "businessFlowTemplates.businessFlowTemplate"
+      ],
+      "summary": "Update entity in businessFlowTemplates",
+      "operationId": "businessFlowTemplate_UpdateBusinessFlowTemplate",
+      "parameters": [
+        {
+          "name": "businessFlowTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of businessFlowTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "businessFlowTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.businessFlowTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.businessFlowTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "businessFlowTemplates.businessFlowTemplate"
+      ],
+      "summary": "Delete entity from businessFlowTemplates",
+      "operationId": "businessFlowTemplate_DeleteBusinessFlowTemplate",
+      "parameters": [
+        {
+          "name": "businessFlowTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of businessFlowTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "businessFlowTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

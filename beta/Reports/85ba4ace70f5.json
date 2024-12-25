@@ -1,0 +1,158 @@
+{
+  "/reports/appCredentialSignInActivities/{appCredentialSignInActivity-id}": {
+    "get": {
+      "tags": [
+        "reports.appCredentialSignInActivity"
+      ],
+      "summary": "Get appCredentialSignInActivity",
+      "description": "Get an appCredentialSignInActivity object that contains recent activity of an application credential.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-beta"
+      },
+      "operationId": "report_GetAppCredentialSignInActivity",
+      "parameters": [
+        {
+          "name": "appCredentialSignInActivity-id",
+          "in": "path",
+          "description": "The unique identifier of appCredentialSignInActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appCredentialSignInActivity"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.appCredentialSignInActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "reports.appCredentialSignInActivity"
+      ],
+      "summary": "Update the navigation property appCredentialSignInActivities in reports",
+      "operationId": "report_UpdateAppCredentialSignInActivity",
+      "parameters": [
+        {
+          "name": "appCredentialSignInActivity-id",
+          "in": "path",
+          "description": "The unique identifier of appCredentialSignInActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appCredentialSignInActivity"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.appCredentialSignInActivity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.appCredentialSignInActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "reports.appCredentialSignInActivity"
+      ],
+      "summary": "Delete navigation property appCredentialSignInActivities for reports",
+      "operationId": "report_DeleteAppCredentialSignInActivity",
+      "parameters": [
+        {
+          "name": "appCredentialSignInActivity-id",
+          "in": "path",
+          "description": "The unique identifier of appCredentialSignInActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appCredentialSignInActivity"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

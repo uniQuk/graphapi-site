@@ -1,0 +1,229 @@
+{
+  "/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow-id}/versions/{workflowVersion-versionNumber}/tasks/{task-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Get tasks from identityGovernance",
+      "description": "The tasks in the workflow.",
+      "operationId": "identityGovernance.lifecycleWorkflow.deletedItem.workflow.version_GetTask",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "workflowVersion-versionNumber",
+          "in": "path",
+          "description": "The unique identifier of workflowVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32"
+          },
+          "x-ms-docs-key-type": "workflowVersion"
+        },
+        {
+          "name": "task-id",
+          "in": "path",
+          "description": "The unique identifier of task",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "task"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.task"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Update the navigation property tasks in identityGovernance",
+      "operationId": "identityGovernance.lifecycleWorkflow.deletedItem.workflow.version_UpdateTask",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "workflowVersion-versionNumber",
+          "in": "path",
+          "description": "The unique identifier of workflowVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32"
+          },
+          "x-ms-docs-key-type": "workflowVersion"
+        },
+        {
+          "name": "task-id",
+          "in": "path",
+          "description": "The unique identifier of task",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "task"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityGovernance.task"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityGovernance.task"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.lifecycleWorkflowsContainer"
+      ],
+      "summary": "Delete navigation property tasks for identityGovernance",
+      "operationId": "identityGovernance.lifecycleWorkflow.deletedItem.workflow.version_DeleteTask",
+      "parameters": [
+        {
+          "name": "workflow-id",
+          "in": "path",
+          "description": "The unique identifier of workflow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "workflow"
+        },
+        {
+          "name": "workflowVersion-versionNumber",
+          "in": "path",
+          "description": "The unique identifier of workflowVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32"
+          },
+          "x-ms-docs-key-type": "workflowVersion"
+        },
+        {
+          "name": "task-id",
+          "in": "path",
+          "description": "The unique identifier of task",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "task"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "/admin/windows/updates/deployments/{deployment-id}/audience/exclusions/microsoft.graph.windowsUpdates.unenrollAssets": {
+    "post": {
+      "tags": [
+        "admin.Actions"
+      ],
+      "summary": "Invoke action unenrollAssets",
+      "operationId": "admin.window.update.deployment.audience.exclusion_unenrollAsset",
+      "parameters": [
+        {
+          "name": "deployment-id",
+          "in": "path",
+          "description": "The unique identifier of deployment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deployment"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "updateCategory": {
+                  "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updateCategory"
+                },
+                "assets": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.start": {
+    "post": {
+      "tags": [
+        "print.Actions"
+      ],
+      "summary": "Invoke action start",
+      "operationId": "print.printer.job_start",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printJobStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

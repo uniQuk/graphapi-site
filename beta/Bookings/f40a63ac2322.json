@@ -1,0 +1,90 @@
+{
+  "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations(email='{email}')": {
+    "get": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Get registrations from solutions",
+      "operationId": "solution.virtualEvent.event.session.registration_GetGraphBPreEmail",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "virtualEventSession-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventSession"
+        },
+        {
+          "name": "email",
+          "in": "path",
+          "description": "Alternate key of virtualEventRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventRegistration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

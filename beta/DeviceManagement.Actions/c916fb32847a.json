@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/intuneBrandingProfiles/{intuneBrandingProfile-id}/microsoft.graph.assign": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action assign",
+      "operationId": "deviceManagement.intuneBrandingProfile_assign",
+      "parameters": [
+        {
+          "name": "intuneBrandingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intuneBrandingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intuneBrandingProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "assignments": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.intuneBrandingProfileAssignment"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

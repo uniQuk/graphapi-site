@@ -1,0 +1,34 @@
+{
+  "/deviceManagement/comanagedDevices/{managedDevice-id}/microsoft.graph.initiateMobileDeviceManagementKeyRecovery": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action initiateMobileDeviceManagementKeyRecovery",
+      "description": "Perform MDM key recovery and TPM attestation",
+      "operationId": "deviceManagement.comanagedDevice_initiateMobileDeviceManagementKeyRecovery",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

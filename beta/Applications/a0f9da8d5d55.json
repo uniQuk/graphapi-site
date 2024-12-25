@@ -1,0 +1,64 @@
+{
+  "/applications/{application-id}/microsoft.graph.addPassword": {
+    "post": {
+      "tags": [
+        "applications.Actions"
+      ],
+      "summary": "Invoke action addPassword",
+      "description": "Adds a strong password to an application. You can also add passwords while creating the application.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-addpassword?view=graph-rest-beta"
+      },
+      "operationId": "application_addPassword",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "passwordCredential": {
+                  "$ref": "#/components/schemas/microsoft.graph.passwordCredential"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.passwordCredential"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

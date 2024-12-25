@@ -1,0 +1,58 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "servicePrincipals.directoryObject"
+      ],
+      "summary": "Remove owner",
+      "description": "Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-delete-owners?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal.owner_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

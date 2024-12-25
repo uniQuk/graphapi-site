@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/androidManagedStoreAppConfigurationSchemas/{androidManagedStoreAppConfigurationSchema-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAppConfigurationSchema"
+      ],
+      "summary": "Get androidManagedStoreAppConfigurationSchemas from deviceManagement",
+      "description": "Android Enterprise app configuration schema entities.",
+      "operationId": "deviceManagement_GetAndroidManagedStoreAppConfigurationSchema",
+      "parameters": [
+        {
+          "name": "androidManagedStoreAppConfigurationSchema-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedStoreAppConfigurationSchema",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedStoreAppConfigurationSchema"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAppConfigurationSchema"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAppConfigurationSchema"
+      ],
+      "summary": "Update the navigation property androidManagedStoreAppConfigurationSchemas in deviceManagement",
+      "operationId": "deviceManagement_UpdateAndroidManagedStoreAppConfigurationSchema",
+      "parameters": [
+        {
+          "name": "androidManagedStoreAppConfigurationSchema-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedStoreAppConfigurationSchema",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedStoreAppConfigurationSchema"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAppConfigurationSchema"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.androidManagedStoreAppConfigurationSchema"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.androidManagedStoreAppConfigurationSchema"
+      ],
+      "summary": "Delete navigation property androidManagedStoreAppConfigurationSchemas for deviceManagement",
+      "operationId": "deviceManagement_DeleteAndroidManagedStoreAppConfigurationSchema",
+      "parameters": [
+        {
+          "name": "androidManagedStoreAppConfigurationSchema-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedStoreAppConfigurationSchema",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedStoreAppConfigurationSchema"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

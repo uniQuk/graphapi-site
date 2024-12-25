@@ -1,0 +1,157 @@
+{
+  "/appCatalogs/teamsApps/{teamsApp-id}/appDefinitions/{teamsAppDefinition-id}/outlineIcon/hostedContent/$value": {
+    "get": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Get teamworkHostedContent",
+      "description": "Retrieve the hosted content in an app's icon.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-beta"
+      },
+      "operationId": "appCatalog.teamsApp.appDefinition.outlineIcon_GetHostedContentContent",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Update media content for the navigation property hostedContent in appCatalogs",
+      "description": "The contents of the app icon if the icon is hosted within the Teams infrastructure.",
+      "operationId": "appCatalog.teamsApp.appDefinition.outlineIcon_SetHostedContentContent",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Delete media content for the navigation property hostedContent in appCatalogs",
+      "description": "The contents of the app icon if the icon is hosted within the Teams infrastructure.",
+      "operationId": "appCatalog.teamsApp.appDefinition.outlineIcon_DeleteHostedContentContent",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

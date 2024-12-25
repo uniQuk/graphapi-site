@@ -1,0 +1,65 @@
+{
+  "/users/{user-id}/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+    "get": {
+      "tags": [
+        "users.Functions"
+      ],
+      "summary": "Invoke function exportDeviceAndAppManagementData",
+      "operationId": "user_exportDeviceAndAppManagementData",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "skip",
+          "in": "path",
+          "description": "Usage: skip={skip}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        {
+          "name": "top",
+          "in": "path",
+          "description": "Usage: top={top}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/exportDeviceAndAppManagementDataResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

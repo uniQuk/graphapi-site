@@ -1,0 +1,38 @@
+{
+  "/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.publish": {
+    "post": {
+      "tags": [
+        "bookingBusinesses.Actions"
+      ],
+      "summary": "Invoke action publish",
+      "description": "Make the scheduling page of this business available to external customers. Set the isPublished property to true, and publicUrl property to the URL of the scheduling page.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingbusiness-publish?view=graph-rest-beta"
+      },
+      "operationId": "bookingBusiness_publish",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

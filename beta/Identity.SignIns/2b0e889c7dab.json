@@ -1,0 +1,184 @@
+{
+  "/identity/userFlows/{identityUserFlow-id}": {
+    "get": {
+      "tags": [
+        "identity.identityUserFlow"
+      ],
+      "summary": "Get userFlow",
+      "description": "Retrieve the properties and associations for an userFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-beta"
+      },
+      "operationId": "identity_GetUserFlow",
+      "parameters": [
+        {
+          "name": "identityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlow"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityUserFlow"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-01-15",
+        "date": "2021-05-21",
+        "version": "2021-05/identityProvider",
+        "description": "The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.identityUserFlow"
+      ],
+      "summary": "Update the navigation property userFlows in identity",
+      "operationId": "identity_UpdateUserFlow",
+      "parameters": [
+        {
+          "name": "identityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlow"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityUserFlow"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityUserFlow"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-01-15",
+        "date": "2021-05-21",
+        "version": "2021-05/identityProvider",
+        "description": "The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.identityUserFlow"
+      ],
+      "summary": "Delete userFlow",
+      "description": "Delete an existing userFlow object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-beta"
+      },
+      "operationId": "identity_DeleteUserFlow",
+      "parameters": [
+        {
+          "name": "identityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlow"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-01-15",
+        "date": "2021-05-21",
+        "version": "2021-05/identityProvider",
+        "description": "The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

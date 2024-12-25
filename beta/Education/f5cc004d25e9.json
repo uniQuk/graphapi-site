@@ -1,0 +1,48 @@
+{
+  "/education/synchronizationProfiles/$count": {
+    "get": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "education.synchronizationProfile_GetCount",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      }
+    }
+  }
+}
