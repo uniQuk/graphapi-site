@@ -1,5 +1,7 @@
 # Microsoft Graph API Site
 
+Note: This is an independent project and is not affiliated with, officially maintained, or endorsed by Microsoft. The API specifications are sourced from Microsoft's official msgraph-sdk-powershell repository.
+
 This repository hosts the generated static site for the [Microsoft Graph API Viewer](https://github.com/uniQuk/GraphAPI-Viewer) project. The site provides an interactive interface for exploring Microsoft Graph API's OpenAPI specifications.
 
 View the live site at: [https://uniquk.github.io/graphapi-site/](https://uniquk.github.io/graphapi-site/)
