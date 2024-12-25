@@ -1,0 +1,158 @@
+{
+  "/directory/subscriptions/{companySubscription-id}": {
+    "get": {
+      "tags": [
+        "directory.companySubscription"
+      ],
+      "summary": "Get companySubscription",
+      "description": "Get a specific commercial subscription that an organization acquired.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-1.0"
+      },
+      "operationId": "directory_GetSubscription",
+      "parameters": [
+        {
+          "name": "companySubscription-id",
+          "in": "path",
+          "description": "The unique identifier of companySubscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "companySubscription"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.companySubscription"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.companySubscription"
+      ],
+      "summary": "Update the navigation property subscriptions in directory",
+      "operationId": "directory_UpdateSubscription",
+      "parameters": [
+        {
+          "name": "companySubscription-id",
+          "in": "path",
+          "description": "The unique identifier of companySubscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "companySubscription"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.companySubscription"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.companySubscription"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.companySubscription"
+      ],
+      "summary": "Delete navigation property subscriptions for directory",
+      "operationId": "directory_DeleteSubscription",
+      "parameters": [
+        {
+          "name": "companySubscription-id",
+          "in": "path",
+          "description": "The unique identifier of companySubscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "companySubscription"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

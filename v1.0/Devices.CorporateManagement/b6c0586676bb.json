@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/mobileApps/{mobileApp-id}/microsoft.graph.androidLobApp/assignments/{mobileAppAssignment-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.mobileApp"
+      ],
+      "summary": "Get assignments from deviceAppManagement",
+      "description": "The list of group assignments for this mobile app.",
+      "operationId": "deviceAppManagement.mobileAppAsAndroidLobApp_GetAssignment",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mobileAppAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.mobileApp"
+      ],
+      "summary": "Update the navigation property assignments in deviceAppManagement",
+      "operationId": "deviceAppManagement.mobileAppAsAndroidLobApp_UpdateAssignment",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.mobileAppAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mobileAppAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.mobileApp"
+      ],
+      "summary": "Delete navigation property assignments for deviceAppManagement",
+      "operationId": "deviceAppManagement.mobileAppAsAndroidLobApp_DeleteAssignment",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "/security/threatIntelligence/hostTrackers/{hostTracker-id}": {
+    "get": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Get hostTracker",
+      "description": "Read the properties and relationships of a hostTracker object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0"
+      },
+      "operationId": "security.threatIntelligence_GetHostTracker",
+      "parameters": [
+        {
+          "name": "hostTracker-id",
+          "in": "path",
+          "description": "The unique identifier of hostTracker",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "hostTracker"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.hostTracker"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Update the navigation property hostTrackers in security",
+      "operationId": "security.threatIntelligence_UpdateHostTracker",
+      "parameters": [
+        {
+          "name": "hostTracker-id",
+          "in": "path",
+          "description": "The unique identifier of hostTracker",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "hostTracker"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.hostTracker"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.hostTracker"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Delete navigation property hostTrackers for security",
+      "operationId": "security.threatIntelligence_DeleteHostTracker",
+      "parameters": [
+        {
+          "name": "hostTracker-id",
+          "in": "path",
+          "description": "The unique identifier of hostTracker",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "hostTracker"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

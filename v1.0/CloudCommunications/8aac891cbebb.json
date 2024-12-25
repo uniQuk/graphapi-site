@@ -1,0 +1,153 @@
+{
+  "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendeeReport": {
+    "get": {
+      "tags": [
+        "users.onlineMeeting"
+      ],
+      "summary": "Get attendeeReport for the navigation property onlineMeetings from users",
+      "description": "The content stream of the attendee report of a Microsoft Teams live event. Read-only.",
+      "operationId": "user_GetOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "users.onlineMeeting"
+      ],
+      "summary": "Update attendeeReport for the navigation property onlineMeetings in users",
+      "description": "The content stream of the attendee report of a Microsoft Teams live event. Read-only.",
+      "operationId": "user_SetOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "users.onlineMeeting"
+      ],
+      "summary": "Delete attendeeReport for the navigation property onlineMeetings in users",
+      "description": "The content stream of the attendee report of a Microsoft Teams live event. Read-only.",
+      "operationId": "user_DeleteOnlineMeetingsAttendeeReport",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

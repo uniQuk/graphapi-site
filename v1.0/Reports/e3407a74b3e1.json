@@ -1,0 +1,53 @@
+{
+  "/reports/microsoft.graph.getSkypeForBusinessActivityCounts(period='{period}')": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function getSkypeForBusinessActivityCounts",
+      "description": "Get the trends on how many users organized and participated in conference sessions held in your organization through Skype for Business. The report also includes the number of peer-to-peer sessions.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessactivitycounts?view=graph-rest-1.0"
+      },
+      "operationId": "report_getSkypeGraphFPreBusinessActivityCount",
+      "parameters": [
+        {
+          "name": "period",
+          "in": "path",
+          "description": "Usage: period='{period}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

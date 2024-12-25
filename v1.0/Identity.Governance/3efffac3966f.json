@@ -1,0 +1,38 @@
+{
+  "/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment-id}/microsoft.graph.reprocess": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action reprocess",
+      "description": "In Microsoft Entra entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a user\u2019s assignments for a specific access package. The state of the access package assignment must be Delivered for the administrator to reprocess the user's assignment. Only admins with the Access Package Assignment Manager role, or higher, in Microsoft Entra entitlement management can perform this action.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackageassignment-reprocess?view=graph-rest-1.0"
+      },
+      "operationId": "identityGovernance.entitlementManagement.assignment_reprocess",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

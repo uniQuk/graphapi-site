@@ -1,0 +1,91 @@
+{
+  "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}/childTags/{ediscoveryReviewTag-id1}": {
+    "get": {
+      "tags": [
+        "security.casesRoot"
+      ],
+      "summary": "Get childTags from security",
+      "description": "Returns the tags that are a child of a tag.",
+      "operationId": "security.case.ediscoveryCase.tag_GetChildTag",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "ediscoveryReviewTag-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryReviewTag",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryReviewTag"
+        },
+        {
+          "name": "ediscoveryReviewTag-id1",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryReviewTag",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryReviewTag"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.ediscoveryReviewTag"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

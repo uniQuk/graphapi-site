@@ -1,0 +1,38 @@
+{
+  "/groups/{group-id}/microsoft.graph.removeFavorite": {
+    "post": {
+      "tags": [
+        "groups.Actions"
+      ],
+      "summary": "Invoke action removeFavorite",
+      "description": "Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0"
+      },
+      "operationId": "group_removeFavorite",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

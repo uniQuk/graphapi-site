@@ -1,0 +1,168 @@
+{
+  "/servicePrincipals(appId='{appId}')": {
+    "get": {
+      "tags": [
+        "servicePrincipals.servicePrincipal"
+      ],
+      "summary": "Get servicePrincipal",
+      "description": "Retrieve the properties and relationships of a servicePrincipal object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0"
+      },
+      "operationId": "servicePrincipal_GetServicePrincipalGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.servicePrincipal"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "servicePrincipals.servicePrincipal"
+      ],
+      "summary": "Upsert servicePrincipal",
+      "description": "Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0"
+      },
+      "operationId": "servicePrincipal_UpdateServicePrincipalGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.servicePrincipal"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.servicePrincipal"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "servicePrincipals.servicePrincipal"
+      ],
+      "summary": "Delete servicePrincipal",
+      "description": "Delete a servicePrincipal object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0"
+      },
+      "operationId": "servicePrincipal_DeleteServicePrincipalGraphBPreAppId",
+      "parameters": [
+        {
+          "name": "appId",
+          "in": "path",
+          "description": "Alternate key of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

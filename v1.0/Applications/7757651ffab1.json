@@ -1,0 +1,82 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/schema/microsoft.graph.parseExpression": {
+    "post": {
+      "tags": [
+        "servicePrincipals.Actions"
+      ],
+      "summary": "Invoke action parseExpression",
+      "description": "Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Microsoft Entra ID.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0"
+      },
+      "operationId": "servicePrincipal.synchronization.job.schema_parseExpression",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "expression": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "testInputObject": {
+                  "$ref": "#/components/schemas/microsoft.graph.expressionInputObject"
+                },
+                "targetAttributeDefinition": {
+                  "$ref": "#/components/schemas/microsoft.graph.attributeDefinition"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.parseExpressionResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

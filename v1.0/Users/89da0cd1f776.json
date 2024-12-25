@@ -1,0 +1,219 @@
+{
+  "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments/{attachmentBase-id}/$value": {
+    "get": {
+      "tags": [
+        "users.todo"
+      ],
+      "summary": "Get media content for the navigation property attachments from users",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "user.todo.list.task_GetAttachmentsContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "todoTaskList-id",
+          "in": "path",
+          "description": "The unique identifier of todoTaskList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTaskList"
+        },
+        {
+          "name": "todoTask-id",
+          "in": "path",
+          "description": "The unique identifier of todoTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTask"
+        },
+        {
+          "name": "attachmentBase-id",
+          "in": "path",
+          "description": "The unique identifier of attachmentBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attachmentBase"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "users.todo"
+      ],
+      "summary": "Update media content for the navigation property attachments in users",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "user.todo.list.task_SetAttachmentsContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "todoTaskList-id",
+          "in": "path",
+          "description": "The unique identifier of todoTaskList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTaskList"
+        },
+        {
+          "name": "todoTask-id",
+          "in": "path",
+          "description": "The unique identifier of todoTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTask"
+        },
+        {
+          "name": "attachmentBase-id",
+          "in": "path",
+          "description": "The unique identifier of attachmentBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attachmentBase"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "users.todo"
+      ],
+      "summary": "Delete media content for the navigation property attachments in users",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "user.todo.list.task_DeleteAttachmentsContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "todoTaskList-id",
+          "in": "path",
+          "description": "The unique identifier of todoTaskList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTaskList"
+        },
+        {
+          "name": "todoTask-id",
+          "in": "path",
+          "description": "The unique identifier of todoTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "todoTask"
+        },
+        {
+          "name": "attachmentBase-id",
+          "in": "path",
+          "description": "The unique identifier of attachmentBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "attachmentBase"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

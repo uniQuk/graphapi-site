@@ -1,0 +1,158 @@
+{
+  "/reports/authenticationMethods/userRegistrationDetails/{userRegistrationDetails-id}": {
+    "get": {
+      "tags": [
+        "reports.authenticationMethodsRoot"
+      ],
+      "summary": "Get userRegistrationDetails",
+      "description": "Read the properties and relationships of a userRegistrationDetails object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0"
+      },
+      "operationId": "report.authenticationMethod_GetUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "userRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of userRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userRegistrationDetails"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userRegistrationDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "reports.authenticationMethodsRoot"
+      ],
+      "summary": "Update the navigation property userRegistrationDetails in reports",
+      "operationId": "report.authenticationMethod_UpdateUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "userRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of userRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userRegistrationDetails"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userRegistrationDetails"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userRegistrationDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "reports.authenticationMethodsRoot"
+      ],
+      "summary": "Delete navigation property userRegistrationDetails for reports",
+      "operationId": "report.authenticationMethod_DeleteUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "userRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of userRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userRegistrationDetails"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

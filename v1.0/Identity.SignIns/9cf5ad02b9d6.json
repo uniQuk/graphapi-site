@@ -1,0 +1,57 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userAttributeAssignments/microsoft.graph.setOrder": {
+    "post": {
+      "tags": [
+        "identity.Actions"
+      ],
+      "summary": "Invoke action setOrder",
+      "description": "Set the order of identityUserFlowAttributeAssignments being collected within a user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0"
+      },
+      "operationId": "identity.b2xUserFlow.userAttributeAssignment_setOrder",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newAssignmentOrder": {
+                  "$ref": "#/components/schemas/microsoft.graph.assignmentOrder"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

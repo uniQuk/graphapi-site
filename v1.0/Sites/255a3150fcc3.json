@@ -1,0 +1,143 @@
+{
+  "/sites/{site-id}/lists/{list-id}/items/{listItem-id}/driveItem/content": {
+    "get": {
+      "tags": [
+        "sites.list"
+      ],
+      "summary": "Get content for the navigation property driveItem from sites",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "site.list.item_GetDriveItemContent",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "list-id",
+          "in": "path",
+          "description": "The unique identifier of list",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "list"
+        },
+        {
+          "name": "listItem-id",
+          "in": "path",
+          "description": "The unique identifier of listItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "listItem"
+        },
+        {
+          "name": "$format",
+          "in": "query",
+          "description": "Format of the content",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "sites.list"
+      ],
+      "summary": "Update content for the navigation property driveItem in sites",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "site.list.item_SetDriveItemContent",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "list-id",
+          "in": "path",
+          "description": "The unique identifier of list",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "list"
+        },
+        {
+          "name": "listItem-id",
+          "in": "path",
+          "description": "The unique identifier of listItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "listItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.driveItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

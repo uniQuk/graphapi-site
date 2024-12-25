@@ -1,0 +1,53 @@
+{
+  "/reports/microsoft.graph.getOffice365GroupsActivityCounts(period='{period}')": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function getOffice365GroupsActivityCounts",
+      "description": "Get the number of group activities across group workloads.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivitycounts?view=graph-rest-1.0"
+      },
+      "operationId": "report_getOffice365GroupsActivityCount",
+      "parameters": [
+        {
+          "name": "period",
+          "in": "path",
+          "description": "Usage: period='{period}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "/teams/{team-id}/schedule/openShiftChangeRequests/{openShiftChangeRequest-id}": {
+    "get": {
+      "tags": [
+        "teams.schedule"
+      ],
+      "summary": "Get openShiftChangeRequest",
+      "description": "Retrieve the properties and relationships of an openShiftChangeRequest object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0"
+      },
+      "operationId": "team.schedule_GetOpenShiftChangeRequest",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "openShiftChangeRequest-id",
+          "in": "path",
+          "description": "The unique identifier of openShiftChangeRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "openShiftChangeRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.openShiftChangeRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teams.schedule"
+      ],
+      "summary": "Update the navigation property openShiftChangeRequests in teams",
+      "operationId": "team.schedule_UpdateOpenShiftChangeRequest",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "openShiftChangeRequest-id",
+          "in": "path",
+          "description": "The unique identifier of openShiftChangeRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "openShiftChangeRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.openShiftChangeRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.openShiftChangeRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teams.schedule"
+      ],
+      "summary": "Delete navigation property openShiftChangeRequests for teams",
+      "operationId": "team.schedule_DeleteOpenShiftChangeRequest",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "openShiftChangeRequest-id",
+          "in": "path",
+          "description": "The unique identifier of openShiftChangeRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "openShiftChangeRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

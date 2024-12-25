@@ -1,0 +1,65 @@
+{
+  "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/microsoft.graph.isPublished()": {
+    "get": {
+      "tags": [
+        "shares.Functions"
+      ],
+      "summary": "Invoke function isPublished",
+      "description": "Check the publishing status of a contentType in a content type hub site.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0"
+      },
+      "operationId": "share.list.contentType_isPublished",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "contentType-id",
+          "in": "path",
+          "description": "The unique identifier of contentType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contentType"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

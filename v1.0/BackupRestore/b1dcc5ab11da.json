@@ -1,0 +1,159 @@
+{
+  "/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession-id}": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get exchangeRestoreSessions from solutions",
+      "description": "The list of Exchange restore sessions available in the tenant.",
+      "operationId": "solution.backupRestore_GetExchangeRestoreSession",
+      "parameters": [
+        {
+          "name": "exchangeRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeRestoreSession"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.exchangeRestoreSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Update exchangeRestoreSession",
+      "description": "Update the properties of an exchangeRestoreSession.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/exchangerestoresession-update?view=graph-rest-1.0"
+      },
+      "operationId": "solution.backupRestore_UpdateExchangeRestoreSession",
+      "parameters": [
+        {
+          "name": "exchangeRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeRestoreSession"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.exchangeRestoreSession"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.exchangeRestoreSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Delete navigation property exchangeRestoreSessions for solutions",
+      "operationId": "solution.backupRestore_DeleteExchangeRestoreSession",
+      "parameters": [
+        {
+          "name": "exchangeRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeRestoreSession"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

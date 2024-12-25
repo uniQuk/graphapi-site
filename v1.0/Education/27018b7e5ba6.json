@@ -1,0 +1,67 @@
+{
+  "/education/users/{educationUser-id}/assignments/{educationAssignment-id}/submissions/{educationSubmission-id}/microsoft.graph.reassign": {
+    "post": {
+      "tags": [
+        "education.Actions"
+      ],
+      "summary": "Invoke action reassign",
+      "description": "Reassign the submission to the student with feedback for review. Only teachers can perform this action.  Include the Prefer: include-unknown-enum-members header when you call this method; otherwise, a reassigned submission is treated as a returned submission. This means that the reassigned status is mapped to the returned status, and reassignedDateTime and reassignedBy properties are mapped to returnedDateTime and returnedBy respectively. If the header Prefer: include-unknown-enum-members is provided, a reassigned submission retains the reassigned status. For details, see the examples section.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsubmission-reassign?view=graph-rest-1.0"
+      },
+      "operationId": "education.user.assignment.submission_reassign",
+      "parameters": [
+        {
+          "name": "educationUser-id",
+          "in": "path",
+          "description": "The unique identifier of educationUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationUser"
+        },
+        {
+          "name": "educationAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of educationAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationAssignment"
+        },
+        {
+          "name": "educationSubmission-id",
+          "in": "path",
+          "description": "The unique identifier of educationSubmission",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSubmission"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationSubmission"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "/reports/microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts(period='{period}')": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function getSkypeForBusinessPeerToPeerActivityCounts",
+      "description": "Get usage trends on the number and type of sessions held in your organization. Types of sessions include IM, audio, video, application sharing, and file transfer.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinesspeertopeeractivitycounts?view=graph-rest-1.0"
+      },
+      "operationId": "report_getSkypeGraphFPreBusinessPeerToPeerActivityCount",
+      "parameters": [
+        {
+          "name": "period",
+          "in": "path",
+          "description": "Usage: period='{period}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

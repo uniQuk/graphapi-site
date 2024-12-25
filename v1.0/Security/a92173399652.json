@@ -1,0 +1,158 @@
+{
+  "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}": {
+    "get": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Get intelligenceProfile",
+      "description": "Read the properties and relationships of a intelligenceProfile object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-intelligenceprofile-get?view=graph-rest-1.0"
+      },
+      "operationId": "security.threatIntelligence_GetIntelProfile",
+      "parameters": [
+        {
+          "name": "intelligenceProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intelligenceProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intelligenceProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.intelligenceProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Update the navigation property intelProfiles in security",
+      "operationId": "security.threatIntelligence_UpdateIntelProfile",
+      "parameters": [
+        {
+          "name": "intelligenceProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intelligenceProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intelligenceProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.intelligenceProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.intelligenceProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Delete navigation property intelProfiles for security",
+      "operationId": "security.threatIntelligence_DeleteIntelProfile",
+      "parameters": [
+        {
+          "name": "intelligenceProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intelligenceProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intelligenceProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

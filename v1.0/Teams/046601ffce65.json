@@ -1,0 +1,234 @@
+{
+  "/teams/{team-id}/channels/{channel-id}/members/{conversationMember-id}": {
+    "get": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Get member of channel",
+      "description": "Get a conversationMember from a channel.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/channel-get-members?view=graph-rest-1.0"
+      },
+      "operationId": "team.channel_GetMember",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "conversationMember-id",
+          "in": "path",
+          "description": "The unique identifier of conversationMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "conversationMember"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.conversationMember"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Update conversationMember",
+      "description": "Update the role of a conversationMember in a team or channel.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0"
+      },
+      "operationId": "team.channel_UpdateMember",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "conversationMember-id",
+          "in": "path",
+          "description": "The unique identifier of conversationMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "conversationMember"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.conversationMember"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.conversationMember"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "teams.channel"
+      ],
+      "summary": "Remove member from channel",
+      "description": "Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0"
+      },
+      "operationId": "team.channel_DeleteMember",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "conversationMember-id",
+          "in": "path",
+          "description": "The unique identifier of conversationMember",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "conversationMember"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

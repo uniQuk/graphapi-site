@@ -1,0 +1,93 @@
+{
+  "/users/{user-id}/chats/{chat-id}/microsoft.graph.sendActivityNotification": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action sendActivityNotification",
+      "description": "Send an activity feed notification in scope of a chat. For more information about sending notifications and the requirements for doing so, see sending Teams activity notifications.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chat-sendactivitynotification?view=graph-rest-1.0"
+      },
+      "operationId": "user.chat_sendActivityNotification",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "chat-id",
+          "in": "path",
+          "description": "The unique identifier of chat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chat"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "topic": {
+                  "$ref": "#/components/schemas/microsoft.graph.teamworkActivityTopic"
+                },
+                "activityType": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "chainId": {
+                  "type": "integer",
+                  "format": "int64",
+                  "nullable": true
+                },
+                "previewText": {
+                  "$ref": "#/components/schemas/microsoft.graph.itemBody"
+                },
+                "teamsAppId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "templateParameters": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.keyValuePair"
+                  }
+                },
+                "recipient": {
+                  "$ref": "#/components/schemas/microsoft.graph.teamworkNotificationRecipient"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

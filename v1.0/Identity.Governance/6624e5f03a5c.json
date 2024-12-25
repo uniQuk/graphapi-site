@@ -1,0 +1,187 @@
+{
+  "/agreements/{agreement-id}/acceptances/{agreementAcceptance-id}": {
+    "get": {
+      "tags": [
+        "agreements.agreementAcceptance"
+      ],
+      "summary": "Get acceptances from agreements",
+      "description": "Read-only. Information about acceptances of this agreement.",
+      "operationId": "agreement_GetAcceptance",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "agreements.agreementAcceptance"
+      ],
+      "summary": "Update the navigation property acceptances in agreements",
+      "operationId": "agreement_UpdateAcceptance",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementAcceptance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "agreements.agreementAcceptance"
+      ],
+      "summary": "Delete navigation property acceptances for agreements",
+      "operationId": "agreement_DeleteAcceptance",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementAcceptance-id",
+          "in": "path",
+          "description": "The unique identifier of agreementAcceptance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementAcceptance"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

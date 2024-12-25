@@ -1,0 +1,196 @@
+{
+  "/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/rules/{unifiedRoleManagementPolicyRule-id}": {
+    "get": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicy"
+      ],
+      "summary": "Get unifiedRoleManagementPolicyRule",
+      "description": "Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-get?view=graph-rest-1.0"
+      },
+      "operationId": "policy.roleManagementPolicy_GetRule",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicy"
+        },
+        {
+          "name": "unifiedRoleManagementPolicyRule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyRule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicy"
+      ],
+      "summary": "Update unifiedRoleManagementPolicyRule",
+      "description": "Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Microsoft Entra roles and examples of updating rules, see the following articles:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-update?view=graph-rest-1.0"
+      },
+      "operationId": "policy.roleManagementPolicy_UpdateRule",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicy"
+        },
+        {
+          "name": "unifiedRoleManagementPolicyRule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyRule"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyRule"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicy"
+      ],
+      "summary": "Delete navigation property rules for policies",
+      "operationId": "policy.roleManagementPolicy_DeleteRule",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicy"
+        },
+        {
+          "name": "unifiedRoleManagementPolicyRule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyRule"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

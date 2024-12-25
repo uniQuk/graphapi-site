@@ -1,0 +1,38 @@
+{
+  "/deviceManagement/remoteAssistancePartners/{remoteAssistancePartner-id}/microsoft.graph.beginOnboarding": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action beginOnboarding",
+      "description": "A request to start onboarding.  Must be coupled with the appropriate TeamViewer account information",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-beginonboarding?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.remoteAssistancePartner_beginOnboarding",
+      "parameters": [
+        {
+          "name": "remoteAssistancePartner-id",
+          "in": "path",
+          "description": "The unique identifier of remoteAssistancePartner",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "remoteAssistancePartner"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

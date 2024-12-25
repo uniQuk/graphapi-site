@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId/{userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+      ],
+      "summary": "Get userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId from deviceManagement",
+      "description": "User experience analytics appHealth Application Performance by App Version Device Id",
+      "operationId": "deviceManagement_GetUserExperienceAnalyticsAppHealthApplicationPerformanceGraphBPreAppVersionDeviceId",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+      ],
+      "summary": "Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId in deviceManagement",
+      "operationId": "deviceManagement_UpdateUserExperienceAnalyticsAppHealthApplicationPerformanceGraphBPreAppVersionDeviceId",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+      ],
+      "summary": "Delete navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId for deviceManagement",
+      "operationId": "deviceManagement_DeleteUserExperienceAnalyticsAppHealthApplicationPerformanceGraphBPreAppVersionDeviceId",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/deviceConfigurations/{deviceConfiguration-id}/deviceSettingStateSummaries/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceConfiguration"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.deviceConfiguration.deviceSettingStateSummary_GetCount",
+      "parameters": [
+        {
+          "name": "deviceConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of deviceConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceConfiguration"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

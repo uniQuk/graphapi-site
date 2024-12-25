@@ -1,0 +1,80 @@
+{
+  "/security/threatIntelligence/hosts/{host-id}/passiveDns/{passiveDnsRecord-id}": {
+    "get": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Get passiveDns from security",
+      "description": "Passive DNS retrieval about this host.",
+      "operationId": "security.threatIntelligence.host_GetPassiveDn",
+      "parameters": [
+        {
+          "name": "host-id",
+          "in": "path",
+          "description": "The unique identifier of host",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "host"
+        },
+        {
+          "name": "passiveDnsRecord-id",
+          "in": "path",
+          "description": "The unique identifier of passiveDnsRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "passiveDnsRecord"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.passiveDnsRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

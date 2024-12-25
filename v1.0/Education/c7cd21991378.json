@@ -1,0 +1,52 @@
+{
+  "/education/users/{educationUser-id}/taughtClasses/$count": {
+    "get": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "education.user.taughtClass_GetCount",
+      "parameters": [
+        {
+          "name": "educationUser-id",
+          "in": "path",
+          "description": "The unique identifier of educationUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationUser"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

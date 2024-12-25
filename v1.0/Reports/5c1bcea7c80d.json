@@ -1,0 +1,49 @@
+{
+  "/reports/authenticationMethods/microsoft.graph.usersRegisteredByFeature(includedUserTypes='{includedUserTypes}',includedUserRoles='{includedUserRoles}')": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function usersRegisteredByFeature",
+      "operationId": "report.authenticationMethod_usersRegisteredGraphBPreFeature",
+      "parameters": [
+        {
+          "name": "includedUserTypes",
+          "in": "path",
+          "description": "Usage: includedUserTypes='{includedUserTypes}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "$ref": "#/components/schemas/microsoft.graph.includedUserTypes"
+          }
+        },
+        {
+          "name": "includedUserRoles",
+          "in": "path",
+          "description": "Usage: includedUserRoles='{includedUserRoles}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "$ref": "#/components/schemas/microsoft.graph.includedUserRoles"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userRegistrationFeatureSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

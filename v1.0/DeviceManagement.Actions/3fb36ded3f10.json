@@ -1,0 +1,109 @@
+{
+  "/deviceManagement/reports/microsoft.graph.getNoncompliantDevicesAndSettingsReport": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action getNoncompliantDevicesAndSettingsReport",
+      "description": "Not yet documented",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getnoncompliantdevicesandsettingsreport?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.report_getNoncompliantDevicesAndSettingsReport",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "select": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "search": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupBy": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "orderBy": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "skip": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "top": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "sessionId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "filter": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

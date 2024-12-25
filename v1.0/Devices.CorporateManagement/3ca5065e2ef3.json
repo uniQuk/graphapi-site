@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.windowsInformationProtectionPolicy"
+      ],
+      "summary": "Get assignments from deviceAppManagement",
+      "description": "Navigation property to list of security groups targeted for policy.",
+      "operationId": "deviceAppManagement.windowsInformationProtectionPolicy_GetAssignment",
+      "parameters": [
+        {
+          "name": "windowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionPolicy"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.windowsInformationProtectionPolicy"
+      ],
+      "summary": "Update the navigation property assignments in deviceAppManagement",
+      "operationId": "deviceAppManagement.windowsInformationProtectionPolicy_UpdateAssignment",
+      "parameters": [
+        {
+          "name": "windowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionPolicy"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.windowsInformationProtectionPolicy"
+      ],
+      "summary": "Delete navigation property assignments for deviceAppManagement",
+      "operationId": "deviceAppManagement.windowsInformationProtectionPolicy_DeleteAssignment",
+      "parameters": [
+        {
+          "name": "windowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of windowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsInformationProtectionPolicy"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

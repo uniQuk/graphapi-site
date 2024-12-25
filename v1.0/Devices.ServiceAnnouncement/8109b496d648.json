@@ -1,0 +1,52 @@
+{
+  "/admin/serviceAnnouncement/messages/{serviceUpdateMessage-id}/attachments/$count": {
+    "get": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "admin.serviceAnnouncement.message.attachment_GetCount",
+      "parameters": [
+        {
+          "name": "serviceUpdateMessage-id",
+          "in": "path",
+          "description": "The unique identifier of serviceUpdateMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceUpdateMessage"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "/solutions/backupRestore/restoreSessions/{restoreSessionBase-id}/microsoft.graph.activate": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action activate",
+      "description": "Activate a draft restoreSessionBase object. The following points apply to restoring a protection unit:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/restoresessionbase-activate?view=graph-rest-1.0"
+      },
+      "operationId": "solution.backupRestore.restoreSession_activate",
+      "parameters": [
+        {
+          "name": "restoreSessionBase-id",
+          "in": "path",
+          "description": "The unique identifier of restoreSessionBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "restoreSessionBase"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.restoreSessionBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

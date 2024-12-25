@@ -1,0 +1,201 @@
+{
+  "/solutions/bookingBusinesses/{bookingBusiness-id}/staffMembers/{bookingStaffMemberBase-id}": {
+    "get": {
+      "tags": [
+        "solutions.bookingBusiness"
+      ],
+      "summary": "Get bookingStaffMember",
+      "description": "Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0"
+      },
+      "operationId": "solution.bookingBusiness_GetStaffMember",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        },
+        {
+          "name": "bookingStaffMemberBase-id",
+          "in": "path",
+          "description": "The unique identifier of bookingStaffMemberBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingStaffMemberBase"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingStaffMemberBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.bookingBusiness"
+      ],
+      "summary": "Update bookingstaffmember",
+      "description": "Update the properties of a bookingStaffMember in the specified bookingBusiness.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0"
+      },
+      "operationId": "solution.bookingBusiness_UpdateStaffMember",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        },
+        {
+          "name": "bookingStaffMemberBase-id",
+          "in": "path",
+          "description": "The unique identifier of bookingStaffMemberBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingStaffMemberBase"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.bookingStaffMemberBase"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.bookingStaffMemberBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.bookingBusiness"
+      ],
+      "summary": "Delete bookingStaffMember",
+      "description": "Delete a bookingStaffMember in the specified bookingBusiness.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0"
+      },
+      "operationId": "solution.bookingBusiness_DeleteStaffMember",
+      "parameters": [
+        {
+          "name": "bookingBusiness-id",
+          "in": "path",
+          "description": "The unique identifier of bookingBusiness",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingBusiness"
+        },
+        {
+          "name": "bookingStaffMemberBase-id",
+          "in": "path",
+          "description": "The unique identifier of bookingStaffMemberBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "bookingStaffMemberBase"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

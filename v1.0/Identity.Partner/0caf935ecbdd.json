@@ -1,0 +1,52 @@
+{
+  "/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer-id}/serviceManagementDetails/$count": {
+    "get": {
+      "tags": [
+        "tenantRelationships.delegatedAdminCustomer"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "tenantRelationship.delegatedAdminCustomer.serviceManagementDetail_GetCount",
+      "parameters": [
+        {
+          "name": "delegatedAdminCustomer-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminCustomer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminCustomer"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

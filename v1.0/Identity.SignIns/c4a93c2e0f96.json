@@ -1,0 +1,198 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/languages/{userFlowLanguageConfiguration-id}/overridesPages/{userFlowLanguagePage-id}/$value": {
+    "get": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "List overridesPages",
+      "description": "Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-list-overridespages?view=graph-rest-1.0"
+      },
+      "operationId": "identity.b2xUserFlow.language_GetOverridesPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Update userFlowLanguagePage",
+      "description": "Update the values in an userFlowLanguagePage object. You may only update the values in an overridesPage, which is used to customize the values shown to a user during a user journey defined by a user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userflowlanguagepage-put?view=graph-rest-1.0"
+      },
+      "operationId": "identity.b2xUserFlow.language_SetOverridesPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Delete userFlowLanguagePage",
+      "description": "Deletes the values in an userFlowLanguagePage object. You may only delete the values in an overridesPage, which is used to customize the values shown to a user during a user journey defined by a user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userflowlanguagepage-delete?view=graph-rest-1.0"
+      },
+      "operationId": "identity.b2xUserFlow.language_DeleteOverridesPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

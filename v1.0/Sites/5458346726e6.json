@@ -1,0 +1,286 @@
+{
+  "/sites/{site-id}/pages/{baseSitePage-id}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSection-id}/columns/{horizontalSectionColumn-id}/webparts/{webPart-id}": {
+    "get": {
+      "tags": [
+        "sites.baseSitePage"
+      ],
+      "summary": "Get webparts from sites",
+      "description": "The collection of WebParts in this column.",
+      "operationId": "site.pageAsSitePage.canvasLayout.horizontalSection.column_GetWebpart",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "baseSitePage-id",
+          "in": "path",
+          "description": "The unique identifier of baseSitePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "baseSitePage"
+        },
+        {
+          "name": "horizontalSection-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSection"
+        },
+        {
+          "name": "horizontalSectionColumn-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSectionColumn",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSectionColumn"
+        },
+        {
+          "name": "webPart-id",
+          "in": "path",
+          "description": "The unique identifier of webPart",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "webPart"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.webPart"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "sites.baseSitePage"
+      ],
+      "summary": "Update the navigation property webparts in sites",
+      "operationId": "site.pageAsSitePage.canvasLayout.horizontalSection.column_UpdateWebpart",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "baseSitePage-id",
+          "in": "path",
+          "description": "The unique identifier of baseSitePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "baseSitePage"
+        },
+        {
+          "name": "horizontalSection-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSection"
+        },
+        {
+          "name": "horizontalSectionColumn-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSectionColumn",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSectionColumn"
+        },
+        {
+          "name": "webPart-id",
+          "in": "path",
+          "description": "The unique identifier of webPart",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "webPart"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.webPart"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.webPart"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "sites.baseSitePage"
+      ],
+      "summary": "Delete navigation property webparts for sites",
+      "operationId": "site.pageAsSitePage.canvasLayout.horizontalSection.column_DeleteWebpart",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "baseSitePage-id",
+          "in": "path",
+          "description": "The unique identifier of baseSitePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "baseSitePage"
+        },
+        {
+          "name": "horizontalSection-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSection"
+        },
+        {
+          "name": "horizontalSectionColumn-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSectionColumn",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSectionColumn"
+        },
+        {
+          "name": "webPart-id",
+          "in": "path",
+          "description": "The unique identifier of webPart",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "webPart"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

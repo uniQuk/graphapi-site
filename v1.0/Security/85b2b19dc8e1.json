@@ -1,0 +1,163 @@
+{
+  "/security/labels/citations/{citationTemplate-id}": {
+    "get": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Get citationTemplate",
+      "description": "Read the properties and relationships of a citationTemplate object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0"
+      },
+      "operationId": "security.label_GetCitation",
+      "parameters": [
+        {
+          "name": "citationTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of citationTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "citationTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.citationTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Update the navigation property citations in security",
+      "operationId": "security.label_UpdateCitation",
+      "parameters": [
+        {
+          "name": "citationTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of citationTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "citationTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.citationTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.citationTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Delete citationTemplate",
+      "description": "Delete a citationTemplate object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0"
+      },
+      "operationId": "security.label_DeleteCitation",
+      "parameters": [
+        {
+          "name": "citationTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of citationTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "citationTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "/sites/{site-id}/onenote/notebooks/{notebook-id}/sections/{onenoteSection-id}/microsoft.graph.copyToNotebook": {
+    "post": {
+      "tags": [
+        "sites.Actions"
+      ],
+      "summary": "Invoke action copyToNotebook",
+      "description": "For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/section-copytonotebook?view=graph-rest-1.0"
+      },
+      "operationId": "site.onenote.notebook.section_copyToNotebook",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "notebook-id",
+          "in": "path",
+          "description": "The unique identifier of notebook",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notebook"
+        },
+        {
+          "name": "onenoteSection-id",
+          "in": "path",
+          "description": "The unique identifier of onenoteSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onenoteSection"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "renameAs": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "siteCollectionId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "siteId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onenoteOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "/devices/{device-id}/registeredOwners/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "devices.directoryObject"
+      ],
+      "summary": "Delete registeredOwner",
+      "description": "Remove a user as a registered owner of the device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-1.0"
+      },
+      "operationId": "device.registeredOwner_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "device-id",
+          "in": "path",
+          "description": "The unique identifier of device",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "device"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

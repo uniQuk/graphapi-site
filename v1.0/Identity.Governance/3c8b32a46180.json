@@ -1,0 +1,220 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}/questions/{accessPackageQuestion-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get questions from identityGovernance",
+      "description": "Questions that are posed to the  requestor.",
+      "operationId": "identityGovernance.entitlementManagement.accessPackage.assignmentPolicy_GetQuestion",
+      "parameters": [
+        {
+          "name": "accessPackage-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackage"
+        },
+        {
+          "name": "accessPackageAssignmentPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignmentPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignmentPolicy"
+        },
+        {
+          "name": "accessPackageQuestion-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageQuestion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageQuestion"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageQuestion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update the navigation property questions in identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackage.assignmentPolicy_UpdateQuestion",
+      "parameters": [
+        {
+          "name": "accessPackage-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackage"
+        },
+        {
+          "name": "accessPackageAssignmentPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignmentPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignmentPolicy"
+        },
+        {
+          "name": "accessPackageQuestion-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageQuestion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageQuestion"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessPackageQuestion"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageQuestion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete navigation property questions for identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackage.assignmentPolicy_DeleteQuestion",
+      "parameters": [
+        {
+          "name": "accessPackage-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackage"
+        },
+        {
+          "name": "accessPackageAssignmentPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignmentPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignmentPolicy"
+        },
+        {
+          "name": "accessPackageQuestion-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageQuestion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageQuestion"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

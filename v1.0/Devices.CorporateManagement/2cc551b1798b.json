@@ -1,0 +1,80 @@
+{
+  "/deviceAppManagement/mobileApps/{mobileApp-id}/microsoft.graph.managedAndroidLobApp/categories/{mobileAppCategory-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.mobileApp"
+      ],
+      "summary": "Get categories from deviceAppManagement",
+      "description": "The list of categories for this app.",
+      "operationId": "deviceAppManagement.mobileAppAsManagedAndroidLobApp_GetCategory",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppCategory-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppCategory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppCategory"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.mobileAppCategory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

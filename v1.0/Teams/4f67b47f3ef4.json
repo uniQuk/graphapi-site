@@ -1,0 +1,191 @@
+{
+  "/appCatalogs/teamsApps/{teamsApp-id}/appDefinitions/{teamsAppDefinition-id}/bot": {
+    "get": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Get teamworkBot",
+      "description": "Get the bot associated with a specific definition of the  TeamsApp.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0"
+      },
+      "operationId": "appCatalog.teamsApp.appDefinition_GetBot",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkBot"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Update the navigation property bot in appCatalogs",
+      "operationId": "appCatalog.teamsApp.appDefinition_UpdateBot",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.teamworkBot"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamworkBot"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "appCatalogs.teamsApp"
+      ],
+      "summary": "Delete navigation property bot for appCatalogs",
+      "operationId": "appCatalog.teamsApp.appDefinition_DeleteBot",
+      "parameters": [
+        {
+          "name": "teamsApp-id",
+          "in": "path",
+          "description": "The unique identifier of teamsApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsApp"
+        },
+        {
+          "name": "teamsAppDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

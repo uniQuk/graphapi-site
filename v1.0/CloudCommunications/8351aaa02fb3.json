@@ -1,0 +1,65 @@
+{
+  "/communications/calls/{call-id}/microsoft.graph.addLargeGalleryView": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action addLargeGalleryView",
+      "description": "Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/call-addlargegalleryview?view=graph-rest-1.0"
+      },
+      "operationId": "communication.call_addLargeGalleryView",
+      "parameters": [
+        {
+          "name": "call-id",
+          "in": "path",
+          "description": "The unique identifier of call",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "call"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "clientContext": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.addLargeGalleryViewOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

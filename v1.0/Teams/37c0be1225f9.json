@@ -1,0 +1,219 @@
+{
+  "/teamwork/deletedTeams/{deletedTeam-id}/channels/{channel-id}/messages/{chatMessage-id}/hostedContents/{chatMessageHostedContent-id}/$value": {
+    "get": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Get media content for the navigation property hostedContents from teamwork",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "teamwork.deletedTeam.channel.message_GetHostedContentsContent",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Update media content for the navigation property hostedContents in teamwork",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "teamwork.deletedTeam.channel.message_SetHostedContentsContent",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Delete media content for the navigation property hostedContents in teamwork",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "teamwork.deletedTeam.channel.message_DeleteHostedContentsContent",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "chatMessage-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessage"
+        },
+        {
+          "name": "chatMessageHostedContent-id",
+          "in": "path",
+          "description": "The unique identifier of chatMessageHostedContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "chatMessageHostedContent"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

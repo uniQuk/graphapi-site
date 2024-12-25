@@ -1,0 +1,76 @@
+{
+  "/communications/calls/{call-id}/microsoft.graph.answer": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action answer",
+      "description": "Enable a bot to answer an incoming call. The incoming call request can be an invitation from a participant in a group call or a peer-to-peer call. If an invitation to a group call is received, the notification will contain the chatInfo and meetingInfo parameters. The bot is expected to answer, reject, or redirect the call before the call times out. The current timeout value is 15 seconds for regular scenarios, and 5 seconds for policy-based recording scenarios. This API supports the following PSTN scenarios:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/call-answer?view=graph-rest-1.0"
+      },
+      "operationId": "communication.call_answer",
+      "parameters": [
+        {
+          "name": "call-id",
+          "in": "path",
+          "description": "The unique identifier of call",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "call"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "callbackUri": {
+                  "type": "string"
+                },
+                "mediaConfig": {
+                  "$ref": "#/components/schemas/microsoft.graph.mediaConfig"
+                },
+                "acceptedModalities": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.modality"
+                  }
+                },
+                "participantCapacity": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "callOptions": {
+                  "$ref": "#/components/schemas/microsoft.graph.incomingCallOptions"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

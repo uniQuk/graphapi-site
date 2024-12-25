@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy-id}/assignments/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.virtualEndpoint.provisioningPolicy.assignment_GetCount",
+      "parameters": [
+        {
+          "name": "cloudPcProvisioningPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcProvisioningPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcProvisioningPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "/reports/partners/billing/reconciliation/billed/microsoft.graph.partners.billing.export": {
+    "post": {
+      "tags": [
+        "reports.Actions"
+      ],
+      "summary": "Invoke action export",
+      "description": "Export the billed invoice reconciliation data.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/partners-billing-billedreconciliation-export?view=graph-rest-1.0"
+      },
+      "operationId": "report.partner.billing.reconciliation.billed_export",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "invoiceId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "attributeSet": {
+                  "$ref": "#/components/schemas/microsoft.graph.partners.billing.attributeSet"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.partners.billing.operation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

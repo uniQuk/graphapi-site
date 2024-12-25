@@ -1,0 +1,57 @@
+{
+  "/applications/{application-id}/microsoft.graph.setVerifiedPublisher": {
+    "post": {
+      "tags": [
+        "applications.Actions"
+      ],
+      "summary": "Invoke action setVerifiedPublisher",
+      "description": "Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0"
+      },
+      "operationId": "application_setVerifiedPublisher",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "verifiedPublisherId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

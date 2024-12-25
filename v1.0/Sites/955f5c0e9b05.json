@@ -1,0 +1,84 @@
+{
+  "/sites/{site-id}/pages/{baseSitePage-id}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSection-id}/columns/{horizontalSectionColumn-id}/webparts/{webPart-id}/microsoft.graph.getPositionOfWebPart": {
+    "post": {
+      "tags": [
+        "sites.Actions"
+      ],
+      "summary": "Invoke action getPositionOfWebPart",
+      "operationId": "site.page.microsoft.graph.sitePage.canvasLayout.horizontalSection.column.webpart_getPositionGraphOPreWebPart",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "baseSitePage-id",
+          "in": "path",
+          "description": "The unique identifier of baseSitePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "baseSitePage"
+        },
+        {
+          "name": "horizontalSection-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSection"
+        },
+        {
+          "name": "horizontalSectionColumn-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSectionColumn",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSectionColumn"
+        },
+        {
+          "name": "webPart-id",
+          "in": "path",
+          "description": "The unique identifier of webPart",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "webPart"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.webPartPosition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

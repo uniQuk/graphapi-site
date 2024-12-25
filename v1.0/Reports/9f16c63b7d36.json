@@ -1,0 +1,79 @@
+{
+  "/reports/microsoft.graph.managedDeviceEnrollmentFailureDetails(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function managedDeviceEnrollmentFailureDetails",
+      "operationId": "report_managedDeviceEnrollmentFailureDetail",
+      "parameters": [
+        {
+          "name": "skip",
+          "in": "path",
+          "description": "Usage: skip={skip}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        {
+          "name": "top",
+          "in": "path",
+          "description": "Usage: top={top}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        {
+          "name": "filter",
+          "in": "path",
+          "description": "Usage: filter='{filter}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "skipToken",
+          "in": "path",
+          "description": "Usage: skipToken='{skipToken}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.report"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

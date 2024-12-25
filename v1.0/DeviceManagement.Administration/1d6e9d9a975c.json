@@ -1,0 +1,168 @@
+{
+  "/deviceManagement/virtualEndpoint/userSettings/{cloudPcUserSetting-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Get cloudPcUserSetting",
+      "description": "Read the properties and relationships of a cloudPcUserSetting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcusersetting-get?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_GetUserSetting",
+      "parameters": [
+        {
+          "name": "cloudPcUserSetting-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcUserSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcUserSetting"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcUserSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Update cloudPcUserSetting",
+      "description": "Update the properties of a cloudPcUserSetting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcusersetting-update?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_UpdateUserSetting",
+      "parameters": [
+        {
+          "name": "cloudPcUserSetting-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcUserSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcUserSetting"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.cloudPcUserSetting"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcUserSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.virtualEndpoint"
+      ],
+      "summary": "Delete cloudPcUserSetting",
+      "description": "Delete a cloudPcUserSetting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpcusersetting-delete?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.virtualEndpoint_DeleteUserSetting",
+      "parameters": [
+        {
+          "name": "cloudPcUserSetting-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPcUserSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPcUserSetting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

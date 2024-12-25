@@ -1,0 +1,187 @@
+{
+  "/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition-id}/instances/{accessReviewHistoryInstance-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Get instances from identityGovernance",
+      "description": "If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.",
+      "operationId": "identityGovernance.accessReview.historyDefinition_GetInstance",
+      "parameters": [
+        {
+          "name": "accessReviewHistoryDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryDefinition"
+        },
+        {
+          "name": "accessReviewHistoryInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryInstance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewHistoryInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Update the navigation property instances in identityGovernance",
+      "operationId": "identityGovernance.accessReview.historyDefinition_UpdateInstance",
+      "parameters": [
+        {
+          "name": "accessReviewHistoryDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryDefinition"
+        },
+        {
+          "name": "accessReviewHistoryInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryInstance"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessReviewHistoryInstance"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessReviewHistoryInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.accessReviewSet"
+      ],
+      "summary": "Delete navigation property instances for identityGovernance",
+      "operationId": "identityGovernance.accessReview.historyDefinition_DeleteInstance",
+      "parameters": [
+        {
+          "name": "accessReviewHistoryDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryDefinition"
+        },
+        {
+          "name": "accessReviewHistoryInstance-id",
+          "in": "path",
+          "description": "The unique identifier of accessReviewHistoryInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReviewHistoryInstance"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

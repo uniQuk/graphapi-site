@@ -1,0 +1,38 @@
+{
+  "/users/{user-id}/solutions/workingTimeSchedule/microsoft.graph.endWorkingTime": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action endWorkingTime",
+      "description": "Trigger the policies associated with the end of working hours for a specific user.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/workingtimeschedule-endworkingtime?view=graph-rest-1.0"
+      },
+      "operationId": "user.solution.workingTimeSchedule_endWorkingTime",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

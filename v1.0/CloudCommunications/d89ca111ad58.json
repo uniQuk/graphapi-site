@@ -1,0 +1,73 @@
+{
+  "/communications/calls/{call-id}/microsoft.graph.sendDtmfTones": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action sendDtmfTones",
+      "operationId": "communication.call_sendDtmfTone",
+      "parameters": [
+        {
+          "name": "call-id",
+          "in": "path",
+          "description": "The unique identifier of call",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "call"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tones": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.tone"
+                  }
+                },
+                "delayBetweenTonesMs": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "clientContext": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.sendDtmfTonesOperation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration-id}/deviceStatuses/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.managedDeviceMobileAppConfiguration"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.mobileAppConfiguration.deviceStatus_GetCount",
+      "parameters": [
+        {
+          "name": "managedDeviceMobileAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfiguration"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

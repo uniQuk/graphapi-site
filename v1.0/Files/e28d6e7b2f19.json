@@ -1,0 +1,170 @@
+{
+  "/shares/{sharedDriveItem-id}/items/{driveItem-id}/content": {
+    "get": {
+      "tags": [
+        "shares.driveItem"
+      ],
+      "summary": "Get content for the navigation property items from shares",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "share_GetItemsContent",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "$format",
+          "in": "query",
+          "description": "Format of the content",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "shares.driveItem"
+      ],
+      "summary": "Update content for the navigation property items in shares",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "share_SetItemsContent",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.driveItem"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "shares.driveItem"
+      ],
+      "summary": "Delete content for the navigation property items in shares",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "share_DeleteItemsContent",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "driveItem-id",
+          "in": "path",
+          "description": "The unique identifier of driveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveItem"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

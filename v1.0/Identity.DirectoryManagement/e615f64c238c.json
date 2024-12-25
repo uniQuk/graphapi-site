@@ -1,0 +1,73 @@
+{
+  "/directoryRoleTemplates/microsoft.graph.getAvailableExtensionProperties": {
+    "post": {
+      "tags": [
+        "directoryRoleTemplates.Actions"
+      ],
+      "summary": "Invoke action getAvailableExtensionProperties",
+      "description": "Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0"
+      },
+      "operationId": "directoryRoleTemplate_getAvailableExtensionProperty",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "isSyncedFromOnPremises": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Collection of extensionProperty",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/microsoft.graph.extensionProperty"
+                    }
+                  },
+                  "@odata.nextLink": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

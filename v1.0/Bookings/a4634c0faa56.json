@@ -1,0 +1,45 @@
+{
+  "/solutions/backupRestore/serviceApps/{serviceApp-id}/microsoft.graph.deactivate": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action deactivate",
+      "description": "Deactivate a serviceApp.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/serviceapp-deactivate?view=graph-rest-1.0"
+      },
+      "operationId": "solution.backupRestore.serviceApp_deactivate",
+      "parameters": [
+        {
+          "name": "serviceApp-id",
+          "in": "path",
+          "description": "The unique identifier of serviceApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceApp"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceApp"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

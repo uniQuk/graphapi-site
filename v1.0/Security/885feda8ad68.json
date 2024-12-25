@@ -1,0 +1,41 @@
+{
+  "/security/alerts_v2/$count": {
+    "get": {
+      "tags": [
+        "security.alert"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.alerts_v2_GetCount",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

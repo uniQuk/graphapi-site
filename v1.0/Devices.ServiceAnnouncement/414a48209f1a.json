@@ -1,0 +1,55 @@
+{
+  "/admin/serviceAnnouncement/issues/{serviceHealthIssue-id}/microsoft.graph.incidentReport()": {
+    "get": {
+      "tags": [
+        "admin.Functions"
+      ],
+      "summary": "Invoke function incidentReport",
+      "description": "Provide the Post-Incident Review (PIR) document of a specified service issue for tenant.  An issue only with status of PostIncidentReviewPublished indicates that the PIR document exists for the issue. The operation returns an error if the specified issue doesn't exist for the tenant or if PIR document does not exist for the issue.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/servicehealthissue-incidentreport?view=graph-rest-1.0"
+      },
+      "operationId": "admin.serviceAnnouncement.issue_incidentReport",
+      "parameters": [
+        {
+          "name": "serviceHealthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealthIssue"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

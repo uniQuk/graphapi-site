@@ -1,0 +1,38 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.resetPasscode": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action resetPasscode",
+      "description": "Reset passcode",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/intune-devices-manageddevice-resetpasscode?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.managedDevice_resetPasscode",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.redirect": {
+    "post": {
+      "tags": [
+        "print.Actions"
+      ],
+      "summary": "Invoke action redirect",
+      "description": "Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printjob-redirect?view=graph-rest-1.0"
+      },
+      "operationId": "print.printer.job_redirect",
+      "parameters": [
+        {
+          "name": "printer-id",
+          "in": "path",
+          "description": "The unique identifier of printer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printer"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "destinationPrinterId": {
+                  "type": "string"
+                },
+                "configuration": {
+                  "$ref": "#/components/schemas/microsoft.graph.printJobConfiguration"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printJob"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

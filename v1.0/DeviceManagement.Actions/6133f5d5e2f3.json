@@ -1,0 +1,38 @@
+{
+  "/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC-id}/microsoft.graph.reboot": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action reboot",
+      "description": "Reboot a specific cloudPC object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/cloudpc-reboot?view=graph-rest-1.0"
+      },
+      "operationId": "deviceManagement.virtualEndpoint.cloudPC_reboot",
+      "parameters": [
+        {
+          "name": "cloudPC-id",
+          "in": "path",
+          "description": "The unique identifier of cloudPC",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "cloudPC"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

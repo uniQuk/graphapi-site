@@ -1,0 +1,153 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/bulkUpload/$value": {
+    "get": {
+      "tags": [
+        "servicePrincipals.synchronization"
+      ],
+      "summary": "Get media content for the navigation property bulkUpload from servicePrincipals",
+      "description": "The bulk upload operation for the job.",
+      "operationId": "servicePrincipal.synchronization.job_GetBulkUploadContent",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "servicePrincipals.synchronization"
+      ],
+      "summary": "Update media content for the navigation property bulkUpload in servicePrincipals",
+      "description": "The bulk upload operation for the job.",
+      "operationId": "servicePrincipal.synchronization.job_SetBulkUploadContent",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "servicePrincipals.synchronization"
+      ],
+      "summary": "Delete media content for the navigation property bulkUpload in servicePrincipals",
+      "description": "The bulk upload operation for the job.",
+      "operationId": "servicePrincipal.synchronization.job_DeleteBulkUploadContent",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        },
+        {
+          "name": "synchronizationJob-id",
+          "in": "path",
+          "description": "The unique identifier of synchronizationJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "synchronizationJob"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

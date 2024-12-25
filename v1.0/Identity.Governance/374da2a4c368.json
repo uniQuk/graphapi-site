@@ -1,0 +1,168 @@
+{
+  "/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get connectedOrganization",
+      "description": "Retrieve the properties and relationships of a connectedOrganization object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0"
+      },
+      "operationId": "identityGovernance.entitlementManagement_GetConnectedOrganization",
+      "parameters": [
+        {
+          "name": "connectedOrganization-id",
+          "in": "path",
+          "description": "The unique identifier of connectedOrganization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectedOrganization"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.connectedOrganization"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update connectedOrganization",
+      "description": "Update a connectedOrganization object to change one or more of its properties.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0"
+      },
+      "operationId": "identityGovernance.entitlementManagement_UpdateConnectedOrganization",
+      "parameters": [
+        {
+          "name": "connectedOrganization-id",
+          "in": "path",
+          "description": "The unique identifier of connectedOrganization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectedOrganization"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.connectedOrganization"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.connectedOrganization"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete connectedOrganization",
+      "description": "Delete a connectedOrganization object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0"
+      },
+      "operationId": "identityGovernance.entitlementManagement_DeleteConnectedOrganization",
+      "parameters": [
+        {
+          "name": "connectedOrganization-id",
+          "in": "path",
+          "description": "The unique identifier of connectedOrganization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectedOrganization"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.targetedManagedAppConfiguration"
+      ],
+      "summary": "Get assignments from deviceAppManagement",
+      "description": "Navigation property to list of inclusion and exclusion groups to which the policy is deployed.",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration_GetAssignment",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.targetedManagedAppConfiguration"
+      ],
+      "summary": "Update the navigation property assignments in deviceAppManagement",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration_UpdateAssignment",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.targetedManagedAppConfiguration"
+      ],
+      "summary": "Delete navigation property assignments for deviceAppManagement",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration_DeleteAssignment",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        },
+        {
+          "name": "targetedManagedAppPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppPolicyAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

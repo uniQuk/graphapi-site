@@ -1,0 +1,154 @@
+{
+  "/security/threatIntelligence/whoisHistoryRecords/{whoisHistoryRecord-id}": {
+    "get": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Get whoisHistoryRecords from security",
+      "description": "Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.",
+      "operationId": "security.threatIntelligence_GetWhoisHistoryRecord",
+      "parameters": [
+        {
+          "name": "whoisHistoryRecord-id",
+          "in": "path",
+          "description": "The unique identifier of whoisHistoryRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "whoisHistoryRecord"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.whoisHistoryRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Update the navigation property whoisHistoryRecords in security",
+      "operationId": "security.threatIntelligence_UpdateWhoisHistoryRecord",
+      "parameters": [
+        {
+          "name": "whoisHistoryRecord-id",
+          "in": "path",
+          "description": "The unique identifier of whoisHistoryRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "whoisHistoryRecord"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.whoisHistoryRecord"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.whoisHistoryRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Delete navigation property whoisHistoryRecords for security",
+      "operationId": "security.threatIntelligence_DeleteWhoisHistoryRecord",
+      "parameters": [
+        {
+          "name": "whoisHistoryRecord-id",
+          "in": "path",
+          "description": "The unique identifier of whoisHistoryRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "whoisHistoryRecord"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

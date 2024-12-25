@@ -1,0 +1,68 @@
+{
+  "/teams/{team-id}/installedApps/{teamsAppInstallation-id}/microsoft.graph.upgrade": {
+    "post": {
+      "tags": [
+        "teams.Actions"
+      ],
+      "summary": "Invoke action upgrade",
+      "description": "Upgrade an app installation within a chat.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0"
+      },
+      "operationId": "team.installedApp_upgrade",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "teamsAppInstallation-id",
+          "in": "path",
+          "description": "The unique identifier of teamsAppInstallation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamsAppInstallation"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "consentedPermissionSet": {
+                  "$ref": "#/components/schemas/microsoft.graph.teamsAppPermissionSet"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

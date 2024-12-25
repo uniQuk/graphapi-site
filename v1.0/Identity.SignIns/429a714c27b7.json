@@ -1,0 +1,158 @@
+{
+  "/policies/roleManagementPolicyAssignments/{unifiedRoleManagementPolicyAssignment-id}": {
+    "get": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicyAssignment"
+      ],
+      "summary": "Get unifiedRoleManagementPolicyAssignment",
+      "description": "Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0"
+      },
+      "operationId": "policy_GetRoleManagementPolicyAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyAssignment"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicyAssignment"
+      ],
+      "summary": "Update the navigation property roleManagementPolicyAssignments in policies",
+      "operationId": "policy_UpdateRoleManagementPolicyAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyAssignment"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleManagementPolicyAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicyAssignment"
+      ],
+      "summary": "Delete navigation property roleManagementPolicyAssignments for policies",
+      "operationId": "policy_DeleteRoleManagementPolicyAssignment",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicyAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicyAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicyAssignment"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "/identity/customAuthenticationExtensions/{customAuthenticationExtension-id}/microsoft.graph.validateAuthenticationConfiguration": {
+    "post": {
+      "tags": [
+        "identity.Actions"
+      ],
+      "summary": "Invoke action validateAuthenticationConfiguration",
+      "description": "An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0"
+      },
+      "operationId": "identity.customAuthenticationExtension_validateAuthenticationConfiguration",
+      "parameters": [
+        {
+          "name": "customAuthenticationExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAuthenticationExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAuthenticationExtension"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationConfigurationValidation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

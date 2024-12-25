@@ -1,0 +1,163 @@
+{
+  "/security/labels/categories/{categoryTemplate-id}": {
+    "get": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Get categoryTemplate",
+      "description": "Read the properties and relationships of a categoryTemplate object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0"
+      },
+      "operationId": "security.label_GetCategory",
+      "parameters": [
+        {
+          "name": "categoryTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of categoryTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "categoryTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.categoryTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Update the navigation property categories in security",
+      "operationId": "security.label_UpdateCategory",
+      "parameters": [
+        {
+          "name": "categoryTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of categoryTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "categoryTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.categoryTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.categoryTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Delete categoryTemplate",
+      "description": "Delete a categoryTemplate object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0"
+      },
+      "operationId": "security.label_DeleteCategory",
+      "parameters": [
+        {
+          "name": "categoryTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of categoryTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "categoryTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}
