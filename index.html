@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Changed base href to match exact repository name casing -->
-    <base href="/graphapi-site/">
+    <base href="" id="base-href">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graph API Viewer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        // Automatically detect and set correct base path
+        (function() {
+            const getBasePath = () => {
+                // For GitHub Pages
+                if (location.hostname.includes('github.io')) {
+                    const repo = location.pathname.split('/')[1];  // Get repo name
+                    return `/${repo}/`;
+                }
+                // For local development or other hosts
+                return '/';
+            };
+            
+            document.getElementById('base-href').setAttribute('href', getBasePath());
+            // Store base path for use in main.js
+            window.__BASE_PATH__ = getBasePath();
+        })();
+    </script>
 </head>
 <body>
     <div class="container-fluid">

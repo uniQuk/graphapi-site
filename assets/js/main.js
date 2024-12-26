@@ -1,5 +1,6 @@
 class APIViewer {
     constructor() {
+        this.basePath = window.__BASE_PATH__ || '/';
         this.currentVersion = 'v1.0';
         this.versionSelect = document.getElementById('version-select');
         this.categoriesList = document.getElementById('categories-list');
@@ -88,7 +89,7 @@ class APIViewer {
     }
 
     updateURL() {
-        let url = `#/${this.router.version}`;
+        let url = `${this.basePath}#/${this.router.version}`;
         if (this.router.category) {
             url += `/${this.router.category}`;
             if (this.router.tag) {
@@ -121,7 +122,7 @@ class APIViewer {
 
     async loadCategories() {
         try {
-            const response = await fetch(`${this.currentVersion}/index.json`);
+            const response = await fetch(`${this.basePath}${this.currentVersion}/index.json`);
             const categories = await response.json();
             this.renderCategories(categories);
         } catch (error) {
@@ -171,10 +172,10 @@ class APIViewer {
             document.querySelector('main').scrollTo(0, 0);
             
             // Load path index first
-            const indexResponse = await fetch(`${this.currentVersion}/${category}/_path_index.json`);
+            const indexResponse = await fetch(`${this.basePath}${this.currentVersion}/${category}/_path_index.json`);
             this.pathIndex = await indexResponse.json();
             
-            const response = await fetch(`${this.currentVersion}/${category}/_metadata.json`);
+            const response = await fetch(`${this.basePath}${this.currentVersion}/${category}/_metadata.json`);
             const data = await response.json();
             
             const endpoints = Object.entries(this.pathIndex).map(([hash, path]) => ({
@@ -340,7 +341,7 @@ class APIViewer {
 
     async loadEndpointData(category, hashedPath) {
         try {
-            const response = await fetch(`${this.currentVersion}/${category}/${hashedPath}.json`);
+            const response = await fetch(`${this.basePath}${this.currentVersion}/${category}/${hashedPath}.json`);
             const data = await response.json();
             return data;
         } catch (error) {
