@@ -11,11 +11,110 @@ class APIViewer {
         this.loadCategories();
         this.pathIndex = {}; // Store path mappings
         this.initThemeToggle();
+
+        // Add router state
+        this.router = {
+            version: 'v1.0',
+            category: null,
+            tag: null,
+            endpoint: null
+        };
+        
+        this.initRouter();
+
+        // Add home button handler
+        document.getElementById('home-button').addEventListener('click', () => {
+            this.router = {
+                version: this.currentVersion, // Keep current version
+                category: null,
+                tag: null,
+                endpoint: null
+            };
+            window.location.hash = ''; // Clear the hash completely
+            this.apiContent.innerHTML = `
+                <div class="text-center text-muted" id="empty-state">
+                    <i class="bi bi-arrow-left-circle fs-1"></i>
+                    <h4 class="mt-3">Select a category from the sidebar</h4>
+                </div>
+            `;
+        });
+    }
+
+    initRouter() {
+        // Handle initial load and back/forward navigation
+        window.addEventListener('hashchange', () => this.handleRoute());
+        window.addEventListener('load', () => this.handleRoute());
+    }
+
+    handleRoute() {
+        // Parse URL hash: #/version/category/tag/endpoint
+        const hash = window.location.hash.slice(1) || '';
+        const [, version, category, tag, endpoint] = hash.split('/');
+
+        // Update router state
+        this.router = {
+            version: version || 'v1.0',
+            category: category || null,
+            tag: tag || null,
+            endpoint: endpoint || null
+        };
+
+        // Update UI based on route
+        this.updateFromRoute();
+    }
+
+    updateFromRoute() {
+        // Update version selector
+        this.versionSelect.value = this.router.version;
+        this.currentVersion = this.router.version;
+
+        // Load categories and select active one
+        this.loadCategories().then(() => {
+            if (this.router.category) {
+                const categoryButton = document.querySelector(`[data-category="${this.router.category}"]`);
+                if (categoryButton) {
+                    categoryButton.classList.add('active');
+                    this.loadEndpoints(this.router.category).then(() => {
+                        if (this.router.endpoint) {
+                            const endpoint = document.querySelector(`[data-hash="${this.router.endpoint}"]`);
+                            if (endpoint) {
+                                endpoint.querySelector('.endpoint-header').click();
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    updateURL() {
+        let url = `#/${this.router.version}`;
+        if (this.router.category) {
+            url += `/${this.router.category}`;
+            if (this.router.tag) {
+                url += `/${this.router.tag}`;
+                if (this.router.endpoint) {
+                    url += `/${this.router.endpoint}`;
+                }
+            }
+        }
+        window.history.pushState(null, '', url);
+    }
+
+    scrollToTag(tagId) {
+        const element = document.getElementById(tagId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     initEventListeners() {
         this.versionSelect.addEventListener('change', (e) => {
-            this.currentVersion = e.target.value;
+            this.router.version = e.target.value;
+            this.router.category = null;
+            this.router.tag = null;
+            this.router.endpoint = null;
+            this.updateURL();
             this.loadCategories();
         });
     }
@@ -47,6 +146,9 @@ class APIViewer {
 
         document.querySelectorAll('[data-category]').forEach(button => {
             button.addEventListener('click', (e) => {
+                // Reset scroll position when changing categories
+                document.querySelector('main').scrollTo(0, 0);
+                
                 // Remove active class from all buttons
                 document.querySelectorAll('[data-category]').forEach(btn => 
                     btn.classList.remove('active')
@@ -54,6 +156,10 @@ class APIViewer {
                 // Add active class to clicked button
                 e.currentTarget.classList.add('active');
                 const category = e.currentTarget.dataset.category;
+                this.router.category = category;
+                this.router.tag = null;
+                this.router.endpoint = null;
+                this.updateURL();
                 this.loadEndpoints(category);
             });
         });
@@ -61,6 +167,9 @@ class APIViewer {
 
     async loadEndpoints(category) {
         try {
+            // Reset scroll position when loading new category
+            document.querySelector('main').scrollTo(0, 0);
+            
             // Load path index first
             const indexResponse = await fetch(`${this.currentVersion}/${category}/_path_index.json`);
             this.pathIndex = await indexResponse.json();
@@ -107,9 +216,16 @@ class APIViewer {
                 </div>
                 <div class="endpoints-container">
                     ${sortedTags.map(tag => `
-                        <div class="tag-section-header">${tag}</div>
+                        <div class="tag-section-header" id="${this.getTagId(tag)}">
+                            <div class="tag-title">
+                                <span>${tag}</span>
+                                <button class="btn btn-link btn-sm copy-tag" data-tag="${tag}" title="Copy link to section">
+                                    <i class="bi bi-link-45deg"></i>
+                                </button>
+                            </div>
+                        </div>
                         ${taggedEndpoints[tag].map(endpoint => `
-                            <div class="endpoint-row" data-hash="${endpoint.hash}">
+                            <div class="endpoint-row" data-hash="${endpoint.hash}" data-tag="${tag}">
                                 <div class="endpoint-header">
                                     <div>
                                         <div class="endpoint-methods">
@@ -134,6 +250,42 @@ class APIViewer {
                     `).join('')}
                 </div>
             `;
+
+            // Add click handlers for copy buttons
+            document.querySelectorAll('.copy-tag').forEach(button => {
+                button.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    const tag = e.currentTarget.dataset.tag;
+                    const url = `${window.location.origin}${window.location.pathname}#/${this.router.version}/${this.router.category}/${encodeURIComponent(tag)}`;
+                    
+                    try {
+                        // Fallback for clipboard API
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            await navigator.clipboard.writeText(url);
+                        } else {
+                            // Fallback method using textarea
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            textarea.style.position = 'fixed';
+                            textarea.style.opacity = '0';
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                        }
+                        
+                        // Show icon feedback
+                        const icon = e.currentTarget.querySelector('i');
+                        const originalClass = icon.className;
+                        icon.className = 'bi bi-check-lg';
+                        setTimeout(() => {
+                            icon.className = originalClass;
+                        }, 1000);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+                    }
+                });
+            });
 
             // Load and display available methods for each endpoint
             endpoints.forEach(async endpoint => {
@@ -167,8 +319,20 @@ class APIViewer {
                     detailsSection.classList.toggle('show');
                     expandBtn.classList.toggle('bi-chevron-down');
                     expandBtn.classList.toggle('bi-chevron-up');
+
+                    // Update router state and URL
+                    const tag = endpointRow.dataset.tag;
+                    this.router.tag = tag;
+                    this.router.endpoint = endpointRow.dataset.hash;
+                    this.updateURL();
                 });
             });
+
+            // If there's a tag in the URL, scroll to it
+            if (this.router.tag) {
+                this.scrollToTag(this.getTagId(this.router.tag));
+            }
+
         } catch (error) {
             console.error('Error loading endpoints:', error);
         }
@@ -311,6 +475,11 @@ class APIViewer {
         // Set initial theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme === 'dark');
+    }
+
+    // Helper method to generate consistent tag IDs
+    getTagId(tag) {
+        return `tag-${tag.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
     }
 }
 
