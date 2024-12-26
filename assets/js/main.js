@@ -2,18 +2,20 @@ class APIViewer {
     constructor() {
         this.basePath = window.__BASE_PATH__ || '/';
         this.currentVersion = 'v1.0';
-        this.versionSelect = document.getElementById('version-select');
-        this.categoriesList = document.getElementById('categories-list');
-        this.apiContent = document.getElementById('api-content');
-        this.sidebar = document.getElementById('sidebar');
-        this.themeToggle = document.getElementById('theme-toggle');
         
-        this.initEventListeners();
-        this.loadCategories();
-        this.pathIndex = {}; // Store path mappings
-        this.initThemeToggle();
-
-        // Add router state
+        // Cache DOM elements
+        this.elements = {
+            versionSelect: document.getElementById('version-select'),
+            categoriesList: document.getElementById('categories-list'),
+            apiContent: document.getElementById('api-content'),
+            sidebar: document.getElementById('sidebar'),
+            themeToggle: document.getElementById('theme-toggle'),
+            homeButton: document.getElementById('home-button'),
+            mainContent: document.querySelector('main')
+        };
+        
+        // Initialize state
+        this.pathIndex = {};
         this.router = {
             version: 'v1.0',
             category: null,
@@ -21,24 +23,13 @@ class APIViewer {
             endpoint: null
         };
         
+        this.initEventListeners();
+        this.loadCategories();
+        this.initThemeToggle();
         this.initRouter();
-
-        // Add home button handler
-        document.getElementById('home-button').addEventListener('click', () => {
-            this.router = {
-                version: this.currentVersion, // Keep current version
-                category: null,
-                tag: null,
-                endpoint: null
-            };
-            window.location.hash = ''; // Clear the hash completely
-            this.apiContent.innerHTML = `
-                <div class="text-center text-muted" id="empty-state">
-                    <i class="bi bi-arrow-left-circle fs-1"></i>
-                    <h4 class="mt-3">Select a category from the sidebar</h4>
-                </div>
-            `;
-        });
+        
+        // Initialize with delegated events
+        this.initDelegatedEvents();
     }
 
     initRouter() {
@@ -66,7 +57,7 @@ class APIViewer {
 
     updateFromRoute() {
         // Update version selector
-        this.versionSelect.value = this.router.version;
+        this.elements.versionSelect.value = this.router.version;
         this.currentVersion = this.router.version;
 
         // Load categories and select active one
@@ -80,7 +71,13 @@ class APIViewer {
                             const endpoint = document.querySelector(`[data-hash="${this.router.endpoint}"]`);
                             if (endpoint) {
                                 endpoint.querySelector('.endpoint-header').click();
+                                // Add slight delay to ensure content is expanded before scrolling
+                                setTimeout(() => {
+                                    endpoint.scrollIntoView({ behavior: 'smooth' });
+                                }, 100);
                             }
+                        } else if (this.router.tag) {
+                            this.scrollToTag(this.getTagId(this.router.tag));
                         }
                     });
                 }
@@ -110,13 +107,29 @@ class APIViewer {
     }
 
     initEventListeners() {
-        this.versionSelect.addEventListener('change', (e) => {
+        this.elements.versionSelect.addEventListener('change', (e) => {
             this.router.version = e.target.value;
             this.router.category = null;
             this.router.tag = null;
             this.router.endpoint = null;
             this.updateURL();
             this.loadCategories();
+        });
+
+        this.elements.homeButton.addEventListener('click', () => {
+            this.router = {
+                version: this.currentVersion,
+                category: null,
+                tag: null,
+                endpoint: null
+            };
+            window.location.hash = '';
+            this.elements.apiContent.innerHTML = `
+                <div class="text-center text-muted" id="empty-state">
+                    <i class="bi bi-arrow-left-circle fs-1"></i>
+                    <h4 class="mt-3">Select a category from the sidebar</h4>
+                </div>
+            `;
         });
     }
 
@@ -136,7 +149,7 @@ class APIViewer {
             a.name.localeCompare(b.name)
         );
 
-        this.categoriesList.innerHTML = sortedCategories.map(category => `
+        this.elements.categoriesList.innerHTML = sortedCategories.map(category => `
             <div class="nav-item mb-1" data-name="${category.name}">
                 <button class="btn w-100 text-start" data-category="${category.name}">
                     <i class="bi bi-folder2"></i>
@@ -144,32 +157,12 @@ class APIViewer {
                 </button>
             </div>
         `).join('');
-
-        document.querySelectorAll('[data-category]').forEach(button => {
-            button.addEventListener('click', (e) => {
-                // Reset scroll position when changing categories
-                document.querySelector('main').scrollTo(0, 0);
-                
-                // Remove active class from all buttons
-                document.querySelectorAll('[data-category]').forEach(btn => 
-                    btn.classList.remove('active')
-                );
-                // Add active class to clicked button
-                e.currentTarget.classList.add('active');
-                const category = e.currentTarget.dataset.category;
-                this.router.category = category;
-                this.router.tag = null;
-                this.router.endpoint = null;
-                this.updateURL();
-                this.loadEndpoints(category);
-            });
-        });
     }
 
     async loadEndpoints(category) {
         try {
             // Reset scroll position when loading new category
-            document.querySelector('main').scrollTo(0, 0);
+            this.elements.mainContent.scrollTo(0, 0);
             
             // Load path index first
             const indexResponse = await fetch(`${this.basePath}${this.currentVersion}/${category}/_path_index.json`);
@@ -210,7 +203,7 @@ class APIViewer {
             // Sort tags alphabetically
             const sortedTags = Object.keys(taggedEndpoints).sort();
 
-            this.apiContent.innerHTML = `
+            this.elements.apiContent.innerHTML = `
                 <div class="category-header">
                     <h2>${category}</h2>
                     ${data.info?.description ? `<p class="text-muted mb-0">${data.info.description}</p>` : ''}
@@ -252,44 +245,8 @@ class APIViewer {
                 </div>
             `;
 
-            // Add click handlers for copy buttons
-            document.querySelectorAll('.copy-tag').forEach(button => {
-                button.addEventListener('click', async (e) => {
-                    e.stopPropagation();
-                    const tag = e.currentTarget.dataset.tag;
-                    const url = `${window.location.origin}${window.location.pathname}#/${this.router.version}/${this.router.category}/${encodeURIComponent(tag)}`;
-                    
-                    try {
-                        // Fallback for clipboard API
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(url);
-                        } else {
-                            // Fallback method using textarea
-                            const textarea = document.createElement('textarea');
-                            textarea.value = url;
-                            textarea.style.position = 'fixed';
-                            textarea.style.opacity = '0';
-                            document.body.appendChild(textarea);
-                            textarea.select();
-                            document.execCommand('copy');
-                            document.body.removeChild(textarea);
-                        }
-                        
-                        // Show icon feedback
-                        const icon = e.currentTarget.querySelector('i');
-                        const originalClass = icon.className;
-                        icon.className = 'bi bi-check-lg';
-                        setTimeout(() => {
-                            icon.className = originalClass;
-                        }, 1000);
-                    } catch (err) {
-                        console.error('Failed to copy:', err);
-                    }
-                });
-            });
-
-            // Load and display available methods for each endpoint
-            endpoints.forEach(async endpoint => {
+            // Load methods for all endpoints at once
+            await Promise.all(endpoints.map(async endpoint => {
                 const data = await this.loadEndpointData(category, endpoint.hash);
                 if (data) {
                     const methodsContainer = document.querySelector(`[data-hash="${endpoint.hash}"] .endpoint-methods`);
@@ -300,34 +257,7 @@ class APIViewer {
                         ).join('');
                     }
                 }
-            });
-
-            // Handle endpoint expansion
-            document.querySelectorAll('.endpoint-header').forEach(header => {
-                header.addEventListener('click', async (e) => {
-                    const endpointRow = header.closest('.endpoint-row');
-                    const detailsSection = endpointRow.querySelector('.endpoint-details');
-                    const expandBtn = header.querySelector('.expand-btn i');
-                    
-                    if (!detailsSection.classList.contains('show')) {
-                        const hash = endpointRow.dataset.hash;
-                        const data = await this.loadEndpointData(category, hash);
-                        if (data) {
-                            detailsSection.querySelector('.endpoint-content').innerHTML = this.renderEndpointDetails(data);
-                        }
-                    }
-                    
-                    detailsSection.classList.toggle('show');
-                    expandBtn.classList.toggle('bi-chevron-down');
-                    expandBtn.classList.toggle('bi-chevron-up');
-
-                    // Update router state and URL
-                    const tag = endpointRow.dataset.tag;
-                    this.router.tag = tag;
-                    this.router.endpoint = endpointRow.dataset.hash;
-                    this.updateURL();
-                });
-            });
+            }));
 
             // If there's a tag in the URL, scroll to it
             if (this.router.tag) {
@@ -463,12 +393,13 @@ class APIViewer {
     initThemeToggle() {
         const setTheme = (isDark) => {
             document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            this.themeToggle.querySelector('i').classList.remove('bi-sun-fill', 'bi-moon-fill');
-            this.themeToggle.querySelector('i').classList.add(isDark ? 'bi-moon-fill' : 'bi-sun-fill');
+            const icon = this.elements.themeToggle.querySelector('i');
+            icon.classList.remove('bi-sun-fill', 'bi-moon-fill');
+            icon.classList.add(isDark ? 'bi-moon-fill' : 'bi-sun-fill');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         };
 
-        this.themeToggle.addEventListener('click', () => {
+        this.elements.themeToggle.addEventListener('click', () => {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             setTheme(!isDark);
         });
@@ -481,6 +412,108 @@ class APIViewer {
     // Helper method to generate consistent tag IDs
     getTagId(tag) {
         return `tag-${tag.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+    }
+
+    initDelegatedEvents() {
+        // Delegate category list clicks
+        this.elements.categoriesList.addEventListener('click', (e) => {
+            const categoryButton = e.target.closest('[data-category]');
+            if (!categoryButton) return;
+
+            // Reset scroll position
+            this.elements.mainContent.scrollTo(0, 0);
+            
+            // Update active state
+            document.querySelectorAll('[data-category]').forEach(btn => 
+                btn.classList.remove('active')
+            );
+            categoryButton.classList.add('active');
+
+            // Update router and load endpoints
+            const category = categoryButton.dataset.category;
+            this.router.category = category;
+            this.router.tag = null;
+            this.router.endpoint = null;
+            this.updateURL();
+            this.loadEndpoints(category);
+        });
+
+        // Delegate API content clicks
+        this.elements.apiContent.addEventListener('click', async (e) => {
+            // Handle copy tag button clicks
+            if (e.target.closest('.copy-tag')) {
+                e.stopPropagation();
+                const button = e.target.closest('.copy-tag');
+                await this.handleTagCopy(button);
+                return;
+            }
+
+            // Handle endpoint header clicks
+            if (e.target.closest('.endpoint-header')) {
+                const header = e.target.closest('.endpoint-header');
+                await this.handleEndpointExpand(header);
+            }
+        });
+    }
+
+    async handleTagCopy(button) {
+        const tag = button.dataset.tag;
+        const url = `${window.location.origin}${window.location.pathname}#/${this.router.version}/${this.router.category}/${encodeURIComponent(tag)}`;
+        
+        try {
+            await this.copyToClipboard(url);
+            this.showCopyFeedback(button);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    }
+
+    async handleEndpointExpand(header) {
+        const endpointRow = header.closest('.endpoint-row');
+        const detailsSection = endpointRow.querySelector('.endpoint-details');
+        const expandBtn = header.querySelector('.expand-btn i');
+        
+        if (!detailsSection.classList.contains('show')) {
+            const hash = endpointRow.dataset.hash;
+            const data = await this.loadEndpointData(this.router.category, hash);
+            if (data) {
+                detailsSection.querySelector('.endpoint-content').innerHTML = this.renderEndpointDetails(data);
+            }
+        }
+        
+        detailsSection.classList.toggle('show');
+        expandBtn.classList.toggle('bi-chevron-down');
+        expandBtn.classList.toggle('bi-chevron-up');
+
+        // Update router state and URL
+        const tag = endpointRow.dataset.tag;
+        this.router.tag = tag;
+        this.router.endpoint = endpointRow.dataset.hash;
+        this.updateURL();
+    }
+
+    async copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+        } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    }
+
+    showCopyFeedback(button) {
+        const icon = button.querySelector('i');
+        const originalClass = icon.className;
+        icon.className = 'bi bi-check-lg';
+        setTimeout(() => {
+            icon.className = originalClass;
+        }, 1000);
     }
 }
 
