@@ -11,7 +11,8 @@ class APIViewer {
             sidebar: document.getElementById('sidebar'),
             themeToggle: document.getElementById('theme-toggle'),
             homeButton: document.getElementById('home-button'),
-            mainContent: document.querySelector('main')
+            mainContent: document.querySelector('main'),
+            mobileMenuToggle: document.getElementById('mobile-menu-toggle')
         };
         
         // Initialize state
@@ -30,6 +31,7 @@ class APIViewer {
         
         // Initialize with delegated events
         this.initDelegatedEvents();
+        this.initMobileMenu();
     }
 
     initRouter() {
@@ -113,7 +115,7 @@ class APIViewer {
             this.router.tag = null;
             this.router.endpoint = null;
             this.updateURL();
-            this.loadCategories();
+            this.showEmptyState();
         });
 
         this.elements.homeButton.addEventListener('click', () => {
@@ -123,14 +125,18 @@ class APIViewer {
                 tag: null,
                 endpoint: null
             };
-            window.location.hash = '';
-            this.elements.apiContent.innerHTML = `
-                <div class="text-center text-muted" id="empty-state">
-                    <i class="bi bi-arrow-left-circle fs-1"></i>
-                    <h4 class="mt-3">Select a category from the sidebar</h4>
-                </div>
-            `;
+            this.updateURL();
+            this.showEmptyState();
         });
+    }
+
+    showEmptyState() {
+        this.elements.apiContent.innerHTML = `
+            <div class="text-center text-muted" id="empty-state">
+                <i class="bi bi-arrow-left-circle fs-1"></i>
+                <h4 class="mt-3">Select a category from the sidebar</h4>
+            </div>
+        `;
     }
 
     async loadCategories() {
@@ -514,6 +520,33 @@ class APIViewer {
         setTimeout(() => {
             icon.className = originalClass;
         }, 1000);
+    }
+
+    initMobileMenu() {
+        // Create backdrop element
+        const backdrop = document.createElement('div');
+        backdrop.className = 'mobile-backdrop';
+        document.body.appendChild(backdrop);
+
+        // Toggle menu
+        this.elements.mobileMenuToggle?.addEventListener('click', () => {
+            this.elements.sidebar.classList.toggle('show');
+            backdrop.classList.toggle('show');
+        });
+
+        // Close menu when clicking backdrop
+        backdrop.addEventListener('click', () => {
+            this.elements.sidebar.classList.remove('show');
+            backdrop.classList.remove('show');
+        });
+
+        // Close menu when selecting a category on mobile
+        this.elements.categoriesList?.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && e.target.closest('[data-category]')) {
+                this.elements.sidebar.classList.remove('show');
+                backdrop.classList.remove('show');
+            }
+        });
     }
 }
 
