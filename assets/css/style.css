@@ -11,7 +11,9 @@
     --text-color: #2d3748;
     --border-color: rgba(0,0,0,0.1);
     --sidebar-bg: #f8f9fa;
-    --card-bg: #ffffff;
+    /* Light theme background colour default #ffffff */
+    /* --card-bg: #ffffff; */
+    --card-bg: #f8f9fa;
     --hover-color: rgba(255,255,255,0.05);
     --text-muted: #a0aec0;
     --endpoint-hover: rgba(0,0,0,0.05);
@@ -192,7 +194,7 @@ body {
     text-transform: uppercase;
     min-width: 55px;
     text-align: center;
-    display: inline-block;
+    display: block;  /* Changed from inline-block */
     flex-shrink: 0;
     margin: 0;
 }
@@ -239,10 +241,14 @@ body {
     background: #e9ecef;
 }
 
-.methods {
+/* Update endpoint methods to display vertically */
+.endpoint-methods {
     display: flex;
-    gap: 0.5rem;
-    margin-right: 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 55px;
+    flex: 0 0 auto;
+    margin-right: 0.5rem;
 }
 
 .path-text {
@@ -330,12 +336,14 @@ body {
     background-color: #fafbfc;
 }
 
+/* Adjust endpoint header spacing for vertical methods */
 .endpoint-header {
     cursor: pointer;
     transition: background-color 0.2s;
     background: transparent;
     border-bottom: none;
-    padding: 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    min-height: auto;  /* Remove fixed height to accommodate vertical methods */
     background-color: var(--card-bg);
     display: flex;
     justify-content: space-between;
@@ -355,6 +363,15 @@ body {
     flex: 0 0 auto;
     align-items: center;
     padding: 0;
+}
+
+.endpoint-header > div {
+    display: flex;
+    align-items: flex-start;  /* Align to top instead of center */
+    gap: 1rem;
+    min-width: 0; /* Enable text truncation */
+    flex: 1;
+    padding: 0.25rem 0;  /* Add some vertical padding */
 }
 
 .endpoint-details {
