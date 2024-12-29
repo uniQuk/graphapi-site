@@ -1,0 +1,198 @@
+{
+  "/education/synchronizationProfiles/{educationSynchronizationProfile-id}/errors": {
+    "get": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Get educationSynchronizationErrors (deprecated)",
+      "description": "Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-beta"
+      },
+      "operationId": "education.synchronizationProfile_ListError",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/microsoft.graph.educationSynchronizationErrorCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Create new navigation property to errors for education",
+      "operationId": "education.synchronizationProfile_CreateError",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.educationSynchronizationError"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Created navigation property.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationSynchronizationError"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

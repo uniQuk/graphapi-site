@@ -1,0 +1,56 @@
+{
+  "/deviceAppManagement/mobileApps/{mobileApp-id}/microsoft.graph.managedMobileLobApp/contentVersions/{mobileAppContent-id}/files/{mobileAppContentFile-id}/microsoft.graph.renewUpload": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action renewUpload",
+      "description": "Renews the SAS URI for an application file upload.",
+      "operationId": "deviceAppManagement.mobileApp.microsoft.graph.managedMobileLobApp.contentVersion.file_renewUpload",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppContent-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppContent"
+        },
+        {
+          "name": "mobileAppContentFile-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppContentFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppContentFile"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

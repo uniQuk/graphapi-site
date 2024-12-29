@@ -1,0 +1,52 @@
+{
+  "/drives/{drive-id}/root/listItem/lastModifiedByUser/serviceProvisioningErrors/$count": {
+    "get": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "drive.root.listItem.lastModifiedGraphBPreUser.ServiceProvisioningError_GetCount",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,814 @@
+{
+  "50472abb503f": {
+    "path": "/solutions/businessScenarios",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenario",
+        "apiReference": "https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaSolutionBusinessScenario",
+        "apiReference": "https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-beta"
+      }
+    }
+  },
+  "561daff3fa26": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenario",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaSolutionBusinessScenario",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaSolutionBusinessScenario",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "81921d311c88": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlanner",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenarioplanner-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlanner",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlanner",
+        "apiReference": ""
+      }
+    }
+  },
+  "59e5468b3f17": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/planConfiguration",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerPlanConfiguration",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerPlanConfiguration",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerPlanConfiguration",
+        "apiReference": ""
+      }
+    }
+  },
+  "5480706845ac": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/planConfiguration/localizations",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalization",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalization",
+        "apiReference": ""
+      }
+    }
+  },
+  "d55cdb4ff6da": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/planConfiguration/localizations/{plannerPlanConfigurationLocalization-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalization",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalization",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalization",
+        "apiReference": ""
+      }
+    }
+  },
+  "57b87bc9fead": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/planConfiguration/localizations/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerPlanConfigurationLocalizationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "06ed0d5e2f82": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/taskConfiguration",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskConfiguration",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertaskconfiguration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTaskConfiguration",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertaskconfiguration-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTaskConfiguration",
+        "apiReference": ""
+      }
+    }
+  },
+  "bbd149ce1265": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioData.Read.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to read the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BusinessScenarioData.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to fully manage the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenarioplanner-list-tasks?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaSolutionBusinessScenarioPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenarioplanner-post-tasks?view=graph-rest-beta"
+      }
+    }
+  },
+  "b52d378985e4": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioData.Read.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to read the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BusinessScenarioData.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to fully manage the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenariotask-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenariotask-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenarioplanner-delete-tasks?view=graph-rest-beta"
+      }
+    }
+  },
+  "24e3601f91ac": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/assignedToTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "34f026a5eabc": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/bucketTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskBucketTaskBoardFormat",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTaskBucketTaskBoardFormat",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTaskBucketTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "3d31da5cd076": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTaskDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTaskDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "31fd353b7262": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/progressTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskProgressTaskBoardFormat",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioPlannerTaskProgressTaskBoardFormat",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioPlannerTaskProgressTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "60614d1650f7": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioData.Read.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to read the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BusinessScenarioData.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write data for all business scenarios this app creates or owns",
+            "FullDescription": "Allows the app to fully manage the data associated with the business scenarios it owns, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioPlannerTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "56c85ff58da5": {
+    "path": "/solutions/businessScenarios(uniqueName='{uniqueName}')",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioByUniqueName",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSolutionBusinessScenarioByUniqueName",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaSolutionBusinessScenarioByUniqueName",
+        "apiReference": "https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "e775c455e457": {
+    "path": "/solutions/businessScenarios/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BusinessScenarioConfig.Read.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to read the configurations of business scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.OwnedBy",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations this app creates or owns",
+            "FullDescription": "Allows the app to create new business scenarios and fully manage the configurations of scenarios it owns, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write business scenario configurations",
+            "FullDescription": "Allows the app to read and write the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BusinessScenarioConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read business scenario configurations",
+            "FullDescription": "Allows the app to read the configurations of your organization's business scenarios, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaSolutionBusinessScenarioCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer-id}/serviceManagementDetails/{delegatedAdminServiceManagementDetail-id}": {
+    "get": {
+      "tags": [
+        "tenantRelationships.delegatedAdminCustomer"
+      ],
+      "summary": "Get serviceManagementDetails from tenantRelationships",
+      "description": "Contains the management details of a service in the customer tenant that's managed by delegated administration.",
+      "operationId": "tenantRelationship.delegatedAdminCustomer_GetServiceManagementDetail",
+      "parameters": [
+        {
+          "name": "delegatedAdminCustomer-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminCustomer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminCustomer"
+        },
+        {
+          "name": "delegatedAdminServiceManagementDetail-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminServiceManagementDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminServiceManagementDetail"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.delegatedAdminServiceManagementDetail"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "tenantRelationships.delegatedAdminCustomer"
+      ],
+      "summary": "Update the navigation property serviceManagementDetails in tenantRelationships",
+      "operationId": "tenantRelationship.delegatedAdminCustomer_UpdateServiceManagementDetail",
+      "parameters": [
+        {
+          "name": "delegatedAdminCustomer-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminCustomer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminCustomer"
+        },
+        {
+          "name": "delegatedAdminServiceManagementDetail-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminServiceManagementDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminServiceManagementDetail"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.delegatedAdminServiceManagementDetail"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.delegatedAdminServiceManagementDetail"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "tenantRelationships.delegatedAdminCustomer"
+      ],
+      "summary": "Delete navigation property serviceManagementDetails for tenantRelationships",
+      "operationId": "tenantRelationship.delegatedAdminCustomer_DeleteServiceManagementDetail",
+      "parameters": [
+        {
+          "name": "delegatedAdminCustomer-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminCustomer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminCustomer"
+        },
+        {
+          "name": "delegatedAdminServiceManagementDetail-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminServiceManagementDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminServiceManagementDetail"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

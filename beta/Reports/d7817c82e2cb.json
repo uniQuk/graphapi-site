@@ -1,0 +1,27 @@
+{
+  "/reports/microsoft.graph.managedDeviceEnrollmentFailureDetails()": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function managedDeviceEnrollmentFailureDetails",
+      "operationId": "report_managedDeviceEnrollmentFailureDetail",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.report"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

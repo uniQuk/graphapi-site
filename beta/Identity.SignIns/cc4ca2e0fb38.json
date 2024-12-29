@@ -1,0 +1,65 @@
+{
+  "/informationProtection/sensitivityLabels/{sensitivityLabel-id}/sublabels/microsoft.graph.evaluate": {
+    "post": {
+      "tags": [
+        "informationProtection.Actions"
+      ],
+      "summary": "Invoke action evaluate",
+      "operationId": "informationProtection.sensitivityLabel.sublabel_evaluate",
+      "parameters": [
+        {
+          "name": "sensitivityLabel-id",
+          "in": "path",
+          "description": "The unique identifier of sensitivityLabel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensitivityLabel"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "discoveredSensitiveTypes": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.discoveredSensitiveType"
+                  }
+                },
+                "currentLabel": {
+                  "$ref": "#/components/schemas/microsoft.graph.currentLabel"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.evaluateLabelJobResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

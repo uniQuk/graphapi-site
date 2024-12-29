@@ -1,0 +1,186 @@
+{
+  "/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/photo/$value": {
+    "get": {
+      "tags": [
+        "users.contactFolder"
+      ],
+      "summary": "Get media content for the navigation property photo from users",
+      "description": "Optional contact picture. You can get or set a photo for a contact.",
+      "operationId": "user.contactFolder.contact_GetPhotoContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "contactFolder-id",
+          "in": "path",
+          "description": "The unique identifier of contactFolder",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contactFolder"
+        },
+        {
+          "name": "contact-id",
+          "in": "path",
+          "description": "The unique identifier of contact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contact"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "users.contactFolder"
+      ],
+      "summary": "Update media content for the navigation property photo in users",
+      "description": "Optional contact picture. You can get or set a photo for a contact.",
+      "operationId": "user.contactFolder.contact_SetPhotoContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "contactFolder-id",
+          "in": "path",
+          "description": "The unique identifier of contactFolder",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contactFolder"
+        },
+        {
+          "name": "contact-id",
+          "in": "path",
+          "description": "The unique identifier of contact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contact"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "users.contactFolder"
+      ],
+      "summary": "Delete media content for the navigation property photo in users",
+      "description": "Optional contact picture. You can get or set a photo for a contact.",
+      "operationId": "user.contactFolder.contact_DeletePhotoContent",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        },
+        {
+          "name": "contactFolder-id",
+          "in": "path",
+          "description": "The unique identifier of contactFolder",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contactFolder"
+        },
+        {
+          "name": "contact-id",
+          "in": "path",
+          "description": "The unique identifier of contact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "contact"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

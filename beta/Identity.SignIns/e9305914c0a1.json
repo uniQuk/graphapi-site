@@ -1,0 +1,52 @@
+{
+  "/policies/authorizationPolicy/{authorizationPolicy-id}/defaultUserRoleOverrides/$count": {
+    "get": {
+      "tags": [
+        "policies.authorizationPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "policy.authorizationPolicy.defaultUserRoleOverride_GetCount",
+      "parameters": [
+        {
+          "name": "authorizationPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of authorizationPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authorizationPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

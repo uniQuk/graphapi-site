@@ -1,0 +1,58 @@
+{
+  "/policies/mobileAppManagementPolicies/{mobilityManagementPolicy-id}/includedGroups/{group-id}/$ref": {
+    "delete": {
+      "tags": [
+        "policies.mobilityManagementPolicy"
+      ],
+      "summary": "Delete includedGroup",
+      "description": "Delete a group from the list of groups included in a mobile app management policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete-includedgroups?view=graph-rest-beta"
+      },
+      "operationId": "policy.mobileAppManagementPolicy.includedGroup_DeleteGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "mobilityManagementPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of mobilityManagementPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobilityManagementPolicy"
+        },
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

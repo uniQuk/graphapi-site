@@ -1,0 +1,45 @@
+{
+  "/users/{user-id}/microsoft.graph.getMailTips": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action getMailTips",
+      "description": "Get the MailTips of one or more recipients as available to the signed-in user. Note that by making a POST call to the getMailTips action, you can request specific types of MailTips to\nbe returned for more than one recipient at one time. The requested MailTips are returned in a mailTips collection.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/user-getmailtips?view=graph-rest-1.0"
+      },
+      "operationId": "user_getMailTip",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/getMailTipsRequestBody"
+      },
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/getMailTipsResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action",
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      }
+    }
+  }
+}

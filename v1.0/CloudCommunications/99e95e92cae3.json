@@ -1,0 +1,63 @@
+{
+  "/communications/callRecords/{callRecord-id}/sessions/{session-id}/segments/$count": {
+    "get": {
+      "tags": [
+        "communications.callRecord"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "communication.callRecord.session.segment_GetCount",
+      "parameters": [
+        {
+          "name": "callRecord-id",
+          "in": "path",
+          "description": "The unique identifier of callRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "callRecord"
+        },
+        {
+          "name": "session-id",
+          "in": "path",
+          "description": "The unique identifier of session",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "session"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog-id}/customAccessPackageWorkflowExtensions/{customAccessPackageWorkflowExtension-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get customAccessPackageWorkflowExtension",
+      "description": "Read the properties and relationships of a customAccessPackageWorkflowExtension object for an accessPackageCatalog object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customaccesspackageworkflowextension-get?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageCatalog_GetCustomAccessPackageWorkflowExtension",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "customAccessPackageWorkflowExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAccessPackageWorkflowExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAccessPackageWorkflowExtension"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAccessPackageWorkflowExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update customAccessPackageWorkflowExtension",
+      "description": "Update the properties of an existing customAccessPackageWorkflowExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customaccesspackageworkflowextension-update?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageCatalog_UpdateCustomAccessPackageWorkflowExtension",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "customAccessPackageWorkflowExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAccessPackageWorkflowExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAccessPackageWorkflowExtension"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.customAccessPackageWorkflowExtension"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAccessPackageWorkflowExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete accessPackageAssignmentRequestWorkflowExtension",
+      "description": "Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:\n1. First retrieve the accessPackageCatalogId by calling the Get accessPackageAssignmentPolicies operation and appending ?$expand=accessPackage($expand=accessPackageCatalog) to the query. For example, https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageAssignmentPolicies?$expand=accessPackage($expand=accessPackageCatalog).\n2. Use the access package catalog ID and retrieve the ID of the accessPackageCustomWorkflowExtension object that you want to delete by running the List accessPackageCustomWorkflowExtensions operation.\n3. Call the Update accessPackageAssignmentPolicy operation to remove the custom workflow extension object from the policy. For an example, see Example 3: Remove the customExtensionStageSettings from a policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-delete?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageCatalog_DeleteCustomAccessPackageWorkflowExtension",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "customAccessPackageWorkflowExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAccessPackageWorkflowExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAccessPackageWorkflowExtension"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

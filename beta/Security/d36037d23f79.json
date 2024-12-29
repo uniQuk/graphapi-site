@@ -1,0 +1,87 @@
+{
+  "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/microsoft.graph.security.export": {
+    "post": {
+      "tags": [
+        "security.Actions"
+      ],
+      "summary": "Invoke action export",
+      "description": "Initiate an export from a reviewSet.  For details, see Export documents from a review set in eDiscovery (Premium).",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-export?view=graph-rest-beta"
+      },
+      "operationId": "security.case.ediscoveryCase.reviewSet_export",
+      "parameters": [
+        {
+          "name": "ediscoveryCase-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryCase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryCase"
+        },
+        {
+          "name": "ediscoveryReviewSet-id",
+          "in": "path",
+          "description": "The unique identifier of ediscoveryReviewSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "ediscoveryReviewSet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "outputName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "azureBlobContainer": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "azureBlobToken": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "exportOptions": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.exportOptions"
+                },
+                "exportStructure": {
+                  "$ref": "#/components/schemas/microsoft.graph.security.exportFileStructure"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/microsoft.graph.managedTenants.changeDeploymentStatus": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action changeDeploymentStatus",
+      "description": "Changes the tenant level deployment status for the management action. This information is used to provide insights into what management actions are in a specific state. As example there might be a plan to apply the require multi-factor authentication for admins, so it would be ideal to change the status to planned to reflect the appropriate status.",
+      "operationId": "tenantRelationship.managedTenant.managementActionTenantDeploymentStatus_changeDeploymentStatus",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tenantGroupId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "tenantId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "managementActionId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "managementTemplateId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "managementTemplateVersion": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "status": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managementActionDeploymentStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

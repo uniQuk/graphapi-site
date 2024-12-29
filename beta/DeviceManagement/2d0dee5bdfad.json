@@ -1,0 +1,63 @@
+{
+  "/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration-id}/definitionValues/{groupPolicyDefinitionValue-id}/presentationValues/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyConfiguration"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.groupPolicyConfiguration.definitionValue.presentationValue_GetCount",
+      "parameters": [
+        {
+          "name": "groupPolicyConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyConfiguration"
+        },
+        {
+          "name": "groupPolicyDefinitionValue-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyDefinitionValue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyDefinitionValue"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

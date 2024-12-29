@@ -1,0 +1,49 @@
+{
+  "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}/provisioningFlows/{provisioningFlow-id}/microsoft.graph.industryData.reset": {
+    "post": {
+      "tags": [
+        "external.Actions"
+      ],
+      "summary": "Invoke action reset",
+      "description": "Reset a provisioningFlow. This action reprovisions all current data as if it were the initial run, and clears out the existing errors associated with the flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-provisioningflow-reset?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData.outboundProvisioningFlowSet.provisioningFlow_reset",
+      "parameters": [
+        {
+          "name": "outboundProvisioningFlowSet-id",
+          "in": "path",
+          "description": "The unique identifier of outboundProvisioningFlowSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "outboundProvisioningFlowSet"
+        },
+        {
+          "name": "provisioningFlow-id",
+          "in": "path",
+          "description": "The unique identifier of provisioningFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "provisioningFlow"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

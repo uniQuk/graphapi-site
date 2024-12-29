@@ -1,0 +1,160 @@
+{
+  "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}/content": {
+    "get": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Get content for the navigation property transcripts from communications",
+      "description": "The content of the transcript. Read-only.",
+      "operationId": "communication.onlineMeeting_GetTranscriptsContent",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        },
+        {
+          "name": "callTranscript-id",
+          "in": "path",
+          "description": "The unique identifier of callTranscript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "callTranscript"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Update content for the navigation property transcripts in communications",
+      "description": "The content of the transcript. Read-only.",
+      "operationId": "communication.onlineMeeting_SetTranscriptsContent",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        },
+        {
+          "name": "callTranscript-id",
+          "in": "path",
+          "description": "The unique identifier of callTranscript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "callTranscript"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.callTranscript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "communications.onlineMeeting"
+      ],
+      "summary": "Delete content for the navigation property transcripts in communications",
+      "description": "The content of the transcript. Read-only.",
+      "operationId": "communication.onlineMeeting_DeleteTranscriptsContent",
+      "parameters": [
+        {
+          "name": "onlineMeeting-id",
+          "in": "path",
+          "description": "The unique identifier of onlineMeeting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onlineMeeting"
+        },
+        {
+          "name": "callTranscript-id",
+          "in": "path",
+          "description": "The unique identifier of callTranscript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "callTranscript"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

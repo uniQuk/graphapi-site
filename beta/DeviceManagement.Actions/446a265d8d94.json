@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting-id}/microsoft.graph.clone": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action clone",
+      "operationId": "deviceManagement.reusablePolicySetting_clone",
+      "parameters": [
+        {
+          "name": "deviceManagementReusablePolicySetting-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementReusablePolicySetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementReusablePolicySetting"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementReusablePolicySetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.resizeCloudPc": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action resizeCloudPc",
+      "description": "Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.managedDevice_resizeCloudPc",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "targetServicePlanId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-10-30",
+        "date": "2023-07-24",
+        "version": "2023-05/resizeCloudPc",
+        "description": "The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

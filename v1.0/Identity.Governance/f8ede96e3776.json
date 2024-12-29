@@ -1,0 +1,69 @@
+{
+  "/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/roleDefinition": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Get roleDefinition from roleManagement",
+      "description": "Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.",
+      "operationId": "roleManagement.entitlementManagement.roleAssignmentSchedule_GetRoleDefinition",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentSchedule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentSchedule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentSchedule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

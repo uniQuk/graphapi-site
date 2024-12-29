@@ -1,0 +1,240 @@
+{
+  "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}": {
+    "get": {
+      "tags": [
+        "print.printerShare"
+      ],
+      "summary": "Get documents from print",
+      "operationId": "print.printerShare.job_GetDocument",
+      "parameters": [
+        {
+          "name": "printerShare-id",
+          "in": "path",
+          "description": "The unique identifier of printerShare",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printerShare"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printDocument"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "print.printerShare"
+      ],
+      "summary": "Update the navigation property documents in print",
+      "operationId": "print.printerShare.job_UpdateDocument",
+      "parameters": [
+        {
+          "name": "printerShare-id",
+          "in": "path",
+          "description": "The unique identifier of printerShare",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printerShare"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printDocument"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printDocument"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "print.printerShare"
+      ],
+      "summary": "Delete navigation property documents for print",
+      "operationId": "print.printerShare.job_DeleteDocument",
+      "parameters": [
+        {
+          "name": "printerShare-id",
+          "in": "path",
+          "description": "The unique identifier of printerShare",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printerShare"
+        },
+        {
+          "name": "printJob-id",
+          "in": "path",
+          "description": "The unique identifier of printJob",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printJob"
+        },
+        {
+          "name": "printDocument-id",
+          "in": "path",
+          "description": "The unique identifier of printDocument",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printDocument"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-07-31",
+        "date": "2023-06-13",
+        "version": "2023-06/Tasks_And_Plans",
+        "description": "The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "/shares/{sharedDriveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/microsoft.graph.restore": {
+    "post": {
+      "tags": [
+        "shares.Actions"
+      ],
+      "summary": "Invoke action restore",
+      "description": "Restore a document set version.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0"
+      },
+      "operationId": "share.listItem.documentSetVersion_restore",
+      "parameters": [
+        {
+          "name": "sharedDriveItem-id",
+          "in": "path",
+          "description": "The unique identifier of sharedDriveItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharedDriveItem"
+        },
+        {
+          "name": "documentSetVersion-id",
+          "in": "path",
+          "description": "The unique identifier of documentSetVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "documentSetVersion"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

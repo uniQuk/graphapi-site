@@ -1,0 +1,52 @@
+{
+  "/solutions/businessScenarios/{businessScenario-id}/planner/planConfiguration/localizations/$count": {
+    "get": {
+      "tags": [
+        "solutions.businessScenario"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "solution.businessScenario.planner.planConfiguration.localization_GetCount",
+      "parameters": [
+        {
+          "name": "businessScenario-id",
+          "in": "path",
+          "description": "The unique identifier of businessScenario",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "businessScenario"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

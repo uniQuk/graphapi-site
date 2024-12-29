@@ -1,0 +1,33 @@
+{
+  "/users/{user-id}/microsoft.graph.exportDeviceAndAppManagementData()": {
+    "get": {
+      "tags": [
+        "users.Functions"
+      ],
+      "summary": "Invoke function exportDeviceAndAppManagementData",
+      "operationId": "user_exportDeviceAndAppManagementData",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/exportDeviceAndAppManagementDataResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

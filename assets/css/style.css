@@ -1,0 +1,1117 @@
+:root {
+    --sidebar-width: 280px;  /* Increased from 260px */
+    --sidebar-collapsed-width: 60px;
+    --header-height: 60px;
+    --method-get: #61affe;
+    --method-post: #49cc90;
+    --method-put: #fca130;
+    --method-delete: #f93e3e;
+    --method-patch: #50e3c2;
+    --bg-color: #ffffff;
+    --text-color: #2d3748;
+    --border-color: rgba(0,0,0,0.1);
+    --sidebar-bg: #f8f9fa;
+    /* Light theme background colour default #ffffff */
+    /* --card-bg: #ffffff; */
+    --card-bg: #f8f9fa;
+    --hover-color: rgba(255,255,255,0.05);
+    --text-muted: #a0aec0;
+    --endpoint-hover: rgba(0,0,0,0.05);
+    --method-bg-dark-get: rgba(97, 175, 254, 0.15);
+    --method-bg-dark-post: rgba(73, 204, 144, 0.15);
+    --method-bg-dark-put: rgba(252, 161, 48, 0.15);
+    --method-bg-dark-delete: rgba(249, 62, 62, 0.15);
+    --method-bg-dark-patch: rgba(80, 227, 194, 0.15);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --bg-color: #1a202c;
+    --text-color: #e2e8f0;
+    --border-color: rgba(255,255,255,0.1);
+    --sidebar-bg: #2d3748;
+    --card-bg: #2d3748;
+    --hover-color: rgba(255,255,255,0.1);
+    --text-muted: #a0aec0;
+    --endpoint-hover: rgba(255,255,255,0.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container-fluid {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Updated sidebar styles */
+.sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    width: var(--sidebar-width);
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 0.75rem 0.5rem;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    display: flex;
+    flex-direction: column;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+    padding-right: 0;
+}
+
+.sidebar.collapsed .version-selector,
+.sidebar.collapsed .nav-item span,
+.sidebar.collapsed #categories-list,
+.sidebar.collapsed .theme-toggle {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.sidebar.collapsed #categories-list .nav-item button {
+    padding: 0.625rem;
+    justify-content: center;
+}
+
+.sidebar.collapsed #categories-list .nav-item button i {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--sidebar-bg);
+}
+
+/* Add these styles for GitHub icon */
+.sidebar-header .btn-link {
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    padding: 0;
+}
+
+.sidebar-header .btn-link:hover {
+    opacity: 1;
+    color: var(--text-color);
+}
+
+#sidebar-toggle, #theme-toggle {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+#sidebar-toggle:hover, #theme-toggle:hover {
+    opacity: 1;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    right: -12px;
+    top: 10px;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#sidebar-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed #sidebar-toggle i {
+    transform: rotate(180deg);
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Version selector updates */
+.version-selector {
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.version-selector select {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.version-selector select:hover {
+    background-color: #f1f3f5;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.method {
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    min-width: 55px;
+    text-align: center;
+    display: block;  /* Changed from inline-block */
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.method.get { background-color: var(--method-get); }
+.method.post { background-color: var(--method-post); }
+.method.put { background-color: var(--method-put); }
+.method.delete { background-color: var(--method-delete); }
+.method.patch { background-color: var(--method-patch); }
+
+.endpoints-list {
+    margin-top: 1rem;
+    display: block;
+}
+
+.endpoint {
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.endpoint-path {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    word-break: break-all;
+    color: #0d1117;
+    max-width: 80%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: none;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;  /* Stack children vertically */
+    align-items: flex-start;  /* Align items to the start */
+}
+
+.endpoint-path:hover {
+    background: #e9ecef;
+}
+
+/* Update endpoint methods to display vertically */
+.endpoint-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 55px;
+    flex: 0 0 auto;
+    margin-right: 0.5rem;
+}
+
+.path-text {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.endpoint-content {
+    padding: 0 !important;
+    border-top: 1px solid #ddd;
+    display: block;
+    width: 100%;
+}
+
+.endpoint-content.expanded {
+    display: block;
+}
+
+.parameters table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.parameters th,
+.parameters td {
+    padding: 0.5rem !important;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.parameters th {
+    background: #f5f5f5;
+}
+
+.response {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.endpoint-link {
+    font-size: 0.875rem;
+    font-family: monospace;
+}
+
+.endpoint-details code {
+    font-size: 0.875rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 0.5rem !important;
+}
+
+#categories-list .nav-item button {
+    font-size: 0.8125rem;  /* Slightly smaller font */
+    padding: 0.5rem 0.5rem;
+    min-height: 34px;
+    width: 100%;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+#categories-list .list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem 1rem;
+}
+
+.endpoint-row {
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    margin-bottom: 0.5rem !important;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+}
+
+.endpoint-row:nth-child(odd) {
+    background-color: #fafbfc;
+}
+
+/* Adjust endpoint header spacing for vertical methods */
+.endpoint-header {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background: transparent;
+    border-bottom: none;
+    padding: 0.75rem 1rem !important;
+    min-height: auto;  /* Remove fixed height to accommodate vertical methods */
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.endpoint-header:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.endpoint-methods {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    min-width: 55px;
+    min-width: fit-content;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 0;
+}
+
+.endpoint-header > div {
+    display: flex;
+    align-items: flex-start;  /* Align to top instead of center */
+    gap: 1rem;
+    min-width: 0; /* Enable text truncation */
+    flex: 1;
+    padding: 0.25rem 0;  /* Add some vertical padding */
+}
+
+.endpoint-details {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    background: var(--card-bg);
+}
+
+.endpoint-details.collapse:not(.show) {
+    display: none;
+}
+
+.endpoint-details.collapse.show {
+    display: block;
+}
+
+.category-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.method-section {
+    padding: 1rem !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.method-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.endpoint-path-container {
+    flex: 1;
+    min-width: 0; /* Enable text wrapping */
+}
+
+.endpoint-description {
+    color: #57606a;
+    font-size: 0.8125rem;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+/* Update sidebar category sorting */
+#categories-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem;  /* Reduced padding */
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+#categories-list .nav-item {
+    order: attr(data-name);
+    margin-bottom: 0.25rem;  /* Reduced margin between items */
+}
+
+#categories-list .nav-item button {
+    width: 100%;
+    padding: 0.5rem 0.375rem;  /* Reduced left/right padding */
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #4b5563;
+    font-size: 0.75rem;  /* Slightly smaller font */
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    line-height: 1.1;  /* Tighter line height */
+    min-height: 32px;  /* Slightly reduced minimum height */
+    letter-spacing: -0.01em;  /* Slightly tighter letter spacing */
+}
+
+#categories-list .nav-item button:hover {
+    background: #f1f3f5;
+    color: #1f2937;
+}
+
+#categories-list .nav-item button.active {
+    background: #e9ecef;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+#categories-list .nav-item button i {
+    font-size: 0.875rem;  /* Slightly smaller icon */
+    margin-right: 0.375rem;  /* Reduced margin */
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+#categories-list .nav-item button:hover i {
+    color: #4b5563;
+}
+
+/* Update sidebar scrollbar */
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.75rem 0.5rem;
+}
+
+/* Make the expand button more compact */
+.expand-btn {
+    padding: 0;
+    font-size: 0.875rem;
+    margin-top: 2px;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+/* Adjust spacing for better density */
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Update background colors for method sections */
+.method-bg.get { background-color: rgba(97, 175, 254, 0.1); }
+.method-bg.post { background-color: rgba(73, 204, 144, 0.1); }
+.method-bg.put { background-color: rgba(252, 161, 48, 0.1); }
+.method-bg.delete { background-color: rgba(249, 62, 62, 0.1); }
+.method-bg.patch { background-color: rgba(80, 227, 194, 0.1); }
+
+/* Make badges more compact */
+.badge {
+    padding: 0.25em 0.5em;
+}
+
+/* Adjust spacing in endpoint details */
+.method-header {
+    padding: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* Additional background colors for better contrast */
+main {
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.3s ease;
+    background-color: var(--bg-color);
+    width: calc(100% - var(--sidebar-width));
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    padding: 1.5rem;  /* Changed from 1.5rem 0 to add consistent padding */
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: auto;
+    flex: 1;
+}
+
+.sidebar.collapsed + main {
+    margin-left: var(--sidebar-collapsed-width);
+    width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+.sidebar.collapsed ~ main {
+    margin-left: var(--sidebar-collapsed-width);
+    width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+.endpoint-row {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    border-radius: 6px;
+}
+
+.endpoint-header {
+    background-color: var(--card-bg);
+    display: flex !important;
+    padding: 1rem !important;
+    gap: 1rem;
+    min-height: 3.5rem;
+    align-items: center;
+}
+
+.endpoint-header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0; /* Enable text truncation */
+    flex: 1;
+}
+
+.method-section {
+    border-radius: 4px;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] {
+    /* Category list items */
+    #categories-list .nav-item button {
+        color: var(--text-color);
+    }
+
+    #categories-list .nav-item button:hover {
+        background: var(--hover-color);
+    }
+
+    #categories-list .nav-item button.active {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+    }
+
+    /* Endpoint styles */
+    .endpoint-row {
+        background: var(--card-bg);
+    }
+
+    .endpoint-row:hover {
+        background: var(--hover-color);
+    }
+
+    .endpoint-path code {
+        background: transparent;
+        color: var(--text-color);
+    }
+
+    /* Method sections */
+    .method-section {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+    }
+
+    /* Text colors */
+    .text-muted {
+        color: var(--text-muted) !important;
+    }
+
+    /* Tables */
+    .table {
+        color: var(--text-color);
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(255,255,255,0.05);
+    }
+
+    /* Code blocks */
+    code {
+        background: rgba(255,255,255,0.1);
+        color: var(--text-color);
+    }
+
+    .endpoint-path {
+        background: transparent;
+    }
+
+    .endpoint-path code {
+        color: var(--text-color);
+        background: transparent;
+    }
+
+    .endpoint-row:nth-child(odd) {
+        background-color: rgba(255,255,255,0.03);
+    }
+
+    .endpoint-row:hover {
+        background-color: rgba(255,255,255,0.05);
+    }
+
+    /* Method section backgrounds in dark mode */
+    .method-bg.get { background-color: var(--method-bg-dark-get); }
+    .method-bg.post { background-color: var(--method-bg-dark-post); }
+    .method-bg.put { background-color: var(--method-bg-dark-put); }
+    .method-bg.delete { background-color: var(--method-bg-dark-delete); }
+    .method-bg.patch { background-color: var(--method-bg-dark-patch); }
+
+    /* Table styles in dark mode */
+    .table {
+        color: var(--text-color);
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(255,255,255,0.03);
+    }
+
+    .table td, .table th {
+        border-color: var(--border-color);
+    }
+
+    /* Code and badge adjustments */
+    code, .badge {
+        color: var(--text-color);
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--sidebar-bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.2);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,0.3);
+    }
+
+    /* Update method buttons contrast */
+    .method {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /* Table text colors */
+    .table th {
+        color: var(--text-color);
+    }
+
+    .table td {
+        color: var(--text-muted);
+    }
+
+    /* Parameter description text */
+    .parameters td:last-child {
+        color: var(--text-color);
+    }
+
+    /* Fix expanded endpoint highlight */
+    .endpoint-row {
+        &:hover, &:focus-within {
+            background-color: var(--card-bg);
+        }
+    }
+
+    .endpoint-details {
+        background-color: var(--card-bg);
+    }
+
+    /* Method section colors */
+    .method-section {
+        background-color: var(--card-bg);
+    }
+
+    /* Response text colors */
+    .list-group-item {
+        background-color: var(--card-bg);
+    }
+
+    .list-group-item span:not(.badge) {
+        color: var(--text-color);
+    }
+
+    /* Permission styles */
+    .permissions-list {
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .permission-item {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .permission-item:last-child {
+        border-bottom: none;
+    }
+
+    .permission-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .permission-name {
+        font-family: monospace;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .permission-description {
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+
+    .powershell-command {
+        display: block;
+        padding: 0.5rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+}
+
+/* Override Bootstrap dark mode styles */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: transparent;
+}
+
+/* Headers and text */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+.list-group-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.list-group-item .d-flex {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.list-group-item code {
+    word-break: break-all;
+    max-width: 100%;
+}
+
+/* Theme toggle position */
+.theme-toggle {
+    position: static;
+}
+
+/* Remove dark mode media query and existing dark mode styles */
+@media (prefers-color-scheme: dark) {
+    /* Remove this entire block */
+}
+
+/* Empty state centering fix */
+#empty-state {
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure endpoints container starts at the top */
+.endpoints-container {
+    margin-top: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 100%;
+}
+
+/* Main content layout fixes */
+.endpoints-container {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    padding: 0 1rem;  /* Ensure consistent horizontal padding */
+}
+
+/* Category spacing in sidebar */
+#categories-list {
+    padding: 0.5rem;
+}
+
+#categories-list .nav-item button {
+    padding: 0.625rem 0.5rem;
+}
+
+/* Table improvements */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-weight: 600;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.parameters .table td {
+    vertical-align: middle;
+}
+
+/* Category spacing fix */
+.category-header {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Main content padding adjustment */
+main {
+    padding: 1.5rem;  /* Changed from 1.5rem 0 to add consistent padding */
+}
+
+/* Endpoint row improvements */
+.endpoint-row {
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    margin: 0 0 0.75rem 0;
+    width: 100%;
+}
+
+/* Fix endpoint header layout */
+.endpoint-header {
+    display: flex !important;
+    padding: 0.75rem 1rem !important;
+    gap: 1rem;
+    min-height: 3.5rem;
+}
+
+.endpoint-header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0; /* Enable text truncation */
+    flex: 1;
+}
+
+/* Fix method buttons layout */
+.endpoint-methods {
+    display: flex;
+    gap: 0.25rem;
+    flex: 0 0 auto;
+}
+
+/* Fix endpoint path display */
+.endpoint-path {
+    min-width: 0;
+    flex: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.endpoint-path code {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    display: inline-block;
+}
+
+/* Add this new style to handle path segments */
+.endpoint-path code span {
+    display: inline-block;
+}
+
+/* Fix expand button positioning */
+.expand-btn {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0.25rem !important;
+}
+
+/* Remove conflicting margin/padding */
+.endpoint-header .d-flex {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure proper content width */
+.container-fluid {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Endpoint header layout */
+.endpoint-header .d-flex {
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.endpoint-path {
+    min-width: 0;
+    flex: 1;
+}
+
+.endpoint-path code {
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+/* Response section improvements */
+.list-group-item .d-flex {
+    align-items: flex-start;
+}
+
+.list-group-item .d-flex > div {
+    min-width: 0;
+    flex: 1;
+}
+
+.list-group-item .small {
+    word-break: break-all;
+    flex-basis: 100%;
+}
+
+.endpoint-details {
+    padding: 1rem;
+}
+
+.method-section {
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+}
+
+/* Method header path styles */
+.method-header .endpoint-path {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+}
+
+.method-header .endpoint-path code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    width: 100%;
+    display: inline-block;
+}
+
+.method-header .endpoint-path code span {
+    display: inline-block;
+}
+
+/* Add endpoint summary styles */
+.endpoint-summary {
+    color: var(--text-muted);
+    font-size: 0.813rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-top: 0.5rem;
+    padding: 0 0 0.25rem 0;
+    display: block;  /* Force to new line */
+    width: 100%;
+}
+
+/* Add tag section header styles */
+.tag-section-header {
+    color: var(--text-color);
+    font-size: 1.25rem;  /* Increased from 1rem */
+    font-weight: 600;
+    padding: 1rem;  /* Added horizontal padding */
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-left: 1rem;  /* Add left margin to align with endpoints */
+    margin-right: 1rem;  /* Add right margin to match */
+}
+
+.tag-section-header:first-child {
+    margin-top: 0;
+}
+
+.tag-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    scroll-margin-top: 2rem; /* Add space for smooth scrolling */
+}
+
+.copy-tag {
+    padding: 0.25rem 0.5rem;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.copy-tag:hover {
+    color: var(--text-color);
+}
+
+.copy-tag i {
+    font-size: 1.25rem;
+}
+
+/* Add new styles */
+.tag-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copy-tag {
+    padding: 0.25rem;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+    position: relative;
+    margin-left: 0.5rem;
+}
+
+.copy-tag i {
+    font-size: 1rem;
+}
+
+/* Update tag header styles */
+.tag-section-header {
+    padding: 1rem;
+    margin: 1.5rem 1rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 2rem;
+}
+
+/* Home button styles */
+#home-button {
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+#home-button:hover {
+    opacity: 1;
+}
+
+/* ...end of css ... */

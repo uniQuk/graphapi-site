@@ -1,0 +1,28 @@
+{
+  "/deviceManagement/microsoft.graph.getAssignedRoleDetails()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getAssignedRoleDetails",
+      "description": "Retrieves the assigned role definitions and role assignments of the currently authenticated user.",
+      "operationId": "deviceManagement_getAssignedRoleDetail",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceAndAppManagementAssignedRoleDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration-id}/settings/{deviceManagementConfigurationSetting-id}/settingDefinitions/{deviceManagementConfigurationSettingDefinition-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.targetedManagedAppConfiguration"
+      ],
+      "summary": "Get settingDefinitions from deviceAppManagement",
+      "description": "List of related Setting Definitions. This property is read-only.",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration.setting_GetSettingDefinition",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        },
+        {
+          "name": "deviceManagementConfigurationSetting-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationSetting"
+        },
+        {
+          "name": "deviceManagementConfigurationSettingDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationSettingDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationSettingDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementConfigurationSettingDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,1121 @@
+{
+  "48d7eb60b23e": {
+    "path": "/external",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternal",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgExternal",
+        "apiReference": ""
+      }
+    }
+  },
+  "776b92f2bd76": {
+    "path": "/external/connections",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0"
+      }
+    }
+  },
+  "f64022b430c1": {
+    "path": "/external/connections/{externalConnection-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "e696abc49578": {
+    "path": "/external/connections/{externalConnection-id}/groups",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionGroup",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0"
+      }
+    }
+  },
+  "391c1e88b41e": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external items",
+            "FullDescription": "Allows the app to read all external items without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "30b74f037e6a": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgExternalConnectionGroupMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0"
+      }
+    }
+  },
+  "2529b237f693": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members/{identity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgExternalConnectionGroupMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "c9a25d9b22fb": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionGroupMemberCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0e083757a2d8": {
+    "path": "/external/connections/{externalConnection-id}/groups/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fa9c2eba7526": {
+    "path": "/external/connections/{externalConnection-id}/items",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItem",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgExternalConnectionItem",
+        "apiReference": ""
+      }
+    }
+  },
+  "2b89c05af00a": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external items",
+            "FullDescription": "Allows the app to read all external items without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0"
+      },
+      "put": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Set-MgExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "b6c3e76c6ad5": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgExternalConnectionItemActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "88cd356949cf": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/{externalActivity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgExternalConnectionItemActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "a2b91bf4ac27": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/{externalActivity-id}/performedBy",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItemActivityPerformedBy",
+        "apiReference": ""
+      }
+    }
+  },
+  "0c4e9496abdb": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItemActivityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6aae6f2ebda4": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/microsoft.graph.externalConnectors.addActivities",
+    "methods": {}
+  },
+  "66acbab8ed41": {
+    "path": "/external/connections/{externalConnection-id}/items/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionItemCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d4be00c767e5": {
+    "path": "/external/connections/{externalConnection-id}/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgExternalConnectionOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f86de567e38": {
+    "path": "/external/connections/{externalConnection-id}/operations/{connectionOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnectionOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-connectionoperation-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgExternalConnectionOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgExternalConnectionOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "a3af59ecc553": {
+    "path": "/external/connections/{externalConnection-id}/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgExternalConnectionOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5c0c67286a34": {
+    "path": "/external/connections/{externalConnection-id}/schema",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnectionSchema",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgExternalConnectionSchema",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0"
+      }
+    }
+  },
+  "6c3fd23fde12": {
+    "path": "/external/connections/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgExternalConnectionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "18fc53a52a03": {
+    "path": "/search",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSearchEntity",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSearchEntity",
+        "apiReference": ""
+      }
+    }
+  },
+  "c78def00bc3f": {
+    "path": "/search/acronyms",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0"
+      }
+    }
+  },
+  "df95048bde55": {
+    "path": "/search/acronyms/{acronym-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "04ccaefb8e30": {
+    "path": "/search/acronyms/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchAcronymCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1ff014c7a1f8": {
+    "path": "/search/bookmarks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0"
+      }
+    }
+  },
+  "aa3af7ab0f29": {
+    "path": "/search/bookmarks/{bookmark-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "949b75723fe2": {
+    "path": "/search/bookmarks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchBookmarkCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c72b6e4111aa": {
+    "path": "/search/microsoft.graph.query",
+    "methods": {}
+  },
+  "1f903338a9ab": {
+    "path": "/search/qnas",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-1.0"
+      }
+    }
+  },
+  "67c787c44b93": {
+    "path": "/search/qnas/{qna-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "e53497a65c50": {
+    "path": "/search/qnas/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSearchQnaCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,3027 @@
+{
+  "362f47487696": {
+    "path": "/bookingBusinesses",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusiness",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaBookingBusiness",
+        "apiReference": ""
+      }
+    }
+  },
+  "742d98b65533": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusiness",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusiness",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Manage bookings information",
+            "FullDescription": "Allows an app to read, write and manage bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusiness",
+        "apiReference": ""
+      }
+    }
+  },
+  "11ed92bfcc02": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/appointments",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessAppointment",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaBookingBusinessAppointment",
+        "apiReference": ""
+      }
+    }
+  },
+  "a7d4280f5059": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/appointments/{bookingAppointment-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessAppointment",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusinessAppointment",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusinessAppointment",
+        "apiReference": ""
+      }
+    }
+  },
+  "f7acee1ad0fb": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/appointments/{bookingAppointment-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "c7aa7ae0357b": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/appointments/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessAppointmentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "48b3b1454e21": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/calendarView",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCalendarView",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaBookingBusinessCalendarView",
+        "apiReference": ""
+      }
+    }
+  },
+  "8ab6c55a13e2": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/calendarView/{bookingAppointment-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaBookingBusinessCalendarView",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaBookingBusinessCalendarView",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaBookingBusinessCalendarView",
+        "apiReference": ""
+      }
+    }
+  },
+  "265e98460c34": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/calendarView/{bookingAppointment-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "a0fdb87cdd3c": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/calendarView/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCalendarViewCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dc749918663d": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customers",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomer",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaBookingBusinessCustomer",
+        "apiReference": ""
+      }
+    }
+  },
+  "e8b3a7f785f4": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customers/{bookingCustomer-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomer",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusinessCustomer",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusinessCustomer",
+        "apiReference": ""
+      }
+    }
+  },
+  "3a70c00bec02": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customers/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomerCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4c154abfd8be": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customQuestions",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomQuestion",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaBookingBusinessCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "70fc69bb24f4": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customQuestions/{bookingCustomQuestion-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomQuestion",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusinessCustomQuestion",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusinessCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "fd2ef0e6e246": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/customQuestions/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCustomQuestionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d38b01239fa": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.getStaffAvailability",
+    "methods": {}
+  },
+  "38519e4f5896": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.publish",
+    "methods": {}
+  },
+  "8331ddb7b391": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.unpublish",
+    "methods": {}
+  },
+  "1c12ce432d3f": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/services",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessService",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaBookingBusinessService",
+        "apiReference": ""
+      }
+    }
+  },
+  "d51d871eba4c": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/services/{bookingService-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessService",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusinessService",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusinessService",
+        "apiReference": ""
+      }
+    }
+  },
+  "89364d8202c1": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/services/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessServiceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7d3ea0081b88": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/staffMembers",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessStaffMember",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaBookingBusinessStaffMember",
+        "apiReference": ""
+      }
+    }
+  },
+  "e3be160b2db2": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/staffMembers/{bookingStaffMember-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessStaffMember",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaBookingBusinessStaffMember",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaBookingBusinessStaffMember",
+        "apiReference": ""
+      }
+    }
+  },
+  "49427b166f6b": {
+    "path": "/bookingBusinesses/{bookingBusiness-id}/staffMembers/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all Bookings related resources.",
+            "FullDescription": "Allows an app to read and write Bookings appointments and customers, and additionally allows reading businesses, services, and staff without a signed-in user. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessStaffMemberCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b1c6edaecb6c": {
+    "path": "/bookingBusinesses/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all Bookings related resources.",
+            "FullDescription": "Allows an app to read Bookings appointments, businesses, customers, services, and staff without a signed-in user.  ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaBookingBusinessCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "454fe7d96e03": {
+    "path": "/bookingCurrencies",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read bookings information",
+            "FullDescription": "Allows an app to read bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write bookings information",
+            "FullDescription": "Allows an app to read and write Bookings appointments, businesses, customers, services, and staff on your behalf. Does not allow create, delete and publish of booking businesses.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Manage bookings information",
+            "FullDescription": "Allows an app to read, write and manage bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaBookingCurrency",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaBookingCurrency",
+        "apiReference": ""
+      }
+    }
+  },
+  "16ee9997f953": {
+    "path": "/bookingCurrencies/{bookingCurrency-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read bookings information",
+            "FullDescription": "Allows an app to read bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write bookings information",
+            "FullDescription": "Allows an app to read and write Bookings appointments, businesses, customers, services, and staff on your behalf. Does not allow create, delete and publish of booking businesses.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Manage bookings information",
+            "FullDescription": "Allows an app to read, write and manage bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaBookingCurrency",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaBookingCurrency",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaBookingCurrency",
+        "apiReference": ""
+      }
+    }
+  },
+  "89cdbbfa9c29": {
+    "path": "/bookingCurrencies/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Bookings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read bookings information",
+            "FullDescription": "Allows an app to read bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "BookingsAppointment.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write booking appointments",
+            "FullDescription": "Allows an app to read and write bookings appointments and customers, and additionally allows read businesses information, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write bookings information",
+            "FullDescription": "Allows an app to read and write Bookings appointments, businesses, customers, services, and staff on your behalf. Does not allow create, delete and publish of booking businesses.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Bookings.Manage.All",
+            "IsAdmin": false,
+            "Description": "Manage bookings information",
+            "FullDescription": "Allows an app to read, write and manage bookings appointments, businesses, customers, services, and staff on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaBookingCurrencyCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1f39e0195f20": {
+    "path": "/solutions",
+    "methods": {}
+  },
+  "a0a0b496c892": {
+    "path": "/solutions/approval/approvalItems/{approvalItem-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "2f5b38ec7e19": {
+    "path": "/solutions/approval/microsoft.graph.provision",
+    "methods": {}
+  },
+  "6e2f5799b38a": {
+    "path": "/solutions/backupRestore/microsoft.graph.enable",
+    "methods": {}
+  },
+  "465e18b88f1b": {
+    "path": "/solutions/backupRestore/protectionPolicies/{protectionPolicyBase-id}/microsoft.graph.activate",
+    "methods": {}
+  },
+  "d41f40820bee": {
+    "path": "/solutions/backupRestore/protectionPolicies/{protectionPolicyBase-id}/microsoft.graph.deactivate",
+    "methods": {}
+  },
+  "57ac233b9e26": {
+    "path": "/solutions/backupRestore/restorePoints/microsoft.graph.search",
+    "methods": {}
+  },
+  "86abe27db7d1": {
+    "path": "/solutions/backupRestore/restoreSessions/{restoreSessionBase-id}/microsoft.graph.activate",
+    "methods": {}
+  },
+  "2723fd69cfaa": {
+    "path": "/solutions/backupRestore/serviceApps/{serviceApp-id}/microsoft.graph.activate",
+    "methods": {}
+  },
+  "a4634c0faa56": {
+    "path": "/solutions/backupRestore/serviceApps/{serviceApp-id}/microsoft.graph.deactivate",
+    "methods": {}
+  },
+  "26d43231d66e": {
+    "path": "/solutions/bookingBusinesses",
+    "methods": {}
+  },
+  "ac3262e80a59": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}",
+    "methods": {}
+  },
+  "82e13a0ac963": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/appointments",
+    "methods": {}
+  },
+  "74249e9e92a5": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/appointments/{bookingAppointment-id}",
+    "methods": {}
+  },
+  "ecd95acc904a": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/appointments/{bookingAppointment-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "0cacbf9c39d1": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/appointments/$count",
+    "methods": {}
+  },
+  "d914e427ac9c": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/calendarView",
+    "methods": {}
+  },
+  "311f9ec4d777": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/calendarView/{bookingAppointment-id}",
+    "methods": {}
+  },
+  "a8418040a93d": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/calendarView/{bookingAppointment-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "c052a82ce18b": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/calendarView/$count",
+    "methods": {}
+  },
+  "ea41e9bae19b": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customers",
+    "methods": {}
+  },
+  "7c247561f79b": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customers/{bookingCustomer-id}",
+    "methods": {}
+  },
+  "802627dfe368": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customers/$count",
+    "methods": {}
+  },
+  "b92b6db130d9": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customQuestions",
+    "methods": {}
+  },
+  "09935151f507": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customQuestions/{bookingCustomQuestion-id}",
+    "methods": {}
+  },
+  "8235e75b3209": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/customQuestions/$count",
+    "methods": {}
+  },
+  "72e9a2b4512c": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.getStaffAvailability",
+    "methods": {}
+  },
+  "68d3e19b856c": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.publish",
+    "methods": {}
+  },
+  "b60a08e19169": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/microsoft.graph.unpublish",
+    "methods": {}
+  },
+  "b4e4df454442": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/services",
+    "methods": {}
+  },
+  "608835cb583c": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/services/{bookingService-id}",
+    "methods": {}
+  },
+  "6c5a06016de8": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/services/$count",
+    "methods": {}
+  },
+  "fb3197d33dab": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/staffMembers",
+    "methods": {}
+  },
+  "8e9ba02adeab": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/staffMembers/{bookingStaffMember-id}",
+    "methods": {}
+  },
+  "e08733bc8640": {
+    "path": "/solutions/bookingBusinesses/{bookingBusiness-id}/staffMembers/$count",
+    "methods": {}
+  },
+  "7e95a26d2b02": {
+    "path": "/solutions/bookingBusinesses/$count",
+    "methods": {}
+  },
+  "fb5f97f012b3": {
+    "path": "/solutions/bookingCurrencies",
+    "methods": {}
+  },
+  "11bedd7ab22a": {
+    "path": "/solutions/bookingCurrencies/{bookingCurrency-id}",
+    "methods": {}
+  },
+  "1b94b9f44e6e": {
+    "path": "/solutions/bookingCurrencies/$count",
+    "methods": {}
+  },
+  "3f2ddefa34ea": {
+    "path": "/solutions/businessScenarios/{businessScenario-id}/planner/microsoft.graph.getPlan",
+    "methods": {}
+  },
+  "6694bdd9ce7c": {
+    "path": "/solutions/virtualEvents",
+    "methods": {}
+  },
+  "f695a4403582": {
+    "path": "/solutions/virtualEvents/events",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEvent",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEvent",
+        "apiReference": ""
+      }
+    }
+  },
+  "63ec00610b1a": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEvent",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEvent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEvent",
+        "apiReference": ""
+      }
+    }
+  },
+  "c7e1731c55b4": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "aa27d5c8fac3": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/microsoft.graph.publish",
+    "methods": {}
+  },
+  "46dfbbba3096": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenter",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "09b9ddc1ccf6": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenter",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventPresenter",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e1a2c071d9e": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "db9537158496": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "19cbde45fed1": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenterSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "8e3c0dea1fc2": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/{virtualEventPresenter-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenterSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fa42dbe7ad77": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dcd2cb95db12": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSession",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e93571a6cad": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSession",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "3120126d0a49": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "269dfc1e9fbc": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "cc0d96e2c464": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "b634fd71d7ff": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/{attendanceRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "81a9df9784e2": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReportAttendanceRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a8d90808ac3b": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/attendanceReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionAttendanceReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1e6e47fcde5e": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "45bb19ef5ef3": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "6e696c4ab46e": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7b2bd9f83b3e": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "5ad3635a6160": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations/{virtualEventRegistration-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "f40a63ac2322": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations(email='{email}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionRegistrationByEmail",
+        "apiReference": ""
+      }
+    }
+  },
+  "4a78b17feede": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations(userId='{userId}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionRegistrationByUserId",
+        "apiReference": ""
+      }
+    }
+  },
+  "b91601c56e2e": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/registrations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionRegistrationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cce92d61c7f1": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionByJoinWebUrl",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventSessionByJoinWebUrl",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "c377b5f05c72": {
+    "path": "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1a4a0ebae8e6": {
+    "path": "/solutions/virtualEvents/events/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "98eba08b48cd": {
+    "path": "/solutions/virtualEvents/townhalls",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhall",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventTownhall",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventsroot-post-townhalls?view=graph-rest-beta"
+      }
+    }
+  },
+  "e83fe31fe00a": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhall",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventtownhall-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhall",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventtownhall-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhall",
+        "apiReference": ""
+      }
+    }
+  },
+  "5b412806e83c": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenter",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualevent-list-presenters?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventTownhallPresenter",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualevent-post-presenters?view=graph-rest-beta"
+      }
+    }
+  },
+  "31ede5723ad9": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenter",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventpresenter-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhallPresenter",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhallPresenter",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "316958809d7c": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/{virtualEventPresenter-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "5d89568e4ea6": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/{virtualEventPresenter-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "ed549e1b00d7": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/{virtualEventPresenter-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenterSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "ede0fe83ca1c": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/{virtualEventPresenter-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenterSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9042f43b6d0d": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fe0bf4f9843d": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSession",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventTownhallSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "5122e0df6fd4": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSession",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhallSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhallSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "5d7b1fd88f22": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventTownhallSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "0d57d0ce958c": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhallSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhallSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d7f1c614a63": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "cc68f800b2f6": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/{attendanceRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "c042099110a8": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReportAttendanceRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "50d58dafc0ac": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/attendanceReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionAttendanceReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "014f47fe9218": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "f21254b58bf3": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "edd0a808a275": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c8675fdbd4f0": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/registrations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "31a9b9917ca3": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/registrations/{virtualEventRegistration-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "ab7a8cfe5979": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/registrations(email='{email}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionRegistrationByEmail",
+        "apiReference": ""
+      }
+    }
+  },
+  "4a3e8e328b06": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/registrations(userId='{userId}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionRegistrationByUserId",
+        "apiReference": ""
+      }
+    }
+  },
+  "0f29419d0a5f": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/{virtualEventSession-id}/registrations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionRegistrationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "805b188933a2": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionByJoinWebUrl",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventTownhallSessionByJoinWebUrl",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventTownhallSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "523c077712ee": {
+    "path": "/solutions/virtualEvents/townhalls/{virtualEventTownhall-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ece86c391141": {
+    "path": "/solutions/virtualEvents/townhalls/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventTownhallCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c1d9989e6cb6": {
+    "path": "/solutions/virtualEvents/townhalls/microsoft.graph.getByUserIdAndRole(userId='{userId}',role='{role}')",
+    "methods": {}
+  },
+  "45486a695563": {
+    "path": "/solutions/virtualEvents/townhalls/microsoft.graph.getByUserRole(role='{role}')",
+    "methods": {}
+  },
+  "4147a39690bb": {
+    "path": "/solutions/virtualEvents/webinars",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinar",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinar",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventsroot-post-webinars?view=graph-rest-beta"
+      }
+    }
+  },
+  "e76ee7d6922c": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinar",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventwebinar-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinar",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventwebinar-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinar",
+        "apiReference": ""
+      }
+    }
+  },
+  "e10c63e689f0": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenter",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "a69be606ea4c": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenter",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarPresenter",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventpresenter-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "aac49455f361": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/{virtualEventPresenter-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "6124573c002a": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/{virtualEventPresenter-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenterSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "d1ccf22c9fd9": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/{virtualEventPresenter-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenterSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "9cafa074d9f4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/{virtualEventPresenter-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenterSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4c318a6995fb": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f90394a0c02e": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrationConfiguration",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationConfiguration",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventwebinarregistrationconfiguration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarRegistrationConfiguration",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarRegistrationConfiguration",
+        "apiReference": ""
+      }
+    }
+  },
+  "6b1e1be5403b": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrationConfiguration/questions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationConfigurationQuestion",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistrationconfiguration-list-questions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarRegistrationConfigurationQuestion",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistrationconfiguration-post-questions?view=graph-rest-beta"
+      }
+    }
+  },
+  "0e6c29dcd6d1": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationConfigurationQuestion",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarRegistrationConfigurationQuestion",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarRegistrationConfigurationQuestion",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistrationquestionbase-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "d7aabc848400": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrationConfiguration/questions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationConfigurationQuestionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5de46a40af6c": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistration",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistration-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarRegistration",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventwebinar-post-registrations?view=graph-rest-beta"
+      }
+    }
+  },
+  "1bd515513cc4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistration",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarRegistration",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "e024543719b4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "dbe0b8a25c9f": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistration-list-sessions?view=graph-rest-beta"
+      }
+    }
+  },
+  "cebe706c99fb": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "7f56a2000eb1": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "abaa2de55cbe": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/{virtualEventRegistration-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "182f0af920b5": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(email='{email}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationByEmail",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarRegistrationByEmail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarRegistrationByEmail",
+        "apiReference": ""
+      }
+    }
+  },
+  "e51903069f88": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(email='{email}')/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "d5b8137adcab": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(userId='{userId}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationByUserId",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarRegistrationByUserId",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarRegistrationByUserId",
+        "apiReference": ""
+      }
+    }
+  },
+  "6b73e5184490": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(userId='{userId}')/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "9d037343460c": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarRegistrationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fdd14a824372": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualevent-list-sessions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "f43cbe39c872": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventsession-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "f7b2e5621244": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReport",
+        "apiReference": "https://learn.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "8cafe9fea7d4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReport",
+        "apiReference": "https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarSessionAttendanceReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarSessionAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "35ee0a941db2": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "e2012f63eeba": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/{attendanceRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f5a13f1af17": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReportAttendanceRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fea590ea3f8b": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/attendanceReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionAttendanceReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "00b1f6caf762": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/presenters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f75a833c7f8": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/presenters/{virtualEventPresenter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionPresenter",
+        "apiReference": ""
+      }
+    }
+  },
+  "1a348ed17472": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/presenters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionPresenterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ecd75dc417e9": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/registrations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "20d2c2a41db1": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/registrations/{virtualEventRegistration-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "a77135f13ad4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/registrations(email='{email}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionRegistrationByEmail",
+        "apiReference": ""
+      }
+    }
+  },
+  "06cab4ef9568": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/registrations(userId='{userId}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionRegistrationByUserId",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d77138ed5f4": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/registrations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionRegistrationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cb3afbb6650b": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionByJoinWebUrl",
+        "apiReference": "https://learn.microsoft.com/graph/api/virtualeventsession-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaVirtualEventWebinarSessionByJoinWebUrl",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaVirtualEventWebinarSessionByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "9ce367c1da2e": {
+    "path": "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "79bc4e8e9911": {
+    "path": "/solutions/virtualEvents/webinars/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaVirtualEventWebinarCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f8fc515d000e": {
+    "path": "/solutions/virtualEvents/webinars/microsoft.graph.getByUserIdAndRole(userId='{userId}',role='{role}')",
+    "methods": {}
+  },
+  "1ecd5da8e9a3": {
+    "path": "/solutions/virtualEvents/webinars/microsoft.graph.getByUserRole(role='{role}')",
+    "methods": {}
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "/identity/authenticationEventsFlows/{authenticationEventsFlow-id}/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAttributeCollection": {
+    "get": {
+      "tags": [
+        "identity.authenticationEventsFlow"
+      ],
+      "summary": "Get onAttributeCollection property value",
+      "description": "The configuration for what to invoke when attributes are ready to be collected from the user.",
+      "operationId": "identity.authenticationEventsFlowAsExternalUsersSelfServiceSignUpEventsFlow_GetOnAttributeCollection",
+      "parameters": [
+        {
+          "name": "authenticationEventsFlow-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationEventsFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationEventsFlow"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Entity result.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onAttributeCollectionHandler"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

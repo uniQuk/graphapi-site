@@ -1,0 +1,52 @@
+{
+  "/teamwork/deletedTeams/{deletedTeam-id}/channels/$count": {
+    "get": {
+      "tags": [
+        "teamwork.deletedTeam"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "teamwork.deletedTeam.channel_GetCount",
+      "parameters": [
+        {
+          "name": "deletedTeam-id",
+          "in": "path",
+          "description": "The unique identifier of deletedTeam",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedTeam"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

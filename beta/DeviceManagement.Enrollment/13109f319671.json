@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/appleUserInitiatedEnrollmentProfiles/{appleUserInitiatedEnrollmentProfile-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.appleUserInitiatedEnrollmentProfile"
+      ],
+      "summary": "Get appleUserInitiatedEnrollmentProfiles from deviceManagement",
+      "description": "Apple user initiated enrollment profiles",
+      "operationId": "deviceManagement_GetAppleUserInitiatedEnrollmentProfile",
+      "parameters": [
+        {
+          "name": "appleUserInitiatedEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of appleUserInitiatedEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appleUserInitiatedEnrollmentProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.appleUserInitiatedEnrollmentProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.appleUserInitiatedEnrollmentProfile"
+      ],
+      "summary": "Update the navigation property appleUserInitiatedEnrollmentProfiles in deviceManagement",
+      "operationId": "deviceManagement_UpdateAppleUserInitiatedEnrollmentProfile",
+      "parameters": [
+        {
+          "name": "appleUserInitiatedEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of appleUserInitiatedEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appleUserInitiatedEnrollmentProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.appleUserInitiatedEnrollmentProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.appleUserInitiatedEnrollmentProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.appleUserInitiatedEnrollmentProfile"
+      ],
+      "summary": "Delete navigation property appleUserInitiatedEnrollmentProfiles for deviceManagement",
+      "operationId": "deviceManagement_DeleteAppleUserInitiatedEnrollmentProfile",
+      "parameters": [
+        {
+          "name": "appleUserInitiatedEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of appleUserInitiatedEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "appleUserInitiatedEnrollmentProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

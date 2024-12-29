@@ -1,0 +1,57 @@
+{
+  "/communications/presences/{presence-id}/microsoft.graph.setStatusMessage": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action setStatusMessage",
+      "description": "Set a presence status message for a user. An optional expiration date and time can be supplied.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-beta"
+      },
+      "operationId": "communication.presence_setStatusMessage",
+      "parameters": [
+        {
+          "name": "presence-id",
+          "in": "path",
+          "description": "The unique identifier of presence",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "presence"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusMessage": {
+                  "$ref": "#/components/schemas/microsoft.graph.presenceStatusMessage"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

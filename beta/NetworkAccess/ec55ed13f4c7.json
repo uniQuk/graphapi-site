@@ -1,0 +1,192 @@
+{
+  "/networkAccess/forwardingPolicies/{forwardingPolicy-id}/policyRules/{policyRule-id}": {
+    "get": {
+      "tags": [
+        "networkAccess.forwardingPolicy"
+      ],
+      "summary": "Get policyRules from networkAccess",
+      "description": "Represents the definition of the policy ruleset that makes up the core definition of a policy.",
+      "operationId": "networkAccess.forwardingPolicy_GetPolicyRule",
+      "parameters": [
+        {
+          "name": "forwardingPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingPolicy"
+        },
+        {
+          "name": "policyRule-id",
+          "in": "path",
+          "description": "The unique identifier of policyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyRule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "networkAccess.forwardingPolicy"
+      ],
+      "summary": "Update policyRule",
+      "description": "Update an existing forwarding rule within a forwarding policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/networkaccess-policyrule-update?view=graph-rest-beta"
+      },
+      "operationId": "networkAccess.forwardingPolicy_UpdatePolicyRule",
+      "parameters": [
+        {
+          "name": "forwardingPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingPolicy"
+        },
+        {
+          "name": "policyRule-id",
+          "in": "path",
+          "description": "The unique identifier of policyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyRule"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyRule"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.policyRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "networkAccess.forwardingPolicy"
+      ],
+      "summary": "Delete navigation property policyRules for networkAccess",
+      "operationId": "networkAccess.forwardingPolicy_DeletePolicyRule",
+      "parameters": [
+        {
+          "name": "forwardingPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingPolicy"
+        },
+        {
+          "name": "policyRule-id",
+          "in": "path",
+          "description": "The unique identifier of policyRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyRule"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

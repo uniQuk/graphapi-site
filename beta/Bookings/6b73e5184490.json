@@ -1,0 +1,45 @@
+{
+  "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(userId='{userId}')/microsoft.graph.cancel": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action cancel",
+      "description": "Cancel a registrant's registration record for a webinar. ",
+      "operationId": "solution.virtualEvent.webinar.registration.userId_cancel",
+      "parameters": [
+        {
+          "name": "virtualEventWebinar-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventWebinar",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventWebinar"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "description": "Alternate key of virtualEventRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

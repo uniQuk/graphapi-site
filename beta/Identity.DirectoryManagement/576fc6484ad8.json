@@ -1,0 +1,158 @@
+{
+  "/directorySettingTemplates/{directorySettingTemplate-id}": {
+    "get": {
+      "tags": [
+        "directorySettingTemplates.directorySettingTemplate"
+      ],
+      "summary": "Get a directory setting template",
+      "description": "A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directorysettingtemplate-get?view=graph-rest-beta"
+      },
+      "operationId": "directorySettingTemplate_GetDirectorySettingTemplate",
+      "parameters": [
+        {
+          "name": "directorySettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of directorySettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySettingTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directorySettingTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directorySettingTemplates.directorySettingTemplate"
+      ],
+      "summary": "Update entity in directorySettingTemplates",
+      "operationId": "directorySettingTemplate_UpdateDirectorySettingTemplate",
+      "parameters": [
+        {
+          "name": "directorySettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of directorySettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySettingTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.directorySettingTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directorySettingTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directorySettingTemplates.directorySettingTemplate"
+      ],
+      "summary": "Delete entity from directorySettingTemplates",
+      "operationId": "directorySettingTemplate_DeleteDirectorySettingTemplate",
+      "parameters": [
+        {
+          "name": "directorySettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of directorySettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySettingTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

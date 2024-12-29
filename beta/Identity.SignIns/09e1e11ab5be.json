@@ -1,0 +1,52 @@
+{
+  "/trustFramework/keySets/{trustFrameworkKeySet-id}/keys_v2/$count": {
+    "get": {
+      "tags": [
+        "trustFramework.trustFrameworkKeySet"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "trustFramework.keySet.keys_v2_GetCount",
+      "parameters": [
+        {
+          "name": "trustFrameworkKeySet-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkKeySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkKeySet"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

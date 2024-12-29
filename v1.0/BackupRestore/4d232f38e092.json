@@ -1,0 +1,159 @@
+{
+  "/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy-id}": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get exchangeProtectionPolicies from solutions",
+      "description": "The list of Exchange protection policies in the tenant.",
+      "operationId": "solution.backupRestore_GetExchangeProtectionPolicy",
+      "parameters": [
+        {
+          "name": "exchangeProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeProtectionPolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.exchangeProtectionPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Update exchangeProtectionPolicy",
+      "description": "Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-update?view=graph-rest-1.0"
+      },
+      "operationId": "solution.backupRestore_UpdateExchangeProtectionPolicy",
+      "parameters": [
+        {
+          "name": "exchangeProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeProtectionPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.exchangeProtectionPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.exchangeProtectionPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Delete navigation property exchangeProtectionPolicies for solutions",
+      "operationId": "solution.backupRestore_DeleteExchangeProtectionPolicy",
+      "parameters": [
+        {
+          "name": "exchangeProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeProtectionPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "/roleManagement/enterpriseApps/{rbacApplication-id}/roleAssignmentScheduleRequests/{unifiedRoleAssignmentScheduleRequest-id}/targetSchedule": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Get targetSchedule from roleManagement",
+      "description": "The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.",
+      "operationId": "roleManagement.enterpriseApp.roleAssignmentScheduleRequest_GetTargetSchedule",
+      "parameters": [
+        {
+          "name": "rbacApplication-id",
+          "in": "path",
+          "description": "The unique identifier of rbacApplication",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "rbacApplication"
+        },
+        {
+          "name": "unifiedRoleAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentScheduleRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentSchedule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "/subscribedSkus/{subscribedSku-id}": {
+    "get": {
+      "tags": [
+        "subscribedSkus.subscribedSku"
+      ],
+      "summary": "Get subscribedSku",
+      "description": "Get a specific commercial subscription that an organization has acquired.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0"
+      },
+      "operationId": "subscribedSku_GetSubscribedSku",
+      "parameters": [
+        {
+          "name": "subscribedSku-id",
+          "in": "path",
+          "description": "The unique identifier of subscribedSku",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscribedSku"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subscribedSku"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "subscribedSkus.subscribedSku"
+      ],
+      "summary": "Update entity in subscribedSkus",
+      "operationId": "subscribedSku_UpdateSubscribedSku",
+      "parameters": [
+        {
+          "name": "subscribedSku-id",
+          "in": "path",
+          "description": "The unique identifier of subscribedSku",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscribedSku"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.subscribedSku"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subscribedSku"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "subscribedSkus.subscribedSku"
+      ],
+      "summary": "Delete entity from subscribedSkus",
+      "operationId": "subscribedSku_DeleteSubscribedSku",
+      "parameters": [
+        {
+          "name": "subscribedSku-id",
+          "in": "path",
+          "description": "The unique identifier of subscribedSku",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscribedSku"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

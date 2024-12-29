@@ -1,0 +1,158 @@
+{
+  "/identityGovernance/privilegedAccess/group/assignmentScheduleRequests/{privilegedAccessGroupAssignmentScheduleRequest-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.privilegedAccessRoot"
+      ],
+      "summary": "Get privilegedAccessGroupAssignmentScheduleRequest",
+      "description": "Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.privilegedAccess.group_GetAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "privilegedAccessGroupAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccessGroupAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccessGroupAssignmentScheduleRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.privilegedAccessRoot"
+      ],
+      "summary": "Update the navigation property assignmentScheduleRequests in identityGovernance",
+      "operationId": "identityGovernance.privilegedAccess.group_UpdateAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "privilegedAccessGroupAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccessGroupAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccessGroupAssignmentScheduleRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.privilegedAccessRoot"
+      ],
+      "summary": "Delete navigation property assignmentScheduleRequests for identityGovernance",
+      "operationId": "identityGovernance.privilegedAccess.group_DeleteAssignmentScheduleRequest",
+      "parameters": [
+        {
+          "name": "privilegedAccessGroupAssignmentScheduleRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccessGroupAssignmentScheduleRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccessGroupAssignmentScheduleRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/$count": {
+    "get": {
+      "tags": [
+        "security.subjectRightsRequest"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.subjectRightsRequest.approver_GetCount",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

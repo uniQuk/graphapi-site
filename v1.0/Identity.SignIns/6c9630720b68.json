@@ -1,0 +1,154 @@
+{
+  "/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration-id}": {
+    "get": {
+      "tags": [
+        "policies.authenticationMethodsPolicy"
+      ],
+      "summary": "Get authenticationMethodConfigurations from policies",
+      "description": "Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.",
+      "operationId": "policy.authenticationMethodsPolicy_GetAuthenticationMethodConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationMethodConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationMethodConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationMethodConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationMethodConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.authenticationMethodsPolicy"
+      ],
+      "summary": "Update the navigation property authenticationMethodConfigurations in policies",
+      "operationId": "policy.authenticationMethodsPolicy_UpdateAuthenticationMethodConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationMethodConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationMethodConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationMethodConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.authenticationMethodConfiguration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationMethodConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.authenticationMethodsPolicy"
+      ],
+      "summary": "Delete navigation property authenticationMethodConfigurations for policies",
+      "operationId": "policy.authenticationMethodsPolicy_DeleteAuthenticationMethodConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationMethodConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationMethodConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationMethodConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

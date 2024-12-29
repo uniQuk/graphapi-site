@@ -1,0 +1,4363 @@
+{
+  "06bdcf95aafd": {
+    "path": "/users",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization on your behalf. Includes display name, first and last name, email address and photo.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as other users, groups.  It does not allow the app to delete users or groups, or reset user passwords.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": true,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0"
+      }
+    }
+  },
+  "3d7d163d79b2": {
+    "path": "/users/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization without a signed-in user. Includes display name, first and last name, email address, open extensions, and photo.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": true,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User-PasswordProfile.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User-Mail.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as other users, groups.  It does not allow the app to delete users or groups, or reset user passwords.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ManageIdentities.All",
+            "IsAdmin": false,
+            "Description": "Manage all users' identities",
+            "FullDescription": "Allows the app to read, update and delete identities that are associated with a user's account, without a signed in user. This controls the identities users can sign-in with.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.EnableDisableAccount.All",
+            "IsAdmin": false,
+            "Description": "Enable and disable user accounts",
+            "FullDescription": "Allows the app to enable and disable users' accounts, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User-Phone.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "User.DeleteRestore.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "be945ec35028": {
+    "path": "/users/{user-id}/createdObjects",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserCreatedObject",
+        "apiReference": ""
+      }
+    }
+  },
+  "1c71c30770d1": {
+    "path": "/users/{user-id}/createdObjects/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserCreatedObject",
+        "apiReference": ""
+      }
+    }
+  },
+  "84086ebefce3": {
+    "path": "/users/{user-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal",
+    "methods": {}
+  },
+  "096923fc5d30": {
+    "path": "/users/{user-id}/createdObjects/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserCreatedObjectCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b2bae7b4880": {
+    "path": "/users/{user-id}/createdObjects/microsoft.graph.servicePrincipal",
+    "methods": {}
+  },
+  "97bc820d99b8": {
+    "path": "/users/{user-id}/createdObjects/microsoft.graph.servicePrincipal/$count",
+    "methods": {}
+  },
+  "e3802c15a3e9": {
+    "path": "/users/{user-id}/directReports",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserDirectReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "2b834a224e8c": {
+    "path": "/users/{user-id}/directReports/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserDirectReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "e84f4328f8ae": {
+    "path": "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.orgContact",
+    "methods": {}
+  },
+  "045f97d86690": {
+    "path": "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user",
+    "methods": {}
+  },
+  "469e6ec1699e": {
+    "path": "/users/{user-id}/directReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserDirectReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "276909039068": {
+    "path": "/users/{user-id}/directReports/microsoft.graph.orgContact",
+    "methods": {}
+  },
+  "f30b26ce2695": {
+    "path": "/users/{user-id}/directReports/microsoft.graph.orgContact/$count",
+    "methods": {}
+  },
+  "05772d6ecf6b": {
+    "path": "/users/{user-id}/directReports/microsoft.graph.user",
+    "methods": {}
+  },
+  "2cae4220b8f7": {
+    "path": "/users/{user-id}/directReports/microsoft.graph.user/$count",
+    "methods": {}
+  },
+  "8f162600ac61": {
+    "path": "/users/{user-id}/extensions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserExtension",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "08984bafe00a": {
+    "path": "/users/{user-id}/extensions/{extension-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserExtension",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserExtension",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "33d025a3272d": {
+    "path": "/users/{user-id}/extensions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserExtensionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0dc30668ab80": {
+    "path": "/users/{user-id}/insights",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsight",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserInsight",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "5cbb5bdfabd4": {
+    "path": "/users/{user-id}/insights/shared",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightShared",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserInsightShared",
+        "apiReference": ""
+      }
+    }
+  },
+  "2f2d6c6d44f9": {
+    "path": "/users/{user-id}/insights/shared/{sharedInsight-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsightShared",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserInsightShared",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserInsightShared",
+        "apiReference": ""
+      }
+    }
+  },
+  "b98722acf2a0": {
+    "path": "/users/{user-id}/insights/shared/{sharedInsight-id}/lastSharedMethod",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsightSharedLastSharedMethod",
+        "apiReference": ""
+      }
+    }
+  },
+  "d736f7114cce": {
+    "path": "/users/{user-id}/insights/shared/{sharedInsight-id}/resource",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsightSharedResource",
+        "apiReference": ""
+      }
+    }
+  },
+  "e5a77881d83c": {
+    "path": "/users/{user-id}/insights/shared/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightSharedCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3de5aa377db0": {
+    "path": "/users/{user-id}/insights/trending",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightTrending",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserInsightTrending",
+        "apiReference": ""
+      }
+    }
+  },
+  "09631e3b2cc5": {
+    "path": "/users/{user-id}/insights/trending/{trending-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsightTrending",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserInsightTrending",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserInsightTrending",
+        "apiReference": ""
+      }
+    }
+  },
+  "00b9ff99da59": {
+    "path": "/users/{user-id}/insights/trending/{trending-id}/resource",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightTrendingResource",
+        "apiReference": ""
+      }
+    }
+  },
+  "cc96739f6964": {
+    "path": "/users/{user-id}/insights/trending/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightTrendingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "03bfdaeb1b7d": {
+    "path": "/users/{user-id}/insights/used",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightUsed",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserInsightUsed",
+        "apiReference": ""
+      }
+    }
+  },
+  "874a3bc639b0": {
+    "path": "/users/{user-id}/insights/used/{usedInsight-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserInsightUsed",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserInsightUsed",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserInsightUsed",
+        "apiReference": ""
+      }
+    }
+  },
+  "5dcc3986a899": {
+    "path": "/users/{user-id}/insights/used/{usedInsight-id}/resource",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightUsedResource",
+        "apiReference": ""
+      }
+    }
+  },
+  "dba74d15a222": {
+    "path": "/users/{user-id}/insights/used/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Sites.Read.All",
+            "IsAdmin": false,
+            "Description": "Read items in all site collections ",
+            "FullDescription": "Allows the app to read documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Sites.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in all site collections",
+            "FullDescription": "Allows the app to create, read, update, and delete documents and list items in all site collections without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserInsightUsedCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6fbfa769c113": {
+    "path": "/users/{user-id}/licenseDetails",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserLicenseDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "6b76b415681f": {
+    "path": "/users/{user-id}/licenseDetails/{licenseDetails-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserLicenseDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserLicenseDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserLicenseDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "ee14f3a56068": {
+    "path": "/users/{user-id}/licenseDetails/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserLicenseDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "bbc6c7636336": {
+    "path": "/users/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "MailboxSettings.Read",
+            "IsAdmin": false,
+            "Description": "Read all user mailbox settings",
+            "FullDescription": "Allows the app to read user's mailbox settings without a signed-in user. Does not include permission to send mail.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "MailboxSettings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and write all user mailbox settings",
+            "FullDescription": "Allows the app to create, read, update, and delete user's mailbox settings without a signed-in user. Does not include permission to send mail.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "a42647cfb172": {
+    "path": "/users/{user-id}/manager",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserManager",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0"
+      }
+    }
+  },
+  "caa022c90abf": {
+    "path": "/users/{user-id}/manager/$ref",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserManagerByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0"
+      },
+      "put": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Set-MgUserManagerByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserManagerByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0"
+      }
+    }
+  },
+  "ac679e9de3fb": {
+    "path": "/users/{user-id}/memberOf",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "GroupMember.Read.All",
+            "IsAdmin": true,
+            "Description": "Read group memberships",
+            "FullDescription": "Allows the app to list groups, read basic group properties and read membership of all your groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserMemberOf",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-memberof?view=graph-rest-1.0"
+      }
+    }
+  },
+  "1832da95f7a1": {
+    "path": "/users/{user-id}/memberOf/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserMemberOf",
+        "apiReference": ""
+      }
+    }
+  },
+  "52da51b0b919": {
+    "path": "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.administrativeUnit",
+    "methods": {}
+  },
+  "f21a007369ab": {
+    "path": "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.directoryRole",
+    "methods": {}
+  },
+  "48b99e0e0f0d": {
+    "path": "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.group",
+    "methods": {}
+  },
+  "aeb02c1783a9": {
+    "path": "/users/{user-id}/memberOf/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "GroupMember.Read.All",
+            "IsAdmin": true,
+            "Description": "Read group memberships",
+            "FullDescription": "Allows the app to list groups, read basic group properties and read membership of all your groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserMemberOfCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2f3bca1e226f": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.administrativeUnit",
+    "methods": {}
+  },
+  "9c0e4058a6e6": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.administrativeUnit/$count",
+    "methods": {}
+  },
+  "55deb75092eb": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.directoryRole",
+    "methods": {}
+  },
+  "2e2ebad4ea04": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.directoryRole/$count",
+    "methods": {}
+  },
+  "09c154df83c9": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.group",
+    "methods": {}
+  },
+  "205c8d2a4b72": {
+    "path": "/users/{user-id}/memberOf/microsoft.graph.group/$count",
+    "methods": {}
+  },
+  "4b8af5cb49d4": {
+    "path": "/users/{user-id}/oauth2PermissionGrants",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DelegatedPermissionGrant.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage all delegated permission grants",
+            "FullDescription": "Allows the app to manage permission grants for delegated permissions exposed by any API (including Microsoft Graph), without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOauth2PermissionGrant",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0"
+      }
+    }
+  },
+  "739b362c032a": {
+    "path": "/users/{user-id}/oauth2PermissionGrants/{oAuth2PermissionGrant-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOauth2PermissionGrant",
+        "apiReference": ""
+      }
+    }
+  },
+  "6d10d4d147b8": {
+    "path": "/users/{user-id}/oauth2PermissionGrants/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DelegatedPermissionGrant.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage all delegated permission grants",
+            "FullDescription": "Allows the app to manage permission grants for delegated permissions exposed by any API (including Microsoft Graph), without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOauth2PermissionGrantCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dee0c5e58a23": {
+    "path": "/users/{user-id}/outlook",
+    "methods": {}
+  },
+  "3cdbb12a1783": {
+    "path": "/users/{user-id}/outlook/masterCategories",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOutlookMasterCategory",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserOutlookMasterCategory",
+        "apiReference": ""
+      }
+    }
+  },
+  "8188d705f8ca": {
+    "path": "/users/{user-id}/outlook/masterCategories/{outlookCategory-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOutlookMasterCategory",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserOutlookMasterCategory",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserOutlookMasterCategory",
+        "apiReference": ""
+      }
+    }
+  },
+  "88c9aeb52307": {
+    "path": "/users/{user-id}/outlook/masterCategories/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOutlookMasterCategoryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f52be45178f3": {
+    "path": "/users/{user-id}/ownedDevices",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOwnedDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "692c4c18b749": {
+    "path": "/users/{user-id}/ownedDevices/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOwnedDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "dbe7b5ce574b": {
+    "path": "/users/{user-id}/ownedDevices/{directoryObject-id}/microsoft.graph.appRoleAssignment",
+    "methods": {}
+  },
+  "97e92594c884": {
+    "path": "/users/{user-id}/ownedDevices/{directoryObject-id}/microsoft.graph.device",
+    "methods": {}
+  },
+  "a1fcc7c83e24": {
+    "path": "/users/{user-id}/ownedDevices/{directoryObject-id}/microsoft.graph.endpoint",
+    "methods": {}
+  },
+  "e55535456d0c": {
+    "path": "/users/{user-id}/ownedDevices/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOwnedDeviceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dfc6ef537b60": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.appRoleAssignment",
+    "methods": {}
+  },
+  "c083730e7d29": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.appRoleAssignment/$count",
+    "methods": {}
+  },
+  "35a711e3c3b0": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.device",
+    "methods": {}
+  },
+  "2b9702b74fca": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.device/$count",
+    "methods": {}
+  },
+  "25fb3525d3eb": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.endpoint",
+    "methods": {}
+  },
+  "6c418986b157": {
+    "path": "/users/{user-id}/ownedDevices/microsoft.graph.endpoint/$count",
+    "methods": {}
+  },
+  "ab128d4c2816": {
+    "path": "/users/{user-id}/ownedObjects",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOwnedObject",
+        "apiReference": ""
+      }
+    }
+  },
+  "05ece34f6936": {
+    "path": "/users/{user-id}/ownedObjects/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserOwnedObject",
+        "apiReference": ""
+      }
+    }
+  },
+  "c505d1fc01c5": {
+    "path": "/users/{user-id}/ownedObjects/{directoryObject-id}/microsoft.graph.application",
+    "methods": {}
+  },
+  "d7ece5230ff5": {
+    "path": "/users/{user-id}/ownedObjects/{directoryObject-id}/microsoft.graph.group",
+    "methods": {}
+  },
+  "e1da1ab01a12": {
+    "path": "/users/{user-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal",
+    "methods": {}
+  },
+  "659fc2ba2235": {
+    "path": "/users/{user-id}/ownedObjects/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserOwnedObjectCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6045c608b7b3": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.application",
+    "methods": {}
+  },
+  "eccd63185d4d": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.application/$count",
+    "methods": {}
+  },
+  "e1f694f33f04": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.group",
+    "methods": {}
+  },
+  "8e4d4d0fe851": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.group/$count",
+    "methods": {}
+  },
+  "acf0ead0576a": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.servicePrincipal",
+    "methods": {}
+  },
+  "841f23fb0824": {
+    "path": "/users/{user-id}/ownedObjects/microsoft.graph.servicePrincipal/$count",
+    "methods": {}
+  },
+  "0d6cd5ae67d1": {
+    "path": "/users/{user-id}/photo",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.Read.All",
+            "IsAdmin": false,
+            "Description": "Read profile photo of a user or group",
+            "FullDescription": "Allows the app to read all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization without a signed-in user. Includes display name, first and last name, email address, open extensions, and photo.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserPhoto",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserPhoto",
+        "apiReference": ""
+      }
+    }
+  },
+  "ba3200970e20": {
+    "path": "/users/{user-id}/photo/$value",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.Read.All",
+            "IsAdmin": false,
+            "Description": "Read profile photo of a user or group",
+            "FullDescription": "Allows the app to read all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization without a signed-in user. Includes display name, first and last name, email address, open extensions, and photo.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserPhotoContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Set-MgUserPhotoContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserPhotoContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "142bca6d6aa1": {
+    "path": "/users/{user-id}/photos",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ProfilePhoto.Read.All",
+            "IsAdmin": false,
+            "Description": "Read profile photo of a user or group",
+            "FullDescription": "Allows the app to read all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization without a signed-in user. Includes display name, first and last name, email address, open extensions, and photo.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ProfilePhoto.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write profile photo of a user or group",
+            "FullDescription": "Allows the app to read and write all profile photos of users and groups, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserPhoto",
+        "apiReference": ""
+      }
+    }
+  },
+  "7b52147c9b20": {
+    "path": "/users/{user-id}/photos/{profilePhoto-id}",
+    "methods": {}
+  },
+  "0e9bd2489d48": {
+    "path": "/users/{user-id}/photos/{profilePhoto-id}/$value",
+    "methods": {}
+  },
+  "5a98a0916f5a": {
+    "path": "/users/{user-id}/registeredDevices",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserRegisteredDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "c7177b9a5866": {
+    "path": "/users/{user-id}/registeredDevices/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserRegisteredDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "b12b4d9899f9": {
+    "path": "/users/{user-id}/registeredDevices/{directoryObject-id}/microsoft.graph.appRoleAssignment",
+    "methods": {}
+  },
+  "34a8f6bcceee": {
+    "path": "/users/{user-id}/registeredDevices/{directoryObject-id}/microsoft.graph.device",
+    "methods": {}
+  },
+  "1071105cad64": {
+    "path": "/users/{user-id}/registeredDevices/{directoryObject-id}/microsoft.graph.endpoint",
+    "methods": {}
+  },
+  "c8fc18f5bbd9": {
+    "path": "/users/{user-id}/registeredDevices/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserRegisteredDeviceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a0f9357c9700": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.appRoleAssignment",
+    "methods": {}
+  },
+  "ffb23e04bb6e": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.appRoleAssignment/$count",
+    "methods": {}
+  },
+  "82ab8a75060f": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.device",
+    "methods": {}
+  },
+  "d6316c433a14": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.device/$count",
+    "methods": {}
+  },
+  "ad99d9d88891": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.endpoint",
+    "methods": {}
+  },
+  "b86dde39a616": {
+    "path": "/users/{user-id}/registeredDevices/microsoft.graph.endpoint/$count",
+    "methods": {}
+  },
+  "08f74328fb7b": {
+    "path": "/users/{user-id}/settings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgUserSetting",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "f2661094806c": {
+    "path": "/users/{user-id}/settings/itemInsights",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your profile",
+            "FullDescription": "Allows the app to read your profile, and discover your group membership, reports and manager. It also allows the app to update your profile information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgUserSettingItemInsight",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingItemInsight",
+        "apiReference": "https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingItemInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "31a263ac8fc9": {
+    "path": "/users/{user-id}/settings/shiftPreferences",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "UserShiftPreferences.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all user shift preferences",
+            "FullDescription": "Allows the app to read all users' shift schedule preferences without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "UserShiftPreferences.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all user shift preferences",
+            "FullDescription": "Allows the app to manage all users' shift schedule preferences without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserSettingShiftPreference",
+        "apiReference": "https://learn.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "UserShiftPreferences.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all user shift preferences",
+            "FullDescription": "Allows the app to manage all users' shift schedule preferences without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUserSettingShiftPreference",
+        "apiReference": "https://learn.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingShiftPreference",
+        "apiReference": ""
+      }
+    }
+  },
+  "7c63abdb3d95": {
+    "path": "/users/{user-id}/settings/storage",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingStorage",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingStorage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingStorage",
+        "apiReference": ""
+      }
+    }
+  },
+  "775bef61b4b3": {
+    "path": "/users/{user-id}/settings/storage/quota",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Files.Read",
+            "IsAdmin": false,
+            "Description": "Read your files",
+            "FullDescription": "Allows the app to read your files.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Have full access to all files you have access to",
+            "FullDescription": "Allows the app to read, create, update and delete all files that you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Have full access to your files",
+            "FullDescription": "Allows the app to read, create, update, and delete your files.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all files that you have access to",
+            "FullDescription": "Allows the app to read all files you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          }
+        ],
+        "command": "Get-MgUserSettingStorageQuota",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingStorageQuota",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingStorageQuota",
+        "apiReference": ""
+      }
+    }
+  },
+  "39ddab97eae3": {
+    "path": "/users/{user-id}/settings/storage/quota/services",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Files.Read",
+            "IsAdmin": false,
+            "Description": "Read your files",
+            "FullDescription": "Allows the app to read your files.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Have full access to all files you have access to",
+            "FullDescription": "Allows the app to read, create, update and delete all files that you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Have full access to your files",
+            "FullDescription": "Allows the app to read, create, update, and delete your files.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all files that you have access to",
+            "FullDescription": "Allows the app to read all files you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          }
+        ],
+        "command": "Get-MgUserSettingStorageQuotaService",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserSettingStorageQuotaService",
+        "apiReference": ""
+      }
+    }
+  },
+  "5925e76b1eff": {
+    "path": "/users/{user-id}/settings/storage/quota/services/{serviceStorageQuotaBreakdown-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Files.Read",
+            "IsAdmin": false,
+            "Description": "Read your files",
+            "FullDescription": "Allows the app to read your files.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Have full access to all files you have access to",
+            "FullDescription": "Allows the app to read, create, update and delete all files that you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Have full access to your files",
+            "FullDescription": "Allows the app to read, create, update, and delete your files.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all files that you have access to",
+            "FullDescription": "Allows the app to read all files you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          }
+        ],
+        "command": "Get-MgUserSettingStorageQuotaService",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingStorageQuotaService",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingStorageQuotaService",
+        "apiReference": ""
+      }
+    }
+  },
+  "9b34ee86525a": {
+    "path": "/users/{user-id}/settings/storage/quota/services/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Files.Read",
+            "IsAdmin": false,
+            "Description": "Read your files",
+            "FullDescription": "Allows the app to read your files.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Have full access to all files you have access to",
+            "FullDescription": "Allows the app to read, create, update and delete all files that you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Have full access to your files",
+            "FullDescription": "Allows the app to read, create, update, and delete your files.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Files.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all files that you have access to",
+            "FullDescription": "Allows the app to read all files you can access.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          }
+        ],
+        "command": "Get-MgUserSettingStorageQuotaServiceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2f3becfd5faa": {
+    "path": "/users/{user-id}/settings/windows",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindows",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserSettingWindows",
+        "apiReference": ""
+      }
+    }
+  },
+  "d55e3f9375f3": {
+    "path": "/users/{user-id}/settings/windows/{windowsSetting-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindows",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingWindows",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingWindows",
+        "apiReference": ""
+      }
+    }
+  },
+  "63bf2e3bc476": {
+    "path": "/users/{user-id}/settings/windows/{windowsSetting-id}/instances",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindowsInstance",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserSettingWindowsInstance",
+        "apiReference": ""
+      }
+    }
+  },
+  "559d15c406e9": {
+    "path": "/users/{user-id}/settings/windows/{windowsSetting-id}/instances/{windowsSettingInstance-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindowsInstance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserSettingWindowsInstance",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserSettingWindowsInstance",
+        "apiReference": ""
+      }
+    }
+  },
+  "219869e30e77": {
+    "path": "/users/{user-id}/settings/windows/{windowsSetting-id}/instances/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindowsInstanceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e148f77072f8": {
+    "path": "/users/{user-id}/settings/windows/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSettingWindowsCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "259018fb2e31": {
+    "path": "/users/{user-id}/sponsors",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgUserSponsor",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0"
+      }
+    }
+  },
+  "da136642998e": {
+    "path": "/users/{user-id}/sponsors/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserSponsor",
+        "apiReference": ""
+      }
+    }
+  },
+  "e6dec34e8232": {
+    "path": "/users/{user-id}/sponsors/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgUserSponsorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "145e90c2ca32": {
+    "path": "/users/{user-id}/todo",
+    "methods": {}
+  },
+  "a54bda0284d0": {
+    "path": "/users/{user-id}/todo/lists",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoList",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUserTodoList",
+        "apiReference": ""
+      }
+    }
+  },
+  "e73ab39ed216": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoList",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUserTodoList",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          }
+        ],
+        "command": "Remove-MgUserTodoList",
+        "apiReference": ""
+      }
+    }
+  },
+  "7193a8d4e7f2": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/extensions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoListExtension",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserTodoListExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "d0d849be1c5e": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/extensions/{extension-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoListExtension",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserTodoListExtension",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserTodoListExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "72bdfea52837": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/extensions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoListExtensionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d5ea7d52d44": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTask",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUserTodoListTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "6a081a41ca12": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTask",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUserTodoListTask",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserTodoListTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "d4c78d69309d": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskAttachment",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUserTodoListTaskAttachment",
+        "apiReference": ""
+      }
+    }
+  },
+  "eacd35409c6d": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments/{attachmentBase-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskAttachment",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserTodoListTaskAttachment",
+        "apiReference": ""
+      }
+    }
+  },
+  "89da0cd1f776": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments/{attachmentBase-id}/$value",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskAttachmentContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgUserTodoListTaskAttachmentContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserTodoListTaskAttachmentContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "51a63a25e00a": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskAttachmentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a378d7d8849d": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachmentSessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskAttachmentSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "d3ecc97a7aff": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachmentSessions/{attachmentSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskAttachmentSession",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserTodoListTaskAttachmentSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserTodoListTaskAttachmentSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "f7dd7711823b": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachmentSessions/{attachmentSession-id}/content",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskAttachmentSessionContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgUserTodoListTaskAttachmentSessionContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserTodoListTaskAttachmentSessionContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "b0b6741a12a4": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachmentSessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskAttachmentSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "aff47c9c8047": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/checklistItems",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskChecklistItem",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUserTodoListTaskChecklistItem",
+        "apiReference": ""
+      }
+    }
+  },
+  "8beb74b44c33": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/checklistItems/{checklistItem-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskChecklistItem",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUserTodoListTaskChecklistItem",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserTodoListTaskChecklistItem",
+        "apiReference": ""
+      }
+    }
+  },
+  "24fd6aa22bde": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/checklistItems/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskChecklistItemCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a52f242ce9ee": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/extensions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskExtension",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgUserTodoListTaskExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "a7fbde23ce5c": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/extensions/{extension-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskExtension",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgUserTodoListTaskExtension",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgUserTodoListTaskExtension",
+        "apiReference": ""
+      }
+    }
+  },
+  "04385afedfdb": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/extensions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTodoTaskExtensionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "353af2524184": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/linkedResources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskLinkedResource",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgUserTodoListTaskLinkedResource",
+        "apiReference": ""
+      }
+    }
+  },
+  "59e8428ec122": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/linkedResources/{linkedResource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskLinkedResource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgUserTodoListTaskLinkedResource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgUserTodoListTaskLinkedResource",
+        "apiReference": ""
+      }
+    }
+  },
+  "f2b0f64444a4": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/linkedResources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskLinkedResourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0c52b66cf87e": {
+    "path": "/users/{user-id}/todo/lists/{todoTaskList-id}/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f30fc8d716d6": {
+    "path": "/users/{user-id}/todo/lists/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTodoListCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e4053431d339": {
+    "path": "/users/{user-id}/transitiveMemberOf",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "GroupMember.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all group memberships",
+            "FullDescription": "Allows the app to read memberships and basic group properties for all groups without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to read group properties and memberships, and readconversations for all groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTransitiveMemberOf",
+        "apiReference": "https://learn.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0"
+      }
+    }
+  },
+  "d215e2d3c372": {
+    "path": "/users/{user-id}/transitiveMemberOf/{directoryObject-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserTransitiveMemberOf",
+        "apiReference": ""
+      }
+    }
+  },
+  "fe1589e3c440": {
+    "path": "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.administrativeUnit",
+    "methods": {}
+  },
+  "990ff8c7771b": {
+    "path": "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.directoryRole",
+    "methods": {}
+  },
+  "93e22a6e80a9": {
+    "path": "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group",
+    "methods": {}
+  },
+  "914951d55ef0": {
+    "path": "/users/{user-id}/transitiveMemberOf/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read user profiles without a signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "GroupMember.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all group memberships",
+            "FullDescription": "Allows the app to read memberships and basic group properties for all groups without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to read group properties and memberships, and readconversations for all groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserTransitiveMemberOfCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a01b7285bd11": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.administrativeUnit",
+    "methods": {}
+  },
+  "19ad4d240245": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.administrativeUnit/$count",
+    "methods": {}
+  },
+  "5dcc84a6b321": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.directoryRole",
+    "methods": {}
+  },
+  "a700f8a67caa": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.directoryRole/$count",
+    "methods": {}
+  },
+  "9da762cf3450": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.group",
+    "methods": {}
+  },
+  "c6082068334c": {
+    "path": "/users/{user-id}/transitiveMemberOf/microsoft.graph.group/$count",
+    "methods": {}
+  },
+  "e6475b6471ba": {
+    "path": "/users/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read all users' basic profiles",
+            "FullDescription": "Allows the app to read a basic set of profile properties of other users in your organization on your behalf. Includes display name, first and last name, email address and photo.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users' full profiles",
+            "FullDescription": "Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as other users, groups.  It does not allow the app to delete users or groups, or reset user passwords.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": true,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "User.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users' full profiles",
+            "FullDescription": "Allows the app to read and update user profiles without a signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgUserCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

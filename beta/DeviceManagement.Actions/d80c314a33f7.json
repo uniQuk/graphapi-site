@@ -1,0 +1,33 @@
+{
+  "/deviceManagement/androidDeviceOwnerEnrollmentProfiles/{androidDeviceOwnerEnrollmentProfile-id}/microsoft.graph.revokeToken": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action revokeToken",
+      "operationId": "deviceManagement.androidDeviceOwnerEnrollmentProfile_revokeToken",
+      "parameters": [
+        {
+          "name": "androidDeviceOwnerEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of androidDeviceOwnerEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidDeviceOwnerEnrollmentProfile"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

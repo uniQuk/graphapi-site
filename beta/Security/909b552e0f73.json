@@ -1,0 +1,163 @@
+{
+  "/security/triggerTypes/retentionEventTypes/{retentionEventType-id}": {
+    "get": {
+      "tags": [
+        "security.triggerTypesRoot"
+      ],
+      "summary": "Get retentionEventType",
+      "description": "Read the properties and relationships of a retentionEventType object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-retentioneventtype-get?view=graph-rest-beta"
+      },
+      "operationId": "security.triggerType_GetRetentionEventType",
+      "parameters": [
+        {
+          "name": "retentionEventType-id",
+          "in": "path",
+          "description": "The unique identifier of retentionEventType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionEventType"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.retentionEventType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.triggerTypesRoot"
+      ],
+      "summary": "Update the navigation property retentionEventTypes in security",
+      "operationId": "security.triggerType_UpdateRetentionEventType",
+      "parameters": [
+        {
+          "name": "retentionEventType-id",
+          "in": "path",
+          "description": "The unique identifier of retentionEventType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionEventType"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.retentionEventType"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.retentionEventType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.triggerTypesRoot"
+      ],
+      "summary": "Delete retentionEventType",
+      "description": "Delete a retentionEventType object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-retentioneventtype-delete?view=graph-rest-beta"
+      },
+      "operationId": "security.triggerType_DeleteRetentionEventType",
+      "parameters": [
+        {
+          "name": "retentionEventType-id",
+          "in": "path",
+          "description": "The unique identifier of retentionEventType",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionEventType"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

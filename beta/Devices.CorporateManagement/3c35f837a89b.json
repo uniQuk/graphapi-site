@@ -1,0 +1,75 @@
+{
+  "/deviceAppManagement/mobileApps/{mobileApp-id}/microsoft.graph.macOSDmgApp/contentVersions/{mobileAppContent-id}/files/{mobileAppContentFile-id}/microsoft.graph.commit": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action commit",
+      "description": "Commits a file of a given app.",
+      "operationId": "deviceAppManagement.mobileApp.microsoft.graph.macOSDmgApp.contentVersion.file_commit",
+      "parameters": [
+        {
+          "name": "mobileApp-id",
+          "in": "path",
+          "description": "The unique identifier of mobileApp",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileApp"
+        },
+        {
+          "name": "mobileAppContent-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppContent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppContent"
+        },
+        {
+          "name": "mobileAppContentFile-id",
+          "in": "path",
+          "description": "The unique identifier of mobileAppContentFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mobileAppContentFile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fileEncryptionInfo": {
+                  "$ref": "#/components/schemas/microsoft.graph.fileEncryptionInfo"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

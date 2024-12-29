@@ -1,0 +1,168 @@
+{
+  "/directory/externalUserProfiles/{externalUserProfile-id}": {
+    "get": {
+      "tags": [
+        "directory.externalUserProfile"
+      ],
+      "summary": "Get externalUserProfile",
+      "description": "Retrieve the properties of a specific externalUserProfile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/externaluserprofile-get?view=graph-rest-beta"
+      },
+      "operationId": "directory_GetExternalUserProfile",
+      "parameters": [
+        {
+          "name": "externalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of externalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalUserProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.externalUserProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.externalUserProfile"
+      ],
+      "summary": "Update externalUserProfile",
+      "description": "Update the properties of a externalUserProfile object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/externaluserprofile-update?view=graph-rest-beta"
+      },
+      "operationId": "directory_UpdateExternalUserProfile",
+      "parameters": [
+        {
+          "name": "externalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of externalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalUserProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.externalUserProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.externalUserProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.externalUserProfile"
+      ],
+      "summary": "Delete externalUserProfile",
+      "description": "Delete an externalUserProfile object. Note: To permanently delete the externalUserProfile, follow permanently delete an item. To restore an externalUserProfile, follow restore a deleted item.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directory-delete-externaluserprofiles?view=graph-rest-beta"
+      },
+      "operationId": "directory_DeleteExternalUserProfile",
+      "parameters": [
+        {
+          "name": "externalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of externalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalUserProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

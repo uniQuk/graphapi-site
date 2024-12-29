@@ -1,0 +1,186 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get accessPackageCatalog",
+      "description": "Retrieve the properties and relationships of an accessPackageCatalog object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement_GetAccessPackageCatalog",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageCatalog"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update accessPackageCatalog",
+      "description": "Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement_UpdateAccessPackageCatalog",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessPackageCatalog"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageCatalog"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete accessPackageCatalog",
+      "description": "Delete an accessPackageCatalog.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement_DeleteAccessPackageCatalog",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

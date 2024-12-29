@@ -1,0 +1,65 @@
+{
+  "/directory/recommendations/{recommendation-id}/microsoft.graph.dismiss": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action dismiss",
+      "description": "Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-beta"
+      },
+      "operationId": "directory.recommendation_dismiss",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dismissReason": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.recommendation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

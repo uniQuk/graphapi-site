@@ -1,0 +1,45 @@
+{
+  "/solutions/backupRestore/protectionPolicies/{protectionPolicyBase-id}/microsoft.graph.deactivate": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action deactivate",
+      "description": "Deactivate a protectionPolicyBase.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta"
+      },
+      "operationId": "solution.backupRestore.protectionPolicy_deactivate",
+      "parameters": [
+        {
+          "name": "protectionPolicyBase-id",
+          "in": "path",
+          "description": "The unique identifier of protectionPolicyBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "protectionPolicyBase"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.protectionPolicyBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

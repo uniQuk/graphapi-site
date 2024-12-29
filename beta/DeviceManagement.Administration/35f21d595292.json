@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/intuneBrandingProfiles/{intuneBrandingProfile-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.intuneBrandingProfile"
+      ],
+      "summary": "Get intuneBrandingProfiles from deviceManagement",
+      "description": "Intune branding profiles targeted to AAD groups",
+      "operationId": "deviceManagement_GetIntuneBrandingProfile",
+      "parameters": [
+        {
+          "name": "intuneBrandingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intuneBrandingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intuneBrandingProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.intuneBrandingProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.intuneBrandingProfile"
+      ],
+      "summary": "Update the navigation property intuneBrandingProfiles in deviceManagement",
+      "operationId": "deviceManagement_UpdateIntuneBrandingProfile",
+      "parameters": [
+        {
+          "name": "intuneBrandingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intuneBrandingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intuneBrandingProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.intuneBrandingProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.intuneBrandingProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.intuneBrandingProfile"
+      ],
+      "summary": "Delete navigation property intuneBrandingProfiles for deviceManagement",
+      "operationId": "deviceManagement_DeleteIntuneBrandingProfile",
+      "parameters": [
+        {
+          "name": "intuneBrandingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intuneBrandingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intuneBrandingProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

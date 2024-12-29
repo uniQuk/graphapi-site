@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/chromeOSOnboardingSettings/microsoft.graph.disconnect": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action disconnect",
+      "operationId": "deviceManagement.chromeOSOnboardingSetting_disconnect",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.chromeOSOnboardingStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

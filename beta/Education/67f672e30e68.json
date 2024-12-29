@@ -1,0 +1,58 @@
+{
+  "/education/schools/{educationSchool-id}/classes/{educationClass-id}/$ref": {
+    "delete": {
+      "tags": [
+        "education.educationSchool"
+      ],
+      "summary": "Remove educationClass",
+      "description": "Delete a class from a school.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationschool-delete-classes?view=graph-rest-beta"
+      },
+      "operationId": "education.school.class_DeleteEducationClassGraphBPreRef",
+      "parameters": [
+        {
+          "name": "educationSchool-id",
+          "in": "path",
+          "description": "The unique identifier of educationSchool",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSchool"
+        },
+        {
+          "name": "educationClass-id",
+          "in": "path",
+          "description": "The unique identifier of educationClass",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationClass"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

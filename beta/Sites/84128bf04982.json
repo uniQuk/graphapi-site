@@ -1,0 +1,96 @@
+{
+  "/groups/{group-id}/sites/{site-id}/pages/{baseSitePage-id}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSection-id}/columns/{horizontalSectionColumn-id}/webparts/$count": {
+    "get": {
+      "tags": [
+        "groups.site"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "group.site.pageAsSitePage.canvasLayout.horizontalSection.column.webpart_GetCount",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        },
+        {
+          "name": "baseSitePage-id",
+          "in": "path",
+          "description": "The unique identifier of baseSitePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "baseSitePage"
+        },
+        {
+          "name": "horizontalSection-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSection"
+        },
+        {
+          "name": "horizontalSectionColumn-id",
+          "in": "path",
+          "description": "The unique identifier of horizontalSectionColumn",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "horizontalSectionColumn"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

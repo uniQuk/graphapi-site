@@ -1,0 +1,98 @@
+{
+  "/networkAccess/connectivity/branches/{branchSite-id}/forwardingProfiles/{forwardingProfile-id}/policies/{policyLink-id}/policy": {
+    "get": {
+      "tags": [
+        "networkAccess.connectivity"
+      ],
+      "summary": "Get policy from networkAccess",
+      "description": "Policy.",
+      "operationId": "networkAccess.connectivity.branch.forwardingProfile.policy_GetPolicy",
+      "parameters": [
+        {
+          "name": "branchSite-id",
+          "in": "path",
+          "description": "The unique identifier of branchSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "branchSite"
+        },
+        {
+          "name": "forwardingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of forwardingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "forwardingProfile"
+        },
+        {
+          "name": "policyLink-id",
+          "in": "path",
+          "description": "The unique identifier of policyLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "policyLink"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.policy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-03-20",
+        "date": "2023-12-19",
+        "version": "2022-06/PrivatePreview:NetworkAccess",
+        "description": "The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

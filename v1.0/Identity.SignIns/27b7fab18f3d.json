@@ -1,0 +1,52 @@
+{
+  "/identityProtection/riskyServicePrincipals/{riskyServicePrincipal-id}/history/$count": {
+    "get": {
+      "tags": [
+        "identityProtection.riskyServicePrincipal"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identityProtection.riskyServicePrincipal.history_GetCount",
+      "parameters": [
+        {
+          "name": "riskyServicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of riskyServicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "riskyServicePrincipal"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

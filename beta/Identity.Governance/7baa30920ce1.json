@@ -1,0 +1,38 @@
+{
+  "/accessReviews/{accessReview-id}/microsoft.graph.resetDecisions": {
+    "post": {
+      "tags": [
+        "accessReviews.Actions"
+      ],
+      "summary": "Invoke action resetDecisions",
+      "description": "In the Microsoft Entra access reviews feature, reset the decisions of a currently active accessReview.  The target object can be either a one-time access review, or an instance of a recurring access review.  Previous decisions are no longer recorded, but reviewers can continue to update decisions.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accessreview-reset?view=graph-rest-beta"
+      },
+      "operationId": "accessReview_resetDecision",
+      "parameters": [
+        {
+          "name": "accessReview-id",
+          "in": "path",
+          "description": "The unique identifier of accessReview",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessReview"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

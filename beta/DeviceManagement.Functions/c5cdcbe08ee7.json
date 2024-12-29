@@ -1,0 +1,41 @@
+{
+  "/deviceManagement/deviceHealthScripts/{deviceHealthScript-id}/microsoft.graph.getRemediationHistory()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getRemediationHistory",
+      "description": "Function to get the number of remediations by a device health scripts",
+      "operationId": "deviceManagement.deviceHealthScript_getRemediationHistory",
+      "parameters": [
+        {
+          "name": "deviceHealthScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceHealthScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceHealthScript"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceHealthScriptRemediationHistory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

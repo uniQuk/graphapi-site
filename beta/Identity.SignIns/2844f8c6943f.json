@@ -1,0 +1,168 @@
+{
+  "/identity/userFlowAttributes/{identityUserFlowAttribute-id}": {
+    "get": {
+      "tags": [
+        "identity.identityUserFlowAttribute"
+      ],
+      "summary": "Get identityUserFlowAttribute",
+      "description": "Retrieve the properties and relationships of a identityUserFlowAttribute object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-beta"
+      },
+      "operationId": "identity_GetUserFlowAttribute",
+      "parameters": [
+        {
+          "name": "identityUserFlowAttribute-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlowAttribute",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlowAttribute"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityUserFlowAttribute"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.identityUserFlowAttribute"
+      ],
+      "summary": "Update identityUserFlowAttribute",
+      "description": "Update the properties of a custom identityUserFlowAttribute object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-beta"
+      },
+      "operationId": "identity_UpdateUserFlowAttribute",
+      "parameters": [
+        {
+          "name": "identityUserFlowAttribute-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlowAttribute",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlowAttribute"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityUserFlowAttribute"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityUserFlowAttribute"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.identityUserFlowAttribute"
+      ],
+      "summary": "Delete identityUserFlowAttribute",
+      "description": "Delete a custom identityUserFlowAttribute.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-beta"
+      },
+      "operationId": "identity_DeleteUserFlowAttribute",
+      "parameters": [
+        {
+          "name": "identityUserFlowAttribute-id",
+          "in": "path",
+          "description": "The unique identifier of identityUserFlowAttribute",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityUserFlowAttribute"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

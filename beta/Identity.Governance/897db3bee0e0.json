@@ -1,0 +1,220 @@
+{
+  "/identityGovernance/termsOfUse/agreements/{agreement-id}/file/localizations/{agreementFileLocalization-id}/versions/{agreementFileVersion-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Get versions from identityGovernance",
+      "description": "Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.",
+      "operationId": "identityGovernance.termsGraphOPreUse.agreement.file.localization_GetVersion",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementFileLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileLocalization"
+        },
+        {
+          "name": "agreementFileVersion-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileVersion"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementFileVersion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Update the navigation property versions in identityGovernance",
+      "operationId": "identityGovernance.termsGraphOPreUse.agreement.file.localization_UpdateVersion",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementFileLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileLocalization"
+        },
+        {
+          "name": "agreementFileVersion-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileVersion"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.agreementFileVersion"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.agreementFileVersion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Delete navigation property versions for identityGovernance",
+      "operationId": "identityGovernance.termsGraphOPreUse.agreement.file.localization_DeleteVersion",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementFileLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileLocalization"
+        },
+        {
+          "name": "agreementFileVersion-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileVersion"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

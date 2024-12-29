@@ -1,0 +1,158 @@
+{
+  "/groupSettingTemplates/{groupSettingTemplate-id}": {
+    "get": {
+      "tags": [
+        "groupSettingTemplates.groupSettingTemplate"
+      ],
+      "summary": "Get a group setting template",
+      "description": "A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0"
+      },
+      "operationId": "groupSettingTemplate_GetGroupSettingTemplate",
+      "parameters": [
+        {
+          "name": "groupSettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of groupSettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSettingTemplate"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupSettingTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "groupSettingTemplates.groupSettingTemplate"
+      ],
+      "summary": "Update entity in groupSettingTemplates",
+      "operationId": "groupSettingTemplate_UpdateGroupSettingTemplate",
+      "parameters": [
+        {
+          "name": "groupSettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of groupSettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSettingTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupSettingTemplate"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupSettingTemplate"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "groupSettingTemplates.groupSettingTemplate"
+      ],
+      "summary": "Delete entity from groupSettingTemplates",
+      "operationId": "groupSettingTemplate_DeleteGroupSettingTemplate",
+      "parameters": [
+        {
+          "name": "groupSettingTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of groupSettingTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSettingTemplate"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "/security/attackSimulation/simulations/{simulation-id}": {
+    "get": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Get simulation",
+      "description": "Get an attack simulation campaign for a tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-beta"
+      },
+      "operationId": "security.attackSimulation_GetSimulation",
+      "parameters": [
+        {
+          "name": "simulation-id",
+          "in": "path",
+          "description": "The unique identifier of simulation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "simulation"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.simulation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Update simulation",
+      "description": "Update an attack simulation campaign for a tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-beta"
+      },
+      "operationId": "security.attackSimulation_UpdateSimulation",
+      "parameters": [
+        {
+          "name": "simulation-id",
+          "in": "path",
+          "description": "The unique identifier of simulation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "simulation"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.simulation"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.simulation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Delete simulation",
+      "description": "Delete an attack simulation campaign for a tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/simulation-delete?view=graph-rest-beta"
+      },
+      "operationId": "security.attackSimulation_DeleteSimulation",
+      "parameters": [
+        {
+          "name": "simulation-id",
+          "in": "path",
+          "description": "The unique identifier of simulation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "simulation"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

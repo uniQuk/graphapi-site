@@ -1,0 +1,3029 @@
+{
+  "fdd26d729f72": {
+    "path": "/tenantRelationships/managedTenants",
+    "methods": {}
+  },
+  "4c7d667d95f8": {
+    "path": "/tenantRelationships/managedTenants/aggregatedPolicyCompliances",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAggregatedPolicyCompliance",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-aggregatedpolicycompliances?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAggregatedPolicyCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "347d4e55e2f1": {
+    "path": "/tenantRelationships/managedTenants/aggregatedPolicyCompliances/{aggregatedPolicyCompliance-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAggregatedPolicyCompliance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAggregatedPolicyCompliance",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAggregatedPolicyCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "04f31080323d": {
+    "path": "/tenantRelationships/managedTenants/aggregatedPolicyCompliances/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAggregatedPolicyComplianceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ea96fdfb8fe0": {
+    "path": "/tenantRelationships/managedTenants/appPerformances",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAppPerformance",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAppPerformance",
+        "apiReference": ""
+      }
+    }
+  },
+  "b5af0efc9bd4": {
+    "path": "/tenantRelationships/managedTenants/appPerformances/{appPerformance-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAppPerformance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAppPerformance",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAppPerformance",
+        "apiReference": ""
+      }
+    }
+  },
+  "807f1debe6e7": {
+    "path": "/tenantRelationships/managedTenants/appPerformances/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAppPerformanceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4a8e8f3cc6ce": {
+    "path": "/tenantRelationships/managedTenants/auditEvents",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAuditEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-auditevents?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAuditEvent",
+        "apiReference": ""
+      }
+    }
+  },
+  "5ae1574fc136": {
+    "path": "/tenantRelationships/managedTenants/auditEvents/{auditEvent-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAuditEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-auditevent-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAuditEvent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAuditEvent",
+        "apiReference": ""
+      }
+    }
+  },
+  "770ae4633ecb": {
+    "path": "/tenantRelationships/managedTenants/auditEvents/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAuditEventCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "549069894f76": {
+    "path": "/tenantRelationships/managedTenants/cloudPcConnections",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcconnections?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantCloudPcConnection",
+        "apiReference": ""
+      }
+    }
+  },
+  "817802f79b1a": {
+    "path": "/tenantRelationships/managedTenants/cloudPcConnections/{cloudPcConnection-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantCloudPcConnection",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantCloudPcConnection",
+        "apiReference": ""
+      }
+    }
+  },
+  "c0c3285426ed": {
+    "path": "/tenantRelationships/managedTenants/cloudPcConnections/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcConnectionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a112f91def44": {
+    "path": "/tenantRelationships/managedTenants/cloudPcDevices",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcDevice",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcdevices?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantCloudPcDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "6c806ff92070": {
+    "path": "/tenantRelationships/managedTenants/cloudPcDevices/{cloudPcDevice-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcDevice",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-cloudpcdevice-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantCloudPcDevice",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantCloudPcDevice",
+        "apiReference": ""
+      }
+    }
+  },
+  "a194da2db027": {
+    "path": "/tenantRelationships/managedTenants/cloudPcDevices/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcDeviceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "950ed79da581": {
+    "path": "/tenantRelationships/managedTenants/cloudPcsOverview",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcOverview",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcsoverview?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantCloudPcOverview",
+        "apiReference": ""
+      }
+    }
+  },
+  "13e0adef14c1": {
+    "path": "/tenantRelationships/managedTenants/cloudPcsOverview/{cloudPcOverview-tenantId}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcOverview",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-cloudpcoverview-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantCloudPcOverview",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantCloudPcOverview",
+        "apiReference": ""
+      }
+    }
+  },
+  "d98b4e8f5020": {
+    "path": "/tenantRelationships/managedTenants/cloudPcsOverview/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "CloudPC.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Cloud PCs",
+            "FullDescription": "Allows the app to read the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "CloudPC.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Cloud PCs",
+            "FullDescription": "Allows the app to read and write the properties of Cloud PCs, on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCloudPcOverviewCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "771ac0ee74ec": {
+    "path": "/tenantRelationships/managedTenants/conditionalAccessPolicyCoverages",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Policy.Read.All",
+            "IsAdmin": true,
+            "Description": "Read your organization's policies",
+            "FullDescription": "Allows the app to read your organization's policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Policy.ReadWrite.ConditionalAccess",
+            "IsAdmin": true,
+            "Description": "Read and write your organization's conditional access policies",
+            "FullDescription": "Allows the app to read and write your organization's conditional access policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": true,
+            "Description": "Read applications",
+            "FullDescription": "Allows the app to read applications and service principals on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverage",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-conditionalaccesspolicycoverages?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverage",
+        "apiReference": ""
+      }
+    }
+  },
+  "41f79f6d6109": {
+    "path": "/tenantRelationships/managedTenants/conditionalAccessPolicyCoverages/{conditionalAccessPolicyCoverage-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Policy.Read.All",
+            "IsAdmin": true,
+            "Description": "Read your organization's policies",
+            "FullDescription": "Allows the app to read your organization's policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Policy.ReadWrite.ConditionalAccess",
+            "IsAdmin": true,
+            "Description": "Read and write your organization's conditional access policies",
+            "FullDescription": "Allows the app to read and write your organization's conditional access policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": true,
+            "Description": "Read applications",
+            "FullDescription": "Allows the app to read applications and service principals on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverage",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-conditionalaccesspolicycoverage-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverage",
+        "apiReference": ""
+      }
+    }
+  },
+  "ba2a26cb8c57": {
+    "path": "/tenantRelationships/managedTenants/conditionalAccessPolicyCoverages/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Policy.Read.All",
+            "IsAdmin": true,
+            "Description": "Read your organization's policies",
+            "FullDescription": "Allows the app to read your organization's policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Policy.ReadWrite.ConditionalAccess",
+            "IsAdmin": true,
+            "Description": "Read and write your organization's conditional access policies",
+            "FullDescription": "Allows the app to read and write your organization's conditional access policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": true,
+            "Description": "Read applications",
+            "FullDescription": "Allows the app to read applications and service principals on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantConditionalAccessPolicyCoverageCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "70f5deae1839": {
+    "path": "/tenantRelationships/managedTenants/credentialUserRegistrationsSummaries",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-credentialuserregistrationssummaries?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "09b709f74043": {
+    "path": "/tenantRelationships/managedTenants/credentialUserRegistrationsSummaries/{credentialUserRegistrationsSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummary",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "c8869508abb0": {
+    "path": "/tenantRelationships/managedTenants/credentialUserRegistrationsSummaries/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCredentialUserRegistrationSummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "76f090238b03": {
+    "path": "/tenantRelationships/managedTenants/deviceAppPerformances",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceAppPerformance",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantDeviceAppPerformance",
+        "apiReference": ""
+      }
+    }
+  },
+  "0642fca74c41": {
+    "path": "/tenantRelationships/managedTenants/deviceAppPerformances/{deviceAppPerformance-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceAppPerformance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantDeviceAppPerformance",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantDeviceAppPerformance",
+        "apiReference": ""
+      }
+    }
+  },
+  "0fc6c6b466d0": {
+    "path": "/tenantRelationships/managedTenants/deviceAppPerformances/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceAppPerformanceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c1321c31a113": {
+    "path": "/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-devicecompliancepolicysettingstatesummary?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "6cb6e3fed3e0": {
+    "path": "/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune Device Configuration and Policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-devicecompliancepolicysettingstatesummary-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummary",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d46bd596538": {
+    "path": "/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceCompliancePolicySettingStateSummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4cf3fcc000f0": {
+    "path": "/tenantRelationships/managedTenants/deviceHealthStatuses",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceHealthStatus",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantDeviceHealthStatus",
+        "apiReference": ""
+      }
+    }
+  },
+  "accbe148fac9": {
+    "path": "/tenantRelationships/managedTenants/deviceHealthStatuses/{deviceHealthStatus-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceHealthStatus",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantDeviceHealthStatus",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantDeviceHealthStatus",
+        "apiReference": ""
+      }
+    }
+  },
+  "b98fb99df411": {
+    "path": "/tenantRelationships/managedTenants/deviceHealthStatuses/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDeviceHealthStatusCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f8c2d4b1d296": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceCompliances",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceCompliance",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-manageddevicecompliances?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagedDeviceCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "2f95e72d44e8": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceCompliances/{managedDeviceCompliance-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceCompliance",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagedDeviceCompliance",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagedDeviceCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "b36b356fad56": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceCompliances/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b637407663d": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceComplianceTrends",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrend",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-manageddevicecompliancetrends?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrend",
+        "apiReference": ""
+      }
+    }
+  },
+  "b8665c4e8c70": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceComplianceTrends/{managedDeviceComplianceTrend-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrend",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrend",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrend",
+        "apiReference": ""
+      }
+    }
+  },
+  "f1067aeedf2b": {
+    "path": "/tenantRelationships/managedTenants/managedDeviceComplianceTrends/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagedDeviceComplianceTrendCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3f8254c7ccc1": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertLogs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertLog",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAlertLog",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e051bfd293d": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertLogs/{managedTenantAlertLog-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertLog",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAlertLog",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAlertLog",
+        "apiReference": ""
+      }
+    }
+  },
+  "40d608a81598": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertLogs/{managedTenantAlertLog-id}/alert",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertLogAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "96ff0fd53507": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertLogs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertLogCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a3bf2136746a": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinition",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAlertRuleDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "d2012bbf4cc8": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinition",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAlertRuleDefinition",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAlertRuleDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "ca3ccbd095a6": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition-id}/alertRules",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinitionAlertRule",
+        "apiReference": ""
+      }
+    }
+  },
+  "a0b06ba2667e": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition-id}/alertRules/{managedTenantAlertRule-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinitionAlertRule",
+        "apiReference": ""
+      }
+    }
+  },
+  "1f118f01ec14": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition-id}/alertRules/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinitionAlertRuleCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "12f6522ae6ea": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleDefinitionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e351edf4edbc": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRule",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAlertRule",
+        "apiReference": ""
+      }
+    }
+  },
+  "70952d8d7be9": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRule",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAlertRule",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAlertRule",
+        "apiReference": ""
+      }
+    }
+  },
+  "c3a10715dce1": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}/alerts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "fb32c5beb590": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}/alerts/{managedTenantAlert-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "fef9eb35c14d": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}/alerts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleAlertCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c1efec53e93d": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}/ruleDefinition",
+    "methods": {}
+  },
+  "20a15a76b801": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlertRules/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertRuleCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "85f6a0bb07cd": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlert",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "7baec38a5f52": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlert",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantAlert",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "62505f1aff01": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/alertLogs",
+    "methods": {}
+  },
+  "713f3413c228": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/alertLogs/{managedTenantAlertLog-id}",
+    "methods": {}
+  },
+  "9bfdabeee291": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/alertLogs/$count",
+    "methods": {}
+  },
+  "1023368076d8": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/alertRule",
+    "methods": {}
+  },
+  "9bf6f01b84c6": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/apiNotifications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertApiNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "64b780d33e6a": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/apiNotifications/{managedTenantApiNotification-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertApiNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "559111a33591": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/apiNotifications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertApiNotificationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "bbda8ec4c574": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/emailNotifications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertEmailNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e2f958837a8": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/emailNotifications/{managedTenantEmailNotification-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertEmailNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "5de2c798e973": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/{managedTenantAlert-id}/emailNotifications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertEmailNotificationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ceeba0de0247": {
+    "path": "/tenantRelationships/managedTenants/managedTenantAlerts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantAlertCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5873a288d1b0": {
+    "path": "/tenantRelationships/managedTenants/managedTenantApiNotifications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantApiNotification",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantApiNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "c57bf6f50c84": {
+    "path": "/tenantRelationships/managedTenants/managedTenantApiNotifications/{managedTenantApiNotification-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantApiNotification",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantApiNotification",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantApiNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "f714d7ec6723": {
+    "path": "/tenantRelationships/managedTenants/managedTenantApiNotifications/{managedTenantApiNotification-id}/alert",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantApiNotificationAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "794dad50c012": {
+    "path": "/tenantRelationships/managedTenants/managedTenantApiNotifications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantApiNotificationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f89ce39f2f91": {
+    "path": "/tenantRelationships/managedTenants/managedTenantEmailNotifications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantEmailNotification",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantEmailNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "4bbf7d8941c3": {
+    "path": "/tenantRelationships/managedTenants/managedTenantEmailNotifications/{managedTenantEmailNotification-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantEmailNotification",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantEmailNotification",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantEmailNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "66b2e1edcd40": {
+    "path": "/tenantRelationships/managedTenants/managedTenantEmailNotifications/{managedTenantEmailNotification-id}/alert",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantEmailNotificationAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "ef4a17af745c": {
+    "path": "/tenantRelationships/managedTenants/managedTenantEmailNotifications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantEmailNotificationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ec40a8690eb9": {
+    "path": "/tenantRelationships/managedTenants/managedTenantTicketingEndpoints",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTicketingEndpoint",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantTicketingEndpoint",
+        "apiReference": ""
+      }
+    }
+  },
+  "c0e7ee46a8b9": {
+    "path": "/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/{managedTenantTicketingEndpoint-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTicketingEndpoint",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantTicketingEndpoint",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantTicketingEndpoint",
+        "apiReference": ""
+      }
+    }
+  },
+  "0fc9e419bd29": {
+    "path": "/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTicketingEndpointCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7953ee257f37": {
+    "path": "/tenantRelationships/managedTenants/managementActions",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementAction",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementAction",
+        "apiReference": ""
+      }
+    }
+  },
+  "bd97f5182820": {
+    "path": "/tenantRelationships/managedTenants/managementActions/{managementAction-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementAction",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managementaction-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementAction",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementAction",
+        "apiReference": ""
+      }
+    }
+  },
+  "8147792e4072": {
+    "path": "/tenantRelationships/managedTenants/managementActions/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementActionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "17a8599b1837": {
+    "path": "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatus",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatus",
+        "apiReference": ""
+      }
+    }
+  },
+  "feef6d09c283": {
+    "path": "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/{managementActionTenantDeploymentStatus-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatus",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managementactiontenantdeploymentstatus-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatus",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatus",
+        "apiReference": ""
+      }
+    }
+  },
+  "205a1e6b0004": {
+    "path": "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementActionTenantDeploymentStatusCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5835137400ae": {
+    "path": "/tenantRelationships/managedTenants/managementIntents",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementIntent",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementintents?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementIntent",
+        "apiReference": ""
+      }
+    }
+  },
+  "d038ca060e36": {
+    "path": "/tenantRelationships/managedTenants/managementIntents/{managementIntent-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementIntent",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managementintent-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementIntent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementIntent",
+        "apiReference": ""
+      }
+    }
+  },
+  "017813b13a4c": {
+    "path": "/tenantRelationships/managedTenants/managementIntents/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementIntentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b15ea6c9718c": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollection",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateCollection",
+        "apiReference": ""
+      }
+    }
+  },
+  "6fc6c6b69910": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollection",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateCollection",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateCollection",
+        "apiReference": ""
+      }
+    }
+  },
+  "2b381a8583a3": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}/managementTemplates",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionManagementTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "760d92ec3672": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}/managementTemplates/{managementTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionManagementTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "35f0461de816": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}/managementTemplates/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionManagementTemplateCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8d4fa4739827": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollections/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fd81da016714": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummary",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "237ddcc8ecee": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/{managementTemplateCollectionTenantSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummary",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummary",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "bc8c2ac04837": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCollectionTenantSummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "da407f310fe2": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplate",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementtemplates?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "66b7623dedc6": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplate",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managementtemplate-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplate",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "be05336619d1": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateCollections",
+    "methods": {}
+  },
+  "eb56b9d50d5b": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateCollections/{managementTemplateCollection-id}",
+    "methods": {}
+  },
+  "1b9f7068f7fc": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateCollections/$count",
+    "methods": {}
+  },
+  "65481bdfa8b3": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateSteps",
+    "methods": {}
+  },
+  "c9e2af7ef432": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateSteps/{managementTemplateStep-id}",
+    "methods": {}
+  },
+  "a10c7e04b9a0": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateSteps/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "104a407a3eb2": {
+    "path": "/tenantRelationships/managedTenants/managementTemplates/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "852c0e7da2d3": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStep",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateStep",
+        "apiReference": ""
+      }
+    }
+  },
+  "fb7a048fda78": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStep",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateStep",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateStep",
+        "apiReference": ""
+      }
+    }
+  },
+  "e77c75911636": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/acceptedVersion",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepAcceptedVersion",
+        "apiReference": ""
+      }
+    }
+  },
+  "855b33334569": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/managementTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepManagementTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "d8df0436eda9": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/versions",
+    "methods": {}
+  },
+  "f2cb1d6411b9": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/versions/{managementTemplateStepVersion-id}",
+    "methods": {}
+  },
+  "31e885002389": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/versions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6fb81eb730c9": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateSteps/$count",
+    "methods": {}
+  },
+  "479edeba611f": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepTenantSummaries",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummary",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "89816f2bc6ef": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepTenantSummaries/{managementTemplateStepTenantSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummary",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummary",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "41078fd0b77c": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepTenantSummaries/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepTenantSummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "52e7d24026a7": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersion",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersion",
+        "apiReference": ""
+      }
+    }
+  },
+  "616c762b09da": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersion",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersion",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersion",
+        "apiReference": ""
+      }
+    }
+  },
+  "cf4fcd66cd48": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/acceptedFor",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionAcceptedFor",
+        "apiReference": ""
+      }
+    }
+  },
+  "3c58438fea58": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeployment",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeployment",
+        "apiReference": ""
+      }
+    }
+  },
+  "bb7cb34ee631": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeployment",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeployment",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeployment",
+        "apiReference": ""
+      }
+    }
+  },
+  "263d64b48bfb": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/templateStepVersion",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeploymentTemplateStepVersion",
+        "apiReference": ""
+      }
+    }
+  },
+  "392aa893474d": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionDeploymentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "88b735e15bc8": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/templateStep",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantManagementTemplateStepVersionTemplateStep",
+        "apiReference": ""
+      }
+    }
+  },
+  "f57bda504e0e": {
+    "path": "/tenantRelationships/managedTenants/managementTemplateStepVersions/$count",
+    "methods": {}
+  },
+  "d2f85e5ba61e": {
+    "path": "/tenantRelationships/managedTenants/myRoles",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantMyRole",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-myroles?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantMyRole",
+        "apiReference": ""
+      }
+    }
+  },
+  "430e8fe732b6": {
+    "path": "/tenantRelationships/managedTenants/myRoles/{myRole-tenantId}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantMyRole",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantMyRole",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantMyRole",
+        "apiReference": ""
+      }
+    }
+  },
+  "0b4de6719024": {
+    "path": "/tenantRelationships/managedTenants/myRoles/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantMyRoleCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "79fe671634a8": {
+    "path": "/tenantRelationships/managedTenants/tenantGroups",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "118e3299ea53": {
+    "path": "/tenantRelationships/managedTenants/tenantGroups/{tenantGroup-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenantgroup-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantGroup",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "40b7631b58b2": {
+    "path": "/tenantRelationships/managedTenants/tenantGroups/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "aa2cf1cf28c7": {
+    "path": "/tenantRelationships/managedTenants/tenants",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenant",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenants?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenant",
+        "apiReference": ""
+      }
+    }
+  },
+  "8667d735f4c7": {
+    "path": "/tenantRelationships/managedTenants/tenants/{tenant-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenant",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenant-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenant",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenant",
+        "apiReference": ""
+      }
+    }
+  },
+  "64c151356f66": {
+    "path": "/tenantRelationships/managedTenants/tenants/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8a802892bcac": {
+    "path": "/tenantRelationships/managedTenants/tenantsCustomizedInformation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCustomizedInformation",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantscustomizedinformation?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantCustomizedInformation",
+        "apiReference": ""
+      }
+    }
+  },
+  "49aab08c106d": {
+    "path": "/tenantRelationships/managedTenants/tenantsCustomizedInformation/{tenantCustomizedInformation-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCustomizedInformation",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantCustomizedInformation",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantCustomizedInformation",
+        "apiReference": ""
+      }
+    }
+  },
+  "b404c9561b19": {
+    "path": "/tenantRelationships/managedTenants/tenantsCustomizedInformation/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantCustomizedInformationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c7ee7ca69a1d": {
+    "path": "/tenantRelationships/managedTenants/tenantsDetailedInformation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDetailedInformation",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantsdetailedinformation?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantDetailedInformation",
+        "apiReference": ""
+      }
+    }
+  },
+  "8f501b50412b": {
+    "path": "/tenantRelationships/managedTenants/tenantsDetailedInformation/{tenantDetailedInformation-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDetailedInformation",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenantdetailedinformation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantDetailedInformation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantDetailedInformation",
+        "apiReference": ""
+      }
+    }
+  },
+  "8b513b3ac2fc": {
+    "path": "/tenantRelationships/managedTenants/tenantsDetailedInformation/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantDetailedInformationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0870aa6e4117": {
+    "path": "/tenantRelationships/managedTenants/tenantTags",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-beta"
+      }
+    }
+  },
+  "0ceed0250a5a": {
+    "path": "/tenantRelationships/managedTenants/tenantTags/{tenantTag-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenanttag-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenanttag-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-tenanttag-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "82e49fe77dbb": {
+    "path": "/tenantRelationships/managedTenants/tenantTags/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ManagedTenants.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all managed tenant information",
+            "FullDescription": "Allows the app to read all managed tenant information on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "ManagedTenants.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all managed tenant information",
+            "FullDescription": "Allows the app to read and write all managed tenant information on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantTagCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dc983c231fae": {
+    "path": "/tenantRelationships/managedTenants/windowsDeviceMalwareStates",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareState",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-windowsdevicemalwarestates?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareState",
+        "apiReference": ""
+      }
+    }
+  },
+  "8cf641fc5b86": {
+    "path": "/tenantRelationships/managedTenants/windowsDeviceMalwareStates/{windowsDeviceMalwareState-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareState",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-windowsdevicemalwarestate-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareState",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareState",
+        "apiReference": ""
+      }
+    }
+  },
+  "941961046cbb": {
+    "path": "/tenantRelationships/managedTenants/windowsDeviceMalwareStates/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsDeviceMalwareStateCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cdfebedfa9e0": {
+    "path": "/tenantRelationships/managedTenants/windowsProtectionStates",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsProtectionState",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-windowsprotectionstates?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaTenantRelationshipManagedTenantWindowsProtectionState",
+        "apiReference": ""
+      }
+    }
+  },
+  "edcc3c4d9f86": {
+    "path": "/tenantRelationships/managedTenants/windowsProtectionStates/{windowsProtectionState-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsProtectionState",
+        "apiReference": "https://learn.microsoft.com/graph/api/managedtenants-windowsprotectionstate-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaTenantRelationshipManagedTenantWindowsProtectionState",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaTenantRelationshipManagedTenantWindowsProtectionState",
+        "apiReference": ""
+      }
+    }
+  },
+  "8a747a719b1e": {
+    "path": "/tenantRelationships/managedTenants/windowsProtectionStates/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": true,
+            "Description": "Read devices Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune. Does not allow high impact operations such as remote wipe and password reset on the devices owner.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaTenantRelationshipManagedTenantWindowsProtectionStateCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

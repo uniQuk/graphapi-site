@@ -1,0 +1,168 @@
+{
+  "/policies/featureRolloutPolicies/{featureRolloutPolicy-id}": {
+    "get": {
+      "tags": [
+        "policies.featureRolloutPolicy"
+      ],
+      "summary": "Get featureRolloutPolicy",
+      "description": "Retrieve the properties and relationships of a featureRolloutPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "policy_GetFeatureRolloutPolicy",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.featureRolloutPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.featureRolloutPolicy"
+      ],
+      "summary": "Update featurerolloutpolicy",
+      "description": "Update the properties of featureRolloutPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-beta"
+      },
+      "operationId": "policy_UpdateFeatureRolloutPolicy",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.featureRolloutPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.featureRolloutPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.featureRolloutPolicy"
+      ],
+      "summary": "Delete featureRolloutPolicy",
+      "description": "Delete a featureRolloutPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-beta"
+      },
+      "operationId": "policy_DeleteFeatureRolloutPolicy",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

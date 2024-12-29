@@ -1,0 +1,253 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment-id}/accessPackage/accessPackageResourceRoleScopes/{accessPackageResourceRoleScope-id}/accessPackageResourceRole/accessPackageResource/accessPackageResourceScopes/{accessPackageResourceScope-id}/accessPackageResource/accessPackageResourceRoles/{accessPackageResourceRole-id}": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get accessPackageResourceRoles from identityGovernance",
+      "description": "Read-only. Nullable. Supports $expand.",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.accessPackageResourceRoleScope.accessPackageResourceRole.accessPackageResource.accessPackageResourceScope.accessPackageResource_GetAccessPackageResourceRole",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "accessPackageResourceRoleScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRoleScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRoleScope"
+        },
+        {
+          "name": "accessPackageResourceScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceScope"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageResourceRole"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Update the navigation property accessPackageResourceRoles in identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.accessPackageResourceRoleScope.accessPackageResourceRole.accessPackageResource.accessPackageResourceScope.accessPackageResource_UpdateAccessPackageResourceRole",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "accessPackageResourceRoleScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRoleScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRoleScope"
+        },
+        {
+          "name": "accessPackageResourceScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceScope"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.accessPackageResourceRole"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.accessPackageResourceRole"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Delete navigation property accessPackageResourceRoles for identityGovernance",
+      "operationId": "identityGovernance.entitlementManagement.accessPackageAssignment.accessPackage.accessPackageResourceRoleScope.accessPackageResourceRole.accessPackageResource.accessPackageResourceScope.accessPackageResource_DeleteAccessPackageResourceRole",
+      "parameters": [
+        {
+          "name": "accessPackageAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageAssignment"
+        },
+        {
+          "name": "accessPackageResourceRoleScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRoleScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRoleScope"
+        },
+        {
+          "name": "accessPackageResourceScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceScope"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "/directory/pendingExternalUserProfiles/{pendingExternalUserProfile-id}": {
+    "get": {
+      "tags": [
+        "directory.pendingExternalUserProfile"
+      ],
+      "summary": "Get pendingExternalUserProfile",
+      "description": "Retrieve the properties of a specific pendingExternalUserProfile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/pendingexternaluserprofile-get?view=graph-rest-beta"
+      },
+      "operationId": "directory_GetPendingExternalUserProfile",
+      "parameters": [
+        {
+          "name": "pendingExternalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of pendingExternalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "pendingExternalUserProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.pendingExternalUserProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.pendingExternalUserProfile"
+      ],
+      "summary": "Update pendingExternalUserProfile",
+      "description": "Update the properties of a pendingExternalUserProfile object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/pendingexternaluserprofile-update?view=graph-rest-beta"
+      },
+      "operationId": "directory_UpdatePendingExternalUserProfile",
+      "parameters": [
+        {
+          "name": "pendingExternalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of pendingExternalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "pendingExternalUserProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.pendingExternalUserProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.pendingExternalUserProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.pendingExternalUserProfile"
+      ],
+      "summary": "Delete pendingExternalUserProfile",
+      "description": "Delete a pendingExternalUserProfile object. Note: To permanently delete the pendingExternalUserProfile, follow permanently delete an item. To restore a pendingExternalUserProfile, follow restore a deleted item.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directory-delete-pendingexternaluserprofiles?view=graph-rest-beta"
+      },
+      "operationId": "directory_DeletePendingExternalUserProfile",
+      "parameters": [
+        {
+          "name": "pendingExternalUserProfile-id",
+          "in": "path",
+          "description": "The unique identifier of pendingExternalUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "pendingExternalUserProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

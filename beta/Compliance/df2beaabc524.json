@@ -1,0 +1,94 @@
+{
+  "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/microsoft.graph.ediscovery.export": {
+    "post": {
+      "tags": [
+        "compliance.Actions"
+      ],
+      "summary": "Invoke action export",
+      "description": "Initiate an export from a reviewSet.  For details, see Export documents from a review set in Advanced eDiscovery.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/ediscovery-reviewset-export?view=graph-rest-beta"
+      },
+      "operationId": "compliance.ediscovery.case.reviewSet_export",
+      "parameters": [
+        {
+          "name": "case-id",
+          "in": "path",
+          "description": "The unique identifier of case",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "case"
+        },
+        {
+          "name": "reviewSet-id",
+          "in": "path",
+          "description": "The unique identifier of reviewSet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "reviewSet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "outputName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "description": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "azureBlobContainer": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "azureBlobToken": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "exportOptions": {
+                  "$ref": "#/components/schemas/microsoft.graph.ediscovery.exportOptions"
+                },
+                "exportStructure": {
+                  "$ref": "#/components/schemas/microsoft.graph.ediscovery.exportFileStructure"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-02-01",
+        "date": "2022-12-05",
+        "version": "2022-12/ediscoveryNamespace",
+        "description": "The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

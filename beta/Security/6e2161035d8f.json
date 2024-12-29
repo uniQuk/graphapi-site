@@ -1,0 +1,32 @@
+{
+  "/security/identities/sensors/microsoft.graph.security.getDeploymentPackageUri()": {
+    "get": {
+      "tags": [
+        "security.Functions"
+      ],
+      "summary": "Invoke function getDeploymentPackageUri",
+      "description": "Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-sensor-getdeploymentpackageuri?view=graph-rest-beta"
+      },
+      "operationId": "security.identity.sensor_getDeploymentPackageUri",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.sensorDeploymentPackage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/microsoft.graph.cancel": {
+    "post": {
+      "tags": [
+        "privilegedAccess.Actions"
+      ],
+      "summary": "Invoke action cancel",
+      "operationId": "privilegedAccess.resource.roleAssignmentRequest_cancel",
+      "parameters": [
+        {
+          "name": "privilegedAccess-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccess",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccess"
+        },
+        {
+          "name": "governanceResource-id",
+          "in": "path",
+          "description": "The unique identifier of governanceResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "governanceResource"
+        },
+        {
+          "name": "governanceRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of governanceRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "governanceRoleAssignmentRequest"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

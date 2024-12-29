@@ -1,0 +1,45 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/licenseDetails/microsoft.graph.getTeamsLicensingDetails()": {
+    "get": {
+      "tags": [
+        "servicePrincipals.Functions"
+      ],
+      "summary": "Invoke function getTeamsLicensingDetails",
+      "description": "Get the license status of a user in Microsoft Teams.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/licensedetails-getteamslicensingdetails?view=graph-rest-beta"
+      },
+      "operationId": "servicePrincipal.licenseDetail_getTeamsLicensingDetail",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.teamsLicensingDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

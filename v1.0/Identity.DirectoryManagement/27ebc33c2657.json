@@ -1,0 +1,192 @@
+{
+  "/organization/{organization-id}/branding/backgroundImage": {
+    "get": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Get backgroundImage for the navigation property branding from organization",
+      "description": "Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 \u00d7 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.",
+      "operationId": "organization_GetBrandingBackgroundImage",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "image/bmp": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpeg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/gif": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/vnd.microsoft.icon": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/png": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/tiff": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Update backgroundImage for the navigation property branding in organization",
+      "description": "Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 \u00d7 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.",
+      "operationId": "organization_SetBrandingBackgroundImage",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "image/bmp": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/gif": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/vnd.microsoft.icon": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/png": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/tiff": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "organization.organizationalBranding"
+      ],
+      "summary": "Delete backgroundImage for the navigation property branding in organization",
+      "description": "Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 \u00d7 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.",
+      "operationId": "organization_DeleteBrandingBackgroundImage",
+      "parameters": [
+        {
+          "name": "organization-id",
+          "in": "path",
+          "description": "The unique identifier of organization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "organization"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

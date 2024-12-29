@@ -1,0 +1,332 @@
+{
+  "ca79dd1f8587": {
+    "path": "/compliance",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgCompliance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "66ef0b15d4a1": {
+    "path": "/privacy/subjectRightsRequests",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0"
+      }
+    }
+  },
+  "13ebfaf23890": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgPrivacySubjectRightsRequest",
+        "apiReference": ""
+      }
+    }
+  },
+  "0b1605a880bc": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "51a77719251b": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "d081d4424cd9": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgPrivacySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "279aa4255b00": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApproverServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "c4662e4ac2bd": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApproverServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a61e6a06d152": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestApproverCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d189ceb00038": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "3eee5fb42f16": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "7522f9b9241a": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgPrivacySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "b19e81758cee": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaboratorServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "69c115a2f581": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaboratorServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a0d4f685b2a4": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestCollaboratorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9eab804dd083": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgPrivacySubjectRightsRequestNote",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgPrivacySubjectRightsRequestNote",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0"
+      }
+    }
+  },
+  "7d738d69278a": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes/{authoredNote-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      }
+    }
+  },
+  "c2472806154b": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgPrivacySubjectRightsRequestNoteCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e07293d91ab": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/team",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgPrivacySubjectRightsRequestTeam",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e5c4879deb3": {
+    "path": "/privacy/subjectRightsRequests/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgPrivacySubjectRightsRequestCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}": {
+    "get": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Get managementTemplateStepVersions from tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_GetManagementTemplateStepVersion",
+      "parameters": [
+        {
+          "name": "managementTemplateStepVersion-id",
+          "in": "path",
+          "description": "The unique identifier of managementTemplateStepVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managementTemplateStepVersion"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managementTemplateStepVersion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Update the navigation property managementTemplateStepVersions in tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_UpdateManagementTemplateStepVersion",
+      "parameters": [
+        {
+          "name": "managementTemplateStepVersion-id",
+          "in": "path",
+          "description": "The unique identifier of managementTemplateStepVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managementTemplateStepVersion"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedTenants.managementTemplateStepVersion"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managementTemplateStepVersion"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Delete navigation property managementTemplateStepVersions for tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_DeleteManagementTemplateStepVersion",
+      "parameters": [
+        {
+          "name": "managementTemplateStepVersion-id",
+          "in": "path",
+          "description": "The unique identifier of managementTemplateStepVersion",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managementTemplateStepVersion"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

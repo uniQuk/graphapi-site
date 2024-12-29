@@ -1,0 +1,154 @@
+{
+  "/deviceAppManagement/defaultManagedAppProtections/{defaultManagedAppProtection-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.defaultManagedAppProtection"
+      ],
+      "summary": "Get defaultManagedAppProtections from deviceAppManagement",
+      "description": "Default managed app policies.",
+      "operationId": "deviceAppManagement_GetDefaultManagedAppProtection",
+      "parameters": [
+        {
+          "name": "defaultManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of defaultManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "defaultManagedAppProtection"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.defaultManagedAppProtection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.defaultManagedAppProtection"
+      ],
+      "summary": "Update the navigation property defaultManagedAppProtections in deviceAppManagement",
+      "operationId": "deviceAppManagement_UpdateDefaultManagedAppProtection",
+      "parameters": [
+        {
+          "name": "defaultManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of defaultManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "defaultManagedAppProtection"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.defaultManagedAppProtection"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.defaultManagedAppProtection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.defaultManagedAppProtection"
+      ],
+      "summary": "Delete navigation property defaultManagedAppProtections for deviceAppManagement",
+      "operationId": "deviceAppManagement_DeleteDefaultManagedAppProtection",
+      "parameters": [
+        {
+          "name": "defaultManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of defaultManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "defaultManagedAppProtection"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "/admin/edge/internetExplorerMode/siteLists/{browserSiteList-id}/sites/{browserSite-id}": {
+    "get": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Get browserSite",
+      "description": "Get a browserSite that resides on a browserSiteList.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0"
+      },
+      "operationId": "admin.edge.internetExplorerMode.siteList_GetSite",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        },
+        {
+          "name": "browserSite-id",
+          "in": "path",
+          "description": "The unique identifier of browserSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSite"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSite"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Update browserSite",
+      "description": "Update the properties of a browserSite object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0"
+      },
+      "operationId": "admin.edge.internetExplorerMode.siteList_UpdateSite",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        },
+        {
+          "name": "browserSite-id",
+          "in": "path",
+          "description": "The unique identifier of browserSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSite"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.browserSite"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSite"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.edge"
+      ],
+      "summary": "Delete browserSite",
+      "description": "Delete a browserSite from a browserSiteList.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0"
+      },
+      "operationId": "admin.edge.internetExplorerMode.siteList_DeleteSite",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        },
+        {
+          "name": "browserSite-id",
+          "in": "path",
+          "description": "The unique identifier of browserSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSite"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

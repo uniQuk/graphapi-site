@@ -1,0 +1,52 @@
+{
+  "/networkAccess/filteringPolicies/{filteringPolicy-id}/policyRules/$count": {
+    "get": {
+      "tags": [
+        "networkAccess.filteringPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "networkAccess.filteringPolicy.policyRule_GetCount",
+      "parameters": [
+        {
+          "name": "filteringPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of filteringPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "filteringPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

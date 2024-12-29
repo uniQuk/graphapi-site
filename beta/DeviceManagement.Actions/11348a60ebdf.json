@@ -1,0 +1,78 @@
+{
+  "/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentity-id}/microsoft.graph.updateDeviceProperties": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action updateDeviceProperties",
+      "description": "Updates properties on Autopilot devices.",
+      "operationId": "deviceManagement.windowsAutopilotDeviceIdentity_updateDeviceProperty",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userPrincipalName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "addressableUserName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupTag": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "displayName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "deviceAccountUpn": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "deviceAccountPassword": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "deviceFriendlyName": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

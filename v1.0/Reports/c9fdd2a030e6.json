@@ -1,0 +1,58 @@
+{
+  "/reports/partners/billing/usage/unbilled/microsoft.graph.partners.billing.export": {
+    "post": {
+      "tags": [
+        "reports.Actions"
+      ],
+      "summary": "Invoke action export",
+      "description": "Export unbilled Azure usage data for a specific billing period and currency.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/partners-billing-unbilledusage-export?view=graph-rest-1.0"
+      },
+      "operationId": "report.partner.billing.usage.unbilled_export",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "currencyCode": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "billingPeriod": {
+                  "$ref": "#/components/schemas/microsoft.graph.partners.billing.billingPeriod"
+                },
+                "attributeSet": {
+                  "$ref": "#/components/schemas/microsoft.graph.partners.billing.attributeSet"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.partners.billing.operation"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

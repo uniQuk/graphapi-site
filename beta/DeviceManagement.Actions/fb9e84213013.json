@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/deviceConfigurations/{deviceConfiguration-id}/microsoft.graph.windowsPrivacyAccessControls": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action windowsPrivacyAccessControls",
+      "operationId": "deviceManagement.deviceConfiguration_windowsPrivacyAccessControl",
+      "parameters": [
+        {
+          "name": "deviceConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of deviceConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "windowsPrivacyAccessControls": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.windowsPrivacyDataAccessControlItem"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

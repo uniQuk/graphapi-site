@@ -1,0 +1,64 @@
+{
+  "/onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/connectorGroups/{connectorGroup-id}/members/{connector-id}/$ref": {
+    "delete": {
+      "tags": [
+        "onPremisesPublishingProfiles.connectorGroup"
+      ],
+      "summary": "Delete ref of navigation property members for onPremisesPublishingProfiles",
+      "operationId": "onPremisesPublishingProfile.connectorGroup.member_DeleteConnectorGraphBPreRef",
+      "parameters": [
+        {
+          "name": "onPremisesPublishingProfile-id",
+          "in": "path",
+          "description": "The unique identifier of onPremisesPublishingProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "onPremisesPublishingProfile"
+        },
+        {
+          "name": "connectorGroup-id",
+          "in": "path",
+          "description": "The unique identifier of connectorGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectorGroup"
+        },
+        {
+          "name": "connector-id",
+          "in": "path",
+          "description": "The unique identifier of connector",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connector"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

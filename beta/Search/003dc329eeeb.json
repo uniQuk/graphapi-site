@@ -1,0 +1,168 @@
+{
+  "/external/industryData/years/{yearTimePeriodDefinition-id}": {
+    "get": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Get yearTimePeriodDefinition",
+      "description": "Read the properties and relationships of a yearTimePeriodDefinition object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData_GetYear",
+      "parameters": [
+        {
+          "name": "yearTimePeriodDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of yearTimePeriodDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "yearTimePeriodDefinition"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.yearTimePeriodDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Update yearTimePeriodDefinition",
+      "description": "Update the properties of a yearTimePeriodDefinition object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData_UpdateYear",
+      "parameters": [
+        {
+          "name": "yearTimePeriodDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of yearTimePeriodDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "yearTimePeriodDefinition"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.industryData.yearTimePeriodDefinition"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.yearTimePeriodDefinition"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Delete yearTimePeriodDefinition",
+      "description": "Delete a yearTimePeriodDefinition object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData_DeleteYear",
+      "parameters": [
+        {
+          "name": "yearTimePeriodDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of yearTimePeriodDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "yearTimePeriodDefinition"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

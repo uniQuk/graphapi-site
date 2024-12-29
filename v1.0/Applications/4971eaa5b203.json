@@ -1,0 +1,65 @@
+{
+  "/applicationTemplates/{applicationTemplate-id}/microsoft.graph.instantiate": {
+    "post": {
+      "tags": [
+        "applicationTemplates.Actions"
+      ],
+      "summary": "Invoke action instantiate",
+      "description": "Add an instance of an application from the Microsoft Entra application gallery into your directory. The application template with ID 8adf8e6e-67b2-4cf2-a259-e3dc5476c621 can be used to add a non-gallery app that you can configure different single-sign on (SSO) modes like SAML SSO and password-based SSO.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0"
+      },
+      "operationId": "applicationTemplate_instantiate",
+      "parameters": [
+        {
+          "name": "applicationTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of applicationTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "applicationTemplate"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.applicationServicePrincipal"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "/deviceManagement/advancedThreatProtectionOnboardingStateSummary": {
+    "get": {
+      "tags": [
+        "deviceManagement.advancedThreatProtectionOnboardingStateSummary"
+      ],
+      "summary": "Get advancedThreatProtectionOnboardingStateSummary from deviceManagement",
+      "description": "The summary state of ATP onboarding state for this account.",
+      "operationId": "deviceManagement_GetAdvancedThreatProtectionOnboardingStateSummary",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.advancedThreatProtectionOnboardingStateSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.advancedThreatProtectionOnboardingStateSummary"
+      ],
+      "summary": "Update the navigation property advancedThreatProtectionOnboardingStateSummary in deviceManagement",
+      "operationId": "deviceManagement_UpdateAdvancedThreatProtectionOnboardingStateSummary",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.advancedThreatProtectionOnboardingStateSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.advancedThreatProtectionOnboardingStateSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.advancedThreatProtectionOnboardingStateSummary"
+      ],
+      "summary": "Delete navigation property advancedThreatProtectionOnboardingStateSummary for deviceManagement",
+      "operationId": "deviceManagement_DeleteAdvancedThreatProtectionOnboardingStateSummary",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

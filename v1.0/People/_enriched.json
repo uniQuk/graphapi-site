@@ -1,0 +1,66 @@
+{
+  "47f55a11ad65": {
+    "path": "/users/{user-id}/people",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "People.Read",
+            "IsAdmin": false,
+            "Description": "Read your relevant people list",
+            "FullDescription": "Allows the app to read a list of people in the order that's most relevant to you. This includes your local contacts, your contacts from social networking, people listed in your organization's directory, and people from recent communications.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "People.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users relevant people lists",
+            "FullDescription": "Allows the app to read a list of people in the order that is most relevant to you. Allows the app to read a list of people in the order that is most relevant to another user in your organization. These can include local contacts, contacts from social networking, people listed in your organizations directory, and people from recent communications.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgUserPerson",
+        "apiReference": ""
+      }
+    }
+  },
+  "c788021d1dfa": {
+    "path": "/users/{user-id}/people/{person-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgUserPerson",
+        "apiReference": ""
+      }
+    }
+  },
+  "5fc34aeba054": {
+    "path": "/users/{user-id}/people/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "People.Read",
+            "IsAdmin": false,
+            "Description": "Read your relevant people list",
+            "FullDescription": "Allows the app to read a list of people in the order that's most relevant to you. This includes your local contacts, your contacts from social networking, people listed in your organization's directory, and people from recent communications.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedPersonal"
+          },
+          {
+            "Name": "People.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all users relevant people lists",
+            "FullDescription": "Allows the app to read a list of people in the order that is most relevant to you. Allows the app to read a list of people in the order that is most relevant to another user in your organization. These can include local contacts, contacts from social networking, people listed in your organizations directory, and people from recent communications.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgUserPersonCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

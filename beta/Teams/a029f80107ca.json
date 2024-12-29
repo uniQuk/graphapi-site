@@ -1,0 +1,38 @@
+{
+  "/teamwork/devices/{teamworkDevice-id}/microsoft.graph.runDiagnostics": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action runDiagnostics",
+      "description": "Run and generate diagnostic logs for the specified Microsoft Teams-enabled device. This API triggers a long-running operation used to generate logs for a device.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkdevice-rundiagnostics?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.device_runDiagnostic",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

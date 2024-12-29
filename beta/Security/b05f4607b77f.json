@@ -1,0 +1,63 @@
+{
+  "/security/incidents/{incident-id}/alerts/{alert-id}/comments/$count": {
+    "get": {
+      "tags": [
+        "security.incident"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.incident.alert.Comment_GetCount",
+      "parameters": [
+        {
+          "name": "incident-id",
+          "in": "path",
+          "description": "The unique identifier of incident",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "incident"
+        },
+        {
+          "name": "alert-id",
+          "in": "path",
+          "description": "The unique identifier of alert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alert"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

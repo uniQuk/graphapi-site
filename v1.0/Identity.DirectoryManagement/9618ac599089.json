@@ -1,0 +1,33 @@
+{
+  "/contacts/{orgContact-id}/microsoft.graph.retryServiceProvisioning": {
+    "post": {
+      "tags": [
+        "contacts.Actions"
+      ],
+      "summary": "Invoke action retryServiceProvisioning",
+      "operationId": "contact_retryServiceProvisioning",
+      "parameters": [
+        {
+          "name": "orgContact-id",
+          "in": "path",
+          "description": "The unique identifier of orgContact",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "orgContact"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicy-id}/driveProtectionUnits/{driveProtectionUnit-id}": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get driveProtectionUnits from solutions",
+      "description": "Contains the protection units associated with a  OneDrive for Business protection policy.",
+      "operationId": "solution.backupRestore.oneDriveGraphFPreBusinessProtectionPolicy_GetDriveProtectionUnit",
+      "parameters": [
+        {
+          "name": "oneDriveForBusinessProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of oneDriveForBusinessProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "oneDriveForBusinessProtectionPolicy"
+        },
+        {
+          "name": "driveProtectionUnit-id",
+          "in": "path",
+          "description": "The unique identifier of driveProtectionUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "driveProtectionUnit"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.driveProtectionUnit"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

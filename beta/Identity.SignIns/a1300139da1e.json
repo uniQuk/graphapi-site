@@ -1,0 +1,128 @@
+{
+  "/policies/federatedTokenValidationPolicy": {
+    "get": {
+      "tags": [
+        "policies.federatedTokenValidationPolicy"
+      ],
+      "summary": "Get federatedTokenValidationPolicy",
+      "description": "Read the properties and relationships of a federatedTokenValidationPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/federatedtokenvalidationpolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "policy_GetFederatedTokenValidationPolicy",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.federatedTokenValidationPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.federatedTokenValidationPolicy"
+      ],
+      "summary": "Update federatedTokenValidationPolicy",
+      "description": "Update the properties of a federatedTokenValidationPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/federatedtokenvalidationpolicy-update?view=graph-rest-beta"
+      },
+      "operationId": "policy_UpdateFederatedTokenValidationPolicy",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.federatedTokenValidationPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.federatedTokenValidationPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.federatedTokenValidationPolicy"
+      ],
+      "summary": "Delete navigation property federatedTokenValidationPolicy for policies",
+      "operationId": "policy_DeleteFederatedTokenValidationPolicy",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

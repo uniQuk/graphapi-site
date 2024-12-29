@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/templates/{deviceManagementTemplate-id}/settings/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementTemplate"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.template.setting_GetCount",
+      "parameters": [
+        {
+          "name": "deviceManagementTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

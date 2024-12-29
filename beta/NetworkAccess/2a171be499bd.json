@@ -1,0 +1,59 @@
+{
+  "/networkAccess/connectivity/branches/{branchSite-id}/deviceLinks/$count": {
+    "get": {
+      "tags": [
+        "networkAccess.connectivity"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "networkAccess.connectivity.branch.deviceLink_GetCount",
+      "parameters": [
+        {
+          "name": "branchSite-id",
+          "in": "path",
+          "description": "The unique identifier of branchSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "branchSite"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-03-20",
+        "date": "2023-12-19",
+        "version": "2022-06/PrivatePreview:NetworkAccess",
+        "description": "The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API."
+      }
+    }
+  }
+}

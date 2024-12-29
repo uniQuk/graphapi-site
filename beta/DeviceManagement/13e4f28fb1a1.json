@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/userExperienceAnalyticsRemoteConnection/{userExperienceAnalyticsRemoteConnection-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsRemoteConnection"
+      ],
+      "summary": "Get userExperienceAnalyticsRemoteConnection from deviceManagement",
+      "description": "User experience analytics remote connection",
+      "operationId": "deviceManagement_GetUserExperienceAnalyticsRemoteConnection",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsRemoteConnection-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsRemoteConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsRemoteConnection"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsRemoteConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsRemoteConnection"
+      ],
+      "summary": "Update the navigation property userExperienceAnalyticsRemoteConnection in deviceManagement",
+      "operationId": "deviceManagement_UpdateUserExperienceAnalyticsRemoteConnection",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsRemoteConnection-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsRemoteConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsRemoteConnection"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsRemoteConnection"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsRemoteConnection"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsRemoteConnection"
+      ],
+      "summary": "Delete navigation property userExperienceAnalyticsRemoteConnection for deviceManagement",
+      "operationId": "deviceManagement_DeleteUserExperienceAnalyticsRemoteConnection",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsRemoteConnection-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsRemoteConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsRemoteConnection"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

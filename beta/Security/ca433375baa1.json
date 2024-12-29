@@ -1,0 +1,52 @@
+{
+  "/security/attackSimulation/trainings/{training-id}/languageDetails/$count": {
+    "get": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.attackSimulation.training.languageDetail_GetCount",
+      "parameters": [
+        {
+          "name": "training-id",
+          "in": "path",
+          "description": "The unique identifier of training",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "training"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

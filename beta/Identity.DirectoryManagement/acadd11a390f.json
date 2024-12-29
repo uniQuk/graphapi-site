@@ -1,0 +1,52 @@
+{
+  "/directory/customSecurityAttributeDefinitions/{customSecurityAttributeDefinition-id}/allowedValues/$count": {
+    "get": {
+      "tags": [
+        "directory.customSecurityAttributeDefinition"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "directory.customSecurityAttributeDefinition.allowedValue_GetCount",
+      "parameters": [
+        {
+          "name": "customSecurityAttributeDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of customSecurityAttributeDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customSecurityAttributeDefinition"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3594 @@
+{
+  "1f3a7ba92938": {
+    "path": "/print",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrint",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrint",
+        "apiReference": ""
+      }
+    }
+  },
+  "c5de19a55b9b": {
+    "path": "/print/connectors",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintConnector",
+        "apiReference": ""
+      }
+    }
+  },
+  "b4205fa3dc78": {
+    "path": "/print/connectors/{printConnector-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/printconnector-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/printconnector-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/printconnector-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "e0a6a15886fe": {
+    "path": "/print/connectors/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintConnectorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ee22414ed2a6": {
+    "path": "/print/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "052946a282ce": {
+    "path": "/print/operations/{printOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/printoperation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "1f014dda0d43": {
+    "path": "/print/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7d298fbaabf1": {
+    "path": "/print/printers",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-beta"
+      }
+    }
+  },
+  "027fbbf34cd7": {
+    "path": "/print/printers/{printer-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPrintPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "0eb857e3466e": {
+    "path": "/print/printers/{printer-id}/connectors",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-list-connectors?view=graph-rest-beta"
+      }
+    }
+  },
+  "9b96fe2e9ede": {
+    "path": "/print/printers/{printer-id}/connectors/{printConnector-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterConnector",
+        "apiReference": ""
+      }
+    }
+  },
+  "018249da40fa": {
+    "path": "/print/printers/{printer-id}/connectors/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterConnectorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4072e512af23": {
+    "path": "/print/printers/{printer-id}/jobs",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-list-jobs?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPrintPrinterJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-post-jobs?view=graph-rest-beta"
+      }
+    }
+  },
+  "e40deb8b7b14": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printjob-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": false,
+            "Description": "Read and write basic information for print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs without a signed-in user.Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "PrintJob.Manage.All",
+            "IsAdmin": false,
+            "Description": "Perform advanced operations on print jobs",
+            "FullDescription": "Allows the application to perform advanced operations like redirecting a print job to another printer without a signed-in user. Also allows the application to read and update the metadata of print jobs.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaPrintPrinterJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printjob-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "64b9e7ab982a": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/documents",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobDocument",
+        "apiReference": "https://learn.microsoft.com/graph/api/printdocument-get-file?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "ad807c8ab149": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterJobDocument",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterJobDocument",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "c11079fbb228": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterJobDocumentContent",
+        "apiReference": "https://learn.microsoft.com/graph/api/printdocument-get-file?view=graph-rest-beta"
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaPrintPrinterJobDocumentContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterJobDocumentContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "a91c78e982c2": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession",
+    "methods": {}
+  },
+  "644dc22f8bb6": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/documents/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobDocumentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "94ebff72de98": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.abort",
+    "methods": {}
+  },
+  "7f87d22bd7e5": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "0423b0c38b31": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob",
+    "methods": {}
+  },
+  "af1dec73c12c": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.redirect",
+    "methods": {}
+  },
+  "987c64a27bfe": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.start",
+    "methods": {}
+  },
+  "7181790a014e": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob",
+    "methods": {}
+  },
+  "631bd8daca3d": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobTask",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "eb4123094255": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobTask",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterJobTask",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "d776cfe2bf05": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobTaskDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "252bb346ae2a": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobTaskTrigger",
+        "apiReference": ""
+      }
+    }
+  },
+  "50728176ba74": {
+    "path": "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterJobTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dc1d5bace5a8": {
+    "path": "/print/printers/{printer-id}/jobs/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterJobCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "92913fd3affe": {
+    "path": "/print/printers/{printer-id}/microsoft.graph.getCapabilities()",
+    "methods": {}
+  },
+  "a992671b029c": {
+    "path": "/print/printers/{printer-id}/microsoft.graph.resetDefaults",
+    "methods": {}
+  },
+  "fb82ab2a17a4": {
+    "path": "/print/printers/{printer-id}/microsoft.graph.restoreFactoryDefaults",
+    "methods": {}
+  },
+  "4b5905b5737b": {
+    "path": "/print/printers/{printer-id}/share",
+    "methods": {}
+  },
+  "15b568b33616": {
+    "path": "/print/printers/{printer-id}/shares",
+    "methods": {}
+  },
+  "8c8b0a4c4469": {
+    "path": "/print/printers/{printer-id}/shares/{printerShare-id}",
+    "methods": {}
+  },
+  "474ffde893f8": {
+    "path": "/print/printers/{printer-id}/shares/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterShareCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "863ba2e48037": {
+    "path": "/print/printers/{printer-id}/taskTriggers",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterTaskTrigger",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPrintPrinterTaskTrigger",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-beta"
+      }
+    }
+  },
+  "af70b074a484": {
+    "path": "/print/printers/{printer-id}/taskTriggers/{printTaskTrigger-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterTaskTrigger",
+        "apiReference": "https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterTaskTrigger",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaPrintPrinterTaskTrigger",
+        "apiReference": "https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-beta"
+      }
+    }
+  },
+  "0976c345051c": {
+    "path": "/print/printers/{printer-id}/taskTriggers/{printTaskTrigger-id}/definition",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterTaskTriggerDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "7130db18c8ee": {
+    "path": "/print/printers/{printer-id}/taskTriggers/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterTaskTriggerCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5a72b37b0230": {
+    "path": "/print/printers/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintPrinterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d3b89963eaf": {
+    "path": "/print/printers/microsoft.graph.create",
+    "methods": {}
+  },
+  "9105641c9364": {
+    "path": "/print/printerShares",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShare",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShare",
+        "apiReference": ""
+      }
+    }
+  },
+  "a727e09cc81f": {
+    "path": "/print/printerShares/{printerShare-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShare",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterShare",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShare",
+        "apiReference": ""
+      }
+    }
+  },
+  "33dd72718e30": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "9b19772d0262": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups/{group-id}/$ref",
+    "methods": {}
+  },
+  "0ba1b6afbfc4": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups/{group-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedGroupServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "d0e9ba6a5bc9": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups/{group-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedGroupServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6e2c0ebbc3c7": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e599f92fd436": {
+    "path": "/print/printerShares/{printerShare-id}/allowedGroups/$ref",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedGroupByRef",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShareAllowedGroupByRef",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareAllowedGroupByRef",
+        "apiReference": ""
+      }
+    }
+  },
+  "59e4fbac54b8": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "68325a75c28c": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/{user-id}/$ref",
+    "methods": {}
+  },
+  "47b850b45fc8": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUserMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterShareAllowedUserMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "88b2b20f7806": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUserServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "167448392fa7": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUserServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4196d9f90536": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f99f0c21a508": {
+    "path": "/print/printerShares/{printerShare-id}/allowedUsers/$ref",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareAllowedUserByRef",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShareAllowedUserByRef",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareAllowedUserByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-beta"
+      }
+    }
+  },
+  "6273cad28041": {
+    "path": "/print/printerShares/{printerShare-id}/jobs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJob",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShareJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "cbecb159988f": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJob",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterShareJob",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "f30d7a1c5e6c": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobDocument",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShareJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e465a66c673": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobDocument",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterShareJobDocument",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f61b1cd0e86": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobDocumentContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaPrintPrinterShareJobDocumentContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareJobDocumentContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "64287a5132db": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession",
+    "methods": {}
+  },
+  "eebb808c3b25": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobDocumentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e7505c6318de": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.abort",
+    "methods": {}
+  },
+  "0559858809da": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "94a6c0cd001e": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob",
+    "methods": {}
+  },
+  "e49dae73a721": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.redirect",
+    "methods": {}
+  },
+  "83648a685cd5": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.start",
+    "methods": {}
+  },
+  "f4dbbf045f96": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob",
+    "methods": {}
+  },
+  "0cc6289f0fa2": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobTask",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintPrinterShareJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "23143fbda509": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobTask",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintPrinterShareJobTask",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintPrinterShareJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "3a8e41a803aa": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobTaskDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "d7f287e41cac": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobTaskTrigger",
+        "apiReference": ""
+      }
+    }
+  },
+  "491b1356be46": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "edfde384198c": {
+    "path": "/print/printerShares/{printerShare-id}/jobs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterShareJobCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7020778a625b": {
+    "path": "/print/printerShares/{printerShare-id}/printer",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintPrinterSharePrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "938254dc6372": {
+    "path": "/print/printerShares/$count",
+    "methods": {}
+  },
+  "af4aaf3357f9": {
+    "path": "/print/services",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintService",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-list-services?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintService",
+        "apiReference": ""
+      }
+    }
+  },
+  "75a6f901be71": {
+    "path": "/print/services/{printService-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintService",
+        "apiReference": "https://learn.microsoft.com/graph/api/printservice-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintService",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintService",
+        "apiReference": ""
+      }
+    }
+  },
+  "a525de3db40f": {
+    "path": "/print/services/{printService-id}/endpoints",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintServiceEndpoint",
+        "apiReference": "https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintServiceEndpoint",
+        "apiReference": ""
+      }
+    }
+  },
+  "62e3a6854778": {
+    "path": "/print/services/{printService-id}/endpoints/{printServiceEndpoint-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintServiceEndpoint",
+        "apiReference": "https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintServiceEndpoint",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintServiceEndpoint",
+        "apiReference": ""
+      }
+    }
+  },
+  "5a7d5c31101e": {
+    "path": "/print/services/{printService-id}/endpoints/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintServiceEndpointCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "eb13a8aa1a0a": {
+    "path": "/print/services/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write tenant-wide print settings",
+            "FullDescription": "Allows the application to read and write tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintSettings.Read.All",
+            "IsAdmin": true,
+            "Description": "Read tenant-wide print settings",
+            "FullDescription": "Allows the application to read tenant-wide print settings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Create",
+            "IsAdmin": false,
+            "Description": "Create your print jobs",
+            "FullDescription": "Allows the application to create print jobs on your behalf and upload document content to print jobs  that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.Create",
+            "IsAdmin": true,
+            "Description": "Register printers",
+            "FullDescription": "Allows the application to create (register) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write print connectors",
+            "FullDescription": "Allows the application to read and write print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintConnector.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print connectors",
+            "FullDescription": "Allows the application to read print connectors on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintAlertSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintServiceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5c1930ca1819": {
+    "path": "/print/shares",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShare",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-list-shares?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintShare",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-post-shares?view=graph-rest-beta"
+      }
+    }
+  },
+  "579da2912fab": {
+    "path": "/print/shares/{printerShare-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShare",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintShare",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShare",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "1b9a883f2ec2": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-beta"
+      }
+    }
+  },
+  "d16ea43e80bc": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups/{group-id}/$ref",
+    "methods": {}
+  },
+  "80d92074093c": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups/{group-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareAllowedGroupServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "58eb1f586b37": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups/{group-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareAllowedGroupServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6a5b7f52c6ba": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f569637c1073": {
+    "path": "/print/shares/{printerShare-id}/allowedGroups/$ref",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedGroupByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintShareAllowedGroupByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-post-allowedgroups?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareAllowedGroupByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-delete-allowedgroup?view=graph-rest-beta"
+      }
+    }
+  },
+  "2e1e1f2e58ec": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-beta"
+      }
+    }
+  },
+  "c7f7ee1f9536": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/{user-id}/$ref",
+    "methods": {}
+  },
+  "1faca456ebea": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareAllowedUserMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintShareAllowedUserMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "c2cea9bbd676": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareAllowedUserServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "19aeec1d699a": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareAllowedUserServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e16e7bbc67e": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d2ec827c44e": {
+    "path": "/print/shares/{printerShare-id}/allowedUsers/$ref",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareAllowedUserByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintShareAllowedUserByRef",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareAllowedUserByRef",
+        "apiReference": ""
+      }
+    }
+  },
+  "6bcf11fbcae0": {
+    "path": "/print/shares/{printerShare-id}/jobs",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-list-jobs?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPrintShareJob",
+        "apiReference": "https://learn.microsoft.com/graph/api/printershare-post-jobs?view=graph-rest-beta"
+      }
+    }
+  },
+  "15643d3d1587": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareJob",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintShareJob",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "5537bc3a4bb9": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobDocument",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintShareJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "f18ceebfc177": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobDocument",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintShareJobDocument",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareJobDocument",
+        "apiReference": ""
+      }
+    }
+  },
+  "a17a2541645f": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobDocumentContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaPrintShareJobDocumentContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareJobDocumentContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "b48e5c2cbdf1": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession",
+    "methods": {}
+  },
+  "6b687e5af2f3": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobDocumentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cd5eca359a40": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.abort",
+    "methods": {}
+  },
+  "5c62e657dfc7": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancel",
+    "methods": {}
+  },
+  "6be3e40d76e1": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob",
+    "methods": {}
+  },
+  "e92f330fd3c0": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.redirect",
+    "methods": {}
+  },
+  "e1c42979d00e": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.start",
+    "methods": {}
+  },
+  "97f8cf74c58b": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob",
+    "methods": {}
+  },
+  "c858191860c3": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobTask",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintShareJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "c21fd9e344ae": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobTask",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintShareJobTask",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintShareJobTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "bc150b6efa86": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobTaskDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "1d7aa330e360": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobTaskTrigger",
+        "apiReference": ""
+      }
+    }
+  },
+  "1ea94bddd596": {
+    "path": "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintShareJobTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1c05c6216e06": {
+    "path": "/print/shares/{printerShare-id}/jobs/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrintJob.ReadBasic",
+            "IsAdmin": false,
+            "Description": "Read basic information of your print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic.All",
+            "IsAdmin": true,
+            "Description": "Read and write basic information of print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWriteBasic",
+            "IsAdmin": false,
+            "Description": "Read and write basic information of your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata of print jobs that you created. Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and update your print jobs",
+            "FullDescription": "Allows the application to read and update the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.ReadBasic.All",
+            "IsAdmin": true,
+            "Description": "Read basic information of print jobs",
+            "FullDescription": "Allows the application to read the metadata of print jobs on your behalf.Does not allow access to print job document content.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read.All",
+            "IsAdmin": true,
+            "Description": "Read print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrintJob.Read",
+            "IsAdmin": false,
+            "Description": "Read your print jobs",
+            "FullDescription": "Allows the application to read the metadata and document content of print jobs that you created.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareJobCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b7eaeda1c0e0": {
+    "path": "/print/shares/{printerShare-id}/printer",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Printer.Read.All",
+            "IsAdmin": true,
+            "Description": "Read printers",
+            "FullDescription": "Allows the application to read printers on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printers",
+            "FullDescription": "Allows the application to read and update printers on your behalf.Does not allow creating (registering) or deleting (unregistering) printers.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Printer.FullControl.All",
+            "IsAdmin": true,
+            "Description": "Register, read, update, and unregister printers",
+            "FullDescription": "Allows the application to create (register), read, update, and delete (unregister) printers on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintSharePrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "87bbf27d52d8": {
+    "path": "/print/shares/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "PrinterShare.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "Read basic information about printer shares",
+            "FullDescription": "Allows the application to read basic information about printer shares on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and update printer shares",
+            "FullDescription": "Allows the application to read and update printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "PrinterShare.Read.All",
+            "IsAdmin": false,
+            "Description": "Read printer shares",
+            "FullDescription": "Allows the application to read printer shares on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrintShareCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8d445bd73548": {
+    "path": "/print/taskDefinitions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintTaskDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-beta"
+      }
+    }
+  },
+  "42735f8949f6": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/printtaskdefinition-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintTaskDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-update-taskdefinition?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintTaskDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/print-delete-taskdefinition?view=graph-rest-beta"
+      }
+    }
+  },
+  "385afd05e302": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinitionTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/printtaskdefinition-list-tasks?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrintTaskDefinitionTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "8e7ffca6ba2e": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}/tasks/{printTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinitionTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrintTaskDefinitionTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrintTaskDefinitionTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "a89f7f46934c": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}/tasks/{printTask-id}/definition",
+    "methods": {}
+  },
+  "a7fb1345c827": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}/tasks/{printTask-id}/trigger",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinitionTaskTrigger",
+        "apiReference": ""
+      }
+    }
+  },
+  "be752a0892ef": {
+    "path": "/print/taskDefinitions/{printTaskDefinition-id}/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinitionTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "26e5fa031c3c": {
+    "path": "/print/taskDefinitions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrintTaskDefinitionCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

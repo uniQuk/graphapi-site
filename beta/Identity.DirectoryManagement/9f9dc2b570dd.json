@@ -1,0 +1,45 @@
+{
+  "/tenantRelationships/managedTenants/tenants/{tenant-id}/microsoft.graph.managedTenants.resetTenantOnboardingStatus": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action resetTenantOnboardingStatus",
+      "description": "Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/managedtenants-tenant-resettenantonboardingstatus?view=graph-rest-beta"
+      },
+      "operationId": "tenantRelationship.managedTenant.tenant_resetTenantOnboardingStatus",
+      "parameters": [
+        {
+          "name": "tenant-id",
+          "in": "path",
+          "description": "The unique identifier of tenant",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tenant"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.tenant"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

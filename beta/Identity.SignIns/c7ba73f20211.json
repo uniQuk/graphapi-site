@@ -1,0 +1,139 @@
+{
+  "/informationProtection/policy": {
+    "get": {
+      "tags": [
+        "informationProtection.informationProtectionPolicy"
+      ],
+      "summary": "Get policy from informationProtection",
+      "operationId": "informationProtection_GetPolicy",
+      "parameters": [
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.informationProtectionPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-08-15",
+        "date": "2021-02-15",
+        "version": "2021-02/Beta_SensitivityLabels",
+        "description": "This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "informationProtection.informationProtectionPolicy"
+      ],
+      "summary": "Update the navigation property policy in informationProtection",
+      "operationId": "informationProtection_UpdatePolicy",
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.informationProtectionPolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.informationProtectionPolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-08-15",
+        "date": "2021-02-15",
+        "version": "2021-02/Beta_SensitivityLabels",
+        "description": "This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "informationProtection.informationProtectionPolicy"
+      ],
+      "summary": "Delete navigation property policy for informationProtection",
+      "operationId": "informationProtection_DeletePolicy",
+      "parameters": [
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-08-15",
+        "date": "2021-02-15",
+        "version": "2021-02/Beta_SensitivityLabels",
+        "description": "This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

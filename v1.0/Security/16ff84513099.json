@@ -1,0 +1,52 @@
+{
+  "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}/indicators/$count": {
+    "get": {
+      "tags": [
+        "security.threatIntelligence"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.threatIntelligence.intelProfile.indicator_GetCount",
+      "parameters": [
+        {
+          "name": "intelligenceProfile-id",
+          "in": "path",
+          "description": "The unique identifier of intelligenceProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "intelligenceProfile"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

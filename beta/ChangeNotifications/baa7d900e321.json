@@ -1,0 +1,38 @@
+{
+  "/subscriptions/{subscription-id}/microsoft.graph.reauthorize": {
+    "post": {
+      "tags": [
+        "subscriptions.Actions"
+      ],
+      "summary": "Invoke action reauthorize",
+      "description": "Reauthorize a subscription when you receive a reauthorizationRequired challenge.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/subscription-reauthorize?view=graph-rest-beta"
+      },
+      "operationId": "subscription_reauthorize",
+      "parameters": [
+        {
+          "name": "subscription-id",
+          "in": "path",
+          "description": "The unique identifier of subscription",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subscription"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

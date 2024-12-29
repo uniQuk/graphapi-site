@@ -1,0 +1,66 @@
+{
+  "/print/printers/microsoft.graph.create": {
+    "post": {
+      "tags": [
+        "print.Actions"
+      ],
+      "summary": "Invoke action create",
+      "description": "Create (register) a printer with the Universal Print service. This is a long-running operation and as such, it returns a printerCreateOperation that can be used to track and verify the registration of the printer.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printer-create?view=graph-rest-beta"
+      },
+      "operationId": "print.printer_create",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "physicalDeviceId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "hasPhysicalDevice": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "certificateSigningRequest": {
+                  "$ref": "#/components/schemas/microsoft.graph.printCertificateSigningRequest"
+                },
+                "connectorId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

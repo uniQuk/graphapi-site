@@ -1,0 +1,2020 @@
+{
+  "48d7eb60b23e": {
+    "path": "/external",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternal",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternal",
+        "apiReference": ""
+      }
+    }
+  },
+  "1fef7f320fbc": {
+    "path": "/external/authorizationSystems",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalAuthorizationSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-external-list-authorizationsystems?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalAuthorizationSystem",
+        "apiReference": ""
+      }
+    }
+  },
+  "3b3cd2cb1c90": {
+    "path": "/external/authorizationSystems/{authorizationSystem-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalAuthorizationSystem",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalAuthorizationSystem",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalAuthorizationSystem",
+        "apiReference": ""
+      }
+    }
+  },
+  "4afe49806ced": {
+    "path": "/external/authorizationSystems/{authorizationSystem-id}/dataCollectionInfo",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalAuthorizationSystemDataCollectionInfo",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalAuthorizationSystemDataCollectionInfo",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalAuthorizationSystemDataCollectionInfo",
+        "apiReference": ""
+      }
+    }
+  },
+  "36d72b355e3b": {
+    "path": "/external/authorizationSystems/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalAuthorizationSystemCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "776b92f2bd76": {
+    "path": "/external/connections",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-beta"
+      }
+    }
+  },
+  "f64022b430c1": {
+    "path": "/external/connections/{externalConnection-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaExternalConnection",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "e696abc49578": {
+    "path": "/external/connections/{externalConnection-id}/groups",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionGroup",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-beta"
+      }
+    }
+  },
+  "391c1e88b41e": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external items",
+            "FullDescription": "Allows the app to read all external items without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnectionGroup",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaExternalConnectionGroup",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaExternalConnectionGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "30b74f037e6a": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaExternalConnectionGroupMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-beta"
+      }
+    }
+  },
+  "2529b237f693": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members/{identity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalConnectionGroupMember",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaExternalConnectionGroupMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "c9a25d9b22fb": {
+    "path": "/external/connections/{externalConnection-id}/groups/{externalGroup-id}/members/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionGroupMemberCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0e083757a2d8": {
+    "path": "/external/connections/{externalConnection-id}/groups/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fa9c2eba7526": {
+    "path": "/external/connections/{externalConnection-id}/items",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItem",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalConnectionItem",
+        "apiReference": ""
+      }
+    }
+  },
+  "2b89c05af00a": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external items",
+            "FullDescription": "Allows the app to read all external items without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-beta"
+      },
+      "put": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Set-MgBetaExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "ExternalItem.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external items",
+            "FullDescription": "Allows the app to read and write external items without a signed-in user. The app can only read external items of the connection that it is authorized to.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalItem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write items in external datasets",
+            "FullDescription": "Allow the app to read or write items in all external datasets that the app is authorized to access",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaExternalConnectionItem",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "b6c3e76c6ad5": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalConnectionItemActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "88cd356949cf": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/{externalActivity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalConnectionItemActivity",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalConnectionItemActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "a2b91bf4ac27": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/{externalActivity-id}/performedBy",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItemActivityPerformedBy",
+        "apiReference": ""
+      }
+    }
+  },
+  "0c4e9496abdb": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItemActivityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6aae6f2ebda4": {
+    "path": "/external/connections/{externalConnection-id}/items/{externalItem-id}/microsoft.graph.externalConnectors.addActivities",
+    "methods": {}
+  },
+  "66acbab8ed41": {
+    "path": "/external/connections/{externalConnection-id}/items/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionItemCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d4be00c767e5": {
+    "path": "/external/connections/{externalConnection-id}/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalConnectionOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f86de567e38": {
+    "path": "/external/connections/{externalConnection-id}/operations/{connectionOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnectionOperation",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalConnectionOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalConnectionOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "a3af59ecc553": {
+    "path": "/external/connections/{externalConnection-id}/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9ed958ab91a5": {
+    "path": "/external/connections/{externalConnection-id}/quota",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalConnectionQuota",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-connectionquota-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalConnectionQuota",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalConnectionQuota",
+        "apiReference": ""
+      }
+    }
+  },
+  "5c0c67286a34": {
+    "path": "/external/connections/{externalConnection-id}/schema",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnectionSchema",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaExternalConnectionSchema",
+        "apiReference": "https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-beta"
+      }
+    }
+  },
+  "6c3fd23fde12": {
+    "path": "/external/connections/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ExternalConnection.ReadWrite.OwnedBy",
+            "IsAdmin": false,
+            "Description": "Read and write external connections",
+            "FullDescription": "Allows the app to read and write external connections without a signed-in user. The app can only read and write external connections that it is authorized to, or it can create new external connections. ",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all external connections",
+            "FullDescription": "Allows the app to read and write all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ExternalConnection.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all external connections",
+            "FullDescription": "Allows the app to read all external connections without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalConnectionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c3d3b4ff0163": {
+    "path": "/external/industryData",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryData",
+        "apiReference": ""
+      }
+    }
+  },
+  "ef5489afc816": {
+    "path": "/external/industryData/dataConnectors",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-DataConnector.Read.All",
+            "IsAdmin": false,
+            "Description": "View data connector definitions",
+            "FullDescription": "Allows the app to read data connectors without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-DataConnector.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage data connector definitions",
+            "FullDescription": "Allows the app to read and write data connectors without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "293d3eeb4012": {
+    "path": "/external/industryData/dataConnectors/{industryDataConnector-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-DataConnector.Read.All",
+            "IsAdmin": false,
+            "Description": "View data connector definitions",
+            "FullDescription": "Allows the app to read data connectors without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-DataConnector.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage data connector definitions",
+            "FullDescription": "Allows the app to read and write data connectors without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataConnector",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "dde038fc871f": {
+    "path": "/external/industryData/dataConnectors/{industryDataConnector-id}/microsoft.graph.industryData.validate",
+    "methods": {}
+  },
+  "c73b0878bccc": {
+    "path": "/external/industryData/dataConnectors/{industryDataConnector-id}/sourceSystem",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataConnectorSourceSystem",
+        "apiReference": ""
+      }
+    }
+  },
+  "4668eb1d750c": {
+    "path": "/external/industryData/dataConnectors/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-DataConnector.Read.All",
+            "IsAdmin": false,
+            "Description": "View data connector definitions",
+            "FullDescription": "Allows the app to read data connectors without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-DataConnector.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage data connector definitions",
+            "FullDescription": "Allows the app to read and write data connectors without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataConnectorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d3a2a7c1805c": {
+    "path": "/external/industryData/inboundFlows",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-InboundFlow.Read.All",
+            "IsAdmin": false,
+            "Description": "View inbound flow definitions",
+            "FullDescription": "Allows the app to read inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-InboundFlow.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage inbound flow definitions",
+            "FullDescription": "Allows the app to read and write inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataInboundFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataInboundFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "a8cdca786d6d": {
+    "path": "/external/industryData/inboundFlows/{inboundFlow-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-InboundFlow.Read.All",
+            "IsAdmin": false,
+            "Description": "View inbound flow definitions",
+            "FullDescription": "Allows the app to read inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-InboundFlow.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage inbound flow definitions",
+            "FullDescription": "Allows the app to read and write inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataInboundFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataInboundFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-inboundapiflow-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataInboundFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "4b47b7589b53": {
+    "path": "/external/industryData/inboundFlows/{inboundFlow-id}/dataConnector",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-DataConnector.Read.All",
+            "IsAdmin": false,
+            "Description": "View data connector definitions",
+            "FullDescription": "Allows the app to read data connectors without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-DataConnector.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage data connector definitions",
+            "FullDescription": "Allows the app to read and write data connectors without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataInboundFlowDataConnector",
+        "apiReference": ""
+      }
+    }
+  },
+  "e09cb62c492c": {
+    "path": "/external/industryData/inboundFlows/{inboundFlow-id}/year",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-TimePeriod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read time period definitions",
+            "FullDescription": "Allows the app to read time period definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-TimePeriod.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage time period definitions",
+            "FullDescription": "Allows the app to read and write time period definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataInboundFlowYear",
+        "apiReference": ""
+      }
+    }
+  },
+  "ea637c660ad9": {
+    "path": "/external/industryData/inboundFlows/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-InboundFlow.Read.All",
+            "IsAdmin": false,
+            "Description": "View inbound flow definitions",
+            "FullDescription": "Allows the app to read inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-InboundFlow.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage inbound flow definitions",
+            "FullDescription": "Allows the app to read and write inbound data flows without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataInboundFlowCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9c57923254ba": {
+    "path": "/external/industryData/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "da6dcf7bb8da": {
+    "path": "/external/industryData/operations/{longRunningOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "89198b324606": {
+    "path": "/external/industryData/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "76b3cf031add": {
+    "path": "/external/industryData/outboundProvisioningFlowSets",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydataroot-list-outboundprovisioningflowsets?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataOutboundProvisioningFlowSet",
+        "apiReference": ""
+      }
+    }
+  },
+  "e164d0bd2cb7": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSet",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataOutboundProvisioningFlowSet",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataOutboundProvisioningFlowSet",
+        "apiReference": ""
+      }
+    }
+  },
+  "67aa07fa3907": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}/provisioningFlows",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlow",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-outboundprovisioningflowset-list-provisioningflows?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlow",
+        "apiReference": ""
+      }
+    }
+  },
+  "0f6846029515": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}/provisioningFlows/{provisioningFlow-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlow",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlow",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlow",
+        "apiReference": ""
+      }
+    }
+  },
+  "25d28993b3e4": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}/provisioningFlows/{provisioningFlow-id}/microsoft.graph.industryData.reset",
+    "methods": {}
+  },
+  "e2d68c43d683": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet-id}/provisioningFlows/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSetProvisioningFlowCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "01f1eba66045": {
+    "path": "/external/industryData/outboundProvisioningFlowSets/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataOutboundProvisioningFlowSetCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a4b59881acc5": {
+    "path": "/external/industryData/referenceDefinitions",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "View basic service and resource information",
+            "FullDescription": "Allows the app to read basic service and resource information without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-ReferenceDefinition.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataReferenceDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-referencedefinition-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataReferenceDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-referencedefinition-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "6b520f81f01f": {
+    "path": "/external/industryData/referenceDefinitions/{referenceDefinition-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-ReferenceDefinition.Read.All",
+            "IsAdmin": false,
+            "Description": "View reference definitions",
+            "FullDescription": "Allows the app to read reference definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-ReferenceDefinition.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataReferenceDefinition",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-referencedefinition-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataReferenceDefinition",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataReferenceDefinition",
+        "apiReference": ""
+      }
+    }
+  },
+  "3a796edc75d0": {
+    "path": "/external/industryData/referenceDefinitions/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData.ReadBasic.All",
+            "IsAdmin": false,
+            "Description": "View basic service and resource information",
+            "FullDescription": "Allows the app to read basic service and resource information without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-ReferenceDefinition.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataReferenceDefinitionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dfd52e0e0381": {
+    "path": "/external/industryData/roleGroups",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRoleGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-rolegroup-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataRoleGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "a421e539e7bd": {
+    "path": "/external/industryData/roleGroups/{roleGroup-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRoleGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataRoleGroup",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataRoleGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "8f9d01cf839a": {
+    "path": "/external/industryData/roleGroups/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRoleGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "87527f147925": {
+    "path": "/external/industryData/runs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRun",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydatarun-list?view=graph-rest-beta"
+      }
+    }
+  },
+  "f7d861970552": {
+    "path": "/external/industryData/runs/{industryDataRun-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRun",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "bf4dfb394ef9": {
+    "path": "/external/industryData/runs/{industryDataRun-id}/activities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRunActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "f877f38ccd51": {
+    "path": "/external/industryData/runs/{industryDataRun-id}/activities/{industryDataRunActivity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRunActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "571a61229dfb": {
+    "path": "/external/industryData/runs/{industryDataRun-id}/activities/{industryDataRunActivity-id}/activity",
+    "methods": {}
+  },
+  "eaec943e8cb8": {
+    "path": "/external/industryData/runs/{industryDataRun-id}/activities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRunActivityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d2631ba74ed9": {
+    "path": "/external/industryData/runs/{industryDataRun-id}/microsoft.graph.industryData.getStatistics()",
+    "methods": {}
+  },
+  "aa49cf98c340": {
+    "path": "/external/industryData/runs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaExternalIndustryDataRunCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4e6bff9ed68f": {
+    "path": "/external/industryData/runs/microsoft.graph.industryData.getStatistics()",
+    "methods": {}
+  },
+  "324789288b7d": {
+    "path": "/external/industryData/sourceSystems",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-SourceSystem.Read.All",
+            "IsAdmin": false,
+            "Description": "View source system definitions",
+            "FullDescription": "Allows the app to read source system definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-SourceSystem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage source system definitions",
+            "FullDescription": "Allows the app to read and write source system definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataSourceSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataSourceSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "681e9dbdf24c": {
+    "path": "/external/industryData/sourceSystems/{sourceSystemDefinition-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-SourceSystem.Read.All",
+            "IsAdmin": false,
+            "Description": "View source system definitions",
+            "FullDescription": "Allows the app to read source system definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-SourceSystem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage source system definitions",
+            "FullDescription": "Allows the app to read and write source system definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataSourceSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataSourceSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataSourceSystem",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "1f4dcf76156a": {
+    "path": "/external/industryData/sourceSystems/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-SourceSystem.Read.All",
+            "IsAdmin": false,
+            "Description": "View source system definitions",
+            "FullDescription": "Allows the app to read source system definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-SourceSystem.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage source system definitions",
+            "FullDescription": "Allows the app to read and write source system definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataSourceSystemCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5901454540a5": {
+    "path": "/external/industryData/years",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-TimePeriod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read time period definitions",
+            "FullDescription": "Allows the app to read time period definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-TimePeriod.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage time period definitions",
+            "FullDescription": "Allows the app to read and write time period definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataYear",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaExternalIndustryDataYear",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "003dc329eeeb": {
+    "path": "/external/industryData/years/{yearTimePeriodDefinition-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-TimePeriod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read time period definitions",
+            "FullDescription": "Allows the app to read time period definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-TimePeriod.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage time period definitions",
+            "FullDescription": "Allows the app to read and write time period definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataYear",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaExternalIndustryDataYear",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaExternalIndustryDataYear",
+        "apiReference": "https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "7e88b25f3cc7": {
+    "path": "/external/industryData/years/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "IndustryData-TimePeriod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read time period definitions",
+            "FullDescription": "Allows the app to read time period definitions without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "IndustryData-TimePeriod.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Manage time period definitions",
+            "FullDescription": "Allows the app to read and write time period definitions without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaExternalIndustryDataYearCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "18fc53a52a03": {
+    "path": "/search",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaSearchEntity",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSearchEntity",
+        "apiReference": ""
+      }
+    }
+  },
+  "c78def00bc3f": {
+    "path": "/search/acronyms",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-beta"
+      }
+    }
+  },
+  "df95048bde55": {
+    "path": "/search/acronyms/{acronym-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaSearchAcronym",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "04ccaefb8e30": {
+    "path": "/search/acronyms/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchAcronymCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1ff014c7a1f8": {
+    "path": "/search/bookmarks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-beta"
+      }
+    }
+  },
+  "aa3af7ab0f29": {
+    "path": "/search/bookmarks/{bookmark-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaSearchBookmark",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "949b75723fe2": {
+    "path": "/search/bookmarks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchBookmarkCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c72b6e4111aa": {
+    "path": "/search/microsoft.graph.query",
+    "methods": {}
+  },
+  "1f903338a9ab": {
+    "path": "/search/qnas",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-beta"
+      }
+    }
+  },
+  "67c787c44b93": {
+    "path": "/search/qnas/{qna-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaSearchQna",
+        "apiReference": "https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "e53497a65c50": {
+    "path": "/search/qnas/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SearchConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organization's search configuration",
+            "FullDescription": "Allows the app to read search configurations, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SearchConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write your organization's search configuration",
+            "FullDescription": "Allows the app to read and write search configurations, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaSearchQnaCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

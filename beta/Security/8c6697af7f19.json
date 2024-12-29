@@ -1,0 +1,52 @@
+{
+  "/security/auditLog/queries/{auditLogQuery-id}/records/$count": {
+    "get": {
+      "tags": [
+        "security.auditCoreRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "security.auditLog.query.record_GetCount",
+      "parameters": [
+        {
+          "name": "auditLogQuery-id",
+          "in": "path",
+          "description": "The unique identifier of auditLogQuery",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "auditLogQuery"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

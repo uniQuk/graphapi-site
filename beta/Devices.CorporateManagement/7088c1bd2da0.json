@@ -1,0 +1,52 @@
+{
+  "/deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfiguration-id}/deviceStatuses/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.iosLobAppProvisioningConfiguration"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.iosLobAppProvisioningConfiguration.deviceStatus_GetCount",
+      "parameters": [
+        {
+          "name": "iosLobAppProvisioningConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of iosLobAppProvisioningConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosLobAppProvisioningConfiguration"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

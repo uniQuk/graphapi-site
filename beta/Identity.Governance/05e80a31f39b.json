@@ -1,0 +1,158 @@
+{
+  "/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}": {
+    "get": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Get unifiedRoleAssignmentSchedule",
+      "description": "Retrieve the schedule for an active role assignment operation.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.directory_GetRoleAssignmentSchedule",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentSchedule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentSchedule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentSchedule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentSchedule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Update the navigation property roleAssignmentSchedules in roleManagement",
+      "operationId": "roleManagement.directory_UpdateRoleAssignmentSchedule",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentSchedule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentSchedule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentSchedule"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentSchedule"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRoleAssignmentSchedule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "roleManagement.rbacApplication"
+      ],
+      "summary": "Delete navigation property roleAssignmentSchedules for roleManagement",
+      "operationId": "roleManagement.directory_DeleteRoleAssignmentSchedule",
+      "parameters": [
+        {
+          "name": "unifiedRoleAssignmentSchedule-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleAssignmentSchedule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleAssignmentSchedule"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

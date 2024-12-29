@@ -1,0 +1,48 @@
+{
+  "/identityProtection/riskyServicePrincipals/microsoft.graph.confirmCompromised": {
+    "post": {
+      "tags": [
+        "identityProtection.Actions"
+      ],
+      "summary": "Invoke action confirmCompromised",
+      "description": "Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to high.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/riskyserviceprincipal-confirmcompromised?view=graph-rest-1.0"
+      },
+      "operationId": "identityProtection.riskyServicePrincipal_confirmCompromised",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "servicePrincipalIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

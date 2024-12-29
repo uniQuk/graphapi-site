@@ -1,0 +1,154 @@
+{
+  "/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession-id}": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get sharePointRestoreSessions from solutions",
+      "description": "The list of SharePoint restore sessions available in the tenant.",
+      "operationId": "solution.backupRestore_GetSharePointRestoreSession",
+      "parameters": [
+        {
+          "name": "sharePointRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of sharePointRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharePointRestoreSession"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.sharePointRestoreSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Update the navigation property sharePointRestoreSessions in solutions",
+      "operationId": "solution.backupRestore_UpdateSharePointRestoreSession",
+      "parameters": [
+        {
+          "name": "sharePointRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of sharePointRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharePointRestoreSession"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.sharePointRestoreSession"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.sharePointRestoreSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Delete navigation property sharePointRestoreSessions for solutions",
+      "operationId": "solution.backupRestore_DeleteSharePointRestoreSession",
+      "parameters": [
+        {
+          "name": "sharePointRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of sharePointRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sharePointRestoreSession"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

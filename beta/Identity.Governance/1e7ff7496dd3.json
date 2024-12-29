@@ -1,0 +1,72 @@
+{
+  "/privilegedApproval/{privilegedApproval-id}/roleInfo/microsoft.graph.selfActivate": {
+    "post": {
+      "tags": [
+        "privilegedApproval.Actions"
+      ],
+      "summary": "Invoke action selfActivate",
+      "operationId": "privilegedApproval.roleInfo_selfActivate",
+      "parameters": [
+        {
+          "name": "privilegedApproval-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedApproval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedApproval"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "duration": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketNumber": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketSystem": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

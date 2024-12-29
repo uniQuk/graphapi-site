@@ -1,0 +1,69 @@
+{
+  "/trustFramework/keySets/{trustFrameworkKeySet-id}/microsoft.graph.uploadPkcs12": {
+    "post": {
+      "tags": [
+        "trustFramework.Actions"
+      ],
+      "summary": "Invoke action uploadPkcs12",
+      "description": "Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/trustframeworkkeyset-uploadpkcs12?view=graph-rest-beta"
+      },
+      "operationId": "trustFramework.keySet_uploadPkcs12",
+      "parameters": [
+        {
+          "name": "trustFrameworkKeySet-id",
+          "in": "path",
+          "description": "The unique identifier of trustFrameworkKeySet",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trustFrameworkKeySet"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "password": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trustFrameworkKey"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

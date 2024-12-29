@@ -1,0 +1,158 @@
+{
+  "/admin/serviceAnnouncement/issues/{serviceHealthIssue-id}": {
+    "get": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Get serviceHealthIssue",
+      "description": "Retrieve the properties and relationships of a serviceHealthIssue object. This operation retrieves a specified service health issue for tenant. The operation returns an error if the issue does not exist for the tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/servicehealthissue-get?view=graph-rest-1.0"
+      },
+      "operationId": "admin.serviceAnnouncement_GetIssue",
+      "parameters": [
+        {
+          "name": "serviceHealthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealthIssue"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Update the navigation property issues in admin",
+      "operationId": "admin.serviceAnnouncement_UpdateIssue",
+      "parameters": [
+        {
+          "name": "serviceHealthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealthIssue"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealthIssue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Delete navigation property issues for admin",
+      "operationId": "admin.serviceAnnouncement_DeleteIssue",
+      "parameters": [
+        {
+          "name": "serviceHealthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealthIssue"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

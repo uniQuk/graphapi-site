@@ -1,0 +1,71 @@
+{
+  "/deviceManagement/managedDevices/microsoft.graph.bulkRestoreCloudPc": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action bulkRestoreCloudPc",
+      "description": "Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.managedDevice_bulkRestoreCloudPc",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "managedDeviceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "restorePointDateTime": {
+                  "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$",
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "timeRange": {
+                  "$ref": "#/components/schemas/microsoft.graph.restoreTimeRange"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcBulkRemoteActionResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-09-24",
+        "date": "2023-05-24",
+        "version": "2023-05/bulkRestoreCloudPc",
+        "description": "The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

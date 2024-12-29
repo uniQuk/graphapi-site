@@ -1,0 +1,52 @@
+{
+  "/print/services/{printService-id}/endpoints/$count": {
+    "get": {
+      "tags": [
+        "print.printService"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "print.service.endpoint_GetCount",
+      "parameters": [
+        {
+          "name": "printService-id",
+          "in": "path",
+          "description": "The unique identifier of printService",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printService"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

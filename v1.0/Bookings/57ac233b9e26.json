@@ -1,0 +1,67 @@
+{
+  "/solutions/backupRestore/restorePoints/microsoft.graph.search": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action search",
+      "description": "Search for the restorePoint objects associated with a protectionUnit.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/restorepoint-search?view=graph-rest-1.0"
+      },
+      "operationId": "solution.backupRestore.restorePoint_search",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "protectionUnitIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "protectionTimePeriod": {
+                  "$ref": "#/components/schemas/microsoft.graph.timePeriod"
+                },
+                "restorePointPreference": {
+                  "$ref": "#/components/schemas/microsoft.graph.restorePointPreference"
+                },
+                "tags": {
+                  "$ref": "#/components/schemas/microsoft.graph.restorePointTags"
+                },
+                "artifactQuery": {
+                  "$ref": "#/components/schemas/microsoft.graph.artifactQuery"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.restorePointSearchResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

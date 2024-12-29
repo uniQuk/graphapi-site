@@ -1,0 +1,187 @@
+{
+  "/education/users/{educationUser-id}/rubrics/{educationRubric-id}": {
+    "get": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Get rubrics from education",
+      "description": "When set, the grading rubric attached to the assignment.",
+      "operationId": "education.user_GetRubric",
+      "parameters": [
+        {
+          "name": "educationUser-id",
+          "in": "path",
+          "description": "The unique identifier of educationUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationUser"
+        },
+        {
+          "name": "educationRubric-id",
+          "in": "path",
+          "description": "The unique identifier of educationRubric",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationRubric"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationRubric"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Update the navigation property rubrics in education",
+      "operationId": "education.user_UpdateRubric",
+      "parameters": [
+        {
+          "name": "educationUser-id",
+          "in": "path",
+          "description": "The unique identifier of educationUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationUser"
+        },
+        {
+          "name": "educationRubric-id",
+          "in": "path",
+          "description": "The unique identifier of educationRubric",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationRubric"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.educationRubric"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationRubric"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "education.educationUser"
+      ],
+      "summary": "Delete navigation property rubrics for education",
+      "operationId": "education.user_DeleteRubric",
+      "parameters": [
+        {
+          "name": "educationUser-id",
+          "in": "path",
+          "description": "The unique identifier of educationUser",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationUser"
+        },
+        {
+          "name": "educationRubric-id",
+          "in": "path",
+          "description": "The unique identifier of educationRubric",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationRubric"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "/deviceManagement/reports/microsoft.graph.retrieveAssignedApplicationsReport": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action retrieveAssignedApplicationsReport",
+      "description": "Retrieves assigned applications report for troubleshooting blade",
+      "operationId": "deviceManagement.report_retrieveAssignedApplicationsReport",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "filter": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "top": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "skip": {
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer",
+                  "format": "int32",
+                  "nullable": true
+                },
+                "orderby": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "groupby": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "select": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "search": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

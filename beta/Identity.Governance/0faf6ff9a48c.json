@@ -1,0 +1,69 @@
+{
+  "/identityGovernance/privilegedAccess/group/assignmentScheduleInstances/{privilegedAccessGroupAssignmentScheduleInstance-id}/activatedUsing": {
+    "get": {
+      "tags": [
+        "identityGovernance.privilegedAccessRoot"
+      ],
+      "summary": "Get activatedUsing from identityGovernance",
+      "description": "When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it's null.",
+      "operationId": "identityGovernance.privilegedAccess.group.assignmentScheduleInstance_GetActivatedUsing",
+      "parameters": [
+        {
+          "name": "privilegedAccessGroupAssignmentScheduleInstance-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccessGroupAssignmentScheduleInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccessGroupAssignmentScheduleInstance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

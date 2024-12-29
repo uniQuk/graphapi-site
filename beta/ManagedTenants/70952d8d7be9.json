@@ -1,0 +1,153 @@
+{
+  "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}": {
+    "get": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Get managedTenantAlertRules from tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_GetManagedTenantAlertRule",
+      "parameters": [
+        {
+          "name": "managedTenantAlertRule-id",
+          "in": "path",
+          "description": "The unique identifier of managedTenantAlertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedTenantAlertRule"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managedTenantAlertRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Update the navigation property managedTenantAlertRules in tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_UpdateManagedTenantAlertRule",
+      "parameters": [
+        {
+          "name": "managedTenantAlertRule-id",
+          "in": "path",
+          "description": "The unique identifier of managedTenantAlertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedTenantAlertRule"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedTenants.managedTenantAlertRule"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.managedTenantAlertRule"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Delete navigation property managedTenantAlertRules for tenantRelationships",
+      "operationId": "tenantRelationship.managedTenant_DeleteManagedTenantAlertRule",
+      "parameters": [
+        {
+          "name": "managedTenantAlertRule-id",
+          "in": "path",
+          "description": "The unique identifier of managedTenantAlertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedTenantAlertRule"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

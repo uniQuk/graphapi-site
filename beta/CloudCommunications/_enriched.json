@@ -1,0 +1,2648 @@
+{
+  "4d5a4667619d": {
+    "path": "/communications",
+    "methods": {}
+  },
+  "91676947f441": {
+    "path": "/communications/callRecords",
+    "methods": {}
+  },
+  "1dc50b014265": {
+    "path": "/communications/callRecords/{callRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecord",
+        "apiReference": "https://learn.microsoft.com/graph/api/callrecords-callrecord-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "ec167722e64e": {
+    "path": "/communications/callRecords/{callRecord-id}/organizer_v2",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordOrganizerV2",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallRecordOrganizerV2",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationCallRecordOrganizerV2",
+        "apiReference": ""
+      }
+    }
+  },
+  "b45d30d3b93b": {
+    "path": "/communications/callRecords/{callRecord-id}/participants_v2",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordParticipantV2",
+        "apiReference": "https://learn.microsoft.com/graph/api/callrecords-callrecord-list-participants_v2?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationCallRecordParticipantV2",
+        "apiReference": ""
+      }
+    }
+  },
+  "fd90fecc63cd": {
+    "path": "/communications/callRecords/{callRecord-id}/participants_v2/{participant-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordParticipantV2",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallRecordParticipantV2",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationCallRecordParticipantV2",
+        "apiReference": ""
+      }
+    }
+  },
+  "77f4785fa978": {
+    "path": "/communications/callRecords/{callRecord-id}/participants_v2/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordParticipant",
+        "apiReference": ""
+      }
+    }
+  },
+  "32193fd1fdc6": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/callrecords-callrecord-list-sessions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationCallRecordSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "bc35273cf197": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions/{session-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordSession",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallRecordSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationCallRecordSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "2bc48f7585b7": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions/{session-id}/segments",
+    "methods": {}
+  },
+  "2134acaf8afc": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions/{session-id}/segments/{segment-id}",
+    "methods": {}
+  },
+  "99e95e92cae3": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions/{session-id}/segments/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordSessionSegmentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c6e7d6c32825": {
+    "path": "/communications/callRecords/{callRecord-id}/sessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2ea06f06e310": {
+    "path": "/communications/callRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "818cf5e8fa7b": {
+    "path": "/communications/callRecords/microsoft.graph.callRecords.getPstnBlockedUsersLog(fromDateTime={fromDateTime},toDateTime={toDateTime})",
+    "methods": {}
+  },
+  "1ae7286d96c7": {
+    "path": "/communications/callRecords/microsoft.graph.callRecords.getPstnOnlineMeetingDialoutReport(fromDateTime={fromDateTime},toDateTime={toDateTime})",
+    "methods": {}
+  },
+  "5b7ef6a695a8": {
+    "path": "/communications/callRecords/microsoft.graph.callRecords.getSmsLog(fromDateTime={fromDateTime},toDateTime={toDateTime})",
+    "methods": {}
+  },
+  "b8bd284be98a": {
+    "path": "/communications/calls",
+    "methods": {
+      "post": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCalls.Chat",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCallAsGuest.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as a guest",
+            "FullDescription": "Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaCommunicationCall",
+        "apiReference": "https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-beta"
+      }
+    }
+  },
+  "328646257697": {
+    "path": "/communications/calls/{call-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.AccessMedia.All",
+            "IsAdmin": false,
+            "Description": "Access media streams in a call as an app",
+            "FullDescription": "Allows the app to get direct access to media streams in a call, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCall",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-get?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.AccessMedia.All",
+            "IsAdmin": false,
+            "Description": "Access media streams in a call as an app",
+            "FullDescription": "Allows the app to get direct access to media streams in a call, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaCommunicationCall",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "3cd359e57137": {
+    "path": "/communications/calls/{call-id}/audioRoutingGroups",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallAudioRoutingGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaCommunicationCallAudioRoutingGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-beta"
+      }
+    }
+  },
+  "026a7350f110": {
+    "path": "/communications/calls/{call-id}/audioRoutingGroups/{audioRoutingGroup-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallAudioRoutingGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaCommunicationCallAudioRoutingGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaCommunicationCallAudioRoutingGroup",
+        "apiReference": "https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "1c5c1775283a": {
+    "path": "/communications/calls/{call-id}/audioRoutingGroups/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallAudioRoutingGroupCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fefa7b7ef987": {
+    "path": "/communications/calls/{call-id}/contentSharingSessions",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCallAsGuest.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as a guest",
+            "FullDescription": "Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallContentSharingSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationCallContentSharingSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "80bb558a076b": {
+    "path": "/communications/calls/{call-id}/contentSharingSessions/{contentSharingSession-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCallAsGuest.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as a guest",
+            "FullDescription": "Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallContentSharingSession",
+        "apiReference": "https://learn.microsoft.com/graph/api/contentsharingsession-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallContentSharingSession",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationCallContentSharingSession",
+        "apiReference": ""
+      }
+    }
+  },
+  "8e90c494d0eb": {
+    "path": "/communications/calls/{call-id}/contentSharingSessions/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCallAsGuest.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as a guest",
+            "FullDescription": "Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.InitiateGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing group calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallContentSharingSessionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8351aaa02fb3": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.addLargeGalleryView",
+    "methods": {}
+  },
+  "14c41f2c5651": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.answer",
+    "methods": {}
+  },
+  "38cc17bfa868": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.cancelMediaProcessing",
+    "methods": {}
+  },
+  "c27e53ab26d3": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.changeScreenSharingRole",
+    "methods": {}
+  },
+  "cad3a4efc7be": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.keepAlive",
+    "methods": {}
+  },
+  "fd8bdc87e878": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.mute",
+    "methods": {}
+  },
+  "299d094df836": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.playPrompt",
+    "methods": {}
+  },
+  "3de8f8a265f9": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.record",
+    "methods": {}
+  },
+  "9047fadad4a8": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.recordResponse",
+    "methods": {}
+  },
+  "a692a270e341": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.redirect",
+    "methods": {}
+  },
+  "4e3a9a013b22": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.reject",
+    "methods": {}
+  },
+  "d89ca111ad58": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.sendDtmfTones",
+    "methods": {}
+  },
+  "1c7d05b2ccac": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.subscribeToTone",
+    "methods": {}
+  },
+  "622599ca3845": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.transfer",
+    "methods": {}
+  },
+  "bcc9cdcd7ba4": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.unmute",
+    "methods": {}
+  },
+  "89f2e0c02f2e": {
+    "path": "/communications/calls/{call-id}/microsoft.graph.updateRecordingStatus",
+    "methods": {}
+  },
+  "db89ddfd968f": {
+    "path": "/communications/calls/{call-id}/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationCallOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "6ba756de67ef": {
+    "path": "/communications/calls/{call-id}/operations/{commsOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationCallOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "b94d8f567b03": {
+    "path": "/communications/calls/{call-id}/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "79c2bbf5d51b": {
+    "path": "/communications/calls/{call-id}/participants",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.AccessMedia.All",
+            "IsAdmin": false,
+            "Description": "Access media streams in a call as an app",
+            "FullDescription": "Allows the app to get direct access to media streams in a call, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallParticipant",
+        "apiReference": "https://learn.microsoft.com/graph/api/call-list-participants?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationCallParticipant",
+        "apiReference": ""
+      }
+    }
+  },
+  "c5ad0af1e052": {
+    "path": "/communications/calls/{call-id}/participants/{participant-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCallasGuest.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallParticipant",
+        "apiReference": "https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationCallParticipant",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Calls.JoinGroupCall.All",
+            "IsAdmin": false,
+            "Description": "Join group calls and meetings as an app",
+            "FullDescription": "Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.JoinGroupCallasGuest.All",
+            "IsAdmin": false,
+            "Description": "Consent name unavailable",
+            "FullDescription": "Consent description unavailable",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaCommunicationCallParticipant",
+        "apiReference": "https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "d4dc9cdc43ec": {
+    "path": "/communications/calls/{call-id}/participants/{participant-id}/microsoft.graph.mute",
+    "methods": {}
+  },
+  "f66db3534988": {
+    "path": "/communications/calls/{call-id}/participants/{participant-id}/microsoft.graph.startHoldMusic",
+    "methods": {}
+  },
+  "b9afc6621b84": {
+    "path": "/communications/calls/{call-id}/participants/{participant-id}/microsoft.graph.stopHoldMusic",
+    "methods": {}
+  },
+  "bd9622f2c8e7": {
+    "path": "/communications/calls/{call-id}/participants/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Calls.Initiate.All",
+            "IsAdmin": false,
+            "Description": "Initiate outgoing 1 to 1 calls from the app",
+            "FullDescription": "Allows the app to place outbound calls to a single user and transfer calls to users in your organizations directory, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Calls.AccessMedia.All",
+            "IsAdmin": false,
+            "Description": "Access media streams in a call as an app",
+            "FullDescription": "Allows the app to get direct access to media streams in a call, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationCallParticipantCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a07f79c086f5": {
+    "path": "/communications/calls/{call-id}/participants/microsoft.graph.invite",
+    "methods": {}
+  },
+  "bb62c487ba14": {
+    "path": "/communications/calls/{call-id}/participants/microsoft.graph.muteAll",
+    "methods": {}
+  },
+  "81d69983ee14": {
+    "path": "/communications/calls/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationCallCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "00f05b0f9f00": {
+    "path": "/communications/calls/microsoft.graph.logTeleconferenceDeviceQuality",
+    "methods": {}
+  },
+  "ea17aca00681": {
+    "path": "/communications/microsoft.graph.getPresencesByUserId",
+    "methods": {}
+  },
+  "65194405aee1": {
+    "path": "/communications/onlineMeetings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationOnlineMeeting",
+        "apiReference": "https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeeting",
+        "apiReference": ""
+      }
+    }
+  },
+  "5a1fe3cbfde2": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeeting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeeting",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeeting",
+        "apiReference": ""
+      }
+    }
+  },
+  "3bf6e05b79db": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/aiInsights",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingAiInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "49e09f271f05": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/aiInsights/{callAiInsight-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingAiInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "2457edf2d6e0": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/aiInsights/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAiInsightCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d98b8c12c6a1": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/alternativeRecording",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "52dca344f615": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "67f0514c87f5": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "93be96341757": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "e007af83c1ff": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/{attendanceRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "b73dd253408a": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReportAttendanceRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "09003ffd992d": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendanceReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendanceReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6342627ac924": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/attendeeReport",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "f52dd32660c8": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/broadcastRecording",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "15e59a3449a0": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport",
+    "methods": {}
+  },
+  "8b3154232d67": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords",
+    "methods": {}
+  },
+  "d533004f9f64": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords/{attendanceRecord-id}",
+    "methods": {}
+  },
+  "5083f802efdb": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords/$count",
+    "methods": {}
+  },
+  "d81e056ae1a4": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/microsoft.graph.getVirtualAppointmentJoinWebUrl()",
+    "methods": {}
+  },
+  "4d25c8176e02": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/microsoft.graph.sendVirtualAppointmentReminderSms",
+    "methods": {}
+  },
+  "424636dac24d": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/microsoft.graph.sendVirtualAppointmentSms",
+    "methods": {}
+  },
+  "511baaf1a8b0": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recording",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "5baddf3a68ed": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recordings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "88ad631e5234": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}",
+    "methods": {
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "e8650faf31e0": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}/content",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRecordingContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingRecordingContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingRecordingContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "35437925e990": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recordings/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRecordingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "967a9595d2fb": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/recordings/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "037e8fbd5d1f": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistration",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingRegistration",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "ff662dd7fac4": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/customQuestions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "33b789554a91": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/customQuestions/{meetingRegistrationQuestion-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "158412730e57": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/customQuestions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationCustomQuestionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4448f04df4ad": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/registrants",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      }
+    }
+  },
+  "becdd8827788": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/registrants/{meetingRegistrantBase-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      }
+    }
+  },
+  "3ee2e7535623": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/registration/registrants/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingRegistrationRegistrantCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "416f9928a38f": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingTranscript",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationOnlineMeetingTranscript",
+        "apiReference": ""
+      }
+    }
+  },
+  "f9306af397cb": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingTranscript",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingTranscript",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingTranscript",
+        "apiReference": ""
+      }
+    }
+  },
+  "3704bb9382ba": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}/content",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingTranscriptContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingTranscriptContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingTranscriptContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "5b023d126f9e": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}/metadataContent",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingTranscriptMetadataContent",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaCommunicationOnlineMeetingTranscriptMetadataContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingTranscriptMetadataContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "94e8ad660a80": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationOnlineMeetingTranscriptCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c0676c89315a": {
+    "path": "/communications/onlineMeetings/{onlineMeeting-id}/transcripts/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "8cc1093f5b36": {
+    "path": "/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "01772d9d5a3d": {
+    "path": "/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')/microsoft.graph.getVirtualAppointmentJoinWebUrl()",
+    "methods": {}
+  },
+  "e76e58d02c51": {
+    "path": "/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')/microsoft.graph.sendVirtualAppointmentReminderSms",
+    "methods": {}
+  },
+  "c96d2c4b0a36": {
+    "path": "/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')/microsoft.graph.sendVirtualAppointmentSms",
+    "methods": {}
+  },
+  "50c9045556a9": {
+    "path": "/communications/onlineMeetings/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationOnlineMeetingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f230d38613b4": {
+    "path": "/communications/onlineMeetings/microsoft.graph.createOrGet",
+    "methods": {}
+  },
+  "d79b4052dfd5": {
+    "path": "/communications/onlineMeetings/microsoft.graph.getAllRecordings(meetingOrganizerUserId='@meetingOrganizerUserId',startDateTime=@startDateTime,endDateTime=@endDateTime)",
+    "methods": {}
+  },
+  "7535f0d83c0a": {
+    "path": "/communications/onlineMeetings/microsoft.graph.getAllTranscripts(meetingOrganizerUserId='@meetingOrganizerUserId',startDateTime=@startDateTime,endDateTime=@endDateTime)",
+    "methods": {}
+  },
+  "30dc5ef8bdf3": {
+    "path": "/communications/presences",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Presence.Read",
+            "IsAdmin": false,
+            "Description": "Read your presence information",
+            "FullDescription": "Allows the app to read your presence information on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.Read.All",
+            "IsAdmin": false,
+            "Description": "Read presence information of all users in your organization",
+            "FullDescription": "Allows the app to read presence information of all users in the directory on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write presence information for all users",
+            "FullDescription": "Allows the app to read all presence information and write activity and availability of all users in the directory without a signed-in user. Presence information includes activity, availability, status note, calendar out-of-office message, time zone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationPresence",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaCommunicationPresence",
+        "apiReference": ""
+      }
+    }
+  },
+  "b87b3266ef51": {
+    "path": "/communications/presences/{presence-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCommunicationPresence",
+        "apiReference": "https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCommunicationPresence",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaCommunicationPresence",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b861c61e190": {
+    "path": "/communications/presences/{presence-id}/microsoft.graph.clearPresence",
+    "methods": {}
+  },
+  "de6febc2ba07": {
+    "path": "/communications/presences/{presence-id}/microsoft.graph.clearUserPreferredPresence",
+    "methods": {}
+  },
+  "d3559ec14caf": {
+    "path": "/communications/presences/{presence-id}/microsoft.graph.setPresence",
+    "methods": {}
+  },
+  "114b9f83cd6a": {
+    "path": "/communications/presences/{presence-id}/microsoft.graph.setStatusMessage",
+    "methods": {}
+  },
+  "ced8ea18afa9": {
+    "path": "/communications/presences/{presence-id}/microsoft.graph.setUserPreferredPresence",
+    "methods": {}
+  },
+  "7b69c86d7e94": {
+    "path": "/communications/presences/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Presence.Read",
+            "IsAdmin": false,
+            "Description": "Read your presence information",
+            "FullDescription": "Allows the app to read your presence information on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.Read.All",
+            "IsAdmin": false,
+            "Description": "Read presence information of all users in your organization",
+            "FullDescription": "Allows the app to read presence information of all users in the directory on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write presence information for all users",
+            "FullDescription": "Allows the app to read all presence information and write activity and availability of all users in the directory without a signed-in user. Presence information includes activity, availability, status note, calendar out-of-office message, time zone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaCommunicationPresenceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f85214df2069": {
+    "path": "/users/{user-id}/onlineMeetings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeeting",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaUserOnlineMeeting",
+        "apiReference": ""
+      }
+    }
+  },
+  "1b884238c8c7": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeeting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaUserOnlineMeeting",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaUserOnlineMeeting",
+        "apiReference": ""
+      }
+    }
+  },
+  "61dfae624b0b": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/aiInsights",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingAiInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "6b7e24099dd5": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/aiInsights/{callAiInsight-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingAiInsight",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingAiInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "d415293c1305": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/aiInsights/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAiInsightCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6afe49573e8f": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/alternativeRecording",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetingArtifact.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting artifacts",
+            "FullDescription": "Allows the app to read online meeting artifacts in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingAlternativeRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "9fde03f0488a": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "5607c1838d49": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingAttendanceReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "da106255f8c0": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "1cb167f62913": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/{attendanceRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "7d7dcb47bfa2": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports/{meetingAttendanceReport-id}/attendanceRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReportAttendanceRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f878858fe5fd": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendanceReports/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendanceReportCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8aac891cbebb": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/attendeeReport",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingAttendeeReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "d00a205528a0": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/broadcastRecording",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingBroadcastRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e609094353c": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport",
+    "methods": {}
+  },
+  "88b9871c83c3": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords",
+    "methods": {}
+  },
+  "fc7adbd2b8a1": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords/{attendanceRecord-id}",
+    "methods": {}
+  },
+  "bfa5e863cd01": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport/attendanceRecords/$count",
+    "methods": {}
+  },
+  "9e3a6908f258": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recording",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetingArtifact.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting artifacts",
+            "FullDescription": "Allows the app to read online meeting artifacts in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "1001ef2b8662": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "d7dc20a3828a": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}",
+    "methods": {
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingRecording",
+        "apiReference": ""
+      }
+    }
+  },
+  "b5577ab6a165": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}/content",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRecordingContent",
+        "apiReference": "https://learn.microsoft.com/graph/api/callrecording-get?view=graph-rest-beta"
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingRecordingContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingRecordingContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "63d950ab30f3": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRecordingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a92bfceb4e5c": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingRegistration",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingRegistration",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaUserOnlineMeetingRegistration",
+        "apiReference": ""
+      }
+    }
+  },
+  "a0c491474ecf": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/customQuestions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "e7607f600e6e": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/customQuestions/{meetingRegistrationQuestion-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingRegistrationCustomQuestion",
+        "apiReference": ""
+      }
+    }
+  },
+  "89602451592a": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/customQuestions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationCustomQuestionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f432e3275df2": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/registrants",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaUserOnlineMeetingRegistrationRegistrant",
+        "apiReference": "https://learn.microsoft.com/graph/api/meetingregistration-post-registrants?view=graph-rest-beta"
+      }
+    }
+  },
+  "3a30487945fc": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/registrants/{meetingRegistrantBase-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingRegistrationRegistrant",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaUserOnlineMeetingRegistrationRegistrant",
+        "apiReference": "https://learn.microsoft.com/graph/api/meetingregistrant-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "a7d481f91260": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/registration/registrants/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingRegistrationRegistrantCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4eebae9a1096": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/transcripts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingTranscript",
+        "apiReference": "https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaUserOnlineMeetingTranscript",
+        "apiReference": ""
+      }
+    }
+  },
+  "b5e50283584d": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingTranscript",
+        "apiReference": "https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingTranscript",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingTranscript",
+        "apiReference": ""
+      }
+    }
+  },
+  "d431ebab681c": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}/content",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingTranscriptContent",
+        "apiReference": "https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-beta"
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingTranscriptContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingTranscriptContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "003204ec7ec6": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/transcripts/{callTranscript-id}/metadataContent",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingTranscriptMetadataContent",
+        "apiReference": "https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-beta"
+      },
+      "put": {
+        "permissions": [],
+        "command": "Set-MgBetaUserOnlineMeetingTranscriptMetadataContent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingTranscriptMetadataContent",
+        "apiReference": ""
+      }
+    }
+  },
+  "0e5237289397": {
+    "path": "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/transcripts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserOnlineMeetingTranscriptCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "84a26c8edce5": {
+    "path": "/users/{user-id}/onlineMeetings(joinWebUrl='{joinWebUrl}')",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserOnlineMeetingByJoinWebUrl",
+        "apiReference": ""
+      }
+    }
+  },
+  "fb056f9c9b1d": {
+    "path": "/users/{user-id}/onlineMeetings/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "OnlineMeetings.Read",
+            "IsAdmin": false,
+            "Description": "Read your online meetings",
+            "FullDescription": "Allows the app to read online meeting details on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read online meeting details",
+            "FullDescription": "Allows the app to read online meeting details in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Read and create your online meetings",
+            "FullDescription": "Allows the app to read and create online meetings on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "OnlineMeetings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and create online meetings",
+            "FullDescription": "Allows the app to read and create online meetings as an application in your organization.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserOnlineMeetingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d37d98c0fe9": {
+    "path": "/users/{user-id}/presence",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Presence.Read",
+            "IsAdmin": false,
+            "Description": "Read your presence information",
+            "FullDescription": "Allows the app to read your presence information on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.Read.All",
+            "IsAdmin": false,
+            "Description": "Read presence information of all users in your organization",
+            "FullDescription": "Allows the app to read presence information of all users in the directory on your behalf. Presence information includes activity, availability, status note, calendar out-of-office message, timezone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Presence.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write presence information for all users",
+            "FullDescription": "Allows the app to read all presence information and write activity and availability of all users in the directory without a signed-in user. Presence information includes activity, availability, status note, calendar out-of-office message, time zone and location.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPresence",
+        "apiReference": "https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaUserPresence",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaUserPresence",
+        "apiReference": ""
+      }
+    }
+  }
+}

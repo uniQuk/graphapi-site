@@ -1,0 +1,187 @@
+{
+  "/security/attackSimulation/trainings/{training-id}/languageDetails/{trainingLanguageDetail-id}": {
+    "get": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Get languageDetails from security",
+      "description": "Language specific details on a training.",
+      "operationId": "security.attackSimulation.training_GetLanguageDetail",
+      "parameters": [
+        {
+          "name": "training-id",
+          "in": "path",
+          "description": "The unique identifier of training",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "training"
+        },
+        {
+          "name": "trainingLanguageDetail-id",
+          "in": "path",
+          "description": "The unique identifier of trainingLanguageDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trainingLanguageDetail"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trainingLanguageDetail"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Update the navigation property languageDetails in security",
+      "operationId": "security.attackSimulation.training_UpdateLanguageDetail",
+      "parameters": [
+        {
+          "name": "training-id",
+          "in": "path",
+          "description": "The unique identifier of training",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "training"
+        },
+        {
+          "name": "trainingLanguageDetail-id",
+          "in": "path",
+          "description": "The unique identifier of trainingLanguageDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trainingLanguageDetail"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.trainingLanguageDetail"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.trainingLanguageDetail"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.attackSimulationRoot"
+      ],
+      "summary": "Delete navigation property languageDetails for security",
+      "operationId": "security.attackSimulation.training_DeleteLanguageDetail",
+      "parameters": [
+        {
+          "name": "training-id",
+          "in": "path",
+          "description": "The unique identifier of training",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "training"
+        },
+        {
+          "name": "trainingLanguageDetail-id",
+          "in": "path",
+          "description": "The unique identifier of trainingLanguageDetail",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "trainingLanguageDetail"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

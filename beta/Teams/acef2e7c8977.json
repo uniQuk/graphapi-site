@@ -1,0 +1,38 @@
+{
+  "/teamwork/devices/{teamworkDevice-id}/microsoft.graph.restart": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action restart",
+      "description": "Restart the specified Microsoft Teams-enabled device asynchronously.  A device is restarted after the async operation completes successfully, which might occur subsequent to a response from this API.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/teamworkdevice-restart?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.device_restart",
+      "parameters": [
+        {
+          "name": "teamworkDevice-id",
+          "in": "path",
+          "description": "The unique identifier of teamworkDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "teamworkDevice"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

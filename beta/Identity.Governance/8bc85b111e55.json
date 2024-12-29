@@ -1,0 +1,66 @@
+{
+  "/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog-id}/accessPackageResources/{accessPackageResource-id}/accessPackageResourceScopes/{accessPackageResourceScope-id}/accessPackageResource/microsoft.graph.refresh": {
+    "post": {
+      "tags": [
+        "identityGovernance.Actions"
+      ],
+      "summary": "Invoke action refresh",
+      "description": "In Microsoft Entra entitlement management, refresh the accessPackageResource object to fetch the latest details for displayName, description, and resourceType from the origin system. For the AadApplication originSystem, this operation also updates the displayName and description for the accessPackageResourceRole. ",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/accesspackageresource-refresh?view=graph-rest-beta"
+      },
+      "operationId": "identityGovernance.entitlementManagement.accessPackageCatalog.accessPackageResource.accessPackageResourceScope.accessPackageResource_refresh",
+      "parameters": [
+        {
+          "name": "accessPackageCatalog-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageCatalog",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageCatalog"
+        },
+        {
+          "name": "accessPackageResource-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResource"
+        },
+        {
+          "name": "accessPackageResourceScope-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceScope"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-12-31",
+        "date": "2023-03-01",
+        "version": "2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

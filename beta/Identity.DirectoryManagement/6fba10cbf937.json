@@ -1,0 +1,52 @@
+{
+  "/administrativeUnits/{administrativeUnit-id}/extensions/$count": {
+    "get": {
+      "tags": [
+        "administrativeUnits.extension"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "administrativeUnit.extension_GetCount",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

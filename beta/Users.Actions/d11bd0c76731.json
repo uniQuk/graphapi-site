@@ -1,0 +1,47 @@
+{
+  "/users/{user-id}/microsoft.graph.convertExternalToInternalMemberUser": {
+    "post": {
+      "tags": [
+        "users.Actions"
+      ],
+      "summary": "Invoke action convertExternalToInternalMemberUser",
+      "description": "Convert an externally authenticated user into an internal user. The user is able to sign into the host tenant as an internal user and access resources as a member. For more information about this conversion, see Convert external users to internal users.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/user-convertexternaltointernalmemberuser?view=graph-rest-beta"
+      },
+      "operationId": "user_convertExternalToInternalMemberUser",
+      "parameters": [
+        {
+          "name": "user-id",
+          "in": "path",
+          "description": "The unique identifier of user",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "user"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/convertExternalToInternalMemberUserRequestBody"
+      },
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/convertExternalToInternalMemberUserResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-07-02",
+        "date": "2024-07-02",
+        "version": "2024-07/PrivatePreview:copilotExportAPI"
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

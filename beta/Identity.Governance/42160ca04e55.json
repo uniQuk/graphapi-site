@@ -1,0 +1,40 @@
+{
+  "/privilegedRoleAssignmentRequests/{privilegedRoleAssignmentRequest-id}/microsoft.graph.cancel": {
+    "post": {
+      "tags": [
+        "privilegedRoleAssignmentRequests.Actions"
+      ],
+      "summary": "Invoke action cancel",
+      "operationId": "privilegedRoleAssignmentRequest_cancel",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignmentRequest"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

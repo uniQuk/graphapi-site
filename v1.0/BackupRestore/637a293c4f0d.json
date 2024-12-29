@@ -1,0 +1,52 @@
+{
+  "/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession-id}/mailboxRestoreArtifacts/$count": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "solution.backupRestore.exchangeRestoreSession.mailboxRestoreArtifact_GetCount",
+      "parameters": [
+        {
+          "name": "exchangeRestoreSession-id",
+          "in": "path",
+          "description": "The unique identifier of exchangeRestoreSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "exchangeRestoreSession"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

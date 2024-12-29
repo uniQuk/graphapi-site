@@ -1,0 +1,163 @@
+{
+  "/solutions/backupRestore/restoreSessions/{restoreSessionBase-id}": {
+    "get": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Get restoreSessionBase",
+      "description": "Get the properties of a restoreSession object by ID.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/restoresessionbase-get?view=graph-rest-beta"
+      },
+      "operationId": "solution.backupRestore_GetRestoreSession",
+      "parameters": [
+        {
+          "name": "restoreSessionBase-id",
+          "in": "path",
+          "description": "The unique identifier of restoreSessionBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "restoreSessionBase"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.restoreSessionBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Update the navigation property restoreSessions in solutions",
+      "operationId": "solution.backupRestore_UpdateRestoreSession",
+      "parameters": [
+        {
+          "name": "restoreSessionBase-id",
+          "in": "path",
+          "description": "The unique identifier of restoreSessionBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "restoreSessionBase"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.restoreSessionBase"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.restoreSessionBase"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.backupRestoreRoot"
+      ],
+      "summary": "Delete restoreSessionBase",
+      "description": "Delete a draft restoreSessionBase object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/restoresessionbase-delete?view=graph-rest-beta"
+      },
+      "operationId": "solution.backupRestore_DeleteRestoreSession",
+      "parameters": [
+        {
+          "name": "restoreSessionBase-id",
+          "in": "path",
+          "description": "The unique identifier of restoreSessionBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "restoreSessionBase"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "/education/synchronizationProfiles/{educationSynchronizationProfile-id}": {
+    "get": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Get an educationSynchronizationProfile (deprecated)",
+      "description": "Retrieve a school data synchronization profile in the tenant based on the identifier.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-beta"
+      },
+      "operationId": "education_GetSynchronizationProfile",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationSynchronizationProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Update the navigation property synchronizationProfiles in education",
+      "operationId": "education_UpdateSynchronizationProfile",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.educationSynchronizationProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.educationSynchronizationProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "education.educationSynchronizationProfile"
+      ],
+      "summary": "Delete a educationSynchronizationProfile (deprecated)",
+      "description": "Delete a school data synchronization profile in the tenant based on the identifier.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsynchronizationprofile-delete?view=graph-rest-beta"
+      },
+      "operationId": "education_DeleteSynchronizationProfile",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

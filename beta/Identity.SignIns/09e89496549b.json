@@ -1,0 +1,158 @@
+{
+  "/informationProtection/threatAssessmentRequests/{threatAssessmentRequest-id}": {
+    "get": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Get threatAssessmentRequest",
+      "description": "Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-beta"
+      },
+      "operationId": "informationProtection_GetThreatAssessmentRequest",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.threatAssessmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Update the navigation property threatAssessmentRequests in informationProtection",
+      "operationId": "informationProtection_UpdateThreatAssessmentRequest",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.threatAssessmentRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.threatAssessmentRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "informationProtection.threatAssessmentRequest"
+      ],
+      "summary": "Delete navigation property threatAssessmentRequests for informationProtection",
+      "operationId": "informationProtection_DeleteThreatAssessmentRequest",
+      "parameters": [
+        {
+          "name": "threatAssessmentRequest-id",
+          "in": "path",
+          "description": "The unique identifier of threatAssessmentRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "threatAssessmentRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "/applications/{application-id}/connectorGroup/$ref": {
+    "get": {
+      "tags": [
+        "applications.connectorGroup"
+      ],
+      "summary": "Get ref of connectorGroup from applications",
+      "description": "The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.",
+      "operationId": "application_GetConnectorGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property link",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "put": {
+      "tags": [
+        "applications.connectorGroup"
+      ],
+      "summary": "Assign a connectorGroup to an application",
+      "description": "Assign a connectorGroup to an application.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/connectorgroup-post-applications?view=graph-rest-beta"
+      },
+      "operationId": "application_SetConnectorGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPutBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "applications.connectorGroup"
+      ],
+      "summary": "Delete ref of navigation property connectorGroup for applications",
+      "operationId": "application_DeleteConnectorGroupGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

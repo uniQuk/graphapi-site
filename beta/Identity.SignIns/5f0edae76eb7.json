@@ -1,0 +1,58 @@
+{
+  "/policies/featureRolloutPolicies/{featureRolloutPolicy-id}/appliesTo/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "policies.featureRolloutPolicy"
+      ],
+      "summary": "Remove appliesTo",
+      "description": "Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete-appliesto?view=graph-rest-beta"
+      },
+      "operationId": "policy.featureRolloutPolicy.appliesTo_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

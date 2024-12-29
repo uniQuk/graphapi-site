@@ -1,0 +1,149 @@
+{
+  "9745a24d531e": {
+    "path": "/schemaExtensions",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all applications",
+            "FullDescription": "Allows the app to read all applications and service principals without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSchemaExtension",
+        "apiReference": "https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Application.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all applications",
+            "FullDescription": "Allows the app to create, read, update and delete applications and service principals without a signed-in user.  Does not allow management of consent grants.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgSchemaExtension",
+        "apiReference": "https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-1.0"
+      }
+    }
+  },
+  "a5e93390e7fd": {
+    "path": "/schemaExtensions/{schemaExtension-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all applications",
+            "FullDescription": "Allows the app to read all applications and service principals without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSchemaExtension",
+        "apiReference": "https://learn.microsoft.com/graph/api/schemaextension-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Application.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all applications",
+            "FullDescription": "Allows the app to create, read, update and delete applications and service principals without a signed-in user.  Does not allow management of consent grants.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgSchemaExtension",
+        "apiReference": "https://learn.microsoft.com/graph/api/schemaextension-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Application.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all applications",
+            "FullDescription": "Allows the app to create, read, update and delete applications and service principals without a signed-in user.  Does not allow management of consent grants.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write directory data",
+            "FullDescription": "Allows the app to read and write data in your organization's directory, such as users, and groups, without a signed-in user.  Does not allow user or group deletion.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgSchemaExtension",
+        "apiReference": "https://learn.microsoft.com/graph/api/schemaextension-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "5f208614069b": {
+    "path": "/schemaExtensions/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "User.Read",
+            "IsAdmin": false,
+            "Description": "Sign you in and read your profile",
+            "FullDescription": "Allows you to sign in to the app with your organizational account and let the app read your profile. It also allows the app to read basic company information.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Application.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all applications",
+            "FullDescription": "Allows the app to read all applications and service principals without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSchemaExtensionCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

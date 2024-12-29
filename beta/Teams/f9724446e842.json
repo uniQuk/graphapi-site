@@ -1,0 +1,38 @@
+{
+  "/teamwork/deletedChats/{deletedChat-id}/microsoft.graph.undoDelete": {
+    "post": {
+      "tags": [
+        "teamwork.Actions"
+      ],
+      "summary": "Invoke action undoDelete",
+      "description": "Restore a deletedChat to an active chat.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/deletedchat-undodelete?view=graph-rest-beta"
+      },
+      "operationId": "teamwork.deletedChat_undoDelete",
+      "parameters": [
+        {
+          "name": "deletedChat-id",
+          "in": "path",
+          "description": "The unique identifier of deletedChat",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deletedChat"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

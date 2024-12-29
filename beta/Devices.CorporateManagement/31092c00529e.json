@@ -1,0 +1,52 @@
+{
+  "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/exemptAppLockerFiles/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.mdmWindowsInformationProtectionPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.mdmWindowsInformationProtectionPolicy.exemptAppLockerFile_GetCount",
+      "parameters": [
+        {
+          "name": "mdmWindowsInformationProtectionPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of mdmWindowsInformationProtectionPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "mdmWindowsInformationProtectionPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

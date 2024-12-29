@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/iosUpdateStatuses/{iosUpdateDeviceStatus-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.iosUpdateDeviceStatus"
+      ],
+      "summary": "Get iosUpdateStatuses from deviceManagement",
+      "description": "The IOS software update installation statuses for this account.",
+      "operationId": "deviceManagement_GetIosUpdateStatus",
+      "parameters": [
+        {
+          "name": "iosUpdateDeviceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of iosUpdateDeviceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosUpdateDeviceStatus"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.iosUpdateDeviceStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.iosUpdateDeviceStatus"
+      ],
+      "summary": "Update the navigation property iosUpdateStatuses in deviceManagement",
+      "operationId": "deviceManagement_UpdateIosUpdateStatus",
+      "parameters": [
+        {
+          "name": "iosUpdateDeviceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of iosUpdateDeviceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosUpdateDeviceStatus"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.iosUpdateDeviceStatus"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.iosUpdateDeviceStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.iosUpdateDeviceStatus"
+      ],
+      "summary": "Delete navigation property iosUpdateStatuses for deviceManagement",
+      "operationId": "deviceManagement_DeleteIosUpdateStatus",
+      "parameters": [
+        {
+          "name": "iosUpdateDeviceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of iosUpdateDeviceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosUpdateDeviceStatus"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration-id}/settings/{deviceManagementConfigurationSetting-id}/settingDefinitions/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.targetedManagedAppConfiguration"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.targetedManagedAppConfiguration.setting.settingDefinition_GetCount",
+      "parameters": [
+        {
+          "name": "targetedManagedAppConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of targetedManagedAppConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "targetedManagedAppConfiguration"
+        },
+        {
+          "name": "deviceManagementConfigurationSetting-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementConfigurationSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementConfigurationSetting"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

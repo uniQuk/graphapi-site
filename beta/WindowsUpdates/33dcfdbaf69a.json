@@ -1,0 +1,52 @@
+{
+  "/admin/windows/updates/deploymentAudiences/{deploymentAudience-id}/exclusions/$count": {
+    "get": {
+      "tags": [
+        "admin.adminWindows"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "admin.window.update.deploymentAudience.exclusion_GetCount",
+      "parameters": [
+        {
+          "name": "deploymentAudience-id",
+          "in": "path",
+          "description": "The unique identifier of deploymentAudience",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deploymentAudience"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

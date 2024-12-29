@@ -1,0 +1,51 @@
+{
+  "/reports/microsoft.graph.getTeamsTeamActivityDetail(date={date})": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function getTeamsTeamActivityDetail",
+      "description": "Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.",
+      "operationId": "report_getTeamsTeamActivityDetail",
+      "parameters": [
+        {
+          "name": "date",
+          "in": "path",
+          "description": "Usage: date={date}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$",
+            "type": "string",
+            "format": "date"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

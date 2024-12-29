@@ -1,0 +1,63 @@
+{
+  "/deviceManagement/intents/{deviceManagementIntent-id}/categories/{deviceManagementIntentSettingCategory-id}/settings/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementIntent"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.intent.category.setting_GetCount",
+      "parameters": [
+        {
+          "name": "deviceManagementIntent-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntent"
+        },
+        {
+          "name": "deviceManagementIntentSettingCategory-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementIntentSettingCategory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementIntentSettingCategory"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

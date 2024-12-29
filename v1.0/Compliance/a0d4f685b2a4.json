@@ -1,0 +1,59 @@
+{
+  "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/$count": {
+    "get": {
+      "tags": [
+        "privacy.subjectRightsRequest"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "privacy.subjectRightsRequest.collaborator_GetCount",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-03-20",
+        "date": "2022-03-22",
+        "version": "2022-02/PrivacyDeprecate",
+        "description": "The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security."
+      }
+    }
+  }
+}

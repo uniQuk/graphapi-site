@@ -1,0 +1,52 @@
+{
+  "/identityGovernance/termsOfUse/agreements/{agreement-id}/files/$count": {
+    "get": {
+      "tags": [
+        "identityGovernance.termsOfUseContainer"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identityGovernance.termsGraphOPreUse.agreement.file_GetCount",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

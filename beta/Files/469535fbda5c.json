@@ -1,0 +1,153 @@
+{
+  "/drives/{drive-id}/root/listItem/activities/{itemActivityOLD-id}/driveItem/contentStream": {
+    "get": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Get contentStream for the navigation property driveItem from drives",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "drive.root.listItem.activity_GetDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Update contentStream for the navigation property driveItem in drives",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "drive.root.listItem.activity_SetDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "drives.driveItem"
+      ],
+      "summary": "Delete contentStream for the navigation property driveItem in drives",
+      "description": "The content stream, if the item represents a file.",
+      "operationId": "drive.root.listItem.activity_DeleteDriveItemContentStream",
+      "parameters": [
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        },
+        {
+          "name": "itemActivityOLD-id",
+          "in": "path",
+          "description": "The unique identifier of itemActivityOLD",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "itemActivityOLD"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

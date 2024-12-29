@@ -1,0 +1,39 @@
+{
+  "/identity/authenticationEventsFlows/{authenticationEventsFlow-id}/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAttributeCollection/microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp": {
+    "get": {
+      "tags": [
+        "identity.authenticationEventsFlow"
+      ],
+      "summary": "Get the item of type microsoft.graph.onAttributeCollectionHandler as microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp",
+      "operationId": "identity.authenticationEventsFlow_GetOnAttributeCollectionAsOnAttributeCollectionExternalUsersSelfServiceSignUp",
+      "parameters": [
+        {
+          "name": "authenticationEventsFlow-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationEventsFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationEventsFlow"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Entity result.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

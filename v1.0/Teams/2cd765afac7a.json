@@ -1,0 +1,98 @@
+{
+  "/teams/{team-id}/channels/{channel-id}/microsoft.graph.doesUserHaveAccess(userId='@userId',tenantId='@tenantId',userPrincipalName='@userPrincipalName')": {
+    "get": {
+      "tags": [
+        "teams.Functions"
+      ],
+      "summary": "Invoke function doesUserHaveAccess",
+      "description": "Determine whether a user has access to a shared channel.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/channel-doesuserhaveaccess?view=graph-rest-1.0"
+      },
+      "operationId": "team.channel_doesUserHaveAccess",
+      "parameters": [
+        {
+          "name": "team-id",
+          "in": "path",
+          "description": "The unique identifier of team",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "team"
+        },
+        {
+          "name": "channel-id",
+          "in": "path",
+          "description": "The unique identifier of channel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "channel"
+        },
+        {
+          "name": "userId",
+          "in": "query",
+          "description": "Usage: userId='@userId'",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "tenantId",
+          "in": "query",
+          "description": "Usage: tenantId='@tenantId'",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "userPrincipalName",
+          "in": "query",
+          "description": "Usage: userPrincipalName='@userPrincipalName'",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

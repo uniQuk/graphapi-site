@@ -1,0 +1,208 @@
+{
+  "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes/{authoredNote-id}": {
+    "get": {
+      "tags": [
+        "privacy.subjectRightsRequest"
+      ],
+      "summary": "Get notes from privacy",
+      "description": "List of notes associated with the request.",
+      "operationId": "privacy.subjectRightsRequest_GetNote",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "authoredNote-id",
+          "in": "path",
+          "description": "The unique identifier of authoredNote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authoredNote"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authoredNote"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-03-20",
+        "date": "2022-03-22",
+        "version": "2022-02/PrivacyDeprecate",
+        "description": "The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "privacy.subjectRightsRequest"
+      ],
+      "summary": "Update the navigation property notes in privacy",
+      "operationId": "privacy.subjectRightsRequest_UpdateNote",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "authoredNote-id",
+          "in": "path",
+          "description": "The unique identifier of authoredNote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authoredNote"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.authoredNote"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authoredNote"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-03-20",
+        "date": "2022-03-22",
+        "version": "2022-02/PrivacyDeprecate",
+        "description": "The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "privacy.subjectRightsRequest"
+      ],
+      "summary": "Delete navigation property notes for privacy",
+      "operationId": "privacy.subjectRightsRequest_DeleteNote",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "authoredNote-id",
+          "in": "path",
+          "description": "The unique identifier of authoredNote",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authoredNote"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2025-03-20",
+        "date": "2022-03-22",
+        "version": "2022-02/PrivacyDeprecate",
+        "description": "The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "/deviceManagement/comanagedDevices/microsoft.graph.bulkSetCloudPcReviewStatus": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action bulkSetCloudPcReviewStatus",
+      "description": "Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.comanagedDevice_bulkSetCloudPcReviewStatus",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "managedDeviceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "reviewStatus": {
+                  "$ref": "#/components/schemas/microsoft.graph.cloudPcReviewStatus"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcBulkRemoteActionResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-09-30",
+        "date": "2024-05-15",
+        "version": "2024-05/BulkSetCloudPcReviewStatus",
+        "description": "The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

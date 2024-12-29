@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/termsAndConditions/{termsAndConditions-id}/acceptanceStatuses/{termsAndConditionsAcceptanceStatus-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Get acceptanceStatuses from deviceManagement",
+      "description": "The list of acceptance statuses for this T&C policy.",
+      "operationId": "deviceManagement.termsAndCondition_GetAcceptanceStatus",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsAcceptanceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsAcceptanceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsAcceptanceStatus"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsAcceptanceStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Update the navigation property acceptanceStatuses in deviceManagement",
+      "operationId": "deviceManagement.termsAndCondition_UpdateAcceptanceStatus",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsAcceptanceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsAcceptanceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsAcceptanceStatus"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsAcceptanceStatus"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.termsAndConditionsAcceptanceStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.termsAndConditions"
+      ],
+      "summary": "Delete navigation property acceptanceStatuses for deviceManagement",
+      "operationId": "deviceManagement.termsAndCondition_DeleteAcceptanceStatus",
+      "parameters": [
+        {
+          "name": "termsAndConditions-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditions",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditions"
+        },
+        {
+          "name": "termsAndConditionsAcceptanceStatus-id",
+          "in": "path",
+          "description": "The unique identifier of termsAndConditionsAcceptanceStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "termsAndConditionsAcceptanceStatus"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "/identity/customAuthenticationExtensions/{customAuthenticationExtension-id}": {
+    "get": {
+      "tags": [
+        "identity.customAuthenticationExtension"
+      ],
+      "summary": "Get customAuthenticationExtension",
+      "description": "Read the properties and relationships of a customAuthenticationExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0"
+      },
+      "operationId": "identity_GetCustomAuthenticationExtension",
+      "parameters": [
+        {
+          "name": "customAuthenticationExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAuthenticationExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAuthenticationExtension"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAuthenticationExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.customAuthenticationExtension"
+      ],
+      "summary": "Update customAuthenticationExtension",
+      "description": "Update the properties of a customAuthenticationExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-1.0"
+      },
+      "operationId": "identity_UpdateCustomAuthenticationExtension",
+      "parameters": [
+        {
+          "name": "customAuthenticationExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAuthenticationExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAuthenticationExtension"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.customAuthenticationExtension"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAuthenticationExtension"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.customAuthenticationExtension"
+      ],
+      "summary": "Delete customAuthenticationExtension",
+      "description": "Delete a customAuthenticationExtension object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0"
+      },
+      "operationId": "identity_DeleteCustomAuthenticationExtension",
+      "parameters": [
+        {
+          "name": "customAuthenticationExtension-id",
+          "in": "path",
+          "description": "The unique identifier of customAuthenticationExtension",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAuthenticationExtension"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

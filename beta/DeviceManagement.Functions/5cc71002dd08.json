@@ -1,0 +1,27 @@
+{
+  "/deviceManagement/microsoft.graph.userExperienceAnalyticsSummarizedDeviceScopes()": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function userExperienceAnalyticsSummarizedDeviceScopes",
+      "operationId": "deviceManagement_userExperienceAnalyticsSummarizedDeviceScope",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsDeviceScopeSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

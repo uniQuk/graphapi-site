@@ -1,0 +1,72 @@
+{
+  "/privilegedRoleAssignments/{privilegedRoleAssignment-id}/roleInfo/microsoft.graph.selfActivate": {
+    "post": {
+      "tags": [
+        "privilegedRoleAssignments.Actions"
+      ],
+      "summary": "Invoke action selfActivate",
+      "operationId": "privilegedRoleAssignment.roleInfo_selfActivate",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignment"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "duration": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketNumber": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ticketSystem": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

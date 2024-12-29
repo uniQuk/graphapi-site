@@ -1,0 +1,207 @@
+{
+  "/directory/featureRolloutPolicies/{featureRolloutPolicy-id}/appliesTo/$ref": {
+    "get": {
+      "tags": [
+        "directory.featureRolloutPolicy"
+      ],
+      "summary": "Get ref of appliesTo from directory",
+      "description": "Nullable. Specifies a list of directoryObject resources that feature is enabled for.",
+      "operationId": "directory.featureRolloutPolicy_ListAppliesToGraphBPreRef",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "$top",
+          "in": "query",
+          "description": "Show only the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "example": 50
+        },
+        {
+          "name": "$skip",
+          "in": "query",
+          "description": "Skip the first n items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$count",
+          "in": "query",
+          "description": "Include count of items",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "description": "Order items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/StringCollectionResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2021-06-30",
+        "date": "2021-03-05",
+        "version": "2021-01/DirectoryFeatureRolloutPolicies",
+        "description": "Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies."
+      },
+      "x-ms-pageable": {
+        "nextLinkName": "@odata.nextLink",
+        "operationName": "listMore"
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "post": {
+      "tags": [
+        "directory.featureRolloutPolicy"
+      ],
+      "summary": "Create new navigation property ref to appliesTo for directory",
+      "operationId": "directory.featureRolloutPolicy_CreateAppliesToGraphBPreRef",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        }
+      ],
+      "requestBody": {
+        "$ref": "#/components/requestBodies/refPostBody"
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2021-06-30",
+        "date": "2021-03-05",
+        "version": "2021-01/DirectoryFeatureRolloutPolicies",
+        "description": "Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.featureRolloutPolicy"
+      ],
+      "summary": "Delete ref of navigation property appliesTo for directory",
+      "operationId": "directory.featureRolloutPolicy_DeleteAppliesToGraphBPreRef",
+      "parameters": [
+        {
+          "name": "featureRolloutPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of featureRolloutPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "featureRolloutPolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "@id",
+          "in": "query",
+          "description": "The delete Uri",
+          "required": true,
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2021-06-30",
+        "date": "2021-03-05",
+        "version": "2021-01/DirectoryFeatureRolloutPolicies",
+        "description": "Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

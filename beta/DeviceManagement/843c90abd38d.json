@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/microsoftTunnelSites/{microsoftTunnelSite-id}/microsoftTunnelServers/{microsoftTunnelServer-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.microsoftTunnelSite"
+      ],
+      "summary": "Get microsoftTunnelServers from deviceManagement",
+      "description": "A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite",
+      "operationId": "deviceManagement.microsoftTunnelSite_GetMicrosoftTunnelServer",
+      "parameters": [
+        {
+          "name": "microsoftTunnelSite-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelSite"
+        },
+        {
+          "name": "microsoftTunnelServer-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServer"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServer"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.microsoftTunnelSite"
+      ],
+      "summary": "Update the navigation property microsoftTunnelServers in deviceManagement",
+      "operationId": "deviceManagement.microsoftTunnelSite_UpdateMicrosoftTunnelServer",
+      "parameters": [
+        {
+          "name": "microsoftTunnelSite-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelSite"
+        },
+        {
+          "name": "microsoftTunnelServer-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServer"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServer"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.microsoftTunnelServer"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.microsoftTunnelSite"
+      ],
+      "summary": "Delete navigation property microsoftTunnelServers for deviceManagement",
+      "operationId": "deviceManagement.microsoftTunnelSite_DeleteMicrosoftTunnelServer",
+      "parameters": [
+        {
+          "name": "microsoftTunnelSite-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelSite",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelSite"
+        },
+        {
+          "name": "microsoftTunnelServer-id",
+          "in": "path",
+          "description": "The unique identifier of microsoftTunnelServer",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "microsoftTunnelServer"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

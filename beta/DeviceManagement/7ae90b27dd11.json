@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory/{userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+      ],
+      "summary": "Get userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory from deviceManagement",
+      "description": "User Experience Analytics Battery Health Device Runtime History",
+      "operationId": "deviceManagement_GetUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+      ],
+      "summary": "Update the navigation property userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory in deviceManagement",
+      "operationId": "deviceManagement_UpdateUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+      ],
+      "summary": "Delete navigation property userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory for deviceManagement",
+      "operationId": "deviceManagement_DeleteUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

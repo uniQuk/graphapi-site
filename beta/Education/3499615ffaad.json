@@ -1,0 +1,61 @@
+{
+  "/education/synchronizationProfiles/{educationSynchronizationProfile-id}/microsoft.graph.uploadUrl()": {
+    "get": {
+      "tags": [
+        "education.Functions"
+      ],
+      "summary": "Invoke function uploadUrl",
+      "description": "Retrieve a shared access signature (SAS) for uploading source files to Azure blob storage for a specific school data synchronization profile in the tenant. The SAS token has a validity of one hour. The upload URL is provided only for the CSV data provider.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/educationsynchronizationprofile-uploadurl?view=graph-rest-beta"
+      },
+      "operationId": "education.synchronizationProfile_uploadUrl",
+      "parameters": [
+        {
+          "name": "educationSynchronizationProfile-id",
+          "in": "path",
+          "description": "The unique identifier of educationSynchronizationProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "educationSynchronizationProfile"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-12-31",
+        "date": "2024-06-16",
+        "version": "2024-06/Deprecated:SynchronizationProfiles",
+        "description": "The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API."
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

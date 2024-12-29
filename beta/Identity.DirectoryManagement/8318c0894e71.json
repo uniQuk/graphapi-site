@@ -1,0 +1,191 @@
+{
+  "/directory/recommendations/{recommendation-id}/impactedResources/{impactedResource-id}": {
+    "get": {
+      "tags": [
+        "directory.recommendation"
+      ],
+      "summary": "Get impactedResource",
+      "description": "Read the properties and relationships of an impactedResource object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/impactedresource-get?view=graph-rest-beta"
+      },
+      "operationId": "directory.recommendation_GetImpactedResource",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        },
+        {
+          "name": "impactedResource-id",
+          "in": "path",
+          "description": "The unique identifier of impactedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "impactedResource"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.impactedResource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.recommendation"
+      ],
+      "summary": "Update the navigation property impactedResources in directory",
+      "operationId": "directory.recommendation_UpdateImpactedResource",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        },
+        {
+          "name": "impactedResource-id",
+          "in": "path",
+          "description": "The unique identifier of impactedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "impactedResource"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.impactedResource"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.impactedResource"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.recommendation"
+      ],
+      "summary": "Delete navigation property impactedResources for directory",
+      "operationId": "directory.recommendation_DeleteImpactedResource",
+      "parameters": [
+        {
+          "name": "recommendation-id",
+          "in": "path",
+          "description": "The unique identifier of recommendation",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "recommendation"
+        },
+        {
+          "name": "impactedResource-id",
+          "in": "path",
+          "description": "The unique identifier of impactedResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "impactedResource"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

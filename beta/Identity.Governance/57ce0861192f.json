@@ -1,0 +1,153 @@
+{
+  "/privilegedApproval/{privilegedApproval-id}": {
+    "get": {
+      "tags": [
+        "privilegedApproval.privilegedApproval"
+      ],
+      "summary": "Get entity from privilegedApproval by key",
+      "operationId": "privilegedApproval_GetPrivilegedApproval",
+      "parameters": [
+        {
+          "name": "privilegedApproval-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedApproval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedApproval"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedApproval"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "privilegedApproval.privilegedApproval"
+      ],
+      "summary": "Update entity in privilegedApproval",
+      "operationId": "privilegedApproval_UpdatePrivilegedApproval",
+      "parameters": [
+        {
+          "name": "privilegedApproval-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedApproval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedApproval"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.privilegedApproval"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedApproval"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "privilegedApproval.privilegedApproval"
+      ],
+      "summary": "Delete entity from privilegedApproval",
+      "operationId": "privilegedApproval_DeletePrivilegedApproval",
+      "parameters": [
+        {
+          "name": "privilegedApproval-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedApproval",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedApproval"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

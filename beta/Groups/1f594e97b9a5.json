@@ -1,0 +1,168 @@
+{
+  "/groupLifecyclePolicies/{groupLifecyclePolicy-id}": {
+    "get": {
+      "tags": [
+        "groupLifecyclePolicies.groupLifecyclePolicy"
+      ],
+      "summary": "Get groupLifecyclePolicy",
+      "description": "Retrieve the properties and relationships of a groupLifecyclePolicies object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-beta"
+      },
+      "operationId": "groupLifecyclePolicy_GetGroupLifecyclePolicy",
+      "parameters": [
+        {
+          "name": "groupLifecyclePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of groupLifecyclePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupLifecyclePolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupLifecyclePolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "groupLifecyclePolicies.groupLifecyclePolicy"
+      ],
+      "summary": "Update groupLifecyclePolicy",
+      "description": "Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-beta"
+      },
+      "operationId": "groupLifecyclePolicy_UpdateGroupLifecyclePolicy",
+      "parameters": [
+        {
+          "name": "groupLifecyclePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of groupLifecyclePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupLifecyclePolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupLifecyclePolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupLifecyclePolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "groupLifecyclePolicies.groupLifecyclePolicy"
+      ],
+      "summary": "Delete groupLifecyclePolicy",
+      "description": "Delete a groupLifecyclePolicy.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-beta"
+      },
+      "operationId": "groupLifecyclePolicy_DeleteGroupLifecyclePolicy",
+      "parameters": [
+        {
+          "name": "groupLifecyclePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of groupLifecyclePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupLifecyclePolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

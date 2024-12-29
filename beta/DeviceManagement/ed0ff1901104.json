@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/deviceManagementScripts/{deviceManagementScript-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementScript"
+      ],
+      "summary": "Get deviceManagementScripts from deviceManagement",
+      "description": "The list of device management scripts associated with the tenant.",
+      "operationId": "deviceManagement_GetDeviceManagementScript",
+      "parameters": [
+        {
+          "name": "deviceManagementScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementScript"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementScript"
+      ],
+      "summary": "Update the navigation property deviceManagementScripts in deviceManagement",
+      "operationId": "deviceManagement_UpdateDeviceManagementScript",
+      "parameters": [
+        {
+          "name": "deviceManagementScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementScript"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementScript"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementScript"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementScript"
+      ],
+      "summary": "Delete navigation property deviceManagementScripts for deviceManagement",
+      "operationId": "deviceManagement_DeleteDeviceManagementScript",
+      "parameters": [
+        {
+          "name": "deviceManagementScript-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementScript",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementScript"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

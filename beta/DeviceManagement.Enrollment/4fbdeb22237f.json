@@ -1,0 +1,168 @@
+{
+  "/roleManagement/exchange/customAppScopes/{customAppScope-id}": {
+    "get": {
+      "tags": [
+        "roleManagement.unifiedRbacApplication"
+      ],
+      "summary": "Get customAppScope",
+      "description": "Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.exchange_GetCustomAppScope",
+      "parameters": [
+        {
+          "name": "customAppScope-id",
+          "in": "path",
+          "description": "The unique identifier of customAppScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAppScope"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAppScope"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "roleManagement.unifiedRbacApplication"
+      ],
+      "summary": "Update customAppScope",
+      "description": "Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.exchange_UpdateCustomAppScope",
+      "parameters": [
+        {
+          "name": "customAppScope-id",
+          "in": "path",
+          "description": "The unique identifier of customAppScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAppScope"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.customAppScope"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.customAppScope"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "roleManagement.unifiedRbacApplication"
+      ],
+      "summary": "Delete customAppScope",
+      "description": "Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-beta"
+      },
+      "operationId": "roleManagement.exchange_DeleteCustomAppScope",
+      "parameters": [
+        {
+          "name": "customAppScope-id",
+          "in": "path",
+          "description": "The unique identifier of customAppScope",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "customAppScope"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

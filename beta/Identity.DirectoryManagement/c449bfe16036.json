@@ -1,0 +1,58 @@
+{
+  "/directory/inboundSharedUserProfiles/{inboundSharedUserProfile-userId}/microsoft.graph.exportPersonalData": {
+    "post": {
+      "tags": [
+        "directory.Actions"
+      ],
+      "summary": "Invoke action exportPersonalData",
+      "description": "Create a request to export the personal data for an inboundSharedUserProfile.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/inboundshareduserprofile-exportpersonaldata?view=graph-rest-beta"
+      },
+      "operationId": "directory.inboundSharedUserProfile_exportPersonalData",
+      "parameters": [
+        {
+          "name": "inboundSharedUserProfile-userId",
+          "in": "path",
+          "description": "The unique identifier of inboundSharedUserProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "inboundSharedUserProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "storageLocation": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

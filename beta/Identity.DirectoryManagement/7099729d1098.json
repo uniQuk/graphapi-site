@@ -1,0 +1,168 @@
+{
+  "/settings/{directorySetting-id}": {
+    "get": {
+      "tags": [
+        "settings.directorySetting"
+      ],
+      "summary": "Get directorySetting",
+      "description": "Retrieve the properties of a specific directory setting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directorysetting-get?view=graph-rest-beta"
+      },
+      "operationId": "setting.directorySetting_GetDirectorySetting",
+      "parameters": [
+        {
+          "name": "directorySetting-id",
+          "in": "path",
+          "description": "The unique identifier of directorySetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySetting"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directorySetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "settings.directorySetting"
+      ],
+      "summary": "Update directorySetting",
+      "description": "Update the properties of a specific directory setting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directorysetting-update?view=graph-rest-beta"
+      },
+      "operationId": "setting.directorySetting_UpdateDirectorySetting",
+      "parameters": [
+        {
+          "name": "directorySetting-id",
+          "in": "path",
+          "description": "The unique identifier of directorySetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySetting"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.directorySetting"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directorySetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "settings.directorySetting"
+      ],
+      "summary": "Delete directorySetting",
+      "description": "Delete a directory setting.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/directorysetting-delete?view=graph-rest-beta"
+      },
+      "operationId": "setting.directorySetting_DeleteDirectorySetting",
+      "parameters": [
+        {
+          "name": "directorySetting-id",
+          "in": "path",
+          "description": "The unique identifier of directorySetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directorySetting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

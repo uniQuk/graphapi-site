@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/microsoft.graph.getSuggestedEnrollmentLimit(enrollmentType='{enrollmentType}')": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getSuggestedEnrollmentLimit",
+      "operationId": "deviceManagement_getSuggestedEnrollmentLimit",
+      "parameters": [
+        {
+          "name": "enrollmentType",
+          "in": "path",
+          "description": "Usage: enrollmentType='{enrollmentType}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.suggestedEnrollmentLimit"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

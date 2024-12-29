@@ -1,0 +1,154 @@
+{
+  "/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection-id}/deploymentSummary": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.androidManagedAppProtection"
+      ],
+      "summary": "Get deploymentSummary from deviceAppManagement",
+      "description": "Navigation property to deployment summary of the configuration.",
+      "operationId": "deviceAppManagement.androidManagedAppProtection_GetDeploymentSummary",
+      "parameters": [
+        {
+          "name": "androidManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedAppProtection"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedAppPolicyDeploymentSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.androidManagedAppProtection"
+      ],
+      "summary": "Update the navigation property deploymentSummary in deviceAppManagement",
+      "operationId": "deviceAppManagement.androidManagedAppProtection_UpdateDeploymentSummary",
+      "parameters": [
+        {
+          "name": "androidManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedAppProtection"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedAppPolicyDeploymentSummary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedAppPolicyDeploymentSummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.androidManagedAppProtection"
+      ],
+      "summary": "Delete navigation property deploymentSummary for deviceAppManagement",
+      "operationId": "deviceAppManagement.androidManagedAppProtection_DeleteDeploymentSummary",
+      "parameters": [
+        {
+          "name": "androidManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of androidManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidManagedAppProtection"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

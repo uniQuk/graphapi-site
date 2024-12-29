@@ -1,0 +1,5338 @@
+{
+  "66815ecaaecf": {
+    "path": "/security",
+    "methods": {}
+  },
+  "a9d1de9d13d3": {
+    "path": "/security/alerts",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlert",
+        "apiReference": "https://learn.microsoft.com/graph/api/alert-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "e02d8edf2e6d": {
+    "path": "/security/alerts_v2",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityAlert.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security alerts",
+            "FullDescription": "Allows the app to read all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityAlert.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security alerts",
+            "FullDescription": "Allows the app to read and write to all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlertV2",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAlertV2",
+        "apiReference": ""
+      }
+    }
+  },
+  "0191dc8bd839": {
+    "path": "/security/alerts_v2/{alert-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityAlert.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security alerts",
+            "FullDescription": "Allows the app to read all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityAlert.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security alerts",
+            "FullDescription": "Allows the app to read and write to all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlertV2",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAlertV2",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAlertV2",
+        "apiReference": ""
+      }
+    }
+  },
+  "75cf1614caaf": {
+    "path": "/security/alerts_v2/{alert-id}/comments",
+    "methods": {
+      "post": {
+        "permissions": [],
+        "command": "Set-MgSecurityAlert",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-alert-post-comments?view=graph-rest-1.0"
+      }
+    }
+  },
+  "6d8728422693": {
+    "path": "/security/alerts_v2/{alert-id}/comments/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Invoke-MgCommentSecurityAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "885feda8ad68": {
+    "path": "/security/alerts_v2/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityAlert.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security alerts",
+            "FullDescription": "Allows the app to read all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityAlert.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security alerts",
+            "FullDescription": "Allows the app to read and write to all security alerts, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlertV2Count",
+        "apiReference": ""
+      }
+    }
+  },
+  "34e4a7d13e5a": {
+    "path": "/security/alerts/{alert-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlert",
+        "apiReference": "https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAlert",
+        "apiReference": "https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0"
+      }
+    }
+  },
+  "c1a68d60f080": {
+    "path": "/security/alerts/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityAlertCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "25c57c5a6f66": {
+    "path": "/security/attackSimulation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulation",
+        "apiReference": ""
+      }
+    }
+  },
+  "0f0bdda093a7": {
+    "path": "/security/attackSimulation/endUserNotifications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotification",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationEndUserNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "0619067b03eb": {
+    "path": "/security/attackSimulation/endUserNotifications/{endUserNotification-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotification",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationEndUserNotification",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationEndUserNotification",
+        "apiReference": ""
+      }
+    }
+  },
+  "e90c399452ff": {
+    "path": "/security/attackSimulation/endUserNotifications/{endUserNotification-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotificationDetail",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationEndUserNotificationDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "c5e1a6348ac1": {
+    "path": "/security/attackSimulation/endUserNotifications/{endUserNotification-id}/details/{endUserNotificationDetail-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotificationDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationEndUserNotificationDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationEndUserNotificationDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "d1421348992e": {
+    "path": "/security/attackSimulation/endUserNotifications/{endUserNotification-id}/details/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotificationDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "bdbbab58b62e": {
+    "path": "/security/attackSimulation/endUserNotifications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationEndUserNotificationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9a092da219c7": {
+    "path": "/security/attackSimulation/landingPages",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPage",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-landingpage?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationLandingPage",
+        "apiReference": ""
+      }
+    }
+  },
+  "cce7ca7df8d8": {
+    "path": "/security/attackSimulation/landingPages/{landingPage-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPage",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationLandingPage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationLandingPage",
+        "apiReference": ""
+      }
+    }
+  },
+  "64c5eec908bd": {
+    "path": "/security/attackSimulation/landingPages/{landingPage-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPageDetail",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationLandingPageDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "107b02957fb0": {
+    "path": "/security/attackSimulation/landingPages/{landingPage-id}/details/{landingPageDetail-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPageDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationLandingPageDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationLandingPageDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "d7a203f836b2": {
+    "path": "/security/attackSimulation/landingPages/{landingPage-id}/details/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPageDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a559b8c18a05": {
+    "path": "/security/attackSimulation/landingPages/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLandingPageCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8cbba9c1f20b": {
+    "path": "/security/attackSimulation/loginPages",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLoginPage",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationLoginPage",
+        "apiReference": ""
+      }
+    }
+  },
+  "9b74a4d03e3b": {
+    "path": "/security/attackSimulation/loginPages/{loginPage-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLoginPage",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationLoginPage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationLoginPage",
+        "apiReference": ""
+      }
+    }
+  },
+  "84f0711aa040": {
+    "path": "/security/attackSimulation/loginPages/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationLoginPageCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0ae2231f4919": {
+    "path": "/security/attackSimulation/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "78ed010e9aa8": {
+    "path": "/security/attackSimulation/operations/{attackSimulationOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "595526519663": {
+    "path": "/security/attackSimulation/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "7795363e4ebb": {
+    "path": "/security/attackSimulation/payloads",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationPayload",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationPayload",
+        "apiReference": ""
+      }
+    }
+  },
+  "8743342804b2": {
+    "path": "/security/attackSimulation/payloads/{payload-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationPayload",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationPayload",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationPayload",
+        "apiReference": ""
+      }
+    }
+  },
+  "1f0cc4d21f3f": {
+    "path": "/security/attackSimulation/payloads/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationPayloadCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4f8dcca54eea": {
+    "path": "/security/attackSimulation/simulationAutomations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomation",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationAutomation",
+        "apiReference": ""
+      }
+    }
+  },
+  "626e4a3834b0": {
+    "path": "/security/attackSimulation/simulationAutomations/{simulationAutomation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomation",
+        "apiReference": "https://learn.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationAutomation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationAutomation",
+        "apiReference": ""
+      }
+    }
+  },
+  "ae3a3240cbcb": {
+    "path": "/security/attackSimulation/simulationAutomations/{simulationAutomation-id}/runs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomationRun",
+        "apiReference": "https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationAutomationRun",
+        "apiReference": ""
+      }
+    }
+  },
+  "c494ada768dd": {
+    "path": "/security/attackSimulation/simulationAutomations/{simulationAutomation-id}/runs/{simulationAutomationRun-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomationRun",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationAutomationRun",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationAutomationRun",
+        "apiReference": ""
+      }
+    }
+  },
+  "c6f0161d38f4": {
+    "path": "/security/attackSimulation/simulationAutomations/{simulationAutomation-id}/runs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomationRunCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e0523d70407": {
+    "path": "/security/attackSimulation/simulationAutomations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationAutomationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "890f45c7ad35": {
+    "path": "/security/attackSimulation/simulations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulation",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulation",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-post-simulation?view=graph-rest-1.0"
+      }
+    }
+  },
+  "672c975b7616": {
+    "path": "/security/attackSimulation/simulations/{simulation-id}",
+    "methods": {}
+  },
+  "b2a3a028f038": {
+    "path": "/security/attackSimulation/simulations/{simulation-id}/landingPage",
+    "methods": {}
+  },
+  "e9c3ec21b57f": {
+    "path": "/security/attackSimulation/simulations/{simulation-id}/loginPage",
+    "methods": {}
+  },
+  "4e57b00d170c": {
+    "path": "/security/attackSimulation/simulations/{simulation-id}/payload",
+    "methods": {}
+  },
+  "58b3067f27ce": {
+    "path": "/security/attackSimulation/simulations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9527bb72dc84": {
+    "path": "/security/attackSimulation/trainings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTraining",
+        "apiReference": "https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationTraining",
+        "apiReference": ""
+      }
+    }
+  },
+  "eaa1839b3273": {
+    "path": "/security/attackSimulation/trainings/{training-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTraining",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationTraining",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationTraining",
+        "apiReference": ""
+      }
+    }
+  },
+  "3f50f8dc4a2d": {
+    "path": "/security/attackSimulation/trainings/{training-id}/languageDetails",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTrainingLanguageDetail",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityAttackSimulationTrainingLanguageDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "f5f1cd801596": {
+    "path": "/security/attackSimulation/trainings/{training-id}/languageDetails/{trainingLanguageDetail-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTrainingLanguageDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityAttackSimulationTrainingLanguageDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityAttackSimulationTrainingLanguageDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "ca433375baa1": {
+    "path": "/security/attackSimulation/trainings/{training-id}/languageDetails/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTrainingLanguageDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ee705c542e94": {
+    "path": "/security/attackSimulation/trainings/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityAttackSimulationTrainingCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9f3aef9e9069": {
+    "path": "/security/cases",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCase",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCase",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCase",
+        "apiReference": ""
+      }
+    }
+  },
+  "a3af0f03fc69": {
+    "path": "/security/cases/ediscoveryCases",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0"
+      }
+    }
+  },
+  "a00aada71b8a": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgSecurityCaseEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgSecurityCaseEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0"
+      }
+    }
+  },
+  "8ebfbe21bdc2": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0"
+      }
+    }
+  },
+  "41792a6d2924": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseCustodian",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseCustodian",
+        "apiReference": ""
+      }
+    }
+  },
+  "c4594fedeb77": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/lastIndexOperation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianLastIndexOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0"
+      }
+    }
+  },
+  "6610d4cf6b7c": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/microsoft.graph.security.activate",
+    "methods": {}
+  },
+  "2a484cb7ebd4": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/microsoft.graph.security.applyHold",
+    "methods": {}
+  },
+  "48579a189690": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/microsoft.graph.security.release",
+    "methods": {}
+  },
+  "178183b848b7": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/microsoft.graph.security.removeHold",
+    "methods": {}
+  },
+  "1470ceccb3fc": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/microsoft.graph.security.updateIndex",
+    "methods": {}
+  },
+  "871e014487e9": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/siteSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "95942b5e0978": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/siteSources/{siteSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianSiteSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseCustodianSiteSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseCustodianSiteSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "182946e146cb": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/siteSources/{siteSource-id}/site",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianSiteSourceSite",
+        "apiReference": ""
+      }
+    }
+  },
+  "107ff8a99f5c": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/siteSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianSiteSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "491dc61021f2": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "0f51bc19b464": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources/{unifiedGroupSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "66cc75ee7959": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSourceGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "7854aef78d0e": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSourceGroupServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "d6e0ac251ab3": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSourceGroupServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "36dd2a46e0a7": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/unifiedGroupSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUnifiedGroupSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cb5235911baa": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/userSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "082210d76ad5": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/userSources/{userSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUserSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseCustodianUserSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseCustodianUserSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "331ee871aebf": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/{ediscoveryCustodian-id}/userSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianUserSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e91c4b4a2062": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCustodianCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "af1359adfb02": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/microsoft.graph.security.applyHold",
+    "methods": {}
+  },
+  "25eef3a78a50": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/custodians/microsoft.graph.security.removeHold",
+    "methods": {}
+  },
+  "f34374e81119": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/microsoft.graph.security.close",
+    "methods": {}
+  },
+  "c8c9bd705111": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/microsoft.graph.security.reopen",
+    "methods": {}
+  },
+  "5487fc304037": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "469ef1742eaf": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "7399fc43dc96": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/dataSource",
+    "methods": {}
+  },
+  "325a88761d86": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/lastIndexOperation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseNoncustodialDataSourceLastIndexOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b23252d2040": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/microsoft.graph.security.applyHold",
+    "methods": {}
+  },
+  "60f96626bc54": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/microsoft.graph.security.release",
+    "methods": {}
+  },
+  "a29264053d72": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/microsoft.graph.security.removeHold",
+    "methods": {}
+  },
+  "533c8f18bf70": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/{ediscoveryNoncustodialDataSource-id}/microsoft.graph.security.updateIndex",
+    "methods": {}
+  },
+  "333c11b4cf26": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseNoncustodialDataSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "42d62020191e": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/microsoft.graph.security.applyHold",
+    "methods": {}
+  },
+  "90e142963444": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/noncustodialDataSources/microsoft.graph.security.removeHold",
+    "methods": {}
+  },
+  "94aa97c6e032": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/operations",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityCaseEdiscoveryCaseOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "91f38c789f43": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/operations/{caseOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-caseoperation-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "0689f7c040a2": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "53abeb229c9a": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseReviewSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-post-reviewsets?view=graph-rest-1.0"
+      }
+    }
+  },
+  "283e58b9e802": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseReviewSet",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseReviewSet",
+        "apiReference": ""
+      }
+    }
+  },
+  "7c17c6327e70": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/microsoft.graph.security.addToReviewSet",
+    "methods": {}
+  },
+  "d36037d23f79": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/microsoft.graph.security.export",
+    "methods": {}
+  },
+  "4f6d81f53c81": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/queries",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0"
+      }
+    }
+  },
+  "78f8b76c2cfd": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/queries/{ediscoveryReviewSetQuery-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0"
+      }
+    }
+  },
+  "729b74893a5b": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/queries/{ediscoveryReviewSetQuery-id}/microsoft.graph.security.applyTags",
+    "methods": {}
+  },
+  "fd48512d0905": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/queries/{ediscoveryReviewSetQuery-id}/microsoft.graph.security.export",
+    "methods": {}
+  },
+  "d3845eee3ffb": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/{ediscoveryReviewSet-id}/queries/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSetQueryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d83c866832e0": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/reviewSets/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseReviewSetCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c2d5d8d3e73b": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearch",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseSearch",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0"
+      }
+    }
+  },
+  "8be3e731b52c": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearch",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseSearch",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseSearch",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0"
+      }
+    }
+  },
+  "12be941e6a7d": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/additionalSources",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchAdditionalSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityCaseEdiscoveryCaseSearchAdditionalSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "21be31d7eb17": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/additionalSources/{dataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchAdditionalSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseSearchAdditionalSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseSearchAdditionalSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "4d25afa1c9fb": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/additionalSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchAdditionalSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d7e8185f11d1": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/addToReviewSetOperation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchAddToReviewSetOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "c8b77da79461": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/custodianSources",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchCustodianSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0"
+      }
+    }
+  },
+  "306973e12456": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/custodianSources/{dataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchCustodianSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "65a395cda136": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/custodianSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchCustodianSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6d7afb5383c9": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/lastEstimateStatisticsOperation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchLastEstimateStatisticsOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0"
+      }
+    }
+  },
+  "9a1ed828616a": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/microsoft.graph.security.estimateStatistics",
+    "methods": {}
+  },
+  "ddbcd9fbb4a0": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/microsoft.graph.security.purgeData",
+    "methods": {}
+  },
+  "f6d640b6af71": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/noncustodialSources",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchNoncustodialSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "0508c764a384": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/noncustodialSources/{ediscoveryNoncustodialDataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchNoncustodialSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "497a3a0a940e": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/{ediscoverySearch-id}/noncustodialSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchNoncustodialSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a9ef43671da8": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/searches/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSearchCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b92babaec2d5": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/settings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "73108e931bec": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/settings/microsoft.graph.security.resetToDefault",
+    "methods": {}
+  },
+  "6da3ddf9a9b2": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgSecurityCaseEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0"
+      }
+    }
+  },
+  "4648deb27f16": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgSecurityCaseEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgSecurityCaseEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0"
+      }
+    }
+  },
+  "0fcd57104933": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}/childTags",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTagChildTag",
+        "apiReference": ""
+      }
+    }
+  },
+  "d3be1e89d706": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}/childTags/{ediscoveryReviewTag-id1}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTagChildTag",
+        "apiReference": ""
+      }
+    }
+  },
+  "359d04a23dd7": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}/childTags/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTagChildTagCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2786304e7015": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/{ediscoveryReviewTag-id}/parent",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTagParent",
+        "apiReference": ""
+      }
+    }
+  },
+  "bcefc1859f39": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseTagCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c60842d6cec3": {
+    "path": "/security/cases/ediscoveryCases/{ediscoveryCase-id}/tags/microsoft.graph.security.asHierarchy()",
+    "methods": {}
+  },
+  "969445317885": {
+    "path": "/security/cases/ediscoveryCases/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityCaseEdiscoveryCaseCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9bdba80795d6": {
+    "path": "/security/identities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityIdentity",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityIdentity",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityIdentity",
+        "apiReference": ""
+      }
+    }
+  },
+  "a71558be7ffa": {
+    "path": "/security/identities/healthIssues",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIdentitiesHealth.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all identity security health issues",
+            "FullDescription": "Allows the app to read all the identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIdentitiesHealth.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all identity security health issues",
+            "FullDescription": "Allows the app to read and write identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIdentityHealthIssue",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-identitycontainer-list-healthissues?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityIdentityHealthIssue",
+        "apiReference": ""
+      }
+    }
+  },
+  "48f17a94edac": {
+    "path": "/security/identities/healthIssues/{healthIssue-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIdentitiesHealth.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all identity security health issues",
+            "FullDescription": "Allows the app to read all the identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIdentitiesHealth.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all identity security health issues",
+            "FullDescription": "Allows the app to read and write identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIdentityHealthIssue",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-healthissue-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityIdentityHealthIssue",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-healthissue-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityIdentityHealthIssue",
+        "apiReference": ""
+      }
+    }
+  },
+  "ec6e20bcc536": {
+    "path": "/security/identities/healthIssues/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIdentitiesHealth.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all identity security health issues",
+            "FullDescription": "Allows the app to read all the identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIdentitiesHealth.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all identity security health issues",
+            "FullDescription": "Allows the app to read and write identity security health issues without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIdentityHealthIssueCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6328dfb159a1": {
+    "path": "/security/incidents",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIncident.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security incidents",
+            "FullDescription": "Allows the app to read all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIncident.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security incidents",
+            "FullDescription": "Allows the app to read and write to all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIncident",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-list-incidents?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityIncident",
+        "apiReference": ""
+      }
+    }
+  },
+  "73d7b4cefc2d": {
+    "path": "/security/incidents/{incident-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIncident.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security incidents",
+            "FullDescription": "Allows the app to read all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIncident.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security incidents",
+            "FullDescription": "Allows the app to read and write to all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIncident",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-incident-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityIncident",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-incident-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityIncident",
+        "apiReference": ""
+      }
+    }
+  },
+  "8aa88e1572c5": {
+    "path": "/security/incidents/{incident-id}/alerts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityIncidentAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b1f04d7d4e6": {
+    "path": "/security/incidents/{incident-id}/alerts/{alert-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityIncidentAlert",
+        "apiReference": ""
+      }
+    }
+  },
+  "953f1dff8dc5": {
+    "path": "/security/incidents/{incident-id}/alerts/{alert-id}/comments",
+    "methods": {
+      "post": {
+        "permissions": [],
+        "command": "Set-MgSecurityIncidentAlertComment",
+        "apiReference": ""
+      }
+    }
+  },
+  "b05f4607b77f": {
+    "path": "/security/incidents/{incident-id}/alerts/{alert-id}/comments/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityIncidentAlertCommentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "19de7eaa82ab": {
+    "path": "/security/incidents/{incident-id}/alerts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityIncidentAlertCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "782123111f10": {
+    "path": "/security/incidents/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityIncident.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all security incidents",
+            "FullDescription": "Allows the app to read all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityIncident.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write to all security incidents",
+            "FullDescription": "Allows the app to read and write to all security incidents, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityIncidentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "99744c6fe131": {
+    "path": "/security/labels",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabel",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabel",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabel",
+        "apiReference": ""
+      }
+    }
+  },
+  "9bd4bd4ce4f5": {
+    "path": "/security/labels/authorities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelAuthority",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelAuthority",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0"
+      }
+    }
+  },
+  "d3917bd6b8e1": {
+    "path": "/security/labels/authorities/{authorityTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelAuthority",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelAuthority",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelAuthority",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-authorities?view=graph-rest-1.0"
+      }
+    }
+  },
+  "5b90b6dc62d5": {
+    "path": "/security/labels/authorities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelAuthorityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e6c77446f71f": {
+    "path": "/security/labels/categories",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelCategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0"
+      }
+    }
+  },
+  "b8ce6b169f53": {
+    "path": "/security/labels/categories/{categoryTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelCategory",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelCategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0"
+      }
+    }
+  },
+  "296f835b1a9d": {
+    "path": "/security/labels/categories/{categoryTemplate-id}/subcategories",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategorySubcategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelCategorySubcategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0"
+      }
+    }
+  },
+  "b2f7160ef73e": {
+    "path": "/security/labels/categories/{categoryTemplate-id}/subcategories/{subcategoryTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategorySubcategory",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelCategorySubcategory",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelCategorySubcategory",
+        "apiReference": ""
+      }
+    }
+  },
+  "e796046c444a": {
+    "path": "/security/labels/categories/{categoryTemplate-id}/subcategories/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategorySubcategoryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b7779583d4f0": {
+    "path": "/security/labels/categories/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCategoryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1e8ae47948cf": {
+    "path": "/security/labels/citations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCitation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-citations?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelCitation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-citations?view=graph-rest-1.0"
+      }
+    }
+  },
+  "85b2b19dc8e1": {
+    "path": "/security/labels/citations/{citationTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCitation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelCitation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelCitation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0"
+      }
+    }
+  },
+  "54f6c4fd6423": {
+    "path": "/security/labels/citations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelCitationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3edebba775a3": {
+    "path": "/security/labels/departments",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelDepartment",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelDepartment",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0"
+      }
+    }
+  },
+  "500e1948c6f6": {
+    "path": "/security/labels/departments/{departmentTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelDepartment",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelDepartment",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelDepartment",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-departments?view=graph-rest-1.0"
+      }
+    }
+  },
+  "0d716b673946": {
+    "path": "/security/labels/departments/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelDepartmentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "97af62d575a2": {
+    "path": "/security/labels/filePlanReferences",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelFilePlanReference",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-fileplanreferences?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelFilePlanReference",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-fileplanreferences?view=graph-rest-1.0"
+      }
+    }
+  },
+  "f73a19e9fffb": {
+    "path": "/security/labels/filePlanReferences/{filePlanReferenceTemplate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelFilePlanReference",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelFilePlanReference",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelFilePlanReference",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-delete-fileplanreferences?view=graph-rest-1.0"
+      }
+    }
+  },
+  "954d58920892": {
+    "path": "/security/labels/filePlanReferences/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelFilePlanReferenceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a04d3f688cc1": {
+    "path": "/security/labels/retentionLabels",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Records Management configuration,labels, and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels and policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Records Management configuration, labels, and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityLabelRetentionLabel",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelRetentionLabel",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0"
+      }
+    }
+  },
+  "a7ad403eacf3": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Records Management configuration,labels, and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels and policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Records Management configuration, labels, and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityLabelRetentionLabel",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelRetentionLabel",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelRetentionLabel",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionlabel-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "2061146a392b": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptor",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelRetentionLabelDescriptor",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelRetentionLabelDescriptor",
+        "apiReference": ""
+      }
+    }
+  },
+  "f26ed6294ecc": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors/authorityTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptorAuthorityTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "67700bd3edbb": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors/categoryTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptorCategoryTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "19cd65f50c9b": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors/citationTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptorCitationTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "cbda7532ef8a": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors/departmentTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptorDepartmentTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "eb592d9f1482": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/descriptors/filePlanReferenceTemplate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDescriptorFilePlanReferenceTemplate",
+        "apiReference": ""
+      }
+    }
+  },
+  "a1582169c0c4": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/dispositionReviewStages",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDispositionReviewStage",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityLabelRetentionLabelDispositionReviewStage",
+        "apiReference": ""
+      }
+    }
+  },
+  "af002b0e78e5": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/dispositionReviewStages/{dispositionReviewStage-stageNumber}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDispositionReviewStage",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityLabelRetentionLabelDispositionReviewStage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityLabelRetentionLabelDispositionReviewStage",
+        "apiReference": ""
+      }
+    }
+  },
+  "579b8923d9c5": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/dispositionReviewStages/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionLabelDispositionReviewStageCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c56ee110f10a": {
+    "path": "/security/labels/retentionLabels/{retentionLabel-id}/retentionEventType",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityLabelRetentionEventType",
+        "apiReference": ""
+      }
+    }
+  },
+  "108862f6301c": {
+    "path": "/security/labels/retentionLabels/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": true,
+            "Description": "Read Records Management configuration,labels, and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels and policies on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write Records Management configuration, labels, and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecurityLabelRetentionLabelCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ded942c80d82": {
+    "path": "/security/microsoft.graph.security.runHuntingQuery",
+    "methods": {}
+  },
+  "3524195c1f6e": {
+    "path": "/security/secureScoreControlProfiles",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScoreControlProfile",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecuritySecureScoreControlProfile",
+        "apiReference": ""
+      }
+    }
+  },
+  "813fa6dea5f0": {
+    "path": "/security/secureScoreControlProfiles/{secureScoreControlProfile-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScoreControlProfile",
+        "apiReference": "https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySecureScoreControlProfile",
+        "apiReference": "https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecuritySecureScoreControlProfile",
+        "apiReference": ""
+      }
+    }
+  },
+  "acabdaba499b": {
+    "path": "/security/secureScoreControlProfiles/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScoreControlProfileCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "213f4c6a5bf0": {
+    "path": "/security/secureScores",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScore",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecuritySecureScore",
+        "apiReference": ""
+      }
+    }
+  },
+  "657ebb3d5584": {
+    "path": "/security/secureScores/{secureScore-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScore",
+        "apiReference": "https://learn.microsoft.com/graph/api/securescore-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySecureScore",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecuritySecureScore",
+        "apiReference": ""
+      }
+    }
+  },
+  "6990cd7f78e2": {
+    "path": "/security/secureScores/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SecurityEvents.Read.All",
+            "IsAdmin": false,
+            "Description": "Read your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "SecurityEvents.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and update your organizations security events",
+            "FullDescription": "Allows the app to read your organizations security events without a signed-in user. Also allows the app to update editable properties in security events.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecuritySecureScoreCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cf8ffc54151b": {
+    "path": "/security/subjectRightsRequests",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecuritySubjectRightsRequest",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecuritySubjectRightsRequest",
+        "apiReference": ""
+      }
+    }
+  },
+  "9117f7995cc0": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecuritySubjectRightsRequest",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySubjectRightsRequest",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecuritySubjectRightsRequest",
+        "apiReference": ""
+      }
+    }
+  },
+  "ae7f690623fd": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "b3f7c00f6afc": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "8bc74014410f": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "160ef7bbea56": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApproverServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "a15b52285294": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApproverServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "218ddc2b6f35": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestApproverCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1fc4161ab836": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "038ffafa0ea4": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "770a49726417": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "10ce2eff3231": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaboratorServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "71ab314751b3": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaboratorServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6823c586cc12": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestCollaboratorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "acd5f53261b4": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/microsoft.graph.getFinalAttachment()",
+    "methods": {}
+  },
+  "e7ef2ecc9eaa": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/microsoft.graph.getFinalReport()",
+    "methods": {}
+  },
+  "1fdfbc89c96c": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/notes",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecuritySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecuritySubjectRightsRequestNote",
+        "apiReference": ""
+      }
+    }
+  },
+  "ee4e19e13a73": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/notes/{authoredNote-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecuritySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecuritySubjectRightsRequestNote",
+        "apiReference": ""
+      }
+    }
+  },
+  "9ba03d71eaf1": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/notes/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecuritySubjectRightsRequestNoteCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "aeed981a2f68": {
+    "path": "/security/subjectRightsRequests/{subjectRightsRequest-id}/team",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecuritySubjectRightsRequestTeam",
+        "apiReference": ""
+      }
+    }
+  },
+  "3c66c0c70b1f": {
+    "path": "/security/subjectRightsRequests/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgSecuritySubjectRightsRequestCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "83781e587d61": {
+    "path": "/security/threatIntelligence",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligence",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligence",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligence",
+        "apiReference": ""
+      }
+    }
+  },
+  "dcf1e6e0aaed": {
+    "path": "/security/threatIntelligence/articleIndicators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticleIndicator",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceArticleIndicator",
+        "apiReference": ""
+      }
+    }
+  },
+  "892ef344ae5c": {
+    "path": "/security/threatIntelligence/articleIndicators/{articleIndicator-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticleIndicator",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceArticleIndicator",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceArticleIndicator",
+        "apiReference": ""
+      }
+    }
+  },
+  "02969821f7b4": {
+    "path": "/security/threatIntelligence/articleIndicators/{articleIndicator-id}/artifact",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticleIndicatorArtifact",
+        "apiReference": ""
+      }
+    }
+  },
+  "45de2c85d310": {
+    "path": "/security/threatIntelligence/articleIndicators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticleIndicatorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "20b919b91e40": {
+    "path": "/security/threatIntelligence/articles",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticle",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-threatintelligence-list-articles?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceArticle",
+        "apiReference": ""
+      }
+    }
+  },
+  "9826814f3e36": {
+    "path": "/security/threatIntelligence/articles/{article-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticle",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-article-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceArticle",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceArticle",
+        "apiReference": ""
+      }
+    }
+  },
+  "2202d9f5507f": {
+    "path": "/security/threatIntelligence/articles/{article-id}/indicators",
+    "methods": {}
+  },
+  "d3e28cd3dd79": {
+    "path": "/security/threatIntelligence/articles/{article-id}/indicators/{articleIndicator-id}",
+    "methods": {}
+  },
+  "d27fff2c35b7": {
+    "path": "/security/threatIntelligence/articles/{article-id}/indicators/$count",
+    "methods": {}
+  },
+  "116aa0b8b31a": {
+    "path": "/security/threatIntelligence/articles/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceArticleCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "244db6627601": {
+    "path": "/security/threatIntelligence/hostComponents",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostComponent",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostComponent",
+        "apiReference": ""
+      }
+    }
+  },
+  "a21df2c09ea1": {
+    "path": "/security/threatIntelligence/hostComponents/{hostComponent-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostComponent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hostcomponent-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostComponent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostComponent",
+        "apiReference": ""
+      }
+    }
+  },
+  "ec19d3f8ec3f": {
+    "path": "/security/threatIntelligence/hostComponents/{hostComponent-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostComponentHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "6ff9dea8b52e": {
+    "path": "/security/threatIntelligence/hostComponents/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostComponentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "45015d4957c9": {
+    "path": "/security/threatIntelligence/hostCookies",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostCookie",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostCookie",
+        "apiReference": ""
+      }
+    }
+  },
+  "7a708f949dae": {
+    "path": "/security/threatIntelligence/hostCookies/{hostCookie-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostCookie",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostCookie",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostCookie",
+        "apiReference": ""
+      }
+    }
+  },
+  "9c5236eeeb2e": {
+    "path": "/security/threatIntelligence/hostCookies/{hostCookie-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostCookieHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "37bc41957b1a": {
+    "path": "/security/threatIntelligence/hostCookies/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostCookieCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2340e2ed837c": {
+    "path": "/security/threatIntelligence/hostPairs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPair",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostPair",
+        "apiReference": ""
+      }
+    }
+  },
+  "e5b127dbc6d6": {
+    "path": "/security/threatIntelligence/hostPairs/{hostPair-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPair",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hostpair-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostPair",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostPair",
+        "apiReference": ""
+      }
+    }
+  },
+  "52d0cad3fe0a": {
+    "path": "/security/threatIntelligence/hostPairs/{hostPair-id}/childHost",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPairChildHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "c68c63a80368": {
+    "path": "/security/threatIntelligence/hostPairs/{hostPair-id}/parentHost",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPairParentHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "13aa02b3ddae": {
+    "path": "/security/threatIntelligence/hostPairs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPairCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1b5000797386": {
+    "path": "/security/threatIntelligence/hostPorts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPort",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostPort",
+        "apiReference": ""
+      }
+    }
+  },
+  "d77ab4e47f48": {
+    "path": "/security/threatIntelligence/hostPorts/{hostPort-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPort",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hostport-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostPort",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostPort",
+        "apiReference": ""
+      }
+    }
+  },
+  "941399c66de4": {
+    "path": "/security/threatIntelligence/hostPorts/{hostPort-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPortHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "8a95e1574acd": {
+    "path": "/security/threatIntelligence/hostPorts/{hostPort-id}/mostRecentSslCertificate",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPortMostRecentSslCertificate",
+        "apiReference": ""
+      }
+    }
+  },
+  "1338b76c7704": {
+    "path": "/security/threatIntelligence/hostPorts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPortCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "99eb4f133138": {
+    "path": "/security/threatIntelligence/hosts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHost",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "7f2d764a8069": {
+    "path": "/security/threatIntelligence/hosts/{host-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHost",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHost",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "5af52452daa4": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/childHostPairs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostChildHostPair",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-list-childhostpairs?view=graph-rest-1.0"
+      }
+    }
+  },
+  "08465818473e": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/childHostPairs/{hostPair-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostChildHostPair",
+        "apiReference": ""
+      }
+    }
+  },
+  "8c25d233ac7a": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/childHostPairs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostChildHostPairCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b24e25b1fd5e": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/components",
+    "methods": {}
+  },
+  "465258f244a1": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/components/{hostComponent-id}",
+    "methods": {}
+  },
+  "2d249471be1c": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/components/$count",
+    "methods": {}
+  },
+  "3e122a0f78b5": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/cookies",
+    "methods": {}
+  },
+  "7782c4b15cc6": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/cookies/{hostCookie-id}",
+    "methods": {}
+  },
+  "884c3e9868a4": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/cookies/$count",
+    "methods": {}
+  },
+  "d72e97fb38de": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/hostPairs",
+    "methods": {}
+  },
+  "53c3aa4b46fc": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/hostPairs/{hostPair-id}",
+    "methods": {}
+  },
+  "548fb1af3bed": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/hostPairs/$count",
+    "methods": {}
+  },
+  "ff3b39c6bb49": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/parentHostPairs",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostParentHostPair",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-list-parenthostpairs?view=graph-rest-1.0"
+      }
+    }
+  },
+  "96d866364756": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/parentHostPairs/{hostPair-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostParentHostPair",
+        "apiReference": ""
+      }
+    }
+  },
+  "7a5c93f2c466": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/parentHostPairs/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostParentHostPairCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4a0aa5a2b615": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDns",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDns",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0"
+      }
+    }
+  },
+  "7e410f36ec32": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDns/{passiveDnsRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDns",
+        "apiReference": ""
+      }
+    }
+  },
+  "619a66a6ac99": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDns/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDnsCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b8b3a63e5557": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDnsReverse",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDnsReverse",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-list-passivednsreverse?view=graph-rest-1.0"
+      }
+    }
+  },
+  "a8e20363ccdc": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDnsReverse/{passiveDnsRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDnsReverse",
+        "apiReference": ""
+      }
+    }
+  },
+  "c5e184128f20": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/passiveDnsReverse/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostPassiveDnsReverseCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0df285e333a8": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/ports",
+    "methods": {}
+  },
+  "84abff20d3a6": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/ports/{hostPort-id}",
+    "methods": {}
+  },
+  "6fb7c3189e8e": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/ports/$count",
+    "methods": {}
+  },
+  "5c2d694393be": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/reputation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostReputation",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostReputation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostReputation",
+        "apiReference": ""
+      }
+    }
+  },
+  "d5dc5177b1e9": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/sslCertificates",
+    "methods": {}
+  },
+  "ca94856a76be": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/sslCertificates/{hostSslCertificate-id}",
+    "methods": {}
+  },
+  "96451c421962": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/sslCertificates/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSslCertificateCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0417e5ad3179": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/subdomains",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSubdomain",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0"
+      }
+    }
+  },
+  "a7e8fb93a950": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/subdomains/{subdomain-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSubdomain",
+        "apiReference": ""
+      }
+    }
+  },
+  "bbe1ba4523e4": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/subdomains/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSubdomainCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "12b35f9bb4d5": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/trackers",
+    "methods": {}
+  },
+  "ebf554e081fb": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/trackers/{hostTracker-id}",
+    "methods": {}
+  },
+  "ea2d42ae607e": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/trackers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostTrackerCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5b8976928268": {
+    "path": "/security/threatIntelligence/hosts/{host-id}/whois",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostWhoi",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-whoisrecord-get?view=graph-rest-1.0"
+      }
+    }
+  },
+  "b32217ef72fe": {
+    "path": "/security/threatIntelligence/hosts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "19f55e496881": {
+    "path": "/security/threatIntelligence/hostSslCertificates",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSslCertificate",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostSslCertificate",
+        "apiReference": ""
+      }
+    }
+  },
+  "7d4902f9dd5a": {
+    "path": "/security/threatIntelligence/hostSslCertificates/{hostSslCertificate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSslCertificate",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hostsslcertificate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostSslCertificate",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostSslCertificate",
+        "apiReference": ""
+      }
+    }
+  },
+  "8124698bbe8f": {
+    "path": "/security/threatIntelligence/hostSslCertificates/{hostSslCertificate-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostSslCertificateHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "83c7c7d47a80": {
+    "path": "/security/threatIntelligence/hostSslCertificates/{hostSslCertificate-id}/sslCertificate",
+    "methods": {}
+  },
+  "c56c87d8cb2e": {
+    "path": "/security/threatIntelligence/hostSslCertificates/$count",
+    "methods": {}
+  },
+  "aa6ad1a5c3bc": {
+    "path": "/security/threatIntelligence/hostTrackers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostTracker",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceHostTracker",
+        "apiReference": ""
+      }
+    }
+  },
+  "7c77bceacd5a": {
+    "path": "/security/threatIntelligence/hostTrackers/{hostTracker-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostTracker",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceHostTracker",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceHostTracker",
+        "apiReference": ""
+      }
+    }
+  },
+  "2c4bfd248918": {
+    "path": "/security/threatIntelligence/hostTrackers/{hostTracker-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceHostTrackerHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "940edb94a4f3": {
+    "path": "/security/threatIntelligence/hostTrackers/$count",
+    "methods": {}
+  },
+  "04b1639bd389": {
+    "path": "/security/threatIntelligence/intelligenceProfileIndicators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceProfileIndicator",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceProfileIndicator",
+        "apiReference": ""
+      }
+    }
+  },
+  "c0d4389aecf3": {
+    "path": "/security/threatIntelligence/intelligenceProfileIndicators/{intelligenceProfileIndicator-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceProfileIndicator",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceProfileIndicator",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceProfileIndicator",
+        "apiReference": ""
+      }
+    }
+  },
+  "49240b767f58": {
+    "path": "/security/threatIntelligence/intelligenceProfileIndicators/{intelligenceProfileIndicator-id}/artifact",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceProfileIndicatorArtifact",
+        "apiReference": ""
+      }
+    }
+  },
+  "2fa3f467aefe": {
+    "path": "/security/threatIntelligence/intelligenceProfileIndicators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceProfileIndicatorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "de6e327aabbd": {
+    "path": "/security/threatIntelligence/intelProfiles",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfile",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-threatintelligence-list-intelprofiles?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceIntelProfile",
+        "apiReference": ""
+      }
+    }
+  },
+  "a92173399652": {
+    "path": "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfile",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-intelligenceprofile-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceIntelProfile",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceIntelProfile",
+        "apiReference": ""
+      }
+    }
+  },
+  "71613642041e": {
+    "path": "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}/indicators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfileIndicator",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0"
+      }
+    }
+  },
+  "db8789eb846d": {
+    "path": "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}/indicators/{intelligenceProfileIndicator-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfileIndicator",
+        "apiReference": ""
+      }
+    }
+  },
+  "16ff84513099": {
+    "path": "/security/threatIntelligence/intelProfiles/{intelligenceProfile-id}/indicators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfileIndicatorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9c97e0a63c70": {
+    "path": "/security/threatIntelligence/intelProfiles/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceIntelProfileCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fdaa08c62320": {
+    "path": "/security/threatIntelligence/passiveDnsRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligencePassiveDnsRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligencePassiveDnsRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "b1a2a5fb6228": {
+    "path": "/security/threatIntelligence/passiveDnsRecords/{passiveDnsRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligencePassiveDnsRecord",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-passivednsrecord-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligencePassiveDnsRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligencePassiveDnsRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "67d11623a1d6": {
+    "path": "/security/threatIntelligence/passiveDnsRecords/{passiveDnsRecord-id}/artifact",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligencePassiveDnsRecordArtifact",
+        "apiReference": ""
+      }
+    }
+  },
+  "806946d20245": {
+    "path": "/security/threatIntelligence/passiveDnsRecords/{passiveDnsRecord-id}/parentHost",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligencePassiveDnsRecordParentHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "8c933092ce6f": {
+    "path": "/security/threatIntelligence/passiveDnsRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligencePassiveDnsRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "b5fc786b5ca8": {
+    "path": "/security/threatIntelligence/sslCertificates",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificate",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-threatintelligence-list-sslcertificates?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceSslCertificate",
+        "apiReference": ""
+      }
+    }
+  },
+  "86cf6cb0be6c": {
+    "path": "/security/threatIntelligence/sslCertificates/{sslCertificate-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificate",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceSslCertificate",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceSslCertificate",
+        "apiReference": ""
+      }
+    }
+  },
+  "4e9a3ee04ace": {
+    "path": "/security/threatIntelligence/sslCertificates/{sslCertificate-id}/relatedHosts",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificateRelatedHost",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-sslcertificate-list-relatedhosts?view=graph-rest-1.0"
+      }
+    }
+  },
+  "64585aa24be0": {
+    "path": "/security/threatIntelligence/sslCertificates/{sslCertificate-id}/relatedHosts/{host-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificateRelatedHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "40664905a492": {
+    "path": "/security/threatIntelligence/sslCertificates/{sslCertificate-id}/relatedHosts/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificateRelatedHostCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "03ee66886caa": {
+    "path": "/security/threatIntelligence/sslCertificates/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSslCertificateCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2bad0fb7de64": {
+    "path": "/security/threatIntelligence/subdomains",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSubdomain",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceSubdomain",
+        "apiReference": ""
+      }
+    }
+  },
+  "7a4ef05931a9": {
+    "path": "/security/threatIntelligence/subdomains/{subdomain-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSubdomain",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-subdomain-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceSubdomain",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceSubdomain",
+        "apiReference": ""
+      }
+    }
+  },
+  "5d015d084da4": {
+    "path": "/security/threatIntelligence/subdomains/{subdomain-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSubdomainHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "f847af42d6b0": {
+    "path": "/security/threatIntelligence/subdomains/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceSubdomainCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "992b6f04c914": {
+    "path": "/security/threatIntelligence/vulnerabilities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerability",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceVulnerability",
+        "apiReference": ""
+      }
+    }
+  },
+  "e26e12a4acd2": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerability",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-vulnerability-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceVulnerability",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceVulnerability",
+        "apiReference": ""
+      }
+    }
+  },
+  "52b27e71a126": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/articles",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityArticle",
+        "apiReference": ""
+      }
+    }
+  },
+  "f6c01031367e": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/articles/{article-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityArticle",
+        "apiReference": ""
+      }
+    }
+  },
+  "08cda43857ea": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/articles/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityArticleCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "cdfcaef49d3c": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/components",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityComponent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceVulnerabilityComponent",
+        "apiReference": ""
+      }
+    }
+  },
+  "f9e29fb99812": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/components/{vulnerabilityComponent-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityComponent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-vulnerabilitycomponent-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceVulnerabilityComponent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceVulnerabilityComponent",
+        "apiReference": ""
+      }
+    }
+  },
+  "60efd3e95d06": {
+    "path": "/security/threatIntelligence/vulnerabilities/{vulnerability-id}/components/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityComponentCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2f7f90335685": {
+    "path": "/security/threatIntelligence/vulnerabilities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceVulnerabilityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "64cc6914f7bb": {
+    "path": "/security/threatIntelligence/whoisHistoryRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisHistoryRecord",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceWhoisHistoryRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "77cf22a0b7a8": {
+    "path": "/security/threatIntelligence/whoisHistoryRecords/{whoisHistoryRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisHistoryRecord",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceWhoisHistoryRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceWhoisHistoryRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "3d1077139188": {
+    "path": "/security/threatIntelligence/whoisHistoryRecords/{whoisHistoryRecord-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisHistoryRecordHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "e14f1c06a61d": {
+    "path": "/security/threatIntelligence/whoisHistoryRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisHistoryRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "87638fbe090f": {
+    "path": "/security/threatIntelligence/whoisRecords",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecord",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-threatintelligence-list-whoisrecords?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityThreatIntelligenceWhoisRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "1175618ae92b": {
+    "path": "/security/threatIntelligence/whoisRecords/{whoisRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecord",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-whoisrecord-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityThreatIntelligenceWhoisRecord",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityThreatIntelligenceWhoisRecord",
+        "apiReference": ""
+      }
+    }
+  },
+  "391db18bbca9": {
+    "path": "/security/threatIntelligence/whoisRecords/{whoisRecord-id}/history",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecordHistory",
+        "apiReference": ""
+      }
+    }
+  },
+  "31a68e6e0836": {
+    "path": "/security/threatIntelligence/whoisRecords/{whoisRecord-id}/history/{whoisHistoryRecord-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecordHistory",
+        "apiReference": ""
+      }
+    }
+  },
+  "b6dd32ae756b": {
+    "path": "/security/threatIntelligence/whoisRecords/{whoisRecord-id}/history/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecordHistoryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3ef170bf393b": {
+    "path": "/security/threatIntelligence/whoisRecords/{whoisRecord-id}/host",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecordHost",
+        "apiReference": ""
+      }
+    }
+  },
+  "da36db134c16": {
+    "path": "/security/threatIntelligence/whoisRecords/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityThreatIntelligenceWhoisRecordCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4c7ff589e4a7": {
+    "path": "/security/triggers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityTrigger",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityTrigger",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityTrigger",
+        "apiReference": ""
+      }
+    }
+  },
+  "debcc8b9b94c": {
+    "path": "/security/triggers/retentionEvents",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerRetentionEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionevent-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityTriggerRetentionEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionevent-post?view=graph-rest-1.0"
+      }
+    }
+  },
+  "bf6b816d8e36": {
+    "path": "/security/triggers/retentionEvents/{retentionEvent-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerRetentionEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityTriggerRetentionEvent",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityTriggerRetentionEvent",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "9092d52a4cc2": {
+    "path": "/security/triggers/retentionEvents/{retentionEvent-id}/retentionEventType",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerRetentionEventType",
+        "apiReference": ""
+      }
+    }
+  },
+  "7311df5b913b": {
+    "path": "/security/triggers/retentionEvents/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerRetentionEventCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4ab3e9eb6e45": {
+    "path": "/security/triggerTypes",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgSecurityTriggerType",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityTriggerType",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityTriggerType",
+        "apiReference": ""
+      }
+    }
+  },
+  "e5da4477aaa9": {
+    "path": "/security/triggerTypes/retentionEventTypes",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerTypeRetentionEventType",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgSecurityTriggerTypeRetentionEventType",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0"
+      }
+    }
+  },
+  "909b552e0f73": {
+    "path": "/security/triggerTypes/retentionEventTypes/{retentionEventType-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerTypeRetentionEventType",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentioneventtype-get?view=graph-rest-1.0"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgSecurityTriggerTypeRetentionEventType",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgSecurityTriggerTypeRetentionEventType",
+        "apiReference": "https://learn.microsoft.com/graph/api/security-retentioneventtype-delete?view=graph-rest-1.0"
+      }
+    }
+  },
+  "f073d60fd6c7": {
+    "path": "/security/triggerTypes/retentionEventTypes/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "RecordsManagement.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Records Management configuration,labels and policies",
+            "FullDescription": "Allows the application to read any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "RecordsManagement.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Records Management configuration, labels and policies",
+            "FullDescription": "Allow the application to create, update and delete any data from Records Management, such as configuration, labels, and policies without the signed in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgSecurityTriggerTypeRetentionEventTypeCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "/identity/authenticationEventsFlows/{authenticationEventsFlow-id}/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart/microsoft.graph.onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp/identityProviders/{identityProviderBase-id}/$ref": {
+    "delete": {
+      "tags": [
+        "identity.authenticationEventsFlow"
+      ],
+      "summary": "Delete ref of navigation property identityProviders for identity",
+      "operationId": "identity.authenticationEventsFlowAsOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.identityProvider_DeleteIdentityProviderBaseGraphBPreRef",
+      "parameters": [
+        {
+          "name": "authenticationEventsFlow-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationEventsFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationEventsFlow"
+        },
+        {
+          "name": "identityProviderBase-id",
+          "in": "path",
+          "description": "The unique identifier of identityProviderBase",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityProviderBase"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

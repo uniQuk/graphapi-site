@@ -1,0 +1,58 @@
+{
+  "/directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}/$ref": {
+    "delete": {
+      "tags": [
+        "directory.administrativeUnit"
+      ],
+      "summary": "Remove a member",
+      "description": "Use this API to remove a member (user, group, or device) from an administrative unit.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/administrativeunit-delete-members?view=graph-rest-1.0"
+      },
+      "operationId": "directory.administrativeUnit.member_DeleteDirectoryObjectGraphBPreRef",
+      "parameters": [
+        {
+          "name": "administrativeUnit-id",
+          "in": "path",
+          "description": "The unique identifier of administrativeUnit",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "administrativeUnit"
+        },
+        {
+          "name": "directoryObject-id",
+          "in": "path",
+          "description": "The unique identifier of directoryObject",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "directoryObject"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

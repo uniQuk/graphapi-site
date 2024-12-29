@@ -1,0 +1,168 @@
+{
+  "/groupSettings/{groupSetting-id}": {
+    "get": {
+      "tags": [
+        "groupSettings.groupSetting"
+      ],
+      "summary": "Get groupSetting",
+      "description": "Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0"
+      },
+      "operationId": "groupSetting_GetGroupSetting",
+      "parameters": [
+        {
+          "name": "groupSetting-id",
+          "in": "path",
+          "description": "The unique identifier of groupSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSetting"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "groupSettings.groupSetting"
+      ],
+      "summary": "Update groupSetting",
+      "description": "Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0"
+      },
+      "operationId": "groupSetting_UpdateGroupSetting",
+      "parameters": [
+        {
+          "name": "groupSetting-id",
+          "in": "path",
+          "description": "The unique identifier of groupSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSetting"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupSetting"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupSetting"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "groupSettings.groupSetting"
+      ],
+      "summary": "Delete a group setting",
+      "description": "Delete a tenant-level or group-specific groupSetting object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0"
+      },
+      "operationId": "groupSetting_DeleteGroupSetting",
+      "parameters": [
+        {
+          "name": "groupSetting-id",
+          "in": "path",
+          "description": "The unique identifier of groupSetting",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupSetting"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

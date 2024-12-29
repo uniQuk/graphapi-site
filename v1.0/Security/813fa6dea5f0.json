@@ -1,0 +1,163 @@
+{
+  "/security/secureScoreControlProfiles/{secureScoreControlProfile-id}": {
+    "get": {
+      "tags": [
+        "security.secureScoreControlProfile"
+      ],
+      "summary": "Get secureScoreControlProfile",
+      "description": "Retrieve the properties and relationships of an securescorecontrolprofile object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0"
+      },
+      "operationId": "security_GetSecureScoreControlProfile",
+      "parameters": [
+        {
+          "name": "secureScoreControlProfile-id",
+          "in": "path",
+          "description": "The unique identifier of secureScoreControlProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "secureScoreControlProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.secureScoreControlProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.secureScoreControlProfile"
+      ],
+      "summary": "Update secureScoreControlProfile",
+      "description": "Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0"
+      },
+      "operationId": "security_UpdateSecureScoreControlProfile",
+      "parameters": [
+        {
+          "name": "secureScoreControlProfile-id",
+          "in": "path",
+          "description": "The unique identifier of secureScoreControlProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "secureScoreControlProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.secureScoreControlProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.secureScoreControlProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.secureScoreControlProfile"
+      ],
+      "summary": "Delete navigation property secureScoreControlProfiles for security",
+      "operationId": "security_DeleteSecureScoreControlProfile",
+      "parameters": [
+        {
+          "name": "secureScoreControlProfile-id",
+          "in": "path",
+          "description": "The unique identifier of secureScoreControlProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "secureScoreControlProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

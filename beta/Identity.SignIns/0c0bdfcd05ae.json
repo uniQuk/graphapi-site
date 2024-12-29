@@ -1,0 +1,189 @@
+{
+  "/identityProviders/{identityProvider-id}": {
+    "get": {
+      "tags": [
+        "identityProviders.identityProvider"
+      ],
+      "summary": "Get identityProvider (deprecated)",
+      "description": "Retrieve the properties and relationships of an identityProvider.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityprovider-get?view=graph-rest-beta"
+      },
+      "operationId": "identityProvider_GetIdentityProvider",
+      "parameters": [
+        {
+          "name": "identityProvider-id",
+          "in": "path",
+          "description": "The unique identifier of identityProvider",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityProvider"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityProvider"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identityProviders.identityProvider"
+      ],
+      "summary": "Update identityProvider (deprecated)",
+      "description": "Update the properties of an identityProvider object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityprovider-update?view=graph-rest-beta"
+      },
+      "operationId": "identityProvider_UpdateIdentityProvider",
+      "parameters": [
+        {
+          "name": "identityProvider-id",
+          "in": "path",
+          "description": "The unique identifier of identityProvider",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityProvider"
+        }
+      ],
+      "requestBody": {
+        "description": "New property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.identityProvider"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.identityProvider"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identityProviders.identityProvider"
+      ],
+      "summary": "Delete identityProvider (deprecated)",
+      "description": "Delete an identityProvider.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-beta"
+      },
+      "operationId": "identityProvider_DeleteIdentityProvider",
+      "parameters": [
+        {
+          "name": "identityProvider-id",
+          "in": "path",
+          "description": "The unique identifier of identityProvider",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "identityProvider"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-15",
+        "date": "2021-08-24",
+        "version": "2021-05/identityProvider",
+        "description": "The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

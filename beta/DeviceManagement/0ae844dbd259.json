@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration-id}/definitionValues/{groupPolicyDefinitionValue-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyConfiguration"
+      ],
+      "summary": "Get definitionValues from deviceManagement",
+      "description": "The list of enabled or disabled group policy definition values for the configuration.",
+      "operationId": "deviceManagement.groupPolicyConfiguration_GetDefinitionValue",
+      "parameters": [
+        {
+          "name": "groupPolicyConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyConfiguration"
+        },
+        {
+          "name": "groupPolicyDefinitionValue-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyDefinitionValue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyDefinitionValue"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyDefinitionValue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.groupPolicyConfiguration"
+      ],
+      "summary": "Update the navigation property definitionValues in deviceManagement",
+      "operationId": "deviceManagement.groupPolicyConfiguration_UpdateDefinitionValue",
+      "parameters": [
+        {
+          "name": "groupPolicyConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyConfiguration"
+        },
+        {
+          "name": "groupPolicyDefinitionValue-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyDefinitionValue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyDefinitionValue"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupPolicyDefinitionValue"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyDefinitionValue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.groupPolicyConfiguration"
+      ],
+      "summary": "Delete navigation property definitionValues for deviceManagement",
+      "operationId": "deviceManagement.groupPolicyConfiguration_DeleteDefinitionValue",
+      "parameters": [
+        {
+          "name": "groupPolicyConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyConfiguration"
+        },
+        {
+          "name": "groupPolicyDefinitionValue-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyDefinitionValue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyDefinitionValue"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

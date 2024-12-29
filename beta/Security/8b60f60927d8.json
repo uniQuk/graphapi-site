@@ -1,0 +1,32 @@
+{
+  "/security/identities/sensors/microsoft.graph.security.getDeploymentAccessKey()": {
+    "get": {
+      "tags": [
+        "security.Functions"
+      ],
+      "summary": "Invoke function getDeploymentAccessKey",
+      "description": "Get the deployment access key associated with a Microsoft Defender for Identity, needed to install sensors associated with the workspace.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-sensor-getdeploymentaccesskey?view=graph-rest-beta"
+      },
+      "operationId": "security.identity.sensor_getDeploymentAccessKey",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.deploymentAccessKeyType"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

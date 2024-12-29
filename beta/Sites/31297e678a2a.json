@@ -1,0 +1,74 @@
+{
+  "/sites/{site-id}/informationProtection/microsoft.graph.verifySignature": {
+    "post": {
+      "tags": [
+        "sites.Actions"
+      ],
+      "summary": "Invoke action verifySignature",
+      "operationId": "site.informationProtection_verifySignature",
+      "parameters": [
+        {
+          "name": "site-id",
+          "in": "path",
+          "description": "The unique identifier of site",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "site"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "digest": {
+                  "type": "string",
+                  "format": "base64url"
+                },
+                "signature": {
+                  "type": "string",
+                  "format": "base64url"
+                },
+                "signingKeyId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.verificationResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2022-08-15",
+        "date": "2021-02-15",
+        "version": "2021-02/Beta_SensitivityLabels",
+        "description": "This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "/privilegedRoleAssignments/{privilegedRoleAssignment-id}/roleInfo/microsoft.graph.selfDeactivate": {
+    "post": {
+      "tags": [
+        "privilegedRoleAssignments.Actions"
+      ],
+      "summary": "Invoke action selfDeactivate",
+      "operationId": "privilegedRoleAssignment.roleInfo_selfDeactivate",
+      "parameters": [
+        {
+          "name": "privilegedRoleAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedRoleAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedRoleAssignment"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.privilegedRoleAssignment"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

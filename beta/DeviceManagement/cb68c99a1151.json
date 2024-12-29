@@ -1,0 +1,220 @@
+{
+  "/deviceManagement/templates/{deviceManagementTemplate-id}/migratableTo/{deviceManagementTemplate-id1}/settings/{deviceManagementSettingInstance-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceManagementTemplate"
+      ],
+      "summary": "Get settings from deviceManagement",
+      "description": "Collection of all settings this template has",
+      "operationId": "deviceManagement.template.migratableTo_GetSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementTemplate-id1",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.deviceManagementTemplate"
+      ],
+      "summary": "Update the navigation property settings in deviceManagement",
+      "operationId": "deviceManagement.template.migratableTo_UpdateSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementTemplate-id1",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.deviceManagementSettingInstance"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.deviceManagementTemplate"
+      ],
+      "summary": "Delete navigation property settings for deviceManagement",
+      "operationId": "deviceManagement.template.migratableTo_DeleteSetting",
+      "parameters": [
+        {
+          "name": "deviceManagementTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementTemplate-id1",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementTemplate"
+        },
+        {
+          "name": "deviceManagementSettingInstance-id",
+          "in": "path",
+          "description": "The unique identifier of deviceManagementSettingInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceManagementSettingInstance"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

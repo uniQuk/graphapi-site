@@ -1,0 +1,201 @@
+{
+  "/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy-id}/combinationConfigurations/{authenticationCombinationConfiguration-id}": {
+    "get": {
+      "tags": [
+        "identity.conditionalAccessRoot"
+      ],
+      "summary": "Get authenticationCombinationConfiguration",
+      "description": "Read the properties and relationships of an authenticationCombinationConfiguration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0"
+      },
+      "operationId": "identity.conditionalAccess.authenticationStrength.policy_GetCombinationConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationStrengthPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationStrengthPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationStrengthPolicy"
+        },
+        {
+          "name": "authenticationCombinationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationCombinationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationCombinationConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationCombinationConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.conditionalAccessRoot"
+      ],
+      "summary": "Update authenticationCombinationConfiguration",
+      "description": "Update the properties of an authenticationCombinationConfiguration object. \nThe properties can be for one of the following derived types:\n* fido2combinationConfigurations\n* x509certificatecombinationconfiguration",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0"
+      },
+      "operationId": "identity.conditionalAccess.authenticationStrength.policy_UpdateCombinationConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationStrengthPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationStrengthPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationStrengthPolicy"
+        },
+        {
+          "name": "authenticationCombinationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationCombinationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationCombinationConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.authenticationCombinationConfiguration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.authenticationCombinationConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.conditionalAccessRoot"
+      ],
+      "summary": "Delete authenticationCombinationConfiguration",
+      "description": "Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0"
+      },
+      "operationId": "identity.conditionalAccess.authenticationStrength.policy_DeleteCombinationConfiguration",
+      "parameters": [
+        {
+          "name": "authenticationStrengthPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationStrengthPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationStrengthPolicy"
+        },
+        {
+          "name": "authenticationCombinationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of authenticationCombinationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "authenticationCombinationConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

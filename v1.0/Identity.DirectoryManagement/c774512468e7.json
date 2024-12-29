@@ -1,0 +1,55 @@
+{
+  "/domains/{domain-id}/microsoft.graph.promote": {
+    "post": {
+      "tags": [
+        "domains.Actions"
+      ],
+      "summary": "Invoke action promote",
+      "description": "Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0"
+      },
+      "operationId": "domain_promote",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false,
+                    "nullable": true
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/roleManagement/exchange/roleDefinitions/{unifiedRoleDefinition-id}/inheritsPermissionsFrom/$count": {
+    "get": {
+      "tags": [
+        "roleManagement.unifiedRbacApplication"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "roleManagement.exchange.roleDefinition.inheritsPermissionsFrom_GetCount",
+      "parameters": [
+        {
+          "name": "unifiedRoleDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleDefinition"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

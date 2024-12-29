@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate-id}/localizedNotificationMessages/{localizedNotificationMessage-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Get localizedNotificationMessages from deviceManagement",
+      "description": "The list of localized messages for this Notification Message Template.",
+      "operationId": "deviceManagement.notificationMessageTemplate_GetLocalizedNotificationMessage",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "localizedNotificationMessage-id",
+          "in": "path",
+          "description": "The unique identifier of localizedNotificationMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "localizedNotificationMessage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.localizedNotificationMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Update the navigation property localizedNotificationMessages in deviceManagement",
+      "operationId": "deviceManagement.notificationMessageTemplate_UpdateLocalizedNotificationMessage",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "localizedNotificationMessage-id",
+          "in": "path",
+          "description": "The unique identifier of localizedNotificationMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "localizedNotificationMessage"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.localizedNotificationMessage"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.localizedNotificationMessage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Delete navigation property localizedNotificationMessages for deviceManagement",
+      "operationId": "deviceManagement.notificationMessageTemplate_DeleteLocalizedNotificationMessage",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "localizedNotificationMessage-id",
+          "in": "path",
+          "description": "The unique identifier of localizedNotificationMessage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "localizedNotificationMessage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "/external/connections/{externalConnection-id}/items/{externalItem-id}/activities/{externalActivity-id}": {
+    "get": {
+      "tags": [
+        "external.externalConnection"
+      ],
+      "summary": "Get activities from external",
+      "description": "Returns a list of activities performed on the item. Write-only.",
+      "operationId": "external.connection.item_GetActivity",
+      "parameters": [
+        {
+          "name": "externalConnection-id",
+          "in": "path",
+          "description": "The unique identifier of externalConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalConnection"
+        },
+        {
+          "name": "externalItem-id",
+          "in": "path",
+          "description": "The unique identifier of externalItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalItem"
+        },
+        {
+          "name": "externalActivity-id",
+          "in": "path",
+          "description": "The unique identifier of externalActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalActivity"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.externalConnectors.externalActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "external.externalConnection"
+      ],
+      "summary": "Update the navigation property activities in external",
+      "operationId": "external.connection.item_UpdateActivity",
+      "parameters": [
+        {
+          "name": "externalConnection-id",
+          "in": "path",
+          "description": "The unique identifier of externalConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalConnection"
+        },
+        {
+          "name": "externalItem-id",
+          "in": "path",
+          "description": "The unique identifier of externalItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalItem"
+        },
+        {
+          "name": "externalActivity-id",
+          "in": "path",
+          "description": "The unique identifier of externalActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalActivity"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.externalConnectors.externalActivity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.externalConnectors.externalActivity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "external.externalConnection"
+      ],
+      "summary": "Delete navigation property activities for external",
+      "operationId": "external.connection.item_DeleteActivity",
+      "parameters": [
+        {
+          "name": "externalConnection-id",
+          "in": "path",
+          "description": "The unique identifier of externalConnection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalConnection"
+        },
+        {
+          "name": "externalItem-id",
+          "in": "path",
+          "description": "The unique identifier of externalItem",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalItem"
+        },
+        {
+          "name": "externalActivity-id",
+          "in": "path",
+          "description": "The unique identifier of externalActivity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "externalActivity"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "/external/industryData/runs/{industryDataRun-id}/microsoft.graph.industryData.getStatistics()": {
+    "get": {
+      "tags": [
+        "external.Functions"
+      ],
+      "summary": "Invoke function getStatistics",
+      "description": "Get statistics for an industryDataRun.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-industrydatarun-getstatistics?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData.run_getStatistics",
+      "parameters": [
+        {
+          "name": "industryDataRun-id",
+          "in": "path",
+          "description": "The unique identifier of industryDataRun",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "industryDataRun"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.industryDataRunStatistics"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

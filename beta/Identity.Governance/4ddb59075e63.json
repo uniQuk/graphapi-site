@@ -1,0 +1,66 @@
+{
+  "/roleManagement/deviceManagement/resourceNamespaces/{unifiedRbacResourceNamespace-id}/microsoft.graph.importResourceActions": {
+    "post": {
+      "tags": [
+        "roleManagement.Actions"
+      ],
+      "summary": "Invoke action importResourceActions",
+      "operationId": "roleManagement.deviceManagement.resourceNamespace_importResourceAction",
+      "parameters": [
+        {
+          "name": "unifiedRbacResourceNamespace-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRbacResourceNamespace",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRbacResourceNamespace"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "format": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "overwriteResourceNamespace": {
+                  "type": "boolean",
+                  "default": false
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.unifiedRbacResourceNamespace"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

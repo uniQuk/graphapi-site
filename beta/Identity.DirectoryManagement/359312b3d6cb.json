@@ -1,0 +1,45 @@
+{
+  "/tenantRelationships/managedTenants/tenants/{tenant-id}/microsoft.graph.managedTenants.offboardTenant": {
+    "post": {
+      "tags": [
+        "tenantRelationships.Actions"
+      ],
+      "summary": "Invoke action offboardTenant",
+      "description": "Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/managedtenants-tenant-offboardtenant?view=graph-rest-beta"
+      },
+      "operationId": "tenantRelationship.managedTenant.tenant_offboardTenant",
+      "parameters": [
+        {
+          "name": "tenant-id",
+          "in": "path",
+          "description": "The unique identifier of tenant",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tenant"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedTenants.tenant"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

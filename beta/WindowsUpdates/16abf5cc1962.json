@@ -1,0 +1,76 @@
+{
+  "/admin/edge/internetExplorerMode/siteLists/{browserSiteList-id}/microsoft.graph.publish": {
+    "post": {
+      "tags": [
+        "admin.Actions"
+      ],
+      "summary": "Invoke action publish",
+      "description": "Publish the specified browserSiteList for devices to download.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/browsersitelist-publish?view=graph-rest-beta"
+      },
+      "operationId": "admin.edge.internetExplorerMode.siteList_publish",
+      "parameters": [
+        {
+          "name": "browserSiteList-id",
+          "in": "path",
+          "description": "The unique identifier of browserSiteList",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "browserSiteList"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "revision": {
+                  "type": "string"
+                },
+                "sites": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.browserSite"
+                  }
+                },
+                "sharedCookies": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.browserSharedCookie"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.browserSiteList"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

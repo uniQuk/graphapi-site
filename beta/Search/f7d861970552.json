@@ -1,0 +1,73 @@
+{
+  "/external/industryData/runs/{industryDataRun-id}": {
+    "get": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Get industryDataRun",
+      "description": "Read the properties and relationships of an industryDataRun object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData_GetRun",
+      "parameters": [
+        {
+          "name": "industryDataRun-id",
+          "in": "path",
+          "description": "The unique identifier of industryDataRun",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "industryDataRun"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.industryDataRun"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "/policies/tokenLifetimePolicies/{tokenLifetimePolicy-id}": {
+    "get": {
+      "tags": [
+        "policies.tokenLifetimePolicy"
+      ],
+      "summary": "Get tokenLifetimePolicy",
+      "description": "Retrieve the properties and relationships of a tokenLifetimePolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0"
+      },
+      "operationId": "policy_GetTokenLifetimePolicy",
+      "parameters": [
+        {
+          "name": "tokenLifetimePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of tokenLifetimePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tokenLifetimePolicy"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tokenLifetimePolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "policies.tokenLifetimePolicy"
+      ],
+      "summary": "Update tokenlifetimepolicy",
+      "description": "Update the properties of a tokenLifetimePolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0"
+      },
+      "operationId": "policy_UpdateTokenLifetimePolicy",
+      "parameters": [
+        {
+          "name": "tokenLifetimePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of tokenLifetimePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tokenLifetimePolicy"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.tokenLifetimePolicy"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tokenLifetimePolicy"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "policies.tokenLifetimePolicy"
+      ],
+      "summary": "Delete tokenLifetimePolicy",
+      "description": "Delete a tokenLifetimePolicy object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0"
+      },
+      "operationId": "policy_DeleteTokenLifetimePolicy",
+      "parameters": [
+        {
+          "name": "tokenLifetimePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of tokenLifetimePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tokenLifetimePolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

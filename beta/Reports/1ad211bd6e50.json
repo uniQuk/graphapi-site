@@ -1,0 +1,28 @@
+{
+  "/reports/microsoft.graph.managedDeviceEnrollmentFailureTrends()": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function managedDeviceEnrollmentFailureTrends",
+      "description": "Metadata for the enrollment failure trends report",
+      "operationId": "report_managedDeviceEnrollmentFailureTrend",
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.report"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

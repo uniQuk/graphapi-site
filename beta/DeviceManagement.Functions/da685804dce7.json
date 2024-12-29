@@ -1,0 +1,49 @@
+{
+  "/deviceManagement/microsoft.graph.scopedForResource(resource='{resource}')": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function scopedForResource",
+      "operationId": "deviceManagement_scopedGraphFPreResource",
+      "parameters": [
+        {
+          "name": "resource",
+          "in": "path",
+          "description": "Usage: resource='{resource}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

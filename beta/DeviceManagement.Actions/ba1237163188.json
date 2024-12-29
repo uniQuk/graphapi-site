@@ -1,0 +1,45 @@
+{
+  "/deviceManagement/windowsAutopilotDeploymentProfiles/{windowsAutopilotDeploymentProfile-id}/assignedDevices/{windowsAutopilotDeviceIdentity-id}/microsoft.graph.unassignUserFromDevice": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action unassignUserFromDevice",
+      "description": "Unassigns the user from an Autopilot device.",
+      "operationId": "deviceManagement.windowsAutopilotDeploymentProfile.assignedDevice_unassignUserFromDevice",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "windowsAutopilotDeviceIdentity-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeviceIdentity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeviceIdentity"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

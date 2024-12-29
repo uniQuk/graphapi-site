@@ -1,0 +1,2867 @@
+{
+  "12d2375a83e3": {
+    "path": "/groups/{group-id}/planner",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaGroupPlanner",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaGroupPlanner",
+        "apiReference": ""
+      }
+    }
+  },
+  "78b5a591b42d": {
+    "path": "/groups/{group-id}/planner/plans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaGroupPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-beta"
+      }
+    }
+  },
+  "14c95f675588": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaGroupPlannerPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "de85c45958c2": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaGroupPlannerPlanBucket",
+        "apiReference": ""
+      }
+    }
+  },
+  "132610d8f324": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}",
+    "methods": {}
+  },
+  "390891316633": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks",
+    "methods": {}
+  },
+  "d90ff90405dd": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "7f4123c0076c": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "90b083c0f1f9": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "bf6be5c2879f": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "a7bb9934ae28": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "af33b522e701": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/$count",
+    "methods": {}
+  },
+  "f0176f095d02": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/buckets/$count",
+    "methods": {}
+  },
+  "71ecf5aa7b74": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaGroupPlannerPlanDetail",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaGroupPlannerPlanDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaGroupPlannerPlanDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "e14956ddd191": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaGroupPlannerPlanTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "c0c5b1661c27": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "45ea4adaf313": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "7776708ec877": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "7b5891ee50e3": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "112239d38d7a": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "e7635528489f": {
+    "path": "/groups/{group-id}/planner/plans/{plannerPlan-id}/tasks/$count",
+    "methods": {}
+  },
+  "84f52a67429b": {
+    "path": "/groups/{group-id}/planner/plans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaGroupPlannerPlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c7ea435b0ca1": {
+    "path": "/planner",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPlanner",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPlanner",
+        "apiReference": ""
+      }
+    }
+  },
+  "a6a99bb57d3f": {
+    "path": "/planner/buckets",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPlannerBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-beta"
+      }
+    }
+  },
+  "dccfda3216c8": {
+    "path": "/planner/buckets/{plannerBucket-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaPlannerBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "f4e15addccae": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerBucketTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbucket-list-tasks?view=graph-rest-beta"
+      }
+    }
+  },
+  "12d5dd1ef755": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "52e93dff3542": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "feba2bca50d4": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "1388cbaee69b": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "795e304bf978": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "81340a30238b": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/$count",
+    "methods": {}
+  },
+  "86a3641bde51": {
+    "path": "/planner/buckets/{plannerBucket-id}/tasks/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "aa88f0efc533": {
+    "path": "/planner/buckets/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerBucketCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d4c2561d828": {
+    "path": "/planner/buckets/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "c9c580bd8fc2": {
+    "path": "/planner/plans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-beta"
+      }
+    }
+  },
+  "b5a4904eb397": {
+    "path": "/planner/plans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplan-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplan-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaPlannerPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplan-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "208f14f7f160": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlanBucket",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-beta"
+      }
+    }
+  },
+  "0fcb18635fd0": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}",
+    "methods": {}
+  },
+  "457dc4afd27a": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks",
+    "methods": {}
+  },
+  "4ba197ff1fdb": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "39cc4cade3f5": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "fa96034b3920": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "e1545984909f": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "a1e513a9b9db": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "b4b53a54e3e4": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/$count",
+    "methods": {}
+  },
+  "1924e8a0ee87": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "79b3c4f177d0": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/$count",
+    "methods": {}
+  },
+  "145a256894c4": {
+    "path": "/planner/plans/{plannerPlan-id}/buckets/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "6593fa4425d6": {
+    "path": "/planner/plans/{plannerPlan-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlanDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplandetails-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerPlanDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplandetails-update?view=graph-rest-beta"
+      }
+    }
+  },
+  "4b0a97e3a70d": {
+    "path": "/planner/plans/{plannerPlan-id}/microsoft.graph.archive",
+    "methods": {}
+  },
+  "c6b3b6654046": {
+    "path": "/planner/plans/{plannerPlan-id}/microsoft.graph.moveToContainer",
+    "methods": {}
+  },
+  "ab437cab1499": {
+    "path": "/planner/plans/{plannerPlan-id}/microsoft.graph.unarchive",
+    "methods": {}
+  },
+  "6b539370f1b8": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlanTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerplan-list-tasks?view=graph-rest-beta"
+      }
+    }
+  },
+  "5edcb1b67e63": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "8975424e1435": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "d5d9ed0097c6": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "e91c597ffd7c": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "3ac06e88415b": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "f046917e7f61": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/$count",
+    "methods": {}
+  },
+  "98f1544f5161": {
+    "path": "/planner/plans/{plannerPlan-id}/tasks/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "798870ad8404": {
+    "path": "/planner/plans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerPlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a64f37330fb6": {
+    "path": "/planner/plans/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "d14c77038819": {
+    "path": "/planner/rosters",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPlannerRoster",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaPlannerRoster",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-post-rosters?view=graph-rest-beta"
+      }
+    }
+  },
+  "b21c619f6403": {
+    "path": "/planner/rosters/{plannerRoster-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRoster",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerroster-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPlannerRoster",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaPlannerRoster",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerroster-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "42ddafa4049e": {
+    "path": "/planner/rosters/{plannerRoster-id}/members",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRosterMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerroster-list-members?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "New-MgBetaPlannerRosterMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerroster-post-members?view=graph-rest-beta"
+      }
+    }
+  },
+  "2b4e5fc6ab04": {
+    "path": "/planner/rosters/{plannerRoster-id}/members/{plannerRosterMember-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRosterMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerrostermember-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPlannerRosterMember",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Remove-MgBetaPlannerRosterMember",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerrostermember-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "e831cf976a0d": {
+    "path": "/planner/rosters/{plannerRoster-id}/members/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRosterMemberCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "bdf0a87f7345": {
+    "path": "/planner/rosters/{plannerRoster-id}/microsoft.graph.assignSensitivityLabel",
+    "methods": {}
+  },
+  "5e2a59f3f0ae": {
+    "path": "/planner/rosters/{plannerRoster-id}/plans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRosterPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerroster-list-plans?view=graph-rest-beta"
+      }
+    }
+  },
+  "fc66eec4ca50": {
+    "path": "/planner/rosters/{plannerRoster-id}/plans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPlannerRosterPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "0b08109c2e2a": {
+    "path": "/planner/rosters/{plannerRoster-id}/plans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerRosterPlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "fb782896ea82": {
+    "path": "/planner/rosters/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPlannerRosterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6b35cc2b7ed3": {
+    "path": "/planner/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-beta"
+      }
+    }
+  },
+  "322b13b4b135": {
+    "path": "/planner/tasks/{plannerTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertask-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertask-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaPlannerTask",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertask-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "d8e7a47b2a88": {
+    "path": "/planner/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPlannerTaskAssignedToTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "6f840b1e7cee": {
+    "path": "/planner/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTaskBucketTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerTaskBucketTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPlannerTaskBucketTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "a68ff39afbb9": {
+    "path": "/planner/tasks/{plannerTask-id}/details",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTaskDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerTaskDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannertaskdetails-update?view=graph-rest-beta"
+      }
+    }
+  },
+  "81fb32068474": {
+    "path": "/planner/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTaskProgressTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaPlannerTaskProgressTaskBoardFormat",
+        "apiReference": "https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPlannerTaskProgressTaskBoardFormat",
+        "apiReference": ""
+      }
+    }
+  },
+  "1b8794a2ef07": {
+    "path": "/planner/tasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaPlannerTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "98ba3161931b": {
+    "path": "/planner/tasks/microsoft.graph.delta()",
+    "methods": {}
+  },
+  "66c4896ecfcb": {
+    "path": "/users/{user-id}/planner",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlanner",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaUserPlanner",
+        "apiReference": ""
+      }
+    }
+  },
+  "14871946f51c": {
+    "path": "/users/{user-id}/planner/all",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlanner",
+        "apiReference": ""
+      }
+    }
+  },
+  "34295ef4fb54": {
+    "path": "/users/{user-id}/planner/all/{plannerDelta-id}",
+    "methods": {}
+  },
+  "435e0440f7e2": {
+    "path": "/users/{user-id}/planner/all/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlannerAllCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4e12366d1ea7": {
+    "path": "/users/{user-id}/planner/favoritePlans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerFavoritePlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "f6597de2cffa": {
+    "path": "/users/{user-id}/planner/favoritePlans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlannerFavoritePlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "20a9a23997a7": {
+    "path": "/users/{user-id}/planner/favoritePlans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerFavoritePlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3736a34317c4": {
+    "path": "/users/{user-id}/planner/myDayTasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerMyDayTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "fd0c2ae510cd": {
+    "path": "/users/{user-id}/planner/myDayTasks/{plannerTask-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlannerMyDayTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "0cbc39ddbcf0": {
+    "path": "/users/{user-id}/planner/myDayTasks/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerMyDayTaskCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "838387a1a1d3": {
+    "path": "/users/{user-id}/planner/plans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "122577712fb7": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}",
+    "methods": {}
+  },
+  "7a62f9f6cf43": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets",
+    "methods": {}
+  },
+  "2845573a261f": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}",
+    "methods": {}
+  },
+  "979a3acc8741": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks",
+    "methods": {}
+  },
+  "d379e35a1c22": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "00f900ad0768": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "e10f5ff1f815": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "0c4717850af5": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "8486ae00386a": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "18636cb0bf5c": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/$count",
+    "methods": {}
+  },
+  "82c6cac9588b": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/$count",
+    "methods": {}
+  },
+  "926ca268ec76": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/details",
+    "methods": {}
+  },
+  "3ea6e7d85a82": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks",
+    "methods": {}
+  },
+  "509aff0b30cc": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "1fb3eb455269": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "ec0344929edd": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "012d415c0b1d": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "3fd698fcfbe1": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "2065fc7e0e64": {
+    "path": "/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/$count",
+    "methods": {}
+  },
+  "e4a5a87d79a6": {
+    "path": "/users/{user-id}/planner/plans/$count",
+    "methods": {}
+  },
+  "6c6cd1f3b3d9": {
+    "path": "/users/{user-id}/planner/recentPlans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerRecentPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "3e082c638f17": {
+    "path": "/users/{user-id}/planner/recentPlans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlannerRecentPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "fcc2bce95da3": {
+    "path": "/users/{user-id}/planner/recentPlans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerRecentPlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "59f0d6e29485": {
+    "path": "/users/{user-id}/planner/rosterPlans",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerRosterPlan",
+        "apiReference": "https://learn.microsoft.com/graph/api/planneruser-list-rosterplans?view=graph-rest-beta"
+      }
+    }
+  },
+  "12d7c2d1fb90": {
+    "path": "/users/{user-id}/planner/rosterPlans/{plannerPlan-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaUserPlannerRosterPlan",
+        "apiReference": ""
+      }
+    }
+  },
+  "831ad50b8b0e": {
+    "path": "/users/{user-id}/planner/rosterPlans/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerRosterPlanCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d6d9eac692f": {
+    "path": "/users/{user-id}/planner/tasks",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "Tasks.Read",
+            "IsAdmin": false,
+            "Description": "Read your tasks and task lists",
+            "FullDescription": "Allows the app to read your tasks and task lists, including any shared with you. Doesn't include permission to create, delete, or update anything.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users tasks and tasklist",
+            "FullDescription": "Allows the app to read all users tasks and task lists in your organization, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Tasks.ReadWrite",
+            "IsAdmin": false,
+            "Description": "Create, read, update, and delete your tasks and task lists",
+            "FullDescription": "Allows the app to create, read, update, and delete your tasks and task lists, including any shared with you.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all groups",
+            "FullDescription": "Allows the app to create groups and read all group properties and memberships on your behalf.  Additionally allows the app to manage your groups and to update group content for groups you are a member of.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Group.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all groups",
+            "FullDescription": "Allows the app to list groups, and to read their properties and all group memberships on your behalf.  Also allows the app to read calendar, conversations, files, and other group content for all groups you can access.  ",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "Tasks.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all users tasks and tasklists",
+            "FullDescription": "Allows the app to create, read, update and delete all users tasks and task lists in your organization, without a signed-in user",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaUserPlannerTask",
+        "apiReference": ""
+      }
+    }
+  },
+  "60929116f3da": {
+    "path": "/users/{user-id}/planner/tasks/{plannerTask-id}",
+    "methods": {}
+  },
+  "c3cf5b0529e7": {
+    "path": "/users/{user-id}/planner/tasks/{plannerTask-id}/assignedToTaskBoardFormat",
+    "methods": {}
+  },
+  "6f83bfc14a03": {
+    "path": "/users/{user-id}/planner/tasks/{plannerTask-id}/bucketTaskBoardFormat",
+    "methods": {}
+  },
+  "d42edeee7585": {
+    "path": "/users/{user-id}/planner/tasks/{plannerTask-id}/details",
+    "methods": {}
+  },
+  "924394802ce3": {
+    "path": "/users/{user-id}/planner/tasks/{plannerTask-id}/progressTaskBoardFormat",
+    "methods": {}
+  },
+  "39468e0ad20f": {
+    "path": "/users/{user-id}/planner/tasks/$count",
+    "methods": {}
+  }
+}

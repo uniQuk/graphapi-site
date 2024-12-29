@@ -1,0 +1,48 @@
+{
+  "/identity/conditionalAccess/authenticationStrengths/authenticationMethodModes/$count": {
+    "get": {
+      "tags": [
+        "identity.conditionalAccessRoot"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identity.conditionalAccess.authenticationStrength.authenticationMethodMode_GetCount",
+      "parameters": [
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-03-31",
+        "date": "2023-02-01",
+        "version": "2023-02/AuthenticationStrengthsRemove",
+        "description": "The 'authenticationStrengths' segment is deprecated. Please use 'authenticationStrength' instead."
+      }
+    }
+  }
+}

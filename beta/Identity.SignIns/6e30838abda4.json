@@ -1,0 +1,201 @@
+{
+  "/identity/b2cUserFlows/{b2cIdentityUserFlow-id}/languages/{userFlowLanguageConfiguration-id}": {
+    "get": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Get userFlowLanguageConfiguration",
+      "description": "Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. Note: To retrieve a language supported for customization, you must first enable language customization on your Azure AD B2C user flow. For more information, see Update b2cIdentityUserFlow. Language customization is enabled by default in Microsoft Entra user flows.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-get?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_GetLanguage",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userFlowLanguageConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Create or update language",
+      "description": "This method is used to create or update a custom language in an Azure AD B2C user flow. Note: You must enable language customization in the Azure AD B2C user flow before you can create a custom language. For more information, see Update b2cIdentityUserFlow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/b2cidentityuserflow-put-languages?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_UpdateLanguage",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.userFlowLanguageConfiguration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.userFlowLanguageConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "identity.b2cIdentityUserFlow"
+      ],
+      "summary": "Delete userFlowLanguageConfiguration",
+      "description": "Deletes a userFlowLanguageConfiguration object from a Azure AD B2C user flow. Note: You cannot delete languages from an Microsoft Entra user flow.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-delete?view=graph-rest-beta"
+      },
+      "operationId": "identity.b2cUserFlow_DeleteLanguage",
+      "parameters": [
+        {
+          "name": "b2cIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2cIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2cIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

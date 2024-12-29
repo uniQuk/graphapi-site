@@ -1,0 +1,175 @@
+{
+  "/reports/credentialUserRegistrationDetails/{credentialUserRegistrationDetails-id}": {
+    "get": {
+      "tags": [
+        "reports.credentialUserRegistrationDetails"
+      ],
+      "summary": "Get credentialUserRegistrationDetails from reports",
+      "description": "Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.",
+      "operationId": "report_GetCredentialUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "credentialUserRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of credentialUserRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "credentialUserRegistrationDetails"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.credentialUserRegistrationDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-06-30",
+        "date": "2023-06-21",
+        "version": "2023-06/credentialUserRegistrationDetails",
+        "description": "The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "reports.credentialUserRegistrationDetails"
+      ],
+      "summary": "Update the navigation property credentialUserRegistrationDetails in reports",
+      "operationId": "report_UpdateCredentialUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "credentialUserRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of credentialUserRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "credentialUserRegistrationDetails"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.credentialUserRegistrationDetails"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.credentialUserRegistrationDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-06-30",
+        "date": "2023-06-21",
+        "version": "2023-06/credentialUserRegistrationDetails",
+        "description": "The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "reports.credentialUserRegistrationDetails"
+      ],
+      "summary": "Delete navigation property credentialUserRegistrationDetails for reports",
+      "operationId": "report_DeleteCredentialUserRegistrationDetail",
+      "parameters": [
+        {
+          "name": "credentialUserRegistrationDetails-id",
+          "in": "path",
+          "description": "The unique identifier of credentialUserRegistrationDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "credentialUserRegistrationDetails"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2024-06-30",
+        "date": "2023-06-21",
+        "version": "2023-06/credentialUserRegistrationDetails",
+        "description": "The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

@@ -1,0 +1,2735 @@
+{
+  "ca79dd1f8587": {
+    "path": "/compliance",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaCompliance",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaCompliance",
+        "apiReference": ""
+      }
+    }
+  },
+  "8ca609c44699": {
+    "path": "/compliance/ediscovery",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscovery",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscovery",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscovery",
+        "apiReference": ""
+      }
+    }
+  },
+  "11b43edeb923": {
+    "path": "/compliance/ediscovery/cases",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "0963ac37fa9a": {
+    "path": "/compliance/ediscovery/cases/{case-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCase",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "43c7d1c447ac": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-list-custodians?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-post-custodians?view=graph-rest-beta"
+      }
+    }
+  },
+  "7ab5fd88db6d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseCustodian",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseCustodian",
+        "apiReference": ""
+      }
+    }
+  },
+  "283eacaca6b6": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/lastIndexOperation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianLastIndexOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "21a6649d0b96": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.activate",
+    "methods": {}
+  },
+  "06a594c43dd5": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.applyHold",
+    "methods": {}
+  },
+  "d84aa912085b": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.release",
+    "methods": {}
+  },
+  "2c93f702b9d7": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.removeHold",
+    "methods": {}
+  },
+  "007984cf66ff": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.updateIndex",
+    "methods": {}
+  },
+  "f4f6a18a39f0": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/siteSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-list-sitesources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-post-sitesources?view=graph-rest-beta"
+      }
+    }
+  },
+  "53c2140172fc": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/siteSources/{siteSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sitesource-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseCustodianSiteSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseCustodianSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sitesource-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "b1a8e64a5c89": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/siteSources/{siteSource-id}/site",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianSiteSourceSite",
+        "apiReference": ""
+      }
+    }
+  },
+  "3b5a43bd430d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/siteSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianSiteSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a727612612c1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-list-unifiedgroupsources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-post-unifiedgroupsources?view=graph-rest-beta"
+      }
+    }
+  },
+  "0f84273664a2": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources/{unifiedGroupSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-unifiedgroupsource-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-unifiedgroupsource-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "d3a3e2eeed91": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSourceGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "40bcc6bcf393": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSourceGroupServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "8dd9ca963e18": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSourceGroupServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0845751b5beb": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUnifiedGroupSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "01f5b5d1622e": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/userSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-list-usersources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-custodian-post-usersources?view=graph-rest-beta"
+      }
+    }
+  },
+  "faadf622b85a": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/userSources/{userSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-usersource-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseCustodianUserSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseCustodianUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-usersource-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "42c6ae270fe5": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/userSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianUserSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "25a1dacdede1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCustodianCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2315b61067a6": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/microsoft.graph.ediscovery.applyHold",
+    "methods": {}
+  },
+  "b600bacea210": {
+    "path": "/compliance/ediscovery/cases/{case-id}/custodians/microsoft.graph.ediscovery.removeHold",
+    "methods": {}
+  },
+  "7a1cfc35434d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHold",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseLegalHold",
+        "apiReference": ""
+      }
+    }
+  },
+  "43f910e11d18": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHold",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseLegalHold",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseLegalHold",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "fda1a62c2367": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/siteSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-sitesources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-sitesources?view=graph-rest-beta"
+      }
+    }
+  },
+  "7574f746b133": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/siteSources/{siteSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "d1c3d190265a": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/siteSources/{siteSource-id}/site",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSourceSite",
+        "apiReference": ""
+      }
+    }
+  },
+  "065d7f812c30": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/siteSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldSiteSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ad44f88cb121": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "cdc6cbda204e": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources/{unifiedGroupSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "16d116e00c0d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources/{unifiedGroupSource-id}/group",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSourceGroup",
+        "apiReference": ""
+      }
+    }
+  },
+  "efc9c78ee48d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSourceGroupServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "100c4fc39fcb": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources/{unifiedGroupSource-id}/group/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSourceGroupServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e7a54e389baf": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUnifiedGroupSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8e6465e3fb15": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/userSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-usersources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseLegalHoldUserSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-usersources?view=graph-rest-beta"
+      }
+    }
+  },
+  "a3b60cfc04e1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/userSources/{userSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUserSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseLegalHoldUserSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseLegalHoldUserSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "eae8aad23613": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/userSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldUserSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "12f3aeff66c1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/legalHolds/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseLegalHoldCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "84f948dff500": {
+    "path": "/compliance/ediscovery/cases/{case-id}/microsoft.graph.ediscovery.close",
+    "methods": {}
+  },
+  "d45a7a1514e3": {
+    "path": "/compliance/ediscovery/cases/{case-id}/microsoft.graph.ediscovery.reopen",
+    "methods": {}
+  },
+  "625edef615f3": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "cec5eb370f5c": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseNoncustodialDataSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "6803ecf30926": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/dataSource",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseNoncustodialDataSourceDataSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "7c79ee101c5b": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/lastIndexOperation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseNoncustodialDataSourceLastIndexOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "39f3b7910d22": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/microsoft.graph.ediscovery.applyHold",
+    "methods": {}
+  },
+  "c87b8d000ca3": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/microsoft.graph.ediscovery.release",
+    "methods": {}
+  },
+  "383dc2782478": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/microsoft.graph.ediscovery.removeHold",
+    "methods": {}
+  },
+  "8d5dbba507c1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/microsoft.graph.ediscovery.updateIndex",
+    "methods": {}
+  },
+  "82fb9b158b3e": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseNoncustodialDataSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "074a4a22564a": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/microsoft.graph.ediscovery.applyHold",
+    "methods": {}
+  },
+  "65028df22832": {
+    "path": "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/microsoft.graph.ediscovery.removeHold",
+    "methods": {}
+  },
+  "d6d10a130faa": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaComplianceEdiscoveryCaseOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "8c2a8715bc28": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/{caseOperation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseOperation",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "3b56d275e776": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/{caseOperation-id}/microsoft.graph.ediscovery.caseExportOperation",
+    "methods": {}
+  },
+  "463486cbeabc": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/{caseOperation-id}/microsoft.graph.ediscovery.caseExportOperation/reviewSet",
+    "methods": {}
+  },
+  "7efe0a45bf76": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2a8a97768216": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/microsoft.graph.ediscovery.caseExportOperation",
+    "methods": {}
+  },
+  "fefa590f2a85": {
+    "path": "/compliance/ediscovery/cases/{case-id}/operations/microsoft.graph.ediscovery.caseExportOperation/$count",
+    "methods": {}
+  },
+  "03a396b787cb": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSet",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseReviewSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-post-reviewsets?view=graph-rest-beta"
+      }
+    }
+  },
+  "4480722c1193": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSet",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewset-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseReviewSet",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseReviewSet",
+        "apiReference": ""
+      }
+    }
+  },
+  "692093703ab2": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/microsoft.graph.ediscovery.addToReviewSet",
+    "methods": {}
+  },
+  "df2beaabc524": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/microsoft.graph.ediscovery.export",
+    "methods": {}
+  },
+  "66b50c9c0c8e": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/queries",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "bfc4498d286b": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/queries/{reviewSetQuery-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseReviewSetQuery",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "b1b46f092dd9": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/queries/{reviewSetQuery-id}/microsoft.graph.ediscovery.applyTags",
+    "methods": {}
+  },
+  "45fdf12832a0": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/{reviewSet-id}/queries/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSetQueryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "88b18313d6ff": {
+    "path": "/compliance/ediscovery/cases/{case-id}/reviewSets/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseReviewSetCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "59b5b6e8238d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/settings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-casesettings-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-casesettings-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "f22dd57ba6e1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/settings/microsoft.graph.ediscovery.resetToDefault",
+    "methods": {}
+  },
+  "52dae8ba8b82": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollection",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-list-sourcecollections?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseSourceCollection",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-post-sourcecollections?view=graph-rest-beta"
+      }
+    }
+  },
+  "2ac56167b428": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollection",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseSourceCollection",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseSourceCollection",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "bdbe51b185d5": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/additionalSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-additionalsources?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "13f39f778bc6": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/additionalSources/{dataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSource",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSource",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "636c647de633": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/additionalSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionAdditionalSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "dcd07a3e41a5": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/addToReviewSetOperation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionAddToReviewSetOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-addtoreviewsetoperation?view=graph-rest-beta"
+      }
+    }
+  },
+  "6fecd720affd": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/custodianSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionCustodianSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-custodiansources?view=graph-rest-beta"
+      }
+    }
+  },
+  "9e166ded8e1d": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/custodianSources/{dataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionCustodianSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "bb343ef2f774": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/custodianSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionCustodianSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a55750b45b4e": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/lastEstimateStatisticsOperation",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionLastEstimateStatisticsOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-lastestimatestatisticsoperation?view=graph-rest-beta"
+      }
+    }
+  },
+  "6b9425fd7fd6": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/microsoft.graph.ediscovery.estimateStatistics",
+    "methods": {}
+  },
+  "8d62beb96012": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/microsoft.graph.ediscovery.purgeData",
+    "methods": {}
+  },
+  "2519d900bda8": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/noncustodialSources",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionNoncustodialSource",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-noncustodialsources?view=graph-rest-beta"
+      }
+    }
+  },
+  "026bcab84bec": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/noncustodialSources/{noncustodialDataSource-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionNoncustodialSource",
+        "apiReference": ""
+      }
+    }
+  },
+  "f713090f0790": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/noncustodialSources/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionNoncustodialSourceCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f72d8e209116": {
+    "path": "/compliance/ediscovery/cases/{case-id}/sourceCollections/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseSourceCollectionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6fd4951f08a1": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-list-tags?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "New-MgBetaComplianceEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-case-post-tags?view=graph-rest-beta"
+      }
+    }
+  },
+  "342b41a0a022": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/{tag-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-tag-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Update-MgBetaComplianceEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-tag-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Remove-MgBetaComplianceEdiscoveryCaseTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-tag-delete?view=graph-rest-beta"
+      }
+    }
+  },
+  "d8f1327648e8": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/{tag-id}/childTags",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTagChildTag",
+        "apiReference": "https://learn.microsoft.com/graph/api/ediscovery-tag-childtags?view=graph-rest-beta"
+      }
+    }
+  },
+  "b95d53a68604": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/{tag-id}/childTags/{tag-id1}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTagChildTag",
+        "apiReference": ""
+      }
+    }
+  },
+  "e14902a8dbf0": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/{tag-id}/childTags/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTagChildTagCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8210e1998616": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/{tag-id}/parent",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTagParent",
+        "apiReference": ""
+      }
+    }
+  },
+  "52dc4ab124a2": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseTagCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a6db82d54f06": {
+    "path": "/compliance/ediscovery/cases/{case-id}/tags/microsoft.graph.ediscovery.asHierarchy()",
+    "methods": {}
+  },
+  "5652d469c500": {
+    "path": "/compliance/ediscovery/cases/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "eDiscovery.Read.All",
+            "IsAdmin": true,
+            "Description": "Read all eDiscovery objects",
+            "FullDescription": "Allows the app to read eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "eDiscovery.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write all eDiscovery objects",
+            "FullDescription": "Allows the app to read and write eDiscovery objects such as cases, custodians, review sets and other related objects on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaComplianceEdiscoveryCaseCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "66ef0b15d4a1": {
+    "path": "/privacy/subjectRightsRequests",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-beta"
+      }
+    }
+  },
+  "13ebfaf23890": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrivacySubjectRightsRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrivacySubjectRightsRequest",
+        "apiReference": ""
+      }
+    }
+  },
+  "0b1605a880bc": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "51a77719251b": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApprover",
+        "apiReference": ""
+      }
+    }
+  },
+  "d081d4424cd9": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrivacySubjectRightsRequestApproverMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "279aa4255b00": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApproverServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "c4662e4ac2bd": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApproverServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a61e6a06d152": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/approvers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestApproverCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "d189ceb00038": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "3eee5fb42f16": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaborator",
+        "apiReference": ""
+      }
+    }
+  },
+  "7522f9b9241a": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/mailboxSettings",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrivacySubjectRightsRequestCollaboratorMailboxSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "b19e81758cee": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaboratorServiceProvisioningError",
+        "apiReference": ""
+      }
+    }
+  },
+  "69c115a2f581": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/{user-id}/serviceProvisioningErrors/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaboratorServiceProvisioningErrorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a0d4f685b2a4": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCollaboratorCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9eab804dd083": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestNote",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaPrivacySubjectRightsRequestNote",
+        "apiReference": "https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-beta"
+      }
+    }
+  },
+  "7d738d69278a": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes/{authoredNote-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaPrivacySubjectRightsRequestNote",
+        "apiReference": ""
+      }
+    }
+  },
+  "c2472806154b": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/notes/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestNoteCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9e07293d91ab": {
+    "path": "/privacy/subjectRightsRequests/{subjectRightsRequest-id}/team",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestTeam",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e5c4879deb3": {
+    "path": "/privacy/subjectRightsRequests/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "SubjectRightsRequest.Read.All",
+            "IsAdmin": true,
+            "Description": "Read data subject requests",
+            "FullDescription": "Allows the app to read subject rights requests on your behalf.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "DelegatedWork"
+          },
+          {
+            "Name": "SubjectRightsRequest.ReadWrite.All",
+            "IsAdmin": true,
+            "Description": "Read and write data subject requests",
+            "FullDescription": "Allows the app to read and write subject rights requests on your behalf.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "DelegatedWork"
+          }
+        ],
+        "command": "Get-MgBetaPrivacySubjectRightsRequestCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection-id}/apps/$count": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.iosManagedAppProtection"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceAppManagement.iosManagedAppProtection.app_GetCount",
+      "parameters": [
+        {
+          "name": "iosManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of iosManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosManagedAppProtection"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

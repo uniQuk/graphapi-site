@@ -1,0 +1,196 @@
+{
+  "/print/taskDefinitions/{printTaskDefinition-id}/tasks/{printTask-id}": {
+    "get": {
+      "tags": [
+        "print.printTaskDefinition"
+      ],
+      "summary": "Get printTask",
+      "description": "Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0"
+      },
+      "operationId": "print.taskDefinition_GetTask",
+      "parameters": [
+        {
+          "name": "printTaskDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskDefinition"
+        },
+        {
+          "name": "printTask-id",
+          "in": "path",
+          "description": "The unique identifier of printTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTask"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printTask"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "print.printTaskDefinition"
+      ],
+      "summary": "Update printTask",
+      "description": "Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0"
+      },
+      "operationId": "print.taskDefinition_UpdateTask",
+      "parameters": [
+        {
+          "name": "printTaskDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskDefinition"
+        },
+        {
+          "name": "printTask-id",
+          "in": "path",
+          "description": "The unique identifier of printTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTask"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.printTask"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.printTask"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "print.printTaskDefinition"
+      ],
+      "summary": "Delete navigation property tasks for print",
+      "operationId": "print.taskDefinition_DeleteTask",
+      "parameters": [
+        {
+          "name": "printTaskDefinition-id",
+          "in": "path",
+          "description": "The unique identifier of printTaskDefinition",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTaskDefinition"
+        },
+        {
+          "name": "printTask-id",
+          "in": "path",
+          "description": "The unique identifier of printTask",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "printTask"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

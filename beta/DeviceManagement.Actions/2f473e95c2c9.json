@@ -1,0 +1,33 @@
+{
+  "/deviceManagement/androidForWorkEnrollmentProfiles/{androidForWorkEnrollmentProfile-id}/microsoft.graph.revokeToken": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action revokeToken",
+      "operationId": "deviceManagement.androidGraphFPreWorkEnrollmentProfile_revokeToken",
+      "parameters": [
+        {
+          "name": "androidForWorkEnrollmentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of androidForWorkEnrollmentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "androidForWorkEnrollmentProfile"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

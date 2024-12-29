@@ -1,0 +1,187 @@
+{
+  "/deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfiguration-id}/userStatuses/{managedDeviceMobileAppConfigurationUserStatus-id}": {
+    "get": {
+      "tags": [
+        "deviceAppManagement.iosLobAppProvisioningConfiguration"
+      ],
+      "summary": "Get userStatuses from deviceAppManagement",
+      "description": "The list of user installation states for this mobile app configuration.",
+      "operationId": "deviceAppManagement.iosLobAppProvisioningConfiguration_GetUserStatus",
+      "parameters": [
+        {
+          "name": "iosLobAppProvisioningConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of iosLobAppProvisioningConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosLobAppProvisioningConfiguration"
+        },
+        {
+          "name": "managedDeviceMobileAppConfigurationUserStatus-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfigurationUserStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfigurationUserStatus"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationUserStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceAppManagement.iosLobAppProvisioningConfiguration"
+      ],
+      "summary": "Update the navigation property userStatuses in deviceAppManagement",
+      "operationId": "deviceAppManagement.iosLobAppProvisioningConfiguration_UpdateUserStatus",
+      "parameters": [
+        {
+          "name": "iosLobAppProvisioningConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of iosLobAppProvisioningConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosLobAppProvisioningConfiguration"
+        },
+        {
+          "name": "managedDeviceMobileAppConfigurationUserStatus-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfigurationUserStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfigurationUserStatus"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationUserStatus"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.managedDeviceMobileAppConfigurationUserStatus"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceAppManagement.iosLobAppProvisioningConfiguration"
+      ],
+      "summary": "Delete navigation property userStatuses for deviceAppManagement",
+      "operationId": "deviceAppManagement.iosLobAppProvisioningConfiguration_DeleteUserStatus",
+      "parameters": [
+        {
+          "name": "iosLobAppProvisioningConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of iosLobAppProvisioningConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "iosLobAppProvisioningConfiguration"
+        },
+        {
+          "name": "managedDeviceMobileAppConfigurationUserStatus-id",
+          "in": "path",
+          "description": "The unique identifier of managedDeviceMobileAppConfigurationUserStatus",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDeviceMobileAppConfigurationUserStatus"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

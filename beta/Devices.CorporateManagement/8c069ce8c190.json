@@ -1,0 +1,55 @@
+{
+  "/deviceAppManagement/windowsManagedAppProtections/{windowsManagedAppProtection-id}/microsoft.graph.targetApps": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action targetApps",
+      "operationId": "deviceAppManagement.windowsManagedAppProtection_targetApp",
+      "parameters": [
+        {
+          "name": "windowsManagedAppProtection-id",
+          "in": "path",
+          "description": "The unique identifier of windowsManagedAppProtection",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsManagedAppProtection"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "apps": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.managedMobileApp"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

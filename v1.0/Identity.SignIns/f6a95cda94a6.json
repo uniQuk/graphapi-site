@@ -1,0 +1,48 @@
+{
+  "/identityProtection/riskyUsers/microsoft.graph.confirmCompromised": {
+    "post": {
+      "tags": [
+        "identityProtection.Actions"
+      ],
+      "summary": "Invoke action confirmCompromised",
+      "description": "Confirm one or more riskyUser objects as compromised. This action sets the targeted user's risk level to high.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/riskyuser-confirmcompromised?view=graph-rest-1.0"
+      },
+      "operationId": "identityProtection.riskyUser_confirmCompromised",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

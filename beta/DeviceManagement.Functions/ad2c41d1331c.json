@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/operationApprovalRequests/microsoft.graph.retrieveMyRequestById(id='{id}')": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function retrieveMyRequestById",
+      "operationId": "deviceManagement.operationApprovalRequest_retrieveMyRequestGraphBPreId",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "Usage: id='{id}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.operationApprovalRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

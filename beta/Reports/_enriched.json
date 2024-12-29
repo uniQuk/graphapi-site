@@ -1,0 +1,2705 @@
+{
+  "bb74bca11630": {
+    "path": "/admin/reportSettings",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "ReportSettings.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all admin report settings",
+            "FullDescription": "Allows the app to read all admin report settings, such as whether to display concealed information in reports, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "ReportSettings.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write all admin report settings",
+            "FullDescription": "Allows the app to read and update all admin report settings, such as whether to display concealed information in reports, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAdminReportSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaAdminReportSetting",
+        "apiReference": "https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-beta"
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaAdminReportSetting",
+        "apiReference": ""
+      }
+    }
+  },
+  "f4bb323517a0": {
+    "path": "/auditLogs",
+    "methods": {}
+  },
+  "836167d76f42": {
+    "path": "/auditLogs/customSecurityAttributeAudits",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogCustomSecurityAttributeAudit",
+        "apiReference": "https://learn.microsoft.com/graph/api/auditlogroot-list-customsecurityattributeaudits?view=graph-rest-beta"
+      }
+    }
+  },
+  "4b9692a4c039": {
+    "path": "/auditLogs/customSecurityAttributeAudits/{customSecurityAttributeAudit-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogCustomSecurityAttributeAudit",
+        "apiReference": ""
+      }
+    }
+  },
+  "5e0547165466": {
+    "path": "/auditLogs/customSecurityAttributeAudits/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogCustomSecurityAttributeAuditCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6dd5839e86ff": {
+    "path": "/auditLogs/directoryAudits",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogDirectoryAudit",
+        "apiReference": "https://learn.microsoft.com/graph/api/directoryaudit-list?view=graph-rest-beta"
+      }
+    }
+  },
+  "22614a15f180": {
+    "path": "/auditLogs/directoryAudits/{directoryAudit-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogDirectoryAudit",
+        "apiReference": "https://learn.microsoft.com/graph/api/directoryaudit-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "87005c95244b": {
+    "path": "/auditLogs/directoryAudits/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogDirectoryAuditCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6be245f4b40b": {
+    "path": "/auditLogs/directoryProvisioning",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogDirectoryProvisioning",
+        "apiReference": ""
+      }
+    }
+  },
+  "e722071dbfb1": {
+    "path": "/auditLogs/directoryProvisioning/{provisioningObjectSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogDirectoryProvisioning",
+        "apiReference": ""
+      }
+    }
+  },
+  "6eead230482a": {
+    "path": "/auditLogs/directoryProvisioning/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogDirectoryProvisioningCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "412d92c15d77": {
+    "path": "/auditLogs/provisioning",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogProvisioning",
+        "apiReference": "https://learn.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-beta"
+      }
+    }
+  },
+  "3cc82e8d436c": {
+    "path": "/auditLogs/provisioning/{provisioningObjectSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaAuditLogProvisioning",
+        "apiReference": ""
+      }
+    }
+  },
+  "abb3185d2b4a": {
+    "path": "/auditLogs/provisioning/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogProvisioningCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "92b7235af982": {
+    "path": "/auditLogs/signIns",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogSignIn",
+        "apiReference": "https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-beta"
+      }
+    }
+  },
+  "ecf59e604ca3": {
+    "path": "/auditLogs/signIns/{signIn-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogSignIn",
+        "apiReference": "https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "3dbcdee093e9": {
+    "path": "/auditLogs/signIns/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "Directory.Read.All",
+            "IsAdmin": false,
+            "Description": "Read directory data",
+            "FullDescription": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaAuditLogSignInCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "39db8ab7ae92": {
+    "path": "/auditLogs/signIns/microsoft.graph.confirmCompromised",
+    "methods": {}
+  },
+  "ca246ec0a834": {
+    "path": "/auditLogs/signIns/microsoft.graph.confirmSafe",
+    "methods": {}
+  },
+  "30ba41997890": {
+    "path": "/deviceManagement/reports",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReport",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementServiceConfig.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune configuration",
+            "FullDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Update-MgBetaDeviceManagementReport",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaDeviceManagementReport",
+        "apiReference": ""
+      }
+    }
+  },
+  "58bc2d176a3c": {
+    "path": "/deviceManagement/reports/cachedReportConfigurations",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportCachedReportConfiguration",
+        "apiReference": ""
+      }
+    }
+  },
+  "f0b52b8e33a1": {
+    "path": "/deviceManagement/reports/cachedReportConfigurations/{deviceManagementCachedReportConfiguration-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportCachedReportConfiguration",
+        "apiReference": ""
+      }
+    }
+  },
+  "a624e3fbe31d": {
+    "path": "/deviceManagement/reports/cachedReportConfigurations/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportCachedReportConfigurationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "77ddb44921dc": {
+    "path": "/deviceManagement/reports/exportJobs",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportExportJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "8919d2740756": {
+    "path": "/deviceManagement/reports/exportJobs/{deviceManagementExportJob-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportExportJob",
+        "apiReference": ""
+      }
+    }
+  },
+  "9716d69b1cc6": {
+    "path": "/deviceManagement/reports/exportJobs/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "DeviceManagementConfiguration.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune devices",
+            "FullDescription": "Allows the app to read and write the properties of devices managed by Microsoft Intune, without a signed-in user. Does not allow high impact operations such as remote wipe and password reset on the devices owner",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementManagedDevices.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune devices",
+            "FullDescription": "Allows the app to read the properties of devices managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementConfiguration.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune device configuration and policies",
+            "FullDescription": "Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.ReadWrite.All",
+            "IsAdmin": false,
+            "Description": "Read and write Microsoft Intune apps",
+            "FullDescription": "Allows the app to read and write the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "DeviceManagementApps.Read.All",
+            "IsAdmin": false,
+            "Description": "Read Microsoft Intune apps",
+            "FullDescription": "Allows the app to read the properties, group assignments and status of apps, app configurations and app protection policies managed by Microsoft Intune, without a signed-in user.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaDeviceManagementReportExportJobCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8a068731fe80": {
+    "path": "/reports",
+    "methods": {}
+  },
+  "878d5b3cbaa4": {
+    "path": "/reports/appCredentialSignInActivities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportAppCredentialSignInActivity",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-beta"
+      }
+    }
+  },
+  "85ba4ace70f5": {
+    "path": "/reports/appCredentialSignInActivities/{appCredentialSignInActivity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportAppCredentialSignInActivity",
+        "apiReference": "https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "75e6da10f0b4": {
+    "path": "/reports/appCredentialSignInActivities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportAppCredentialSignInActivityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "bcc902ad3bd2": {
+    "path": "/reports/applicationSignInDetailedSummary",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportApplicationSignInDetailedSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-applicationsignindetailedsummary?view=graph-rest-beta"
+      }
+    }
+  },
+  "748b0e73a848": {
+    "path": "/reports/applicationSignInDetailedSummary/{applicationSignInDetailedSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportApplicationSignInDetailedSummary",
+        "apiReference": "https://learn.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "76c12952ab8c": {
+    "path": "/reports/applicationSignInDetailedSummary/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportApplicationSignInDetailedSummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e519d7f4bf1b": {
+    "path": "/reports/authenticationMethods",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportAuthenticationMethod",
+        "apiReference": ""
+      }
+    }
+  },
+  "ff7029275db2": {
+    "path": "/reports/authenticationMethods/microsoft.graph.usersRegisteredByFeature()",
+    "methods": {}
+  },
+  "5c1bcea7c80d": {
+    "path": "/reports/authenticationMethods/microsoft.graph.usersRegisteredByFeature(includedUserTypes='{includedUserTypes}',includedUserRoles='{includedUserRoles}')",
+    "methods": {}
+  },
+  "8b3a925a38bf": {
+    "path": "/reports/authenticationMethods/microsoft.graph.usersRegisteredByMethod()",
+    "methods": {}
+  },
+  "efa7e24bbc40": {
+    "path": "/reports/authenticationMethods/microsoft.graph.usersRegisteredByMethod(includedUserTypes='{includedUserTypes}',includedUserRoles='{includedUserRoles}')",
+    "methods": {}
+  },
+  "5c23126145f7": {
+    "path": "/reports/authenticationMethods/userRegistrationDetails",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "UserAuthenticationMethod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' authentication methods",
+            "FullDescription": "Allows the app to read authentication methods of all users in your organization, without a signed-in user. Authentication methods include things like a users phone numbers and Authenticator app settings. This does not allow the app to see secret information like passwords, or to sign-in or otherwise use the authentication methods.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaReportAuthenticationMethodUserRegistrationDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-beta"
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaReportAuthenticationMethodUserRegistrationDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "86d0e69cbeb3": {
+    "path": "/reports/authenticationMethods/userRegistrationDetails/{userRegistrationDetails-id}",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "UserAuthenticationMethod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' authentication methods",
+            "FullDescription": "Allows the app to read authentication methods of all users in your organization, without a signed-in user. Authentication methods include things like a users phone numbers and Authenticator app settings. This does not allow the app to see secret information like passwords, or to sign-in or otherwise use the authentication methods.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaReportAuthenticationMethodUserRegistrationDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportAuthenticationMethodUserRegistrationDetail",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportAuthenticationMethodUserRegistrationDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "04bc7860956d": {
+    "path": "/reports/authenticationMethods/userRegistrationDetails/$count",
+    "methods": {
+      "get": {
+        "permissions": [
+          {
+            "Name": "AuditLog.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all audit log data",
+            "FullDescription": "Allows the app to read and query your audit log activities, without a signed-in user.",
+            "IsLeastPrivilege": true,
+            "PermissionType": "Application"
+          },
+          {
+            "Name": "UserAuthenticationMethod.Read.All",
+            "IsAdmin": false,
+            "Description": "Read all users' authentication methods",
+            "FullDescription": "Allows the app to read authentication methods of all users in your organization, without a signed-in user. Authentication methods include things like a users phone numbers and Authenticator app settings. This does not allow the app to see secret information like passwords, or to sign-in or otherwise use the authentication methods.",
+            "IsLeastPrivilege": false,
+            "PermissionType": "Application"
+          }
+        ],
+        "command": "Get-MgBetaReportAuthenticationMethodUserRegistrationDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "1e0305589b16": {
+    "path": "/reports/credentialUserRegistrationDetails",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportCredentialUserRegistrationDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-beta"
+      }
+    }
+  },
+  "173fc31e3ab2": {
+    "path": "/reports/credentialUserRegistrationDetails/{credentialUserRegistrationDetails-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportCredentialUserRegistrationDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "4cd86d3b48ef": {
+    "path": "/reports/credentialUserRegistrationDetails/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportCredentialUserRegistrationDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "c9ecbc3fd5cf": {
+    "path": "/reports/dailyPrintUsage",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsage",
+        "apiReference": ""
+      }
+    }
+  },
+  "c1a89f812566": {
+    "path": "/reports/dailyPrintUsage/{printUsage-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsage",
+        "apiReference": ""
+      }
+    }
+  },
+  "f6385337030a": {
+    "path": "/reports/dailyPrintUsage/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e2ebe7e25c0a": {
+    "path": "/reports/dailyPrintUsageByPrinter",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyprinter?view=graph-rest-beta"
+      }
+    }
+  },
+  "85d0d0e19722": {
+    "path": "/reports/dailyPrintUsageByPrinter/{printUsageByPrinter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "284f5b2a51b8": {
+    "path": "/reports/dailyPrintUsageByPrinter/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByPrinterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "5e9fb1b7f7b8": {
+    "path": "/reports/dailyPrintUsageByUser",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyuser?view=graph-rest-beta"
+      }
+    }
+  },
+  "b9fe206ef289": {
+    "path": "/reports/dailyPrintUsageByUser/{printUsageByUser-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "56cae94d5a5a": {
+    "path": "/reports/dailyPrintUsageByUser/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageByUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "991311b6de25": {
+    "path": "/reports/dailyPrintUsageSummariesByPrinter",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByPrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "6cedf3e2f44d": {
+    "path": "/reports/dailyPrintUsageSummariesByPrinter/{printUsageByPrinter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByPrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "42e38245d808": {
+    "path": "/reports/dailyPrintUsageSummariesByPrinter/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByPrinterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3ab02dc5293f": {
+    "path": "/reports/dailyPrintUsageSummariesByUser",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "e43b6033c6ec": {
+    "path": "/reports/dailyPrintUsageSummariesByUser/{printUsageByUser-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "28c14a9bb1da": {
+    "path": "/reports/dailyPrintUsageSummariesByUser/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportDailyPrintUsageSummaryByUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "676830a072f1": {
+    "path": "/reports/microsoft.graph.deviceConfigurationDeviceActivity()",
+    "methods": {}
+  },
+  "80235c459922": {
+    "path": "/reports/microsoft.graph.deviceConfigurationUserActivity()",
+    "methods": {}
+  },
+  "288cc475c3b3": {
+    "path": "/reports/microsoft.graph.getAttackSimulationRepeatOffenders()",
+    "methods": {}
+  },
+  "51bacdaf803f": {
+    "path": "/reports/microsoft.graph.getAttackSimulationSimulationUserCoverage()",
+    "methods": {}
+  },
+  "932c7becacf5": {
+    "path": "/reports/microsoft.graph.getAttackSimulationTrainingUserCoverage()",
+    "methods": {}
+  },
+  "d5c3d616dbc4": {
+    "path": "/reports/microsoft.graph.getAzureADApplicationSignInSummary(period='{period}')",
+    "methods": {}
+  },
+  "fc191d6908d8": {
+    "path": "/reports/microsoft.graph.getBrowserDistributionUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "ddef0eb72fb0": {
+    "path": "/reports/microsoft.graph.getBrowserUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "d209b3cdc705": {
+    "path": "/reports/microsoft.graph.getBrowserUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "8dbe0a8de96c": {
+    "path": "/reports/microsoft.graph.getCredentialUsageSummary(period='{period}')",
+    "methods": {}
+  },
+  "e40e60599901": {
+    "path": "/reports/microsoft.graph.getCredentialUserRegistrationCount()",
+    "methods": {}
+  },
+  "e89e4a4f7325": {
+    "path": "/reports/microsoft.graph.getEmailActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "1b284ef04130": {
+    "path": "/reports/microsoft.graph.getEmailActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "e8cef3b0bcbf": {
+    "path": "/reports/microsoft.graph.getEmailActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "13e0fab6f7ea": {
+    "path": "/reports/microsoft.graph.getEmailActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "c2943e1924ed": {
+    "path": "/reports/microsoft.graph.getEmailAppUsageAppsUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "11530dc9c553": {
+    "path": "/reports/microsoft.graph.getEmailAppUsageUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "f25bcdb86aa2": {
+    "path": "/reports/microsoft.graph.getEmailAppUsageUserDetail(date={date})",
+    "methods": {}
+  },
+  "8b08b56ff9bb": {
+    "path": "/reports/microsoft.graph.getEmailAppUsageUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "9a670207cc31": {
+    "path": "/reports/microsoft.graph.getEmailAppUsageVersionsUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "e6f12c0613ed": {
+    "path": "/reports/microsoft.graph.getFormsUserActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "0caac41a7daf": {
+    "path": "/reports/microsoft.graph.getFormsUserActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "b943de69d583": {
+    "path": "/reports/microsoft.graph.getFormsUserActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "baf0d74b4dea": {
+    "path": "/reports/microsoft.graph.getFormsUserActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "5e4c649a8706": {
+    "path": "/reports/microsoft.graph.getGroupArchivedPrintJobs(groupId='{groupId}',startDateTime={startDateTime},endDateTime={endDateTime})",
+    "methods": {}
+  },
+  "fd9e89c06a2e": {
+    "path": "/reports/microsoft.graph.getM365AppPlatformUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "1d3df4729a55": {
+    "path": "/reports/microsoft.graph.getM365AppUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "3c00261ddb08": {
+    "path": "/reports/microsoft.graph.getM365AppUserDetail(date={date})",
+    "methods": {}
+  },
+  "e4639c24570e": {
+    "path": "/reports/microsoft.graph.getM365AppUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "0960a2dd3f86": {
+    "path": "/reports/microsoft.graph.getMailboxUsageDetail(period='{period}')",
+    "methods": {}
+  },
+  "205fbd6ce531": {
+    "path": "/reports/microsoft.graph.getMailboxUsageMailboxCounts(period='{period}')",
+    "methods": {}
+  },
+  "94d04bbf3513": {
+    "path": "/reports/microsoft.graph.getMailboxUsageQuotaStatusMailboxCounts(period='{period}')",
+    "methods": {}
+  },
+  "c900122f76ef": {
+    "path": "/reports/microsoft.graph.getMailboxUsageStorage(period='{period}')",
+    "methods": {}
+  },
+  "3d4fe6e3051c": {
+    "path": "/reports/microsoft.graph.getMicrosoft365CopilotUsageUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "bdab111a3406": {
+    "path": "/reports/microsoft.graph.getMicrosoft365CopilotUserCountSummary(period='{period}')",
+    "methods": {}
+  },
+  "1adf29e19d25": {
+    "path": "/reports/microsoft.graph.getMicrosoft365CopilotUserCountTrend(period='{period}')",
+    "methods": {}
+  },
+  "e3ec6b2fffdc": {
+    "path": "/reports/microsoft.graph.getOffice365ActivationCounts()",
+    "methods": {}
+  },
+  "3d70d175f9fd": {
+    "path": "/reports/microsoft.graph.getOffice365ActivationsUserCounts()",
+    "methods": {}
+  },
+  "753620a729e1": {
+    "path": "/reports/microsoft.graph.getOffice365ActivationsUserDetail()",
+    "methods": {}
+  },
+  "f7d61f2ba5f6": {
+    "path": "/reports/microsoft.graph.getOffice365ActiveUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "ec07e0f22b52": {
+    "path": "/reports/microsoft.graph.getOffice365ActiveUserDetail(date={date})",
+    "methods": {}
+  },
+  "cb74375b8fa0": {
+    "path": "/reports/microsoft.graph.getOffice365ActiveUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "6ea7fa1758dc": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "8382a57f53b4": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityDetail(date={date})",
+    "methods": {}
+  },
+  "e3d2deb495c6": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityDetail(period='{period}')",
+    "methods": {}
+  },
+  "9bcebc057a73": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityFileCounts(period='{period}')",
+    "methods": {}
+  },
+  "51fca9e394ba": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityGroupCounts(period='{period}')",
+    "methods": {}
+  },
+  "04e1479c6a4d": {
+    "path": "/reports/microsoft.graph.getOffice365GroupsActivityStorage(period='{period}')",
+    "methods": {}
+  },
+  "046487e84e22": {
+    "path": "/reports/microsoft.graph.getOffice365ServicesUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "aeefb71a48ce": {
+    "path": "/reports/microsoft.graph.getOneDriveActivityFileCounts(period='{period}')",
+    "methods": {}
+  },
+  "242580872922": {
+    "path": "/reports/microsoft.graph.getOneDriveActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "675471e29e68": {
+    "path": "/reports/microsoft.graph.getOneDriveActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "566e8e35c27a": {
+    "path": "/reports/microsoft.graph.getOneDriveActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "23454a8d85a2": {
+    "path": "/reports/microsoft.graph.getOneDriveUsageAccountCounts(period='{period}')",
+    "methods": {}
+  },
+  "934e8a998a8c": {
+    "path": "/reports/microsoft.graph.getOneDriveUsageAccountDetail(date={date})",
+    "methods": {}
+  },
+  "168fa853ee13": {
+    "path": "/reports/microsoft.graph.getOneDriveUsageAccountDetail(period='{period}')",
+    "methods": {}
+  },
+  "cb9ef3384acb": {
+    "path": "/reports/microsoft.graph.getOneDriveUsageFileCounts(period='{period}')",
+    "methods": {}
+  },
+  "7f325032a21f": {
+    "path": "/reports/microsoft.graph.getOneDriveUsageStorage(period='{period}')",
+    "methods": {}
+  },
+  "3ec49c05d8aa": {
+    "path": "/reports/microsoft.graph.getPrinterArchivedPrintJobs(printerId='{printerId}',startDateTime={startDateTime},endDateTime={endDateTime})",
+    "methods": {}
+  },
+  "523d174195f4": {
+    "path": "/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}')",
+    "methods": {}
+  },
+  "cae54d528854": {
+    "path": "/reports/microsoft.graph.getSharePointActivityFileCounts(period='{period}')",
+    "methods": {}
+  },
+  "68796b0aec3c": {
+    "path": "/reports/microsoft.graph.getSharePointActivityPages(period='{period}')",
+    "methods": {}
+  },
+  "531eca248d45": {
+    "path": "/reports/microsoft.graph.getSharePointActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "8cc35326c404": {
+    "path": "/reports/microsoft.graph.getSharePointActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "c9672ea693e6": {
+    "path": "/reports/microsoft.graph.getSharePointActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "7ac49692eba0": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsageDetail(date={date})",
+    "methods": {}
+  },
+  "21215f16f007": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsageDetail(period='{period}')",
+    "methods": {}
+  },
+  "2d8e985e46ad": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsageFileCounts(period='{period}')",
+    "methods": {}
+  },
+  "12f6a68c1e97": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsagePages(period='{period}')",
+    "methods": {}
+  },
+  "3fd4824a3077": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsageSiteCounts(period='{period}')",
+    "methods": {}
+  },
+  "781a6bbd3c3c": {
+    "path": "/reports/microsoft.graph.getSharePointSiteUsageStorage(period='{period}')",
+    "methods": {}
+  },
+  "e3407a74b3e1": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "52dcd383496d": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "a8ace377c87d": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "0998d1ba7a71": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "b0591b5cb635": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessDeviceUsageDistributionUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "65bec114f61f": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessDeviceUsageUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "2ffacc351d59": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail(date={date})",
+    "methods": {}
+  },
+  "5efdfd58422f": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "76bd6fa5b571": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessOrganizerActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "16acb6f5e184": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessOrganizerActivityMinuteCounts(period='{period}')",
+    "methods": {}
+  },
+  "a78151988115": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessOrganizerActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "bca7e972cc20": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessParticipantActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "a345d2d22af8": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessParticipantActivityMinuteCounts(period='{period}')",
+    "methods": {}
+  },
+  "dcbab718270f": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessParticipantActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "cb557337b16d": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "1e79cce03e85": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessPeerToPeerActivityMinuteCounts(period='{period}')",
+    "methods": {}
+  },
+  "ad599ed746a0": {
+    "path": "/reports/microsoft.graph.getSkypeForBusinessPeerToPeerActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "a7aee9b92ab5": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageDistributionTotalUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "f557a7c40240": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageDistributionUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "fe171474a63f": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageTotalUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "63927e99d54f": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "09f7b7bf8f0d": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageUserDetail(date={date})",
+    "methods": {}
+  },
+  "2fca7cf38ca9": {
+    "path": "/reports/microsoft.graph.getTeamsDeviceUsageUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "14e95472ddde": {
+    "path": "/reports/microsoft.graph.getTeamsTeamActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "32df733f44e0": {
+    "path": "/reports/microsoft.graph.getTeamsTeamActivityDetail(date={date})",
+    "methods": {}
+  },
+  "40787910e0eb": {
+    "path": "/reports/microsoft.graph.getTeamsTeamActivityDetail(period='{period}')",
+    "methods": {}
+  },
+  "7b682d214d8b": {
+    "path": "/reports/microsoft.graph.getTeamsTeamActivityDistributionCounts(period='{period}')",
+    "methods": {}
+  },
+  "f0a8b5abbaa9": {
+    "path": "/reports/microsoft.graph.getTeamsTeamCounts(period='{period}')",
+    "methods": {}
+  },
+  "f99452b4d0c9": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "7d38a57f45e7": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityDistributionTotalUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "849b3aecd0ca": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityDistributionUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "2480b306e060": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityTotalCounts(period='{period}')",
+    "methods": {}
+  },
+  "731cfc42d738": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityTotalDistributionCounts(period='{period}')",
+    "methods": {}
+  },
+  "9bf3289fdbb7": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityTotalUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "0fb7dfaf5a94": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "3791b8d14d0c": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "2a73610862d5": {
+    "path": "/reports/microsoft.graph.getTeamsUserActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "6afd68198c2e": {
+    "path": "/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime={startDateTime},endDateTime={endDateTime})",
+    "methods": {}
+  },
+  "1b740f485d42": {
+    "path": "/reports/microsoft.graph.getYammerActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "be9187d1c618": {
+    "path": "/reports/microsoft.graph.getYammerActivityUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "237bcc9228e4": {
+    "path": "/reports/microsoft.graph.getYammerActivityUserDetail(date={date})",
+    "methods": {}
+  },
+  "c01a325ee619": {
+    "path": "/reports/microsoft.graph.getYammerActivityUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "349df4239070": {
+    "path": "/reports/microsoft.graph.getYammerDeviceUsageDistributionUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "7d6b9e8e858f": {
+    "path": "/reports/microsoft.graph.getYammerDeviceUsageUserCounts(period='{period}')",
+    "methods": {}
+  },
+  "953507acd05c": {
+    "path": "/reports/microsoft.graph.getYammerDeviceUsageUserDetail(date={date})",
+    "methods": {}
+  },
+  "c4b6f3949a5d": {
+    "path": "/reports/microsoft.graph.getYammerDeviceUsageUserDetail(period='{period}')",
+    "methods": {}
+  },
+  "413047475fe2": {
+    "path": "/reports/microsoft.graph.getYammerGroupsActivityCounts(period='{period}')",
+    "methods": {}
+  },
+  "83b0777601ad": {
+    "path": "/reports/microsoft.graph.getYammerGroupsActivityDetail(date={date})",
+    "methods": {}
+  },
+  "6a801e31184e": {
+    "path": "/reports/microsoft.graph.getYammerGroupsActivityDetail(period='{period}')",
+    "methods": {}
+  },
+  "e9450939559a": {
+    "path": "/reports/microsoft.graph.getYammerGroupsActivityGroupCounts(period='{period}')",
+    "methods": {}
+  },
+  "a77eb4769638": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentAbandonmentDetails(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')",
+    "methods": {}
+  },
+  "8d6339012f76": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentAbandonmentSummary(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')",
+    "methods": {}
+  },
+  "d7817c82e2cb": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentFailureDetails()",
+    "methods": {}
+  },
+  "9f16c63b7d36": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentFailureDetails(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')",
+    "methods": {}
+  },
+  "1ad211bd6e50": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentFailureTrends()",
+    "methods": {}
+  },
+  "4f7f0e220c85": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentTopFailures()",
+    "methods": {}
+  },
+  "e4fc121b14f8": {
+    "path": "/reports/microsoft.graph.managedDeviceEnrollmentTopFailures(period='{period}')",
+    "methods": {}
+  },
+  "56fea0628d40": {
+    "path": "/reports/monthlyPrintUsageByPrinter",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByPrinter",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-beta"
+      }
+    }
+  },
+  "2d54f0a388be": {
+    "path": "/reports/monthlyPrintUsageByPrinter/{printUsageByPrinter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByPrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "f27ca0d4606c": {
+    "path": "/reports/monthlyPrintUsageByPrinter/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByPrinterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6c72a9c34c67": {
+    "path": "/reports/monthlyPrintUsageByUser",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-beta"
+      }
+    }
+  },
+  "fb397ff4221c": {
+    "path": "/reports/monthlyPrintUsageByUser/{printUsageByUser-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "97885a35807f": {
+    "path": "/reports/monthlyPrintUsageByUser/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageByUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "998dc8bcf749": {
+    "path": "/reports/monthlyPrintUsageSummariesByPrinter",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByPrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "5e8af7a2fb7d": {
+    "path": "/reports/monthlyPrintUsageSummariesByPrinter/{printUsageByPrinter-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByPrinter",
+        "apiReference": ""
+      }
+    }
+  },
+  "a1eb6dbd09e7": {
+    "path": "/reports/monthlyPrintUsageSummariesByPrinter/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByPrinterCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "05738f73d409": {
+    "path": "/reports/monthlyPrintUsageSummariesByUser",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "74711a5a32a8": {
+    "path": "/reports/monthlyPrintUsageSummariesByUser/{printUsageByUser-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "cc6f4980a552": {
+    "path": "/reports/monthlyPrintUsageSummariesByUser/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportMonthlyPrintUsageSummaryByUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ee58cf835f08": {
+    "path": "/reports/partners",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartner",
+        "apiReference": ""
+      }
+    }
+  },
+  "cd715f249a20": {
+    "path": "/reports/partners/billing",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBilling",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBilling",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBilling",
+        "apiReference": ""
+      }
+    }
+  },
+  "90982b0f995d": {
+    "path": "/reports/partners/billing/manifests",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingManifest",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaReportPartnerBillingManifest",
+        "apiReference": ""
+      }
+    }
+  },
+  "60f1bb0586f4": {
+    "path": "/reports/partners/billing/manifests/{manifest-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingManifest",
+        "apiReference": "https://learn.microsoft.com/graph/api/partners-billing-manifest-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingManifest",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingManifest",
+        "apiReference": ""
+      }
+    }
+  },
+  "be2f0a8565f1": {
+    "path": "/reports/partners/billing/manifests/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingManifestCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "6edd4a01a7f2": {
+    "path": "/reports/partners/billing/operations",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingOperation",
+        "apiReference": ""
+      },
+      "post": {
+        "permissions": [],
+        "command": "New-MgBetaReportPartnerBillingOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "138ce312b263": {
+    "path": "/reports/partners/billing/operations/{operation-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingOperation",
+        "apiReference": "https://learn.microsoft.com/graph/api/partners-billing-operation-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingOperation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingOperation",
+        "apiReference": ""
+      }
+    }
+  },
+  "bbfd4becaa5c": {
+    "path": "/reports/partners/billing/operations/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingOperationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "f8437f6a347e": {
+    "path": "/reports/partners/billing/reconciliation",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingReconciliation",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingReconciliation",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingReconciliation",
+        "apiReference": ""
+      }
+    }
+  },
+  "f912b76cecc1": {
+    "path": "/reports/partners/billing/reconciliation/billed",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingReconciliationBilled",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingReconciliationBilled",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingReconciliationBilled",
+        "apiReference": ""
+      }
+    }
+  },
+  "98f2b9b892c9": {
+    "path": "/reports/partners/billing/reconciliation/billed/microsoft.graph.partners.billing.export",
+    "methods": {}
+  },
+  "af68b2c60f38": {
+    "path": "/reports/partners/billing/usage",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingUsage",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingUsage",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingUsage",
+        "apiReference": ""
+      }
+    }
+  },
+  "0720c0dbc742": {
+    "path": "/reports/partners/billing/usage/billed",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingUsageBilled",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingUsageBilled",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingUsageBilled",
+        "apiReference": ""
+      }
+    }
+  },
+  "97afd0c5adfc": {
+    "path": "/reports/partners/billing/usage/billed/microsoft.graph.partners.billing.export",
+    "methods": {}
+  },
+  "ba7958770a8e": {
+    "path": "/reports/partners/billing/usage/unbilled",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportPartnerBillingUsageUnbilled",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportPartnerBillingUsageUnbilled",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportPartnerBillingUsageUnbilled",
+        "apiReference": ""
+      }
+    }
+  },
+  "c9fdd2a030e6": {
+    "path": "/reports/partners/billing/usage/unbilled/microsoft.graph.partners.billing.export",
+    "methods": {}
+  },
+  "202f53652c30": {
+    "path": "/reports/security",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportSecurity",
+        "apiReference": ""
+      }
+    }
+  },
+  "809517227fdd": {
+    "path": "/reports/security/microsoft.graph.getAttackSimulationRepeatOffenders()",
+    "methods": {}
+  },
+  "8046c99c0a56": {
+    "path": "/reports/security/microsoft.graph.getAttackSimulationSimulationUserCoverage()",
+    "methods": {}
+  },
+  "274d25713651": {
+    "path": "/reports/security/microsoft.graph.getAttackSimulationTrainingUserCoverage()",
+    "methods": {}
+  },
+  "1833541bff89": {
+    "path": "/reports/serviceActivity",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportServiceActivity",
+        "apiReference": ""
+      }
+    }
+  },
+  "b5235cacd274": {
+    "path": "/reports/serviceActivity/microsoft.graph.getMetricsForConditionalAccessCompliantDevicesSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes)",
+    "methods": {}
+  },
+  "f0c8a1073c46": {
+    "path": "/reports/serviceActivity/microsoft.graph.getMetricsForConditionalAccessManagedDevicesSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes)",
+    "methods": {}
+  },
+  "46ec656ef2f9": {
+    "path": "/reports/serviceActivity/microsoft.graph.getMetricsForMfaSignInFailure(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes)",
+    "methods": {}
+  },
+  "c22009f191ec": {
+    "path": "/reports/serviceActivity/microsoft.graph.getMetricsForMfaSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes)",
+    "methods": {}
+  },
+  "e0cdf87662fc": {
+    "path": "/reports/serviceActivity/microsoft.graph.getMetricsForSamlSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes)",
+    "methods": {}
+  },
+  "a7a52c0fc12e": {
+    "path": "/reports/servicePrincipalSignInActivities",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportServicePrincipalSignInActivity",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-beta"
+      }
+    }
+  },
+  "b2e8c596b661": {
+    "path": "/reports/servicePrincipalSignInActivities/{servicePrincipalSignInActivity-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportServicePrincipalSignInActivity",
+        "apiReference": "https://learn.microsoft.com/graph/api/serviceprincipalsigninactivity-get?view=graph-rest-beta"
+      }
+    }
+  },
+  "5f8894c93d79": {
+    "path": "/reports/servicePrincipalSignInActivities/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportServicePrincipalSignInActivityCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a33ba32145b7": {
+    "path": "/reports/sla",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportSla",
+        "apiReference": ""
+      }
+    }
+  },
+  "4db405f5a7a9": {
+    "path": "/reports/sla/azureADAuthentication",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportSlaAzureAdAuthentication",
+        "apiReference": "https://learn.microsoft.com/graph/api/azureadauthentication-get?view=graph-rest-beta"
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportSlaAzureAdAuthentication",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportSlaAzureAdAuthentication",
+        "apiReference": ""
+      }
+    }
+  },
+  "9d5d0a21a914": {
+    "path": "/reports/userCredentialUsageDetails",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserCredentialUsageDetail",
+        "apiReference": "https://learn.microsoft.com/graph/api/reportroot-list-usercredentialusagedetails?view=graph-rest-beta"
+      }
+    }
+  },
+  "f29936f6a4d8": {
+    "path": "/reports/userCredentialUsageDetails/{userCredentialUsageDetails-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserCredentialUsageDetail",
+        "apiReference": ""
+      }
+    }
+  },
+  "38a493387c5a": {
+    "path": "/reports/userCredentialUsageDetails/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserCredentialUsageDetailCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "19feb4e54873": {
+    "path": "/reports/userInsights",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsight",
+        "apiReference": ""
+      }
+    }
+  },
+  "e8a306a2508c": {
+    "path": "/reports/userInsights/daily",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDaily",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportUserInsightDaily",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportUserInsightDaily",
+        "apiReference": ""
+      }
+    }
+  },
+  "11e5d893df6d": {
+    "path": "/reports/userInsights/daily/activeUsers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyActiveUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusers?view=graph-rest-beta"
+      }
+    }
+  },
+  "aa7c129cf99e": {
+    "path": "/reports/userInsights/daily/activeUsers/{activeUsersMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyActiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "57be6c4a417b": {
+    "path": "/reports/userInsights/daily/activeUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyActiveUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "8dd04b72a024": {
+    "path": "/reports/userInsights/daily/authentications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyAuthentication",
+        "apiReference": "https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-authentications?view=graph-rest-beta"
+      }
+    }
+  },
+  "15336be2a22e": {
+    "path": "/reports/userInsights/daily/authentications/{authenticationsMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyAuthentication",
+        "apiReference": ""
+      }
+    }
+  },
+  "d50cfb1308e4": {
+    "path": "/reports/userInsights/daily/authentications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyAuthenticationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9aaebddf0a2d": {
+    "path": "/reports/userInsights/daily/inactiveUsers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "bce8bc2f7206": {
+    "path": "/reports/userInsights/daily/inactiveUsers/{dailyInactiveUsersMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "8dedc99ce481": {
+    "path": "/reports/userInsights/daily/inactiveUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "609cdb67af0c": {
+    "path": "/reports/userInsights/daily/inactiveUsersByApplication",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUserByApplication",
+        "apiReference": ""
+      }
+    }
+  },
+  "d0c67dbb8d87": {
+    "path": "/reports/userInsights/daily/inactiveUsersByApplication/{dailyInactiveUsersByApplicationMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUserByApplication",
+        "apiReference": ""
+      }
+    }
+  },
+  "e79af734460d": {
+    "path": "/reports/userInsights/daily/inactiveUsersByApplication/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyInactiveUserByApplicationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "2e081d888625": {
+    "path": "/reports/userInsights/daily/mfaCompletions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyMfaCompletion",
+        "apiReference": "https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-mfacompletions?view=graph-rest-beta"
+      }
+    }
+  },
+  "168469daf2a0": {
+    "path": "/reports/userInsights/daily/mfaCompletions/{mfaCompletionMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyMfaCompletion",
+        "apiReference": ""
+      }
+    }
+  },
+  "029abc1b8e0d": {
+    "path": "/reports/userInsights/daily/mfaCompletions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyMfaCompletionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "512566c7bfda": {
+    "path": "/reports/userInsights/daily/signUps",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySignUp",
+        "apiReference": "https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-signups?view=graph-rest-beta"
+      }
+    }
+  },
+  "a44cce63a3e9": {
+    "path": "/reports/userInsights/daily/signUps/{userSignUpMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySignUp",
+        "apiReference": ""
+      }
+    }
+  },
+  "ac06d6811354": {
+    "path": "/reports/userInsights/daily/signUps/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySignUpCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "4b2cef812c11": {
+    "path": "/reports/userInsights/daily/summary",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "21d78d8da4b1": {
+    "path": "/reports/userInsights/daily/summary/{insightSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "d3f9a128ae57": {
+    "path": "/reports/userInsights/daily/summary/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailySummaryCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "0812c7c88e86": {
+    "path": "/reports/userInsights/daily/userCount",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyUserCount",
+        "apiReference": "https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-usercount?view=graph-rest-beta"
+      }
+    }
+  },
+  "ea4418996bb5": {
+    "path": "/reports/userInsights/daily/userCount/{userCountMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightDailyUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "e8e26b6bb599": {
+    "path": "/reports/userInsights/daily/userCount/$count",
+    "methods": {}
+  },
+  "3de6c51b1d52": {
+    "path": "/reports/userInsights/monthly",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthly",
+        "apiReference": ""
+      },
+      "patch": {
+        "permissions": [],
+        "command": "Update-MgBetaReportUserInsightMonthly",
+        "apiReference": ""
+      },
+      "delete": {
+        "permissions": [],
+        "command": "Remove-MgBetaReportUserInsightMonthly",
+        "apiReference": ""
+      }
+    }
+  },
+  "65209205d87d": {
+    "path": "/reports/userInsights/monthly/activeUsers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyActiveUser",
+        "apiReference": "https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-activeusers?view=graph-rest-beta"
+      }
+    }
+  },
+  "bd1d60099db0": {
+    "path": "/reports/userInsights/monthly/activeUsers/{activeUsersMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyActiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "c2860796d53a": {
+    "path": "/reports/userInsights/monthly/activeUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyActiveUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "67ca93b14ec7": {
+    "path": "/reports/userInsights/monthly/authentications",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyAuthentication",
+        "apiReference": "https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-authentications?view=graph-rest-beta"
+      }
+    }
+  },
+  "50d47cff8d11": {
+    "path": "/reports/userInsights/monthly/authentications/{authenticationsMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyAuthentication",
+        "apiReference": ""
+      }
+    }
+  },
+  "3382ae2e77e3": {
+    "path": "/reports/userInsights/monthly/authentications/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyAuthenticationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a40c6208da34": {
+    "path": "/reports/userInsights/monthly/inactiveUsers",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "a63e5f6e884d": {
+    "path": "/reports/userInsights/monthly/inactiveUsers/{monthlyInactiveUsersMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUser",
+        "apiReference": ""
+      }
+    }
+  },
+  "11580bb529b5": {
+    "path": "/reports/userInsights/monthly/inactiveUsers/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUserCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3db1e6883f92": {
+    "path": "/reports/userInsights/monthly/inactiveUsersByApplication",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUserByApplication",
+        "apiReference": ""
+      }
+    }
+  },
+  "a2bc5596b258": {
+    "path": "/reports/userInsights/monthly/inactiveUsersByApplication/{monthlyInactiveUsersByApplicationMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUserByApplication",
+        "apiReference": ""
+      }
+    }
+  },
+  "08d0fa3185fd": {
+    "path": "/reports/userInsights/monthly/inactiveUsersByApplication/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyInactiveUserByApplicationCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "3eb979de5959": {
+    "path": "/reports/userInsights/monthly/mfaCompletions",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyMfaCompletion",
+        "apiReference": "https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-mfacompletions?view=graph-rest-beta"
+      }
+    }
+  },
+  "efbcb5acc5ad": {
+    "path": "/reports/userInsights/monthly/mfaCompletions/{mfaCompletionMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyMfaCompletion",
+        "apiReference": ""
+      }
+    }
+  },
+  "fa21eb154791": {
+    "path": "/reports/userInsights/monthly/mfaCompletions/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyMfaCompletionCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "a289b48f3d8c": {
+    "path": "/reports/userInsights/monthly/requests",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyRequest",
+        "apiReference": "https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-requests?view=graph-rest-beta"
+      }
+    }
+  },
+  "c03e67f06570": {
+    "path": "/reports/userInsights/monthly/requests/{userRequestsMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyRequest",
+        "apiReference": ""
+      }
+    }
+  },
+  "95d2447efd54": {
+    "path": "/reports/userInsights/monthly/requests/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlyRequestCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "9a713bd4951d": {
+    "path": "/reports/userInsights/monthly/signUps",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySignUp",
+        "apiReference": "https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-signups?view=graph-rest-beta"
+      }
+    }
+  },
+  "8ee496124ef3": {
+    "path": "/reports/userInsights/monthly/signUps/{userSignUpMetric-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySignUp",
+        "apiReference": ""
+      }
+    }
+  },
+  "53b7f133eaf6": {
+    "path": "/reports/userInsights/monthly/signUps/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySignUpCount",
+        "apiReference": ""
+      }
+    }
+  },
+  "ddeab90794ad": {
+    "path": "/reports/userInsights/monthly/summary",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "c38b97096ab6": {
+    "path": "/reports/userInsights/monthly/summary/{insightSummary-id}",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySummary",
+        "apiReference": ""
+      }
+    }
+  },
+  "2d41a49add4a": {
+    "path": "/reports/userInsights/monthly/summary/$count",
+    "methods": {
+      "get": {
+        "permissions": [],
+        "command": "Get-MgBetaReportUserInsightMonthlySummaryCount",
+        "apiReference": ""
+      }
+    }
+  }
+}

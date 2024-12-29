@@ -1,0 +1,70 @@
+{
+  "/applications/{application-id}/microsoft.graph.addKey": {
+    "post": {
+      "tags": [
+        "applications.Actions"
+      ],
+      "summary": "Invoke action addKey",
+      "description": "Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that don\u2019t have any existing valid certificates (no certificates have been added yet, or all certificates have expired), won\u2019t be able to use this service action. You can use the Update application operation to perform an update instead.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-addkey?view=graph-rest-1.0"
+      },
+      "operationId": "application_addKey",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "keyCredential": {
+                  "$ref": "#/components/schemas/microsoft.graph.keyCredential"
+                },
+                "passwordCredential": {
+                  "$ref": "#/components/schemas/microsoft.graph.passwordCredential"
+                },
+                "proof": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.keyCredential"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

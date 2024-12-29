@@ -1,0 +1,153 @@
+{
+  "/security/subjectRightsRequests/{subjectRightsRequest-id}": {
+    "get": {
+      "tags": [
+        "security.subjectRightsRequest"
+      ],
+      "summary": "Get subjectRightsRequests from security",
+      "operationId": "security_GetSubjectRightsRequest",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subjectRightsRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.subjectRightsRequest"
+      ],
+      "summary": "Update the navigation property subjectRightsRequests in security",
+      "operationId": "security_UpdateSubjectRightsRequest",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.subjectRightsRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.subjectRightsRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.subjectRightsRequest"
+      ],
+      "summary": "Delete navigation property subjectRightsRequests for security",
+      "operationId": "security_DeleteSubjectRightsRequest",
+      "parameters": [
+        {
+          "name": "subjectRightsRequest-id",
+          "in": "path",
+          "description": "The unique identifier of subjectRightsRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "subjectRightsRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

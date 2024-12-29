@@ -1,0 +1,53 @@
+{
+  "/informationProtection/dataLossPreventionPolicies/microsoft.graph.evaluate": {
+    "post": {
+      "tags": [
+        "informationProtection.Actions"
+      ],
+      "summary": "Invoke action evaluate",
+      "operationId": "informationProtection.dataLossPreventionPolicy_evaluate",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "target": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "evaluationInput": {
+                  "$ref": "#/components/schemas/microsoft.graph.dlpEvaluationInput"
+                },
+                "notificationInfo": {
+                  "$ref": "#/components/schemas/microsoft.graph.dlpNotification"
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.dlpEvaluatePoliciesJobResponse"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

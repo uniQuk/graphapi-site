@@ -1,0 +1,63 @@
+{
+  "/agreements/{agreement-id}/file/localizations/{agreementFileLocalization-id}/versions/$count": {
+    "get": {
+      "tags": [
+        "agreements.agreementFile"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "agreement.file.localization.version_GetCount",
+      "parameters": [
+        {
+          "name": "agreement-id",
+          "in": "path",
+          "description": "The unique identifier of agreement",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreement"
+        },
+        {
+          "name": "agreementFileLocalization-id",
+          "in": "path",
+          "description": "The unique identifier of agreementFileLocalization",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "agreementFileLocalization"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

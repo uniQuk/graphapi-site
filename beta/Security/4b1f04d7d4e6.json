@@ -1,0 +1,80 @@
+{
+  "/security/incidents/{incident-id}/alerts/{alert-id}": {
+    "get": {
+      "tags": [
+        "security.incident"
+      ],
+      "summary": "Get alerts from security",
+      "description": "The list of related alerts. Supports $expand.",
+      "operationId": "security.incident_GetAlert",
+      "parameters": [
+        {
+          "name": "incident-id",
+          "in": "path",
+          "description": "The unique identifier of incident",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "incident"
+        },
+        {
+          "name": "alert-id",
+          "in": "path",
+          "description": "The unique identifier of alert",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "alert"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.alert"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

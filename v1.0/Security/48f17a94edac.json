@@ -1,0 +1,163 @@
+{
+  "/security/identities/healthIssues/{healthIssue-id}": {
+    "get": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Get healthIssue",
+      "description": "Read the properties and relationships of a healthIssue object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-healthissue-get?view=graph-rest-1.0"
+      },
+      "operationId": "security.identity_GetHealthIssue",
+      "parameters": [
+        {
+          "name": "healthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of healthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "healthIssue"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.healthIssue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Update healthIssue",
+      "description": "Update the properties of a healthIssue object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/security-healthissue-update?view=graph-rest-1.0"
+      },
+      "operationId": "security.identity_UpdateHealthIssue",
+      "parameters": [
+        {
+          "name": "healthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of healthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "healthIssue"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.healthIssue"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.healthIssue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Delete navigation property healthIssues for security",
+      "operationId": "security.identity_DeleteHealthIssue",
+      "parameters": [
+        {
+          "name": "healthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of healthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "healthIssue"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

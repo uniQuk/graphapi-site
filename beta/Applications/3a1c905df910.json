@@ -1,0 +1,58 @@
+{
+  "/applications/{application-id}/tokenLifetimePolicies/{tokenLifetimePolicy-id}/$ref": {
+    "delete": {
+      "tags": [
+        "applications.tokenLifetimePolicy"
+      ],
+      "summary": "Remove tokenLifetimePolicy",
+      "description": "Remove a tokenLifetimePolicy from an application or servicePrincipal.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/application-delete-tokenlifetimepolicies?view=graph-rest-beta"
+      },
+      "operationId": "application.tokenLifetimePolicy_DeleteTokenLifetimePolicyGraphBPreRef",
+      "parameters": [
+        {
+          "name": "application-id",
+          "in": "path",
+          "description": "The unique identifier of application",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "application"
+        },
+        {
+          "name": "tokenLifetimePolicy-id",
+          "in": "path",
+          "description": "The unique identifier of tokenLifetimePolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tokenLifetimePolicy"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

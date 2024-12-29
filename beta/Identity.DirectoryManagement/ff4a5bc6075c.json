@@ -1,0 +1,201 @@
+{
+  "/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration-id}/trustedCertificateAuthorities/{certificateAuthorityAsEntity-id}": {
+    "get": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Get certificateAuthorityAsEntity",
+      "description": "Read the properties and relationships of a certificateAuthorityAsEntity object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificateauthorityasentity-get?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority.certificateBasedApplicationConfiguration_GetTrustedCertificateAuthority",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        },
+        {
+          "name": "certificateAuthorityAsEntity-id",
+          "in": "path",
+          "description": "The unique identifier of certificateAuthorityAsEntity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateAuthorityAsEntity"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.certificateAuthorityAsEntity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Update certificateAuthorityAsEntity",
+      "description": "Update the properties of a certificateAuthorityAsEntity object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificateauthorityasentity-update?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority.certificateBasedApplicationConfiguration_UpdateTrustedCertificateAuthority",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        },
+        {
+          "name": "certificateAuthorityAsEntity-id",
+          "in": "path",
+          "description": "The unique identifier of certificateAuthorityAsEntity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateAuthorityAsEntity"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.certificateAuthorityAsEntity"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.certificateAuthorityAsEntity"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Delete certificateAuthorityAsEntity",
+      "description": "Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificateauthorityasentity-delete?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority.certificateBasedApplicationConfiguration_DeleteTrustedCertificateAuthority",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        },
+        {
+          "name": "certificateAuthorityAsEntity-id",
+          "in": "path",
+          "description": "The unique identifier of certificateAuthorityAsEntity",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateAuthorityAsEntity"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

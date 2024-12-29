@@ -1,0 +1,80 @@
+{
+  "/security/identities/sensors/{sensor-id}/healthIssues/{healthIssue-id}": {
+    "get": {
+      "tags": [
+        "security.identityContainer"
+      ],
+      "summary": "Get healthIssues from security",
+      "description": "Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.",
+      "operationId": "security.identity.sensor_GetHealthIssue",
+      "parameters": [
+        {
+          "name": "sensor-id",
+          "in": "path",
+          "description": "The unique identifier of sensor",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensor"
+        },
+        {
+          "name": "healthIssue-id",
+          "in": "path",
+          "description": "The unique identifier of healthIssue",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "healthIssue"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.healthIssue"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

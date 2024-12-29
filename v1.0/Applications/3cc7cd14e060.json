@@ -1,0 +1,68 @@
+{
+  "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/microsoft.graph.validateCredentials": {
+    "post": {
+      "tags": [
+        "servicePrincipals.Actions"
+      ],
+      "summary": "Invoke action validateCredentials",
+      "operationId": "servicePrincipal.synchronization.job_validateCredential",
+      "parameters": [
+        {
+          "name": "servicePrincipal-id",
+          "in": "path",
+          "description": "The unique identifier of servicePrincipal",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "servicePrincipal"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "applicationIdentifier": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "templateId": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "useSavedCredentials": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "credentials": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.synchronizationSecretKeyStringValuePair"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

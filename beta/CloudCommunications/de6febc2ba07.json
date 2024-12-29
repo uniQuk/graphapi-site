@@ -1,0 +1,38 @@
+{
+  "/communications/presences/{presence-id}/microsoft.graph.clearUserPreferredPresence": {
+    "post": {
+      "tags": [
+        "communications.Actions"
+      ],
+      "summary": "Invoke action clearUserPreferredPresence",
+      "description": "Clear the preferred availability and activity status for a user.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-beta"
+      },
+      "operationId": "communication.presence_clearUserPreferredPresence",
+      "parameters": [
+        {
+          "name": "presence-id",
+          "in": "path",
+          "description": "The unique identifier of presence",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "presence"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

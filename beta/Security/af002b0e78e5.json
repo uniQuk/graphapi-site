@@ -1,0 +1,187 @@
+{
+  "/security/labels/retentionLabels/{retentionLabel-id}/dispositionReviewStages/{dispositionReviewStage-stageNumber}": {
+    "get": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Get dispositionReviewStages from security",
+      "description": "When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.",
+      "operationId": "security.label.retentionLabel_GetDispositionReviewStage",
+      "parameters": [
+        {
+          "name": "retentionLabel-id",
+          "in": "path",
+          "description": "The unique identifier of retentionLabel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionLabel"
+        },
+        {
+          "name": "dispositionReviewStage-stageNumber",
+          "in": "path",
+          "description": "The unique identifier of dispositionReviewStage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dispositionReviewStage"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.dispositionReviewStage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Update the navigation property dispositionReviewStages in security",
+      "operationId": "security.label.retentionLabel_UpdateDispositionReviewStage",
+      "parameters": [
+        {
+          "name": "retentionLabel-id",
+          "in": "path",
+          "description": "The unique identifier of retentionLabel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionLabel"
+        },
+        {
+          "name": "dispositionReviewStage-stageNumber",
+          "in": "path",
+          "description": "The unique identifier of dispositionReviewStage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dispositionReviewStage"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.security.dispositionReviewStage"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.security.dispositionReviewStage"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.labelsRoot"
+      ],
+      "summary": "Delete navigation property dispositionReviewStages for security",
+      "operationId": "security.label.retentionLabel_DeleteDispositionReviewStage",
+      "parameters": [
+        {
+          "name": "retentionLabel-id",
+          "in": "path",
+          "description": "The unique identifier of retentionLabel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "retentionLabel"
+        },
+        {
+          "name": "dispositionReviewStage-stageNumber",
+          "in": "path",
+          "description": "The unique identifier of dispositionReviewStage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dispositionReviewStage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

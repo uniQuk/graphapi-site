@@ -1,0 +1,52 @@
+{
+  "/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/effectiveRules/$count": {
+    "get": {
+      "tags": [
+        "policies.unifiedRoleManagementPolicy"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "policy.roleManagementPolicy.effectiveRule_GetCount",
+      "parameters": [
+        {
+          "name": "unifiedRoleManagementPolicy-id",
+          "in": "path",
+          "description": "The unique identifier of unifiedRoleManagementPolicy",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "unifiedRoleManagementPolicy"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

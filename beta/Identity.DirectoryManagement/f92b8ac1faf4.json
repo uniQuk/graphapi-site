@@ -1,0 +1,168 @@
+{
+  "/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration-id}": {
+    "get": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Get certificateBasedApplicationConfiguration",
+      "description": "Read the properties and relationships of a certificateBasedApplicationConfiguration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-get?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority_GetCertificateBasedApplicationConfiguration",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.certificateBasedApplicationConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Update certificateBasedApplicationConfiguration",
+      "description": "Update the properties of a certificateBasedApplicationConfiguration object. To update the trustedCertificateAuthorities within a certificateBasedApplicationConfiguration object, use the Update certificateAuthorityAsEntity operation.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-update?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority_UpdateCertificateBasedApplicationConfiguration",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.certificateBasedApplicationConfiguration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.certificateBasedApplicationConfiguration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "directory.certificateAuthorityPath"
+      ],
+      "summary": "Delete certificateBasedApplicationConfiguration",
+      "description": "Delete the properties and relationships of a certificateBasedApplicationConfiguration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-delete?view=graph-rest-beta"
+      },
+      "operationId": "directory.certificateAuthority_DeleteCertificateBasedApplicationConfiguration",
+      "parameters": [
+        {
+          "name": "certificateBasedApplicationConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of certificateBasedApplicationConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "certificateBasedApplicationConfiguration"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

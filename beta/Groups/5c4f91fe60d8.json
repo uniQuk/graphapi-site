@@ -1,0 +1,90 @@
+{
+  "/groups/{group-id}/drives/{drive-id}/root/microsoft.graph.preview": {
+    "post": {
+      "tags": [
+        "groups.Actions"
+      ],
+      "summary": "Invoke action preview",
+      "operationId": "group.drive.root_preview",
+      "parameters": [
+        {
+          "name": "group-id",
+          "in": "path",
+          "description": "The unique identifier of group",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "group"
+        },
+        {
+          "name": "drive-id",
+          "in": "path",
+          "description": "The unique identifier of drive",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "drive"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "viewer": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "chromeless": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "allowEdit": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                },
+                "page": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "zoom": {
+                  "type": "number",
+                  "format": "double",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.itemPreviewInfo"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

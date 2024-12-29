@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/windowsAutopilotDeploymentProfiles/{windowsAutopilotDeploymentProfile-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Get windowsAutopilotDeploymentProfiles from deviceManagement",
+      "description": "Windows auto pilot deployment profiles",
+      "operationId": "deviceManagement_GetWindowsAutopilotDeploymentProfile",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeploymentProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Update the navigation property windowsAutopilotDeploymentProfiles in deviceManagement",
+      "operationId": "deviceManagement_UpdateWindowsAutopilotDeploymentProfile",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeploymentProfile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.windowsAutopilotDeploymentProfile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.windowsAutopilotDeploymentProfile"
+      ],
+      "summary": "Delete navigation property windowsAutopilotDeploymentProfiles for deviceManagement",
+      "operationId": "deviceManagement_DeleteWindowsAutopilotDeploymentProfile",
+      "parameters": [
+        {
+          "name": "windowsAutopilotDeploymentProfile-id",
+          "in": "path",
+          "description": "The unique identifier of windowsAutopilotDeploymentProfile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "windowsAutopilotDeploymentProfile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

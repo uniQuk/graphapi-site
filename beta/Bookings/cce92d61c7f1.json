@@ -1,0 +1,187 @@
+{
+  "/solutions/virtualEvents/events/{virtualEvent-id}/sessions(joinWebUrl='{joinWebUrl}')": {
+    "get": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Get sessions from solutions",
+      "description": "The sessions for the virtual event.",
+      "operationId": "solution.virtualEvent.event.session_GetGraphBPreJoinWebUrl",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "joinWebUrl",
+          "in": "path",
+          "description": "Alternate key of virtualEventSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Update the navigation property sessions in solutions",
+      "operationId": "solution.virtualEvent.event.session_UpdateGraphBPreJoinWebUrl",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "joinWebUrl",
+          "in": "path",
+          "description": "Alternate key of virtualEventSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.virtualEventSession"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventSession"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Delete navigation property sessions for solutions",
+      "operationId": "solution.virtualEvent.event.session_DeleteGraphBPreJoinWebUrl",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        },
+        {
+          "name": "joinWebUrl",
+          "in": "path",
+          "description": "Alternate key of virtualEventSession",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

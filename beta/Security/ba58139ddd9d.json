@@ -1,0 +1,189 @@
+{
+  "/security/tiIndicators/{tiIndicator-id}": {
+    "get": {
+      "tags": [
+        "security.tiIndicator"
+      ],
+      "summary": "Get threat intelligence indicator",
+      "description": "Retrieve the properties and relationships of a tiIndicator object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tiindicator-get?view=graph-rest-beta"
+      },
+      "operationId": "security_GetTiIndicator",
+      "parameters": [
+        {
+          "name": "tiIndicator-id",
+          "in": "path",
+          "description": "The unique identifier of tiIndicator",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tiIndicator"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tiIndicator"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "security.tiIndicator"
+      ],
+      "summary": "Update tiIndicator",
+      "description": "Update the properties of a tiIndicator object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tiindicator-update?view=graph-rest-beta"
+      },
+      "operationId": "security_UpdateTiIndicator",
+      "parameters": [
+        {
+          "name": "tiIndicator-id",
+          "in": "path",
+          "description": "The unique identifier of tiIndicator",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tiIndicator"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.tiIndicator"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.tiIndicator"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "security.tiIndicator"
+      ],
+      "summary": "Delete threat intelligence indicator",
+      "description": "Delete a tiIndicator object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/tiindicator-delete?view=graph-rest-beta"
+      },
+      "operationId": "security_DeleteTiIndicator",
+      "parameters": [
+        {
+          "name": "tiIndicator-id",
+          "in": "path",
+          "description": "The unique identifier of tiIndicator",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "tiIndicator"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2026-04-10",
+        "date": "2024-04-10",
+        "version": "2024-01/Deprecation",
+        "description": "The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API."
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

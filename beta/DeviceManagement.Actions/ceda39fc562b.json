@@ -1,0 +1,55 @@
+{
+  "/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile-id}/microsoft.graph.addLanguageFiles": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action addLanguageFiles",
+      "operationId": "deviceManagement.groupPolicyUploadedDefinitionFile_addLanguageFile",
+      "parameters": [
+        {
+          "name": "groupPolicyUploadedDefinitionFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyUploadedDefinitionFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyUploadedDefinitionFile"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "groupPolicyUploadedLanguageFiles": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/microsoft.graph.groupPolicyUploadedLanguageFile"
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

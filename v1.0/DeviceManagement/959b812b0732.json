@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/userExperienceAnalyticsCategories/{userExperienceAnalyticsCategory-id}/metricValues/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.userExperienceAnalyticsCategory"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.userExperienceAnalyticsCategory.metricValue_GetCount",
+      "parameters": [
+        {
+          "name": "userExperienceAnalyticsCategory-id",
+          "in": "path",
+          "description": "The unique identifier of userExperienceAnalyticsCategory",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userExperienceAnalyticsCategory"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

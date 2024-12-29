@@ -1,0 +1,158 @@
+{
+  "/external/industryData/roleGroups/{roleGroup-id}": {
+    "get": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Get roleGroup",
+      "description": "Read the properties and relationships of a roleGroup object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-beta"
+      },
+      "operationId": "external.industryData_GetRoleGroup",
+      "parameters": [
+        {
+          "name": "roleGroup-id",
+          "in": "path",
+          "description": "The unique identifier of roleGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "roleGroup"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.roleGroup"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Update the navigation property roleGroups in external",
+      "operationId": "external.industryData_UpdateRoleGroup",
+      "parameters": [
+        {
+          "name": "roleGroup-id",
+          "in": "path",
+          "description": "The unique identifier of roleGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "roleGroup"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.industryData.roleGroup"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.industryData.roleGroup"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "external.industryDataRoot"
+      ],
+      "summary": "Delete navigation property roleGroups for external",
+      "operationId": "external.industryData_DeleteRoleGroup",
+      "parameters": [
+        {
+          "name": "roleGroup-id",
+          "in": "path",
+          "description": "The unique identifier of roleGroup",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "roleGroup"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

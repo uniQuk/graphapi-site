@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/configManagerCollections/microsoft.graph.getPolicySummary(policyId='{policyId}')": {
+    "get": {
+      "tags": [
+        "deviceManagement.Functions"
+      ],
+      "summary": "Invoke function getPolicySummary",
+      "operationId": "deviceManagement.configManagerCollection_getPolicySummary",
+      "parameters": [
+        {
+          "name": "policyId",
+          "in": "path",
+          "description": "Usage: policyId='{policyId}'",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.configManagerPolicySummary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

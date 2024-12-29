@@ -1,0 +1,40 @@
+{
+  "/deviceManagement/dataSharingConsents/{dataSharingConsent-id}/microsoft.graph.consentToDataSharing": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action consentToDataSharing",
+      "operationId": "deviceManagement.dataSharingConsent_consentToDataSharing",
+      "parameters": [
+        {
+          "name": "dataSharingConsent-id",
+          "in": "path",
+          "description": "The unique identifier of dataSharingConsent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "dataSharingConsent"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.dataSharingConsent"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "/domains/{domain-id}/verificationDnsRecords/{domainDnsRecord-id}": {
+    "get": {
+      "tags": [
+        "domains.domainDnsRecord"
+      ],
+      "summary": "Get verificationDnsRecords from domains",
+      "description": "DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.",
+      "operationId": "domain_GetVerificationDnsRecord",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "domainDnsRecord-id",
+          "in": "path",
+          "description": "The unique identifier of domainDnsRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domainDnsRecord"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.domainDnsRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "domains.domainDnsRecord"
+      ],
+      "summary": "Update the navigation property verificationDnsRecords in domains",
+      "operationId": "domain_UpdateVerificationDnsRecord",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "domainDnsRecord-id",
+          "in": "path",
+          "description": "The unique identifier of domainDnsRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domainDnsRecord"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.domainDnsRecord"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.domainDnsRecord"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "domains.domainDnsRecord"
+      ],
+      "summary": "Delete navigation property verificationDnsRecords for domains",
+      "operationId": "domain_DeleteVerificationDnsRecord",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        },
+        {
+          "name": "domainDnsRecord-id",
+          "in": "path",
+          "description": "The unique identifier of domainDnsRecord",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domainDnsRecord"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

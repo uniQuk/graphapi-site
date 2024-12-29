@@ -1,0 +1,69 @@
+{
+  "/identityGovernance/privilegedAccess/group/eligibilityScheduleInstances/{privilegedAccessGroupEligibilityScheduleInstance-id}/principal": {
+    "get": {
+      "tags": [
+        "identityGovernance.privilegedAccessRoot"
+      ],
+      "summary": "Get principal from identityGovernance",
+      "description": "References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.",
+      "operationId": "identityGovernance.privilegedAccess.group.eligibilityScheduleInstance_GetPrincipal",
+      "parameters": [
+        {
+          "name": "privilegedAccessGroupEligibilityScheduleInstance-id",
+          "in": "path",
+          "description": "The unique identifier of privilegedAccessGroupEligibilityScheduleInstance",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "privilegedAccessGroupEligibilityScheduleInstance"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.directoryObject"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

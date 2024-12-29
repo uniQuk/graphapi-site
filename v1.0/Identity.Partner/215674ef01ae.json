@@ -1,0 +1,191 @@
+{
+  "/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship-id}/requests/{delegatedAdminRelationshipRequest-id}": {
+    "get": {
+      "tags": [
+        "tenantRelationships.delegatedAdminRelationship"
+      ],
+      "summary": "Get delegatedAdminRelationshipRequest",
+      "description": "Read the properties and relationships of a delegatedAdminRelationshipRequest object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0"
+      },
+      "operationId": "tenantRelationship.delegatedAdminRelationship_GetRequest",
+      "parameters": [
+        {
+          "name": "delegatedAdminRelationship-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationship",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationship"
+        },
+        {
+          "name": "delegatedAdminRelationshipRequest-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationshipRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationshipRequest"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.delegatedAdminRelationshipRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "tenantRelationships.delegatedAdminRelationship"
+      ],
+      "summary": "Update the navigation property requests in tenantRelationships",
+      "operationId": "tenantRelationship.delegatedAdminRelationship_UpdateRequest",
+      "parameters": [
+        {
+          "name": "delegatedAdminRelationship-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationship",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationship"
+        },
+        {
+          "name": "delegatedAdminRelationshipRequest-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationshipRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationshipRequest"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.delegatedAdminRelationshipRequest"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.delegatedAdminRelationshipRequest"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "tenantRelationships.delegatedAdminRelationship"
+      ],
+      "summary": "Delete navigation property requests for tenantRelationships",
+      "operationId": "tenantRelationship.delegatedAdminRelationship_DeleteRequest",
+      "parameters": [
+        {
+          "name": "delegatedAdminRelationship-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationship",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationship"
+        },
+        {
+          "name": "delegatedAdminRelationshipRequest-id",
+          "in": "path",
+          "description": "The unique identifier of delegatedAdminRelationshipRequest",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "delegatedAdminRelationshipRequest"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

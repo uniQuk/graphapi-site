@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment-id}/roleScopeTags/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.deviceAndAppManagementRoleAssignment"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.roleAssignment.roleScopeTag_GetCount",
+      "parameters": [
+        {
+          "name": "deviceAndAppManagementRoleAssignment-id",
+          "in": "path",
+          "description": "The unique identifier of deviceAndAppManagementRoleAssignment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "deviceAndAppManagementRoleAssignment"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

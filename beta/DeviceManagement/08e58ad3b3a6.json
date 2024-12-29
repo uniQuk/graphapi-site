@@ -1,0 +1,52 @@
+{
+  "/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate-id}/localizedNotificationMessages/$count": {
+    "get": {
+      "tags": [
+        "deviceManagement.notificationMessageTemplate"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "deviceManagement.notificationMessageTemplate.localizedNotificationMessage_GetCount",
+      "parameters": [
+        {
+          "name": "notificationMessageTemplate-id",
+          "in": "path",
+          "description": "The unique identifier of notificationMessageTemplate",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "notificationMessageTemplate"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

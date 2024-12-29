@@ -1,0 +1,33 @@
+{
+  "/solutions/virtualEvents/events/{virtualEvent-id}/microsoft.graph.publish": {
+    "post": {
+      "tags": [
+        "solutions.Actions"
+      ],
+      "summary": "Invoke action publish",
+      "operationId": "solution.virtualEvent.event_publish",
+      "parameters": [
+        {
+          "name": "virtualEvent-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEvent",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEvent"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

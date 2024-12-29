@@ -1,0 +1,74 @@
+{
+  "/identityGovernance/entitlementManagement/resourceEnvironments/{accessPackageResourceEnvironment-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}/resource/scopes/$count": {
+    "get": {
+      "tags": [
+        "identityGovernance.entitlementManagement"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "identityGovernance.entitlementManagement.resourceEnvironment.resource.role.resource.scope_GetCount",
+      "parameters": [
+        {
+          "name": "accessPackageResourceEnvironment-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceEnvironment",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceEnvironment"
+        },
+        {
+          "name": "accessPackageResource-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResource",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResource"
+        },
+        {
+          "name": "accessPackageResourceRole-id",
+          "in": "path",
+          "description": "The unique identifier of accessPackageResourceRole",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "accessPackageResourceRole"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "/admin/serviceAnnouncement/healthOverviews/{serviceHealth-id}": {
+    "get": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Get serviceHealth",
+      "description": "Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/servicehealth-get?view=graph-rest-beta"
+      },
+      "operationId": "admin.serviceAnnouncement_GetHealthOverview",
+      "parameters": [
+        {
+          "name": "serviceHealth-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealth",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealth"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealth"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Update the navigation property healthOverviews in admin",
+      "operationId": "admin.serviceAnnouncement_UpdateHealthOverview",
+      "parameters": [
+        {
+          "name": "serviceHealth-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealth",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealth"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.serviceHealth"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.serviceHealth"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "admin.serviceAnnouncement"
+      ],
+      "summary": "Delete navigation property healthOverviews for admin",
+      "operationId": "admin.serviceAnnouncement_DeleteHealthOverview",
+      "parameters": [
+        {
+          "name": "serviceHealth-id",
+          "in": "path",
+          "description": "The unique identifier of serviceHealth",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "serviceHealth"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

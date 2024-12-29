@@ -1,0 +1,52 @@
+{
+  "/informationProtection/sensitivityLabels/{sensitivityLabel-id}/sublabels/$count": {
+    "get": {
+      "tags": [
+        "informationProtection.sensitivityLabel"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "informationProtection.sensitivityLabel.sublabel_GetCount",
+      "parameters": [
+        {
+          "name": "sensitivityLabel-id",
+          "in": "path",
+          "description": "The unique identifier of sensitivityLabel",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "sensitivityLabel"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/languages/{userFlowLanguageConfiguration-id}/defaultPages/{userFlowLanguagePage-id}/$value": {
+    "get": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Get media content for the navigation property defaultPages from identity",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "identity.b2xUserFlow.language_GetDefaultPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved media content",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "put": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Update media content for the navigation property defaultPages in identity",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "identity.b2xUserFlow.language_SetDefaultPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        }
+      ],
+      "requestBody": {
+        "description": "New media content.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "identity.b2xIdentityUserFlow"
+      ],
+      "summary": "Delete media content for the navigation property defaultPages in identity",
+      "description": "The unique identifier for an entity. Read-only.",
+      "operationId": "identity.b2xUserFlow.language_DeleteDefaultPagesContent",
+      "parameters": [
+        {
+          "name": "b2xIdentityUserFlow-id",
+          "in": "path",
+          "description": "The unique identifier of b2xIdentityUserFlow",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "b2xIdentityUserFlow"
+        },
+        {
+          "name": "userFlowLanguageConfiguration-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguageConfiguration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguageConfiguration"
+        },
+        {
+          "name": "userFlowLanguagePage-id",
+          "in": "path",
+          "description": "The unique identifier of userFlowLanguagePage",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "userFlowLanguagePage"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}

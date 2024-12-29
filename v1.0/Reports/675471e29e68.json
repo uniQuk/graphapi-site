@@ -1,0 +1,55 @@
+{
+  "/reports/microsoft.graph.getOneDriveActivityUserDetail(date={date})": {
+    "get": {
+      "tags": [
+        "reports.Functions"
+      ],
+      "summary": "Invoke function getOneDriveActivityUserDetail",
+      "description": "Get details about OneDrive activity by user.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/reportroot-getonedriveactivityuserdetail?view=graph-rest-1.0"
+      },
+      "operationId": "report_getOneDriveActivityUserDetail",
+      "parameters": [
+        {
+          "name": "date",
+          "in": "path",
+          "description": "Usage: date={date}",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "pattern": "^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$",
+            "type": "string",
+            "format": "date"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "format": "base64url"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "function"
+    }
+  }
+}

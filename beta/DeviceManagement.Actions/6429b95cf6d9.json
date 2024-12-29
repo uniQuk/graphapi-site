@@ -1,0 +1,62 @@
+{
+  "/deviceManagement/managedDevices/microsoft.graph.bulkReprovisionCloudPc": {
+    "post": {
+      "tags": [
+        "deviceManagement.Actions"
+      ],
+      "summary": "Invoke action bulkReprovisionCloudPc",
+      "description": "Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/manageddevice-bulkreprovisioncloudpc?view=graph-rest-beta"
+      },
+      "operationId": "deviceManagement.managedDevice_bulkReprovisionCloudPc",
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "managedDeviceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.cloudPcBulkRemoteActionResult"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "deprecated": true,
+      "x-ms-deprecation": {
+        "removalDate": "2023-09-24",
+        "date": "2023-05-24",
+        "version": "2023-05/bulkReprovisionCloudPc",
+        "description": "The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api."
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

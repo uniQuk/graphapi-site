@@ -1,0 +1,59 @@
+{
+  "/deviceAppManagement/vppTokens/{vppToken-id}/microsoft.graph.revokeLicenses": {
+    "post": {
+      "tags": [
+        "deviceAppManagement.Actions"
+      ],
+      "summary": "Invoke action revokeLicenses",
+      "description": "Revoke licenses associated with a specific appleVolumePurchaseProgramToken",
+      "operationId": "deviceAppManagement.vppToken_revokeLicense",
+      "parameters": [
+        {
+          "name": "vppToken-id",
+          "in": "path",
+          "description": "The unique identifier of vppToken",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "vppToken"
+        }
+      ],
+      "requestBody": {
+        "description": "Action parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "notifyManagedDevices": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "revokeUntrackedLicenses": {
+                  "type": "boolean",
+                  "default": false,
+                  "nullable": true
+                }
+              },
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

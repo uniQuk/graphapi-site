@@ -1,0 +1,187 @@
+{
+  "/networkAccess/connectivity/remoteNetworks/{remoteNetwork-id}/connectivityConfiguration/links/{connectivityConfigurationLink-id}": {
+    "get": {
+      "tags": [
+        "networkAccess.connectivity"
+      ],
+      "summary": "Get links from networkAccess",
+      "description": "List of connectivity configurations for deviceLink objects.",
+      "operationId": "networkAccess.connectivity.remoteNetwork.connectivityConfiguration_GetLink",
+      "parameters": [
+        {
+          "name": "remoteNetwork-id",
+          "in": "path",
+          "description": "The unique identifier of remoteNetwork",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "remoteNetwork"
+        },
+        {
+          "name": "connectivityConfigurationLink-id",
+          "in": "path",
+          "description": "The unique identifier of connectivityConfigurationLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectivityConfigurationLink"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.connectivityConfigurationLink"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "networkAccess.connectivity"
+      ],
+      "summary": "Update the navigation property links in networkAccess",
+      "operationId": "networkAccess.connectivity.remoteNetwork.connectivityConfiguration_UpdateLink",
+      "parameters": [
+        {
+          "name": "remoteNetwork-id",
+          "in": "path",
+          "description": "The unique identifier of remoteNetwork",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "remoteNetwork"
+        },
+        {
+          "name": "connectivityConfigurationLink-id",
+          "in": "path",
+          "description": "The unique identifier of connectivityConfigurationLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectivityConfigurationLink"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.networkaccess.connectivityConfigurationLink"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.networkaccess.connectivityConfigurationLink"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "networkAccess.connectivity"
+      ],
+      "summary": "Delete navigation property links for networkAccess",
+      "operationId": "networkAccess.connectivity.remoteNetwork.connectivityConfiguration_DeleteLink",
+      "parameters": [
+        {
+          "name": "remoteNetwork-id",
+          "in": "path",
+          "description": "The unique identifier of remoteNetwork",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "remoteNetwork"
+        },
+        {
+          "name": "connectivityConfigurationLink-id",
+          "in": "path",
+          "description": "The unique identifier of connectivityConfigurationLink",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "connectivityConfigurationLink"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

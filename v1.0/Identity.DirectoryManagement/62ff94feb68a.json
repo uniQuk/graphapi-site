@@ -1,0 +1,45 @@
+{
+  "/domains/{domain-id}/microsoft.graph.verify": {
+    "post": {
+      "tags": [
+        "domains.Actions"
+      ],
+      "summary": "Invoke action verify",
+      "description": "Validates the ownership of the domain.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0"
+      },
+      "operationId": "domain_verify",
+      "parameters": [
+        {
+          "name": "domain-id",
+          "in": "path",
+          "description": "The unique identifier of domain",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "domain"
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.domain"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "action"
+    }
+  }
+}

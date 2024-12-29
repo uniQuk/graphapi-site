@@ -1,0 +1,154 @@
+{
+  "/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.groupPolicyUploadedDefinitionFile"
+      ],
+      "summary": "Get groupPolicyUploadedDefinitionFiles from deviceManagement",
+      "description": "The available group policy uploaded definition files for this account.",
+      "operationId": "deviceManagement_GetGroupPolicyUploadedDefinitionFile",
+      "parameters": [
+        {
+          "name": "groupPolicyUploadedDefinitionFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyUploadedDefinitionFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyUploadedDefinitionFile"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyUploadedDefinitionFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.groupPolicyUploadedDefinitionFile"
+      ],
+      "summary": "Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement",
+      "operationId": "deviceManagement_UpdateGroupPolicyUploadedDefinitionFile",
+      "parameters": [
+        {
+          "name": "groupPolicyUploadedDefinitionFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyUploadedDefinitionFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyUploadedDefinitionFile"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.groupPolicyUploadedDefinitionFile"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.groupPolicyUploadedDefinitionFile"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.groupPolicyUploadedDefinitionFile"
+      ],
+      "summary": "Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement",
+      "operationId": "deviceManagement_DeleteGroupPolicyUploadedDefinitionFile",
+      "parameters": [
+        {
+          "name": "groupPolicyUploadedDefinitionFile-id",
+          "in": "path",
+          "description": "The unique identifier of groupPolicyUploadedDefinitionFile",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "groupPolicyUploadedDefinitionFile"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

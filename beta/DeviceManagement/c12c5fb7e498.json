@@ -1,0 +1,187 @@
+{
+  "/deviceManagement/managedDevices/{managedDevice-id}/assignmentFilterEvaluationStatusDetails/{assignmentFilterEvaluationStatusDetails-id}": {
+    "get": {
+      "tags": [
+        "deviceManagement.managedDevice"
+      ],
+      "summary": "Get assignmentFilterEvaluationStatusDetails from deviceManagement",
+      "description": "Managed device mobile app configuration states for this device.",
+      "operationId": "deviceManagement.managedDevice_GetAssignmentFilterEvaluationStatusDetail",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        },
+        {
+          "name": "assignmentFilterEvaluationStatusDetails-id",
+          "in": "path",
+          "description": "The unique identifier of assignmentFilterEvaluationStatusDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "assignmentFilterEvaluationStatusDetails"
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.assignmentFilterEvaluationStatusDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "deviceManagement.managedDevice"
+      ],
+      "summary": "Update the navigation property assignmentFilterEvaluationStatusDetails in deviceManagement",
+      "operationId": "deviceManagement.managedDevice_UpdateAssignmentFilterEvaluationStatusDetail",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        },
+        {
+          "name": "assignmentFilterEvaluationStatusDetails-id",
+          "in": "path",
+          "description": "The unique identifier of assignmentFilterEvaluationStatusDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "assignmentFilterEvaluationStatusDetails"
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.assignmentFilterEvaluationStatusDetails"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.assignmentFilterEvaluationStatusDetails"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "deviceManagement.managedDevice"
+      ],
+      "summary": "Delete navigation property assignmentFilterEvaluationStatusDetails for deviceManagement",
+      "operationId": "deviceManagement.managedDevice_DeleteAssignmentFilterEvaluationStatusDetail",
+      "parameters": [
+        {
+          "name": "managedDevice-id",
+          "in": "path",
+          "description": "The unique identifier of managedDevice",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedDevice"
+        },
+        {
+          "name": "assignmentFilterEvaluationStatusDetails-id",
+          "in": "path",
+          "description": "The unique identifier of assignmentFilterEvaluationStatusDetails",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "assignmentFilterEvaluationStatusDetails"
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

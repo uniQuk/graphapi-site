@@ -1,0 +1,191 @@
+{
+  "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/registrations(userId='{userId}')": {
+    "get": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Get virtualEventRegistration",
+      "description": "Get the properties and relationships of a virtualEventRegistration object.",
+      "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-beta"
+      },
+      "operationId": "solution.virtualEvent.webinar.registration_GetGraphBPreUserId",
+      "parameters": [
+        {
+          "name": "virtualEventWebinar-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventWebinar",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventWebinar"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "description": "Alternate key of virtualEventRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "description": "Select properties to be returned",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "$expand",
+          "in": "query",
+          "description": "Expand related entities",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Retrieved navigation property",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventRegistration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "patch": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Update the navigation property registrations in solutions",
+      "operationId": "solution.virtualEvent.webinar.registration_UpdateGraphBPreUserId",
+      "parameters": [
+        {
+          "name": "virtualEventWebinar-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventWebinar",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventWebinar"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "description": "Alternate key of virtualEventRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      ],
+      "requestBody": {
+        "description": "New navigation property values",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/microsoft.graph.virtualEventRegistration"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "2XX": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/microsoft.graph.virtualEventRegistration"
+              }
+            }
+          }
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    },
+    "delete": {
+      "tags": [
+        "solutions.virtualEventsRoot"
+      ],
+      "summary": "Delete navigation property registrations for solutions",
+      "operationId": "solution.virtualEvent.webinar.registration_DeleteGraphBPreUserId",
+      "parameters": [
+        {
+          "name": "virtualEventWebinar-id",
+          "in": "path",
+          "description": "The unique identifier of virtualEventWebinar",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "virtualEventWebinar"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "description": "Alternate key of virtualEventRegistration",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        {
+          "name": "If-Match",
+          "in": "header",
+          "description": "ETag",
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "description": "Success"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      },
+      "x-ms-docs-operation-type": "operation"
+    }
+  }
+}

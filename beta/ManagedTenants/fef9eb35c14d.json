@@ -1,0 +1,52 @@
+{
+  "/tenantRelationships/managedTenants/managedTenantAlertRules/{managedTenantAlertRule-id}/alerts/$count": {
+    "get": {
+      "tags": [
+        "tenantRelationships.managedTenant"
+      ],
+      "summary": "Get the number of the resource",
+      "operationId": "tenantRelationship.managedTenant.managedTenantAlertRule.alert_GetCount",
+      "parameters": [
+        {
+          "name": "managedTenantAlertRule-id",
+          "in": "path",
+          "description": "The unique identifier of managedTenantAlertRule",
+          "required": true,
+          "style": "simple",
+          "schema": {
+            "type": "string"
+          },
+          "x-ms-docs-key-type": "managedTenantAlertRule"
+        },
+        {
+          "name": "$search",
+          "in": "query",
+          "description": "Search items by search phrases",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "$filter",
+          "in": "query",
+          "description": "Filter items by property values",
+          "style": "form",
+          "explode": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "2XX": {
+          "$ref": "#/components/responses/ODataCountResponse"
+        },
+        "default": {
+          "$ref": "#/components/responses/error"
+        }
+      }
+    }
+  }
+}
